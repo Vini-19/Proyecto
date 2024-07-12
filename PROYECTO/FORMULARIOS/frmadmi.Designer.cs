@@ -132,6 +132,7 @@ namespace PROYECTO
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.WaitOnLoad = true;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // label1
             // 
@@ -153,6 +154,7 @@ namespace PROYECTO
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMenu.TabIndex = 1;
             this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click_1);
             // 
             // slidermenu
             // 
@@ -189,6 +191,7 @@ namespace PROYECTO
             this.btnPersonas.Text = "                  Personas";
             this.btnPersonas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPersonas.UseVisualStyleBackColor = false;
+            this.btnPersonas.Click += new System.EventHandler(this.btnPersonas_Click);
             // 
             // panelPersonas
             // 
@@ -248,6 +251,7 @@ namespace PROYECTO
             this.btnFacturacion.Text = "                  Facturación";
             this.btnFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFacturacion.UseVisualStyleBackColor = false;
+            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click_1);
             // 
             // panelFacturacion
             // 
@@ -338,6 +342,7 @@ namespace PROYECTO
             this.btnProduct.Text = "                  Productos";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click_1);
             // 
             // panelProductos
             // 
@@ -414,10 +419,12 @@ namespace PROYECTO
             this.button5.Text = "                  &Salir";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // sliderTran
             // 
             this.sliderTran.Interval = 10;
+            this.sliderTran.Tick += new System.EventHandler(this.sliderTran_Tick);
             // 
             // BtnProdu
             // 

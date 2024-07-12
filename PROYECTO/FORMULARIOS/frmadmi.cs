@@ -83,36 +83,11 @@ namespace PROYECTO
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (siderbarExpand)
-            {
-                slidermenu.Width -= 10;
-                if (slidermenu.Width <= 60)
-                {
-                    siderbarExpand = false;
-                    sliderTran.Stop();
-                }
-            }
-            else
-            {
-                slidermenu.Width += 10;
-                if (slidermenu.Width >= 263)
-                {
-                    siderbarExpand = true;
-                    sliderTran.Stop();
-
-
-
-                }
-
-
-            }
-        }
+      
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            sliderTran.Start();
+            
         }
 
         private void frmadmi_Load(object sender, EventArgs e)
@@ -194,7 +169,7 @@ namespace PROYECTO
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -267,6 +242,64 @@ namespace PROYECTO
         private void pnsubusu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnPersonas_Click(object sender, EventArgs e)
+        {
+            ShowMenu(panelPersonas);
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnFacturacion_Click_1(object sender, EventArgs e)
+        {
+            ShowMenu(panelFacturacion);
+        }
+
+        private void btnProduct_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            ShowMenu(pnusuario);
+            ShowMenu(pnsubusu);
+        }
+
+        private void btnMenu_Click_1(object sender, EventArgs e)
+        {
+            sliderTran.Start();
+        }
+
+        private void sliderTran_Tick(object sender, EventArgs e)
+        {
+            if (siderbarExpand)
+            {
+                slidermenu.Width -= 10;
+                if (slidermenu.Width <= 60)
+                {
+                    siderbarExpand = false;
+                    sliderTran.Stop();
+                }
+            }
+            else
+            {
+                slidermenu.Width += 10;
+                if (slidermenu.Width >= 263)
+                {
+                    siderbarExpand = true;
+                    sliderTran.Stop();
+
+
+
+                }
+
+
+            }
         }
     }
 }
