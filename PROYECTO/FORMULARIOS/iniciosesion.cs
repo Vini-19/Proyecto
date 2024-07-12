@@ -20,7 +20,7 @@ namespace PROYECTO.FORMULARIOS
         private void iniciosesion_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+
         }
     }
 }
