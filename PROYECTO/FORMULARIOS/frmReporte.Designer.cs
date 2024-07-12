@@ -1,6 +1,6 @@
-﻿namespace PROYECTO.FORMULARIOS
+﻿namespace Proyecto_de_desarrolo
 {
-    partial class iniciosesion
+    partial class frmReporte
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // iniciosesion
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "iniciosesion";
-            this.Text = "iniciosesion";
-            this.Load += new System.EventHandler(this.iniciosesion_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "frmReporte";
         }
 
         #endregion

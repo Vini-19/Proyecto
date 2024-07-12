@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PROYECTO.FORMULARIOS
+namespace Proyecto_de_desarrolo
 {
-    public partial class iniciosesion : Form
+    public partial class frmReporte : Form
     {
-        public iniciosesion()
+        public frmReporte()
         {
             InitializeComponent();
-        }
-
-        private void iniciosesion_Load(object sender, EventArgs e)
-        {
-
-
         }
     }
 }

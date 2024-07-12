@@ -68,19 +68,135 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLASES\clsClientes.cs" />
     <Compile Include="CLASES\clsPersonasid.cs" />
+    <Compile Include="CLASES\clsProductoNuevo.cs" />
+    <Compile Include="CLASES\clsProveedores.cs" />
+    <Compile Include="CLASES\clsProveedorProducto.cs" />
+    <Compile Include="CLASES\clsRegistro.cs" />
+    <Compile Include="CLASES\clsTrabajadores.cs" />
+    <Compile Include="CLASES\clsValidaciones.cs" />
+    <Compile Include="CLASES\clsVentas.cs" />
     <Compile Include="CLASES\Conexion.cs" />
+    <Compile Include="FORMULARIOS\agregarTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\agregarTrabajador.Designer.cs">
+      <DependentUpon>agregarTrabajador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\frmadmi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\frmadmi.Designer.cs">
       <DependentUpon>frmadmi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\iniciosesion.cs">
+    <Compile Include="FORMULARIOS\frmAgregarCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\iniciosesion.Designer.cs">
-      <DependentUpon>iniciosesion.cs</DependentUpon>
+    <Compile Include="FORMULARIOS\frmAgregarCompra.Designer.cs">
+      <DependentUpon>frmAgregarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmCarrito.Designer.cs">
+      <DependentUpon>frmCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmEnvios.Designer.cs">
+      <DependentUpon>frmEnvios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmEspecificacionesInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmEspecificacionesInicio.Designer.cs">
+      <DependentUpon>frmEspecificacionesInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPedido.Designer.cs">
+      <DependentUpon>frmPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPrincipalCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPrincipalCliente.Designer.cs">
+      <DependentUpon>frmPrincipalCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPrincipalEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmPrincipalEmpleado.Designer.cs">
+      <DependentUpon>frmPrincipalEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmRecuperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmRecuperacion.Designer.cs">
+      <DependentUpon>frmRecuperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\Pedidos_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\Pedidos_Cliente.Designer.cs">
+      <DependentUpon>Pedidos_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\reporte.cs">
       <SubType>Form</SubType>
@@ -96,11 +212,65 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORMULARIOS\agregarTrabajador.resx">
+      <DependentUpon>agregarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\frmadmi.resx">
       <DependentUpon>frmadmi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\iniciosesion.resx">
-      <DependentUpon>iniciosesion.cs</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\frmAgregarCompra.resx">
+      <DependentUpon>frmAgregarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmCarrito.resx">
+      <DependentUpon>frmCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmEnvios.resx">
+      <DependentUpon>frmEnvios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmEspecificacionesInicio.resx">
+      <DependentUpon>frmEspecificacionesInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmPedido.resx">
+      <DependentUpon>frmPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmPrincipalCliente.resx">
+      <DependentUpon>frmPrincipalCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmPrincipalEmpleado.resx">
+      <DependentUpon>frmPrincipalEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmRecuperacion.resx">
+      <DependentUpon>frmRecuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\Pedidos_Cliente.resx">
+      <DependentUpon>Pedidos_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\reporte.resx">
       <DependentUpon>reporte.cs</DependentUpon>
