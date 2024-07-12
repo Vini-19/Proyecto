@@ -75,9 +75,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+<<<<<<< HEAD:frmAdmin/frmAdmin/PROYECETO.csproj
     <EmbeddedResource Include="FRM\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> parent of c50a80e (subir report):frmAdmin/frmAdmin/frmAdmin.csproj
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
