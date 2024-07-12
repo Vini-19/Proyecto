@@ -107,16 +107,16 @@ namespace PROYECTO
                                     frmPrincipal.Show();
                                     break;
                                 case 2:
-                                    frmPrincipalEmpleado frm = new frmPrincipalEmpleado();
+                                    /*frmPrincipalEmpleado frm = new frmPrincipalEmpleado();
                                     frm.SetUsuarioLabel(usuario);
                                     MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San Jose");
                                     frm.Show();
                                     break;
                                 case 3:
-                                    frmPrincipalCliente frmPrincipalCliente = new frmPrincipalCliente();
+                                    /*frmPrincipalCliente frmPrincipalCliente = new frmPrincipalCliente();
                                     frmPrincipalCliente.SetUsuarioLabel(usuario);
                                     MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San Jose");
-                                    frmPrincipalCliente.Show();
+                                    frmPrincipalCliente.Show();*/
                                     break;
                                 default:
                                     MessageBox.Show("El usuario no tiene un rol válido.");
@@ -161,9 +161,9 @@ namespace PROYECTO
 
         private void linkLRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmRegistro Reg = new frmRegistro();
+           /* frmRegistro Reg = new frmRegistro();
             Reg.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
 
@@ -171,8 +171,8 @@ namespace PROYECTO
         {
             //frmRecuperacion Rec = new frmRecuperacion();
             //Rec.Show();
-            frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
-            Esp.Show();
+            /* frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
+             Esp.Show();*/
         }
 
         private void frmInicioSesion_Load(object sender, EventArgs e)
