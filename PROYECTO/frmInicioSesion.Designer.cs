@@ -1,4 +1,7 @@
-﻿namespace PROYECTO
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace PROYECTO
 {
     partial class frmInicioSesion
     {
@@ -29,168 +32,176 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
-            panel1 = new Panel();
-            btnSalir = new Button();
-            pictureBox1 = new PictureBox();
-            linkLRecuperacion = new LinkLabel();
-            linkLRegistro = new LinkLabel();
-            label5 = new Label();
-            btnIniciar = new Button();
-            txtContra = new TextBox();
-            txtUsuario = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLRecuperacion = new System.Windows.Forms.LinkLabel();
+            this.linkLRegistro = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnIniciar = new System.Windows.Forms.Button();
+            this.txtContra = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(btnSalir);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(linkLRecuperacion);
-            panel1.Controls.Add(linkLRegistro);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(btnIniciar);
-            panel1.Controls.Add(txtContra);
-            panel1.Controls.Add(txtUsuario);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(11, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(277, 529);
-            panel1.TabIndex = 3;
-            panel1.Paint += panel1_Paint;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnSalir);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.linkLRecuperacion);
+            this.panel1.Controls.Add(this.linkLRegistro);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btnIniciar);
+            this.panel1.Controls.Add(this.txtContra);
+            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(208, 344);
+            this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // btnSalir
             // 
-            btnSalir.BackColor = Color.White;
-            btnSalir.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalir.ForeColor = Color.Red;
-            btnSalir.Location = new Point(224, 3);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(50, 29);
-            btnSalir.TabIndex = 11;
-            btnSalir.Text = "X";
-            btnSalir.UseVisualStyleBackColor = false;
-            btnSalir.Click += btnSalir_Click;
+            this.btnSalir.BackColor = System.Drawing.Color.White;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Red;
+            this.btnSalir.Location = new System.Drawing.Point(168, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(38, 19);
+            this.btnSalir.TabIndex = 11;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(30, 52);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(214, 121);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // linkLRecuperacion
             // 
-            linkLRecuperacion.AutoSize = true;
-            linkLRecuperacion.Location = new Point(39, 421);
-            linkLRecuperacion.Name = "linkLRecuperacion";
-            linkLRecuperacion.Size = new Size(205, 20);
-            linkLRecuperacion.TabIndex = 10;
-            linkLRecuperacion.TabStop = true;
-            linkLRecuperacion.Text = "¿Haz olvidado tu contraseña?";
-            linkLRecuperacion.LinkClicked += linkLRecuperacion_LinkClicked;
+            this.linkLRecuperacion.AutoSize = true;
+            this.linkLRecuperacion.Location = new System.Drawing.Point(29, 274);
+            this.linkLRecuperacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLRecuperacion.Name = "linkLRecuperacion";
+            this.linkLRecuperacion.Size = new System.Drawing.Size(149, 13);
+            this.linkLRecuperacion.TabIndex = 10;
+            this.linkLRecuperacion.TabStop = true;
+            this.linkLRecuperacion.Text = "¿Haz olvidado tu contraseña?";
             // 
             // linkLRegistro
             // 
-            linkLRegistro.AutoSize = true;
-            linkLRegistro.Location = new Point(101, 487);
-            linkLRegistro.Name = "linkLRegistro";
-            linkLRegistro.Size = new Size(76, 20);
-            linkLRegistro.TabIndex = 9;
-            linkLRegistro.TabStop = true;
-            linkLRegistro.Text = "Regístrate";
-            linkLRegistro.LinkClicked += linkLRegistro_LinkClicked;
+            this.linkLRegistro.AutoSize = true;
+            this.linkLRegistro.Location = new System.Drawing.Point(76, 317);
+            this.linkLRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLRegistro.Name = "linkLRegistro";
+            this.linkLRegistro.Size = new System.Drawing.Size(57, 13);
+            this.linkLRegistro.TabIndex = 9;
+            this.linkLRegistro.TabStop = true;
+            this.linkLRegistro.Text = "Regístrate";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(69, 467);
-            label5.Name = "label5";
-            label5.Size = new Size(134, 20);
-            label5.TabIndex = 8;
-            label5.Text = "¿No tienes cuenta?";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(52, 304);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "¿No tienes cuenta?";
             // 
             // btnIniciar
             // 
-            btnIniciar.BackColor = Color.Gold;
-            btnIniciar.Location = new Point(93, 369);
-            btnIniciar.Name = "btnIniciar";
-            btnIniciar.Size = new Size(94, 29);
-            btnIniciar.TabIndex = 6;
-            btnIniciar.Text = "Iniciar Sesión ";
-            btnIniciar.UseVisualStyleBackColor = false;
-            btnIniciar.Click += button1_Click_2;
+            this.btnIniciar.BackColor = System.Drawing.Color.Gold;
+            this.btnIniciar.Location = new System.Drawing.Point(70, 240);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(70, 19);
+            this.btnIniciar.TabIndex = 6;
+            this.btnIniciar.Text = "Iniciar Sesión ";
+            this.btnIniciar.UseVisualStyleBackColor = false;
             // 
             // txtContra
             // 
-            txtContra.Location = new Point(51, 319);
-            txtContra.Name = "txtContra";
-            txtContra.PasswordChar = '*';
-            txtContra.Size = new Size(174, 27);
-            txtContra.TabIndex = 5;
+            this.txtContra.Location = new System.Drawing.Point(38, 207);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '*';
+            this.txtContra.Size = new System.Drawing.Size(132, 20);
+            this.txtContra.TabIndex = 5;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(51, 257);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(174, 27);
-            txtUsuario.TabIndex = 4;
+            this.txtUsuario.Location = new System.Drawing.Point(38, 167);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(132, 20);
+            this.txtUsuario.TabIndex = 4;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Banner", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label3.Location = new Point(93, 287);
-            label3.Name = "label3";
-            label3.Size = new Size(99, 29);
-            label3.TabIndex = 2;
-            label3.Text = "Contraseña";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(70, 187);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Contraseña";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Sitka Banner", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label2.Location = new Point(104, 225);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 29);
-            label2.TabIndex = 1;
-            label2.Text = "Usuario";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 146);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Usuario";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Mongolian Baiti", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 176);
-            label1.Name = "label1";
-            label1.Size = new Size(209, 30);
-            label1.TabIndex = 0;
-            label1.Text = "Inicio de Sesión";
-            label1.Click += label1_Click;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 114);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Inicio de Sesión";
             // 
             // frmInicioSesion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Firebrick;
-            ClientSize = new Size(299, 553);
-            Controls.Add(panel1);
-            Name = "frmInicioSesion";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
-            Load += frmInicioSesion_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Firebrick;
+            this.ClientSize = new System.Drawing.Size(224, 359);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmInicioSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
