@@ -7,37 +7,49 @@ namespace PROYECTO.CLASES
 {
     public class Cconexion
     {
-        private readonly string connectionString = "Data Source=croas.database.windows.net;Initial Catalog=Proyecto_Carniceria;Persist Security Info=True;User ID=Vini;Password=Cr0as_P4ss;TrustServerCertificate=True";
-
-        private SqlConnection ObtenerConexion()
+        public SqlConnection leer()
         {
-            SqlConnection cn = new SqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection("Data Source=croas.database.windows.net;Initial Catalog=Proyecto_Carniceria;Persist Security Info=True;User ID=Vini;Password=Cr0as_P4ss;TrustServerCertificate=True");
             if (cn.State == ConnectionState.Open)
             {
                 cn.Close();
             }
-            cn.Open();
+            else
+            {
+                cn.Open();
+            }
             return cn;
+
         }
 
         public void RegistroUsu(string contra, string pregunta, string respuesta, string nomUsuario)
         {
+
+            Cconexion conexion = new Cconexion();
+
             try
             {
-                using (SqlConnection cn = ObtenerConexion())
+                SqlConnection cn = conexion.leer();
+                if (cn.State == ConnectionState.Open)
                 {
-                    using (SqlCommand comando = new SqlCommand("PA_RegistroUsuario", cn))
-                    {
-                        comando.CommandType = CommandType.StoredProcedure;
-                        comando.Parameters.AddWithValue("@Contraseña", contra);
-                        comando.Parameters.AddWithValue("@Roles_ID", 3);
-                        comando.Parameters.AddWithValue("@Pregunta_Recuperacion", pregunta);
-                        comando.Parameters.AddWithValue("@Respuesta_Recuperacion", respuesta);
-                        comando.Parameters.AddWithValue("@Nombre_Usuario", nomUsuario);
+                    SqlCommand comandoExisteUsuario = new SqlCommand("PA_RegistroUsuario", cn);
+                    comandoExisteUsuario.CommandType = CommandType.StoredProcedure;
 
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Usuario registrado correctamente");
-                    }
+
+                    comandoExisteUsuario.Parameters.AddWithValue("@Contraseña", contra);
+                    comandoExisteUsuario.Parameters.AddWithValue("@Roles_ID", 3);
+                    comandoExisteUsuario.Parameters.AddWithValue("@Pregunta_Recuperacion", pregunta);
+                    comandoExisteUsuario.Parameters.AddWithValue("@Respuesta_Recuperacion", respuesta);
+                    comandoExisteUsuario.Parameters.AddWithValue("@Nombre_Usuario", nomUsuario);
+
+
+                    comandoExisteUsuario.ExecuteNonQuery();
+
+                    MessageBox.Show("Usuario registrado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Error de conexión.");
                 }
             }
             catch (Exception ex)
@@ -46,21 +58,39 @@ namespace PROYECTO.CLASES
             }
         }
 
+
         public bool VerificarClienteExistente(string nombre)
         {
-            bool verificar = false;
+            Cconexion conexion = new Cconexion();
+            bool verificar = true;
             try
             {
-                using (SqlConnection cn = ObtenerConexion())
+                using (SqlConnection cn = conexion.leer())
                 {
-                    using (SqlCommand comando = new SqlCommand("PA_VerificarClienteExistente", cn))
+                    if (cn.State == ConnectionState.Closed)
                     {
-                        comando.CommandType = CommandType.StoredProcedure;
-                        comando.Parameters.AddWithValue("@nombre", nombre);
-
-                        int count = (int)comando.ExecuteScalar();
-                        verificar = count > 0;
+                        cn.Open();
                     }
+
+                    SqlCommand comandoExisteCliente = new SqlCommand("PA_VerificarClienteExistente", cn);
+                    comandoExisteCliente.CommandType = CommandType.StoredProcedure;
+                    comandoExisteCliente.Parameters.AddWithValue("@nombre", nombre);
+
+                    int count = (int)comandoExisteCliente.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+
+                        verificar = true;
+
+                    }
+                    else
+                    {
+                        verificar = false;
+
+                    }
+
+
                 }
             }
             catch (Exception ex)
@@ -70,28 +100,39 @@ namespace PROYECTO.CLASES
             return verificar;
         }
 
+
         public void RegistroCliente(string rtn, string dni, string nombre, int rol, bool estado, int telefono, string correo, string direccion, DateTime fecha)
         {
+
+            Cconexion conexion = new Cconexion();
+
             try
             {
-                using (SqlConnection cn = ObtenerConexion())
+                using (SqlConnection cn = conexion.leer())
                 {
-                    using (SqlCommand comando = new SqlCommand("PA_RegistrarCliente", cn))
+                    if (cn.State == ConnectionState.Closed)
                     {
-                        comando.CommandType = CommandType.StoredProcedure;
-                        comando.Parameters.AddWithValue("@RTN", rtn);
-                        comando.Parameters.AddWithValue("@DNI", dni);
-                        comando.Parameters.AddWithValue("@nombre", nombre);
-                        comando.Parameters.AddWithValue("@rol", rol);
-                        comando.Parameters.AddWithValue("@estado", estado);
-                        comando.Parameters.AddWithValue("@telefono", telefono);
-                        comando.Parameters.AddWithValue("@correo", correo);
-                        comando.Parameters.AddWithValue("@direccion", direccion);
-                        comando.Parameters.AddWithValue("@fecha_Inscripcion", fecha);
-
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Cliente registrado correctamente");
+                        cn.Open();
                     }
+
+                    SqlCommand comandoInsertarCliente = new SqlCommand("PA_RegistrarCliente", cn);
+                    comandoInsertarCliente.CommandType = CommandType.StoredProcedure;
+                    comandoInsertarCliente.Parameters.AddWithValue("@RTN", rtn);
+                    comandoInsertarCliente.Parameters.AddWithValue("@DNI", dni);
+                    comandoInsertarCliente.Parameters.AddWithValue("@nombre", nombre);
+                    comandoInsertarCliente.Parameters.AddWithValue("@rol", rol);
+                    comandoInsertarCliente.Parameters.AddWithValue("@estado", estado);
+                    comandoInsertarCliente.Parameters.AddWithValue("@telefono", telefono);
+                    comandoInsertarCliente.Parameters.AddWithValue("@correo", correo);
+                    comandoInsertarCliente.Parameters.AddWithValue("@direccion", direccion);
+                    comandoInsertarCliente.Parameters.AddWithValue("@fecha_Inscripcion", fecha);
+
+                    comandoInsertarCliente.ExecuteNonQuery();
+
+                    MessageBox.Show("Cliente registrado correctamente");
+
+
+
                 }
             }
             catch (Exception ex)
@@ -100,4 +141,3 @@ namespace PROYECTO.CLASES
             }
         }
     }
-}

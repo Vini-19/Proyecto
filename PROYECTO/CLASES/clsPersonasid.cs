@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace PROYECTO.CLASES
 {
-    
     public class clsPersonasid
     {
         static string cod;
