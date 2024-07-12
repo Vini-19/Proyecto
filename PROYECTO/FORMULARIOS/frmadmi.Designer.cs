@@ -512,6 +512,7 @@ namespace PROYECTO
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.UseWaitCursor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // frmadmi
             // 

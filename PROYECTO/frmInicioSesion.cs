@@ -72,7 +72,7 @@ namespace PROYECTO
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -195,6 +195,11 @@ namespace PROYECTO
                     MessageBox.Show("Error de conexión.");
                 }
             }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

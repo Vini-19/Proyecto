@@ -81,6 +81,7 @@ namespace PROYECTO
             this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // pictureBox1
             // 
