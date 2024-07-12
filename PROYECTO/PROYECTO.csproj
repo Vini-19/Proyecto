@@ -70,6 +70,12 @@
   <ItemGroup>
     <Compile Include="CLASES\clsPersonasid.cs" />
     <Compile Include="CLASES\Conexion.cs" />
+    <Compile Include="FORMULARIOS\frmadmi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmadmi.Designer.cs">
+      <DependentUpon>frmadmi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\iniciosesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORMULARIOS\frmadmi.resx">
+      <DependentUpon>frmadmi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\iniciosesion.resx">
       <DependentUpon>iniciosesion.cs</DependentUpon>
     </EmbeddedResource>
