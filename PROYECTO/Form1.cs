@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace frmAdmin.FRM
+namespace PROYECTO
 {
-    public partial class reporte : Form
+    public partial class Form1 : Form
     {
-        public reporte()
+        public Form1()
         {
             InitializeComponent();
         }

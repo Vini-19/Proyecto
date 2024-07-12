@@ -1,4 +1,4 @@
-﻿namespace frmAdmin
+﻿namespace PROYECTO
 {
     partial class Form1
     {
@@ -28,32 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD:frmAdmin/frmAdmin/FRM/Form1.Designer.cs
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(135, 65);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(298, 200);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
-=======
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
->>>>>>> parent of c50a80e (subir report):frmAdmin/frmAdmin/Form1.Designer.cs
             this.Text = "Form1";
         }
 
