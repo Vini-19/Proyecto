@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PROYECTO
+namespace PROYECTO.FORMULARIOS
 {
-    public partial class Form1 : Form
+    public partial class iniciosesion : Form
     {
-        public Form1()
+        public iniciosesion()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void iniciosesion_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();
