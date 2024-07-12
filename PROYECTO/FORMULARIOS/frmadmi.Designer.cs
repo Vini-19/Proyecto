@@ -1,4 +1,7 @@
-﻿namespace Proyecto_de_desarrolo
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace PROYECTO
 {
     partial class frmadmi
     {
@@ -28,531 +31,511 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmadmi));
-            panel1 = new Panel();
-            panel4 = new Panel();
-            panel2 = new Panel();
-            lblUsuario = new Label();
-            pictureBox2 = new PictureBox();
-            label1 = new Label();
-            btnMenu = new PictureBox();
-            slidermenu = new FlowLayoutPanel();
-            btnPersonas = new Button();
-            panelPersonas = new Panel();
-            button4 = new Button();
-            button14 = new Button();
-            btnFacturacion = new Button();
-            panelFacturacion = new Panel();
-            button2 = new Button();
-            button3 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            btnProduct = new Button();
-            panelProductos = new Panel();
-            button19 = new Button();
-            button20 = new Button();
-            button6 = new Button();
-            button5 = new Button();
-            sliderTran = new System.Windows.Forms.Timer(components);
-            BtnProdu = new Button();
-            panel6 = new Panel();
-            pictureBox1 = new PictureBox();
-            contenedor = new Panel();
-            pnsubusu = new Panel();
-            pnusuario = new Panel();
-            button7 = new Button();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnMenu).BeginInit();
-            slidermenu.SuspendLayout();
-            panelPersonas.SuspendLayout();
-            panelFacturacion.SuspendLayout();
-            panelProductos.SuspendLayout();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            contenedor.SuspendLayout();
-            pnsubusu.SuspendLayout();
-            pnusuario.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.slidermenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnPersonas = new System.Windows.Forms.Button();
+            this.panelPersonas = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.btnFacturacion = new System.Windows.Forms.Button();
+            this.panelFacturacion = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.panelProductos = new System.Windows.Forms.Panel();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.sliderTran = new System.Windows.Forms.Timer(this.components);
+            this.BtnProdu = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contenedor = new System.Windows.Forms.Panel();
+            this.pnsubusu = new System.Windows.Forms.Panel();
+            this.pnusuario = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            this.slidermenu.SuspendLayout();
+            this.panelPersonas.SuspendLayout();
+            this.panelFacturacion.SuspendLayout();
+            this.panelProductos.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contenedor.SuspendLayout();
+            this.pnsubusu.SuspendLayout();
+            this.pnusuario.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Crimson;
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(btnMenu);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1152, 38);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnMenu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1152, 38);
+            this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
-            panel4.Location = new Point(952, 38);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 100);
-            panel4.TabIndex = 1;
+            this.panel4.Location = new System.Drawing.Point(952, 38);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 100);
+            this.panel4.TabIndex = 1;
             // 
             // panel2
             // 
-            panel2.Controls.Add(lblUsuario);
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(992, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(130, 38);
-            panel2.TabIndex = 4;
+            this.panel2.Controls.Add(this.lblUsuario);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(992, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(130, 38);
+            this.panel2.TabIndex = 4;
             // 
             // lblUsuario
             // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Cursor = Cursors.SizeAll;
-            lblUsuario.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsuario.ForeColor = Color.White;
-            lblUsuario.Location = new Point(62, 6);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(0, 19);
-            lblUsuario.TabIndex = 3;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(62, 6);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 19);
+            this.lblUsuario.TabIndex = 3;
             // 
             // pictureBox2
             // 
-            pictureBox2.Dock = DockStyle.Right;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1122, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 38);
-            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
-            pictureBox2.WaitOnLoad = true;
-            pictureBox2.Click += pictureBox2_Click;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1122, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.WaitOnLoad = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(48, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(238, 19);
-            label1.TabIndex = 1;
-            label1.Text = "San José Carniceros | CROAS";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(48, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "San José Carniceros | CROAS";
             // 
             // btnMenu
             // 
-            btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
-            btnMenu.Location = new Point(9, 3);
-            btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(30, 30);
-            btnMenu.SizeMode = PictureBoxSizeMode.AutoSize;
-            btnMenu.TabIndex = 1;
-            btnMenu.TabStop = false;
-            btnMenu.Click += btnMenu_Click;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(9, 3);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(30, 30);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMenu.TabIndex = 1;
+            this.btnMenu.TabStop = false;
             // 
             // slidermenu
             // 
-            slidermenu.BackColor = Color.Black;
-            slidermenu.Controls.Add(btnPersonas);
-            slidermenu.Controls.Add(panelPersonas);
-            slidermenu.Controls.Add(btnFacturacion);
-            slidermenu.Controls.Add(panelFacturacion);
-            slidermenu.Controls.Add(btnProduct);
-            slidermenu.Controls.Add(panelProductos);
-            slidermenu.Controls.Add(button6);
-            slidermenu.Controls.Add(button5);
-            slidermenu.Dock = DockStyle.Left;
-            slidermenu.FlowDirection = FlowDirection.TopDown;
-            slidermenu.Location = new Point(0, 38);
-            slidermenu.Name = "slidermenu";
-            slidermenu.Size = new Size(263, 973);
-            slidermenu.TabIndex = 1;
-            slidermenu.WrapContents = false;
-            slidermenu.Paint += slidermenu_Paint;
+            this.slidermenu.BackColor = System.Drawing.Color.Black;
+            this.slidermenu.Controls.Add(this.btnPersonas);
+            this.slidermenu.Controls.Add(this.panelPersonas);
+            this.slidermenu.Controls.Add(this.btnFacturacion);
+            this.slidermenu.Controls.Add(this.panelFacturacion);
+            this.slidermenu.Controls.Add(this.btnProduct);
+            this.slidermenu.Controls.Add(this.panelProductos);
+            this.slidermenu.Controls.Add(this.button6);
+            this.slidermenu.Controls.Add(this.button5);
+            this.slidermenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.slidermenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.slidermenu.Location = new System.Drawing.Point(0, 38);
+            this.slidermenu.Name = "slidermenu";
+            this.slidermenu.Size = new System.Drawing.Size(263, 973);
+            this.slidermenu.TabIndex = 1;
+            this.slidermenu.WrapContents = false;
             // 
             // btnPersonas
             // 
-            btnPersonas.BackColor = Color.Black;
-            btnPersonas.FlatAppearance.BorderSize = 0;
-            btnPersonas.FlatStyle = FlatStyle.Flat;
-            btnPersonas.ForeColor = Color.White;
-            btnPersonas.Image = (Image)resources.GetObject("btnPersonas.Image");
-            btnPersonas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPersonas.Location = new Point(3, 3);
-            btnPersonas.Name = "btnPersonas";
-            btnPersonas.Padding = new Padding(2, 0, 0, 0);
-            btnPersonas.Size = new Size(260, 81);
-            btnPersonas.TabIndex = 2;
-            btnPersonas.Text = "                  Personas";
-            btnPersonas.TextAlign = ContentAlignment.MiddleLeft;
-            btnPersonas.UseVisualStyleBackColor = false;
-            btnPersonas.Click += button16_Click_1;
+            this.btnPersonas.BackColor = System.Drawing.Color.Black;
+            this.btnPersonas.FlatAppearance.BorderSize = 0;
+            this.btnPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonas.ForeColor = System.Drawing.Color.White;
+            this.btnPersonas.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonas.Image")));
+            this.btnPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonas.Location = new System.Drawing.Point(3, 3);
+            this.btnPersonas.Name = "btnPersonas";
+            this.btnPersonas.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnPersonas.Size = new System.Drawing.Size(260, 81);
+            this.btnPersonas.TabIndex = 2;
+            this.btnPersonas.Text = "                  Personas";
+            this.btnPersonas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonas.UseVisualStyleBackColor = false;
             // 
             // panelPersonas
             // 
-            panelPersonas.BackColor = Color.Black;
-            panelPersonas.Controls.Add(button4);
-            panelPersonas.Controls.Add(button14);
-            panelPersonas.Location = new Point(3, 91);
-            panelPersonas.Margin = new Padding(3, 4, 3, 4);
-            panelPersonas.Name = "panelPersonas";
-            panelPersonas.Size = new Size(260, 129);
-            panelPersonas.TabIndex = 27;
-            panelPersonas.Visible = false;
-            panelPersonas.Paint += panelPersonas_Paint;
+            this.panelPersonas.BackColor = System.Drawing.Color.Black;
+            this.panelPersonas.Controls.Add(this.button4);
+            this.panelPersonas.Controls.Add(this.button14);
+            this.panelPersonas.Location = new System.Drawing.Point(3, 91);
+            this.panelPersonas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelPersonas.Name = "panelPersonas";
+            this.panelPersonas.Size = new System.Drawing.Size(260, 129);
+            this.panelPersonas.TabIndex = 27;
+            this.panelPersonas.Visible = false;
             // 
             // button4
             // 
-            button4.BackColor = Color.Gray;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 61);
-            button4.Name = "button4";
-            button4.Padding = new Padding(40, 0, 0, 0);
-            button4.Size = new Size(243, 55);
-            button4.TabIndex = 19;
-            button4.Text = "Proveedores";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            this.button4.BackColor = System.Drawing.Color.Gray;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(0, 61);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(243, 55);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "Proveedores";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button14
             // 
-            button14.BackColor = Color.Gray;
-            button14.FlatAppearance.BorderSize = 0;
-            button14.FlatStyle = FlatStyle.Flat;
-            button14.ForeColor = Color.White;
-            button14.Location = new Point(0, 0);
-            button14.Name = "button14";
-            button14.Padding = new Padding(40, 0, 0, 0);
-            button14.Size = new Size(243, 55);
-            button14.TabIndex = 17;
-            button14.Text = "Clientes";
-            button14.TextAlign = ContentAlignment.MiddleLeft;
-            button14.UseVisualStyleBackColor = false;
-            button14.Click += button14_Click;
+            this.button14.BackColor = System.Drawing.Color.Gray;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(0, 0);
+            this.button14.Name = "button14";
+            this.button14.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button14.Size = new System.Drawing.Size(243, 55);
+            this.button14.TabIndex = 17;
+            this.button14.Text = "Clientes";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.UseVisualStyleBackColor = false;
             // 
             // btnFacturacion
             // 
-            btnFacturacion.BackColor = Color.Black;
-            btnFacturacion.FlatAppearance.BorderSize = 0;
-            btnFacturacion.FlatStyle = FlatStyle.Flat;
-            btnFacturacion.ForeColor = Color.White;
-            btnFacturacion.Image = (Image)resources.GetObject("btnFacturacion.Image");
-            btnFacturacion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFacturacion.Location = new Point(3, 227);
-            btnFacturacion.Name = "btnFacturacion";
-            btnFacturacion.Padding = new Padding(3, 0, 0, 0);
-            btnFacturacion.Size = new Size(260, 81);
-            btnFacturacion.TabIndex = 2;
-            btnFacturacion.Text = "                  Facturación";
-            btnFacturacion.TextAlign = ContentAlignment.MiddleLeft;
-            btnFacturacion.UseVisualStyleBackColor = false;
-            btnFacturacion.Click += btnFacturacion_Click;
+            this.btnFacturacion.BackColor = System.Drawing.Color.Black;
+            this.btnFacturacion.FlatAppearance.BorderSize = 0;
+            this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturacion.ForeColor = System.Drawing.Color.White;
+            this.btnFacturacion.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturacion.Image")));
+            this.btnFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturacion.Location = new System.Drawing.Point(3, 227);
+            this.btnFacturacion.Name = "btnFacturacion";
+            this.btnFacturacion.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnFacturacion.Size = new System.Drawing.Size(260, 81);
+            this.btnFacturacion.TabIndex = 2;
+            this.btnFacturacion.Text = "                  Facturación";
+            this.btnFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturacion.UseVisualStyleBackColor = false;
             // 
             // panelFacturacion
             // 
-            panelFacturacion.BackColor = Color.Black;
-            panelFacturacion.Controls.Add(button2);
-            panelFacturacion.Controls.Add(button3);
-            panelFacturacion.Controls.Add(button8);
-            panelFacturacion.Controls.Add(button9);
-            panelFacturacion.Location = new Point(3, 315);
-            panelFacturacion.Margin = new Padding(3, 4, 3, 4);
-            panelFacturacion.Name = "panelFacturacion";
-            panelFacturacion.Size = new Size(260, 255);
-            panelFacturacion.TabIndex = 29;
-            panelFacturacion.Visible = false;
-            panelFacturacion.Paint += panel2_Paint;
+            this.panelFacturacion.BackColor = System.Drawing.Color.Black;
+            this.panelFacturacion.Controls.Add(this.button2);
+            this.panelFacturacion.Controls.Add(this.button3);
+            this.panelFacturacion.Controls.Add(this.button8);
+            this.panelFacturacion.Controls.Add(this.button9);
+            this.panelFacturacion.Location = new System.Drawing.Point(3, 315);
+            this.panelFacturacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelFacturacion.Name = "panelFacturacion";
+            this.panelFacturacion.Size = new System.Drawing.Size(260, 255);
+            this.panelFacturacion.TabIndex = 29;
+            this.panelFacturacion.Visible = false;
             // 
             // button2
             // 
-            button2.BackColor = Color.Gray;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 191);
-            button2.Name = "button2";
-            button2.Padding = new Padding(40, 0, 0, 0);
-            button2.Size = new Size(243, 55);
-            button2.TabIndex = 19;
-            button2.Text = "Reportes";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 191);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(243, 55);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Reportes";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            button3.BackColor = Color.Gray;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 130);
-            button3.Name = "button3";
-            button3.Padding = new Padding(40, 0, 0, 0);
-            button3.Size = new Size(243, 55);
-            button3.TabIndex = 18;
-            button3.Text = "Envíos";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 130);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(243, 55);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Envíos";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
-            button8.BackColor = Color.Gray;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.ForeColor = Color.White;
-            button8.Location = new Point(0, 69);
-            button8.Name = "button8";
-            button8.Padding = new Padding(40, 0, 0, 0);
-            button8.Size = new Size(243, 55);
-            button8.TabIndex = 17;
-            button8.Text = "comprar";
-            button8.TextAlign = ContentAlignment.MiddleLeft;
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click_1;
+            this.button8.BackColor = System.Drawing.Color.Gray;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(0, 69);
+            this.button8.Name = "button8";
+            this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(243, 55);
+            this.button8.TabIndex = 17;
+            this.button8.Text = "comprar";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
-            button9.BackColor = Color.Gray;
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(0, 5);
-            button9.Name = "button9";
-            button9.Padding = new Padding(40, 0, 0, 0);
-            button9.Size = new Size(243, 57);
-            button9.TabIndex = 1;
-            button9.Text = "Ventas";
-            button9.TextAlign = ContentAlignment.MiddleLeft;
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            this.button9.BackColor = System.Drawing.Color.Gray;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(0, 5);
+            this.button9.Name = "button9";
+            this.button9.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button9.Size = new System.Drawing.Size(243, 57);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "Ventas";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // btnProduct
             // 
-            btnProduct.BackColor = Color.Black;
-            btnProduct.FlatAppearance.BorderSize = 0;
-            btnProduct.FlatStyle = FlatStyle.Flat;
-            btnProduct.ForeColor = Color.White;
-            btnProduct.Image = (Image)resources.GetObject("btnProduct.Image");
-            btnProduct.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProduct.Location = new Point(3, 577);
-            btnProduct.Name = "btnProduct";
-            btnProduct.Size = new Size(260, 81);
-            btnProduct.TabIndex = 2;
-            btnProduct.Text = "                  Productos";
-            btnProduct.TextAlign = ContentAlignment.MiddleLeft;
-            btnProduct.UseVisualStyleBackColor = false;
-            btnProduct.Click += btnProduct_Click;
+            this.btnProduct.BackColor = System.Drawing.Color.Black;
+            this.btnProduct.FlatAppearance.BorderSize = 0;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.ForeColor = System.Drawing.Color.White;
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.Location = new System.Drawing.Point(3, 577);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(260, 81);
+            this.btnProduct.TabIndex = 2;
+            this.btnProduct.Text = "                  Productos";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.UseVisualStyleBackColor = false;
             // 
             // panelProductos
             // 
-            panelProductos.BackColor = Color.Black;
-            panelProductos.Controls.Add(button19);
-            panelProductos.Controls.Add(button20);
-            panelProductos.Location = new Point(3, 665);
-            panelProductos.Margin = new Padding(3, 4, 3, 4);
-            panelProductos.Name = "panelProductos";
-            panelProductos.Size = new Size(260, 132);
-            panelProductos.TabIndex = 31;
-            panelProductos.Visible = false;
+            this.panelProductos.BackColor = System.Drawing.Color.Black;
+            this.panelProductos.Controls.Add(this.button19);
+            this.panelProductos.Controls.Add(this.button20);
+            this.panelProductos.Location = new System.Drawing.Point(3, 665);
+            this.panelProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelProductos.Name = "panelProductos";
+            this.panelProductos.Size = new System.Drawing.Size(260, 132);
+            this.panelProductos.TabIndex = 31;
+            this.panelProductos.Visible = false;
             // 
             // button19
             // 
-            button19.BackColor = Color.Gray;
-            button19.FlatAppearance.BorderSize = 0;
-            button19.FlatStyle = FlatStyle.Flat;
-            button19.ForeColor = Color.White;
-            button19.Location = new Point(0, 69);
-            button19.Name = "button19";
-            button19.Padding = new Padding(40, 0, 0, 0);
-            button19.Size = new Size(243, 55);
-            button19.TabIndex = 17;
-            button19.Text = "Pedidos";
-            button19.TextAlign = ContentAlignment.MiddleLeft;
-            button19.UseVisualStyleBackColor = false;
-            button19.Click += button19_Click;
+            this.button19.BackColor = System.Drawing.Color.Gray;
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(0, 69);
+            this.button19.Name = "button19";
+            this.button19.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button19.Size = new System.Drawing.Size(243, 55);
+            this.button19.TabIndex = 17;
+            this.button19.Text = "Pedidos";
+            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button19.UseVisualStyleBackColor = false;
             // 
             // button20
             // 
-            button20.BackColor = Color.Gray;
-            button20.FlatAppearance.BorderSize = 0;
-            button20.FlatStyle = FlatStyle.Flat;
-            button20.ForeColor = Color.White;
-            button20.Location = new Point(0, 5);
-            button20.Name = "button20";
-            button20.Padding = new Padding(40, 0, 0, 0);
-            button20.Size = new Size(243, 57);
-            button20.TabIndex = 1;
-            button20.Text = "Inventario";
-            button20.TextAlign = ContentAlignment.MiddleLeft;
-            button20.UseVisualStyleBackColor = false;
-            button20.Click += button20_Click;
+            this.button20.BackColor = System.Drawing.Color.Gray;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(0, 5);
+            this.button20.Name = "button20";
+            this.button20.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button20.Size = new System.Drawing.Size(243, 57);
+            this.button20.TabIndex = 1;
+            this.button20.Text = "Inventario";
+            this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button20.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
-            button6.BackColor = Color.Black;
-            button6.Dock = DockStyle.Top;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.White;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(3, 804);
-            button6.Name = "button6";
-            button6.Size = new Size(260, 81);
-            button6.TabIndex = 27;
-            button6.Text = "                  Pedidos";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = false;
+            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(3, 804);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(260, 81);
+            this.button6.TabIndex = 27;
+            this.button6.Text = "                  Pedidos";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
-            button5.BackColor = Color.IndianRed;
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(3, 891);
-            button5.Name = "button5";
-            button5.Size = new Size(260, 81);
-            button5.TabIndex = 26;
-            button5.Text = "                  &Salir";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(3, 891);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(260, 81);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "                  &Salir";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // sliderTran
             // 
-            sliderTran.Interval = 10;
-            sliderTran.Tick += timer1_Tick;
+            this.sliderTran.Interval = 10;
             // 
             // BtnProdu
             // 
-            BtnProdu.BackColor = Color.White;
-            BtnProdu.FlatAppearance.BorderSize = 0;
-            BtnProdu.FlatStyle = FlatStyle.Flat;
-            BtnProdu.ForeColor = Color.Black;
-            BtnProdu.Location = new Point(0, -71);
-            BtnProdu.Name = "BtnProdu";
-            BtnProdu.Padding = new Padding(11, 0, 0, 0);
-            BtnProdu.Size = new Size(301, 64);
-            BtnProdu.TabIndex = 24;
-            BtnProdu.Text = "Productos";
-            BtnProdu.TextAlign = ContentAlignment.MiddleLeft;
-            BtnProdu.UseVisualStyleBackColor = false;
+            this.BtnProdu.BackColor = System.Drawing.Color.White;
+            this.BtnProdu.FlatAppearance.BorderSize = 0;
+            this.BtnProdu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProdu.ForeColor = System.Drawing.Color.Black;
+            this.BtnProdu.Location = new System.Drawing.Point(0, -71);
+            this.BtnProdu.Name = "BtnProdu";
+            this.BtnProdu.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.BtnProdu.Size = new System.Drawing.Size(301, 64);
+            this.BtnProdu.TabIndex = 24;
+            this.BtnProdu.Text = "Productos";
+            this.BtnProdu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProdu.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
-            panel6.Controls.Add(pictureBox1);
-            panel6.Location = new Point(0, -213);
-            panel6.Margin = new Padding(3, 4, 3, 4);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(301, 142);
-            panel6.TabIndex = 23;
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Location = new System.Drawing.Point(0, -213);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(301, 142);
+            this.panel6.TabIndex = 23;
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Top;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(301, 124);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(301, 124);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // contenedor
             // 
-            contenedor.Controls.Add(pnsubusu);
-            contenedor.Dock = DockStyle.Fill;
-            contenedor.Location = new Point(263, 38);
-            contenedor.Margin = new Padding(3, 2, 3, 2);
-            contenedor.Name = "contenedor";
-            contenedor.Size = new Size(889, 973);
-            contenedor.TabIndex = 25;
-            contenedor.UseWaitCursor = true;
-            contenedor.Paint += contenedor_Paint;
+            this.contenedor.Controls.Add(this.pnsubusu);
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(263, 38);
+            this.contenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(889, 973);
+            this.contenedor.TabIndex = 25;
+            this.contenedor.UseWaitCursor = true;
             // 
             // pnsubusu
             // 
-            pnsubusu.BackColor = Color.Transparent;
-            pnsubusu.Controls.Add(pnusuario);
-            pnsubusu.Dock = DockStyle.Right;
-            pnsubusu.Location = new Point(732, 0);
-            pnsubusu.Name = "pnsubusu";
-            pnsubusu.Size = new Size(157, 973);
-            pnsubusu.TabIndex = 0;
-            pnsubusu.UseWaitCursor = true;
-            pnsubusu.Visible = false;
+            this.pnsubusu.BackColor = System.Drawing.Color.Transparent;
+            this.pnsubusu.Controls.Add(this.pnusuario);
+            this.pnsubusu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnsubusu.Location = new System.Drawing.Point(732, 0);
+            this.pnsubusu.Name = "pnsubusu";
+            this.pnsubusu.Size = new System.Drawing.Size(157, 973);
+            this.pnsubusu.TabIndex = 0;
+            this.pnsubusu.UseWaitCursor = true;
+            this.pnsubusu.Visible = false;
+            this.pnsubusu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnsubusu_Paint);
             // 
             // pnusuario
             // 
-            pnusuario.Controls.Add(button7);
-            pnusuario.Dock = DockStyle.Top;
-            pnusuario.Location = new Point(0, 0);
-            pnusuario.Name = "pnusuario";
-            pnusuario.Size = new Size(157, 65);
-            pnusuario.TabIndex = 0;
-            pnusuario.UseWaitCursor = true;
+            this.pnusuario.Controls.Add(this.button7);
+            this.pnusuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnusuario.Location = new System.Drawing.Point(0, 0);
+            this.pnusuario.Name = "pnusuario";
+            this.pnusuario.Size = new System.Drawing.Size(157, 65);
+            this.pnusuario.TabIndex = 0;
+            this.pnusuario.UseWaitCursor = true;
             // 
             // button7
             // 
-            button7.BackColor = Color.IndianRed;
-            button7.Dock = DockStyle.Top;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.White;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(0, 0);
-            button7.Name = "button7";
-            button7.Size = new Size(157, 53);
-            button7.TabIndex = 27;
-            button7.Text = "                  &Cerrar Sesion";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = false;
-            button7.UseWaitCursor = true;
-            button7.Click += button7_Click;
+            this.button7.BackColor = System.Drawing.Color.IndianRed;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(157, 53);
+            this.button7.TabIndex = 27;
+            this.button7.Text = "                  &Cerrar Sesion";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.UseWaitCursor = true;
             // 
             // frmadmi
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1152, 1011);
-            Controls.Add(contenedor);
-            Controls.Add(BtnProdu);
-            Controls.Add(panel6);
-            Controls.Add(slidermenu);
-            Controls.Add(panel1);
-            Font = new Font("Segoe UI", 9F);
-            Name = "frmadmi";
-            Text = "frmadmi";
-            Load += frmadmi_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnMenu).EndInit();
-            slidermenu.ResumeLayout(false);
-            panelPersonas.ResumeLayout(false);
-            panelFacturacion.ResumeLayout(false);
-            panelProductos.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            contenedor.ResumeLayout(false);
-            pnsubusu.ResumeLayout(false);
-            pnusuario.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1152, 1011);
+            this.Controls.Add(this.contenedor);
+            this.Controls.Add(this.BtnProdu);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.slidermenu);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Name = "frmadmi";
+            this.Text = "frmadmi";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
+            this.slidermenu.ResumeLayout(false);
+            this.panelPersonas.ResumeLayout(false);
+            this.panelFacturacion.ResumeLayout(false);
+            this.panelProductos.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contenedor.ResumeLayout(false);
+            this.pnsubusu.ResumeLayout(false);
+            this.pnusuario.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

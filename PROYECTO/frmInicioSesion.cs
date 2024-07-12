@@ -36,7 +36,56 @@ namespace PROYECTO
 
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        
+
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           /* frmRegistro Reg = new frmRegistro();
+            Reg.Show();
+            this.Hide();*/
+        }
+
+
+        private void linkLRecuperacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //frmRecuperacion Rec = new frmRecuperacion();
+            //Rec.Show();
+            /* frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
+             Esp.Show();*/
+        }
+
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
             string cod;
             clsPersonasid per = new clsPersonasid();
@@ -146,53 +195,6 @@ namespace PROYECTO
                     MessageBox.Show("Error de conexión.");
                 }
             }
-        }
-
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           /* frmRegistro Reg = new frmRegistro();
-            Reg.Show();
-            this.Hide();*/
-        }
-
-
-        private void linkLRecuperacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //frmRecuperacion Rec = new frmRecuperacion();
-            //Rec.Show();
-            /* frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
-             Esp.Show();*/
-        }
-
-        private void frmInicioSesion_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

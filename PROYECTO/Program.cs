@@ -17,7 +17,7 @@ namespace PROYECTO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new reporte());
+            Application.Run(new frmInicioSesion());
         }
     }
 }

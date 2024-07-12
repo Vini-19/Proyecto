@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Formularios;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -169,22 +169,22 @@ namespace PROYECTO
 
         private void button20_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmInventario());
+            
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmPedido());
+           
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmProveedores());
+            
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmClientes());
+            
         }
 
         private void contenedor_Paint(object sender, PaintEventArgs e)
@@ -199,17 +199,17 @@ namespace PROYECTO
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmProveedores());
+           
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmVentas());
+           
         }
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            AbriForm(new frmAgregarCompra());
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -219,17 +219,17 @@ namespace PROYECTO
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            AbriForm(new frmReportes());
+           
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmProductos());
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbriForm(new agregarTrabajador());
+           
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -262,6 +262,11 @@ namespace PROYECTO
             frmInicioSesion sesio = new frmInicioSesion();
             sesio.Show();
            
+        }
+
+        private void pnsubusu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
