@@ -1,6 +1,6 @@
 ﻿namespace PROYECTO.FORMULARIOS
 {
-    partial class iniciosesion
+    partial class reporte
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // iniciosesion
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(129, 81);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "iniciosesion";
-            this.Text = "iniciosesion";
-            this.Load += new System.EventHandler(this.iniciosesion_Load);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "reporte";
+            this.Text = "reporte";
+            this.Load += new System.EventHandler(this.reporte_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
