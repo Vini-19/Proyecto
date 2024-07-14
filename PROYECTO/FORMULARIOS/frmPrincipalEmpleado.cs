@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROYECTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -153,7 +154,7 @@ namespace Proyecto_de_desarrolo
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmInicioSesion sesio = new frmInicioSesion();
+            frmInicioSesion sesio = new frmInicioSesion();  
             sesio.Show();
         }
     }

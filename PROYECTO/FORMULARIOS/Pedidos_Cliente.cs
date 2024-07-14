@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
-using Proyecto_de_desarrolo.Clases;
+using PROYECTO.CLASES;
 
 namespace Proyecto_de_desarrolo.Formularios
 {

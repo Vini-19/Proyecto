@@ -8,7 +8,7 @@ namespace PROYECTO.CLASES
 {
     public class clsValidaciones
     {
-        public string doble_espacio(string texto)
+        /*public string doble_espacio(string texto)
         {
             int x = 0;
 
@@ -103,7 +103,7 @@ namespace PROYECTO.CLASES
             
         }*/
 
-        public string rango_12(string texto)
+        /*public string rango_12(string texto)
         {
             if(texto.Length ==12)
             {
@@ -528,6 +528,6 @@ namespace PROYECTO.CLASES
             }
 
             return mensage;
-        }
+        }*/
     }
 }

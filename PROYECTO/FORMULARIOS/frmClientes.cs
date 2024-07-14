@@ -1,5 +1,5 @@
 ﻿using Microsoft.Win32;
-using Proyecto_de_desarrolo.Clases;
+using PROYECTO.CLASES;
 using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;
@@ -326,28 +326,27 @@ namespace Proyecto_de_desarrolo
 
         private void txtRTN_Cliente_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtRTN_Cliente, val.txt_vacio(txtRTN_Cliente.Text) + val.espacio_inicio_final(txtRTN_Cliente.Text) + val.rango_14(txtRTN_Cliente.Text) + val.espacio(txtRTN_Cliente.Text));
-
+            
         }
 
         private void txtRTN_Cliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.validarnum(e);
+            
         }
 
         private void txtDNI_Cliente_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtDNI_Cliente, val.txt_vacio(txtDNI_Cliente.Text) + val.espacio_inicio_final(txtDNI_Cliente.Text) + val.rango_13(txtDNI_Cliente.Text) + val.espacio(txtDNI_Cliente.Text)+val.validar_dni(txtDNI_Cliente.Text));
+            
         }
 
         private void txtDNI_Cliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.validarnum(e);
+            
         }
 
         private void txtNombre_Cliente_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtNombre_Cliente, val.txt_vacio(txtNombre_Cliente.Text) + val.rango_nombre(txtNombre_Cliente.Text)+val.validarletra_espacio(txtNombre_Cliente.Text));
+           
 
         }
 
@@ -358,18 +357,18 @@ namespace Proyecto_de_desarrolo
 
         private void txtTelefono_Cliente_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtTelefono_Cliente, val.txt_vacio(txtTelefono_Cliente.Text) + val.espacio_inicio_final(txtTelefono_Cliente.Text) + val.validarnumerotell(txtTelefono_Cliente.Text) + val.rango_8(txtTelefono_Cliente.Text));
+            
 
         }
 
         private void txtTelefono_Cliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.validarnum(e);
+            
         }
 
         private void txtCorreo_Cliente_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtCorreo_Cliente, val.txt_vacio(txtCorreo_Cliente.Text) + val.espacio_inicio_final(txtCorreo_Cliente.Text) + val.validar_correo(txtCorreo_Cliente.Text));
+            
 
         }
 

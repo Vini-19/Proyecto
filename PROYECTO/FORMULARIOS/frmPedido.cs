@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -247,7 +247,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            val.validarcm(cmbCategoria.Text);
+            
 
             if (errorProvider1.GetError(txtCodigo) == "" && errorProvider1.GetError(txtNombre) == "" && errorProvider1.GetError(txtNombre_Imagen) == "")
             {
@@ -389,13 +389,13 @@ namespace Proyecto_de_desarrolo
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtCodigo, val.txt_vacio(txtCodigo.Text) + val.espacio_inicio_final(txtCodigo.Text) + val.rango_12(txtCodigo.Text) + val.espacio(txtCodigo.Text));
+            
         }
 
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtNombre, val.txt_vacio(txtNombre.Text) + val.espacio_inicio_final(txtNombre.Text) + val.rango_nombre(txtNombre.Text)+val.validarletra_espacio(txtNombre.Text));
+            
         }
 
         private void txtNombre_Leave(object sender, EventArgs e)
@@ -405,19 +405,19 @@ namespace Proyecto_de_desarrolo
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.validarnum(e);
+           
         }
 
         private void txtNombre_Imagen_TextChanged(object sender, EventArgs e)
         {
 
-            errorProvider1.SetError(txtNombre_Imagen, val.txt_vacio(txtNombre_Imagen.Text) + val.espacio_inicio_final(txtNombre_Imagen.Text) + val.rango_nombre(txtNombre_Imagen.Text));
+            
 
         }
 
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtPrecio, val.txt_vacio(txtPrecio.Text) + val.espacio_inicio_final(txtPrecio.Text) + val.validar_precio(txtPrecio.Text));
+            
 
         }
 

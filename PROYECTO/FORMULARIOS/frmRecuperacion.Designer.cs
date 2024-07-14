@@ -1,4 +1,7 @@
-﻿namespace Proyecto_de_desarrolo.Formularios
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Proyecto_de_desarrolo.Formularios
 {
     partial class frmRecuperacion
     {
@@ -28,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             panel1 = new Panel();
             txtNueva_Contraseña2 = new TextBox();
@@ -36,7 +40,9 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            errorProvider1 = new ErrorProvider(components);
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -70,6 +76,7 @@
             txtNueva_Contraseña2.Name = "txtNueva_Contraseña2";
             txtNueva_Contraseña2.Size = new Size(242, 27);
             txtNueva_Contraseña2.TabIndex = 5;
+            
             // 
             // btnConfirmar
             // 
@@ -87,6 +94,7 @@
             txtNueva_Contraseña1.Name = "txtNueva_Contraseña1";
             txtNueva_Contraseña1.Size = new Size(242, 27);
             txtNueva_Contraseña1.TabIndex = 2;
+            
             // 
             // label4
             // 
@@ -121,6 +129,10 @@
             label2.Text = "Por favor, ingrese la nueva contraseña";
             label2.Click += label2_Click_1;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // frmRecuperacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -133,6 +145,7 @@
             Text = "frmRecuperacion";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
@@ -146,5 +159,6 @@
         private TextBox txtNueva_Contraseña2;
         private Label label4;
         private Label label3;
+        private ErrorProvider errorProvider1;
     }
 }

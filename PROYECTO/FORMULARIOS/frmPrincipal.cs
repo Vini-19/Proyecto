@@ -1,4 +1,5 @@
-﻿using Proyecto_de_desarrolo.Formularios;
+﻿using PROYECTO.FORMULARIOS;
+using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -134,7 +135,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmReportes());
+            AbriForm(new reporte());
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -224,7 +225,7 @@ namespace Proyecto_de_desarrolo
 
         private void button8_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmReportes());
+            AbriForm(new reporte());
         }
 
         private void button5_Click_2(object sender, EventArgs e)

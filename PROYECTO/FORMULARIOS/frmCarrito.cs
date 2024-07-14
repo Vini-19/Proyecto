@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -128,9 +128,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad1.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                MemoryStream stm = new MemoryStream(bytedata);
+                
 
-                pictureBox1.Image = Image.FromStream(stm);
+                
             }
             else
             {
@@ -180,9 +180,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad2.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                MemoryStream stm = new MemoryStream(bytedata);
+                
 
-                pictureBox2.Image = Image.FromStream(stm);
+                
             }
             else
             {
@@ -231,9 +231,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad3.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                MemoryStream stm = new MemoryStream(bytedata);
+                
 
-                pictureBox3.Image = Image.FromStream(stm);
+                
             }
             else
             {
@@ -283,9 +283,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad4.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                MemoryStream stm = new MemoryStream(bytedata);
+                
 
-                pictureBox4.Image = Image.FromStream(stm);
+                
             }
             else
             {

@@ -1,4 +1,7 @@
 ﻿
+using PROYECTO.FORMULARIOS;
+using Proyecto_de_desarrolo;
+using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -261,7 +264,7 @@ namespace PROYECTO
 
         private void btnProduct_Click_1(object sender, EventArgs e)
         {
-
+            ShowMenu(panelProductos);
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -307,6 +310,46 @@ namespace PROYECTO
            frmInicioSesion ini = new frmInicioSesion();
             this.Hide();
             ini.Show();
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new frmClientes());
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new frmProveedores());
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new frmVentas());
+        }
+
+        private void button8_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new frmAgregarCompra());
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new frmEnvios());
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new reporte());
+        }
+
+        private void button20_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new frmInventario());
+        }
+
+        private void button19_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new frmPedido());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,8 +91,7 @@ namespace Proyecto_de_desarrolo.Formularios
             ListaCompras.Items.Add(txtCantidad.Text);
             ListaCompras.Items.Add(txtPrecio.Text);
 
-            val.validarcm(cmbProveedor.Text);
-            val.validarcm(cmbCategoria.Text);
+            
 
             cant = int.Parse(txtCantidad.Text);
             precio = float.Parse(txtPrecio.Text);
@@ -248,13 +247,13 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtCantidad, val.txt_vacio(txtCantidad.Text) + val.espacio_inicio_final(txtCantidad.Text));
+            
         }
 
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
 
-            errorProvider1.SetError(txtPrecio, val.txt_vacio(txtPrecio.Text) + val.espacio_inicio_final(txtPrecio.Text)+val.validar_precio(txtPrecio.Text));
+            
 
         }
 

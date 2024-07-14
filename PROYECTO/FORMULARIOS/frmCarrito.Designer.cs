@@ -1,4 +1,7 @@
-﻿namespace Proyecto_de_desarrolo.Formularios
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Proyecto_de_desarrolo.Formularios
 {
     partial class frmCarrito
     {

@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -173,7 +173,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            val.validarcm(cmbCategoria.Text);
+            
 
             if (txtRTN_Prov.Text == "" || txtDNI_Prov.Text == "" || txtNombre_Prov.Text == "" || txtTelefono_Prov.Text == "" || txtCorreo_Prov.Text == "" || txtDireccion_Prov.Text == "")
             {
@@ -478,43 +478,43 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtRTN_Prov_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtRTN_Prov, val.txt_vacio(txtRTN_Prov.Text) + val.espacio_inicio_final(txtRTN_Prov.Text) + val.rango_14(txtRTN_Prov.Text) + val.espacio(txtRTN_Prov.Text));
+            
         }
 
         private void txtRTN_Prov_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.validarnum(e);
+            
         }
 
         private void txtDNI_Prov_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtDNI_Prov, val.txt_vacio(txtDNI_Prov.Text) + val.espacio_inicio_final(txtDNI_Prov.Text) + val.rango_13(txtDNI_Prov.Text) + val.espacio(txtDNI_Prov.Text)+val.validar_dni(txtDNI_Prov.Text));
+        
         }
 
         private void txtNombre_Prov_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtNombre_Prov, val.txt_vacio(txtDNI_Prov.Text) + val.espacio_inicio_final(txtDNI_Prov.Text)+val.validarletra_espacio(txtNombre_Prov.Text));
+           
         }
 
         private void txtTelefono_Prov_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtTelefono_Prov, val.txt_vacio(txtTelefono_Prov.Text) + val.espacio_inicio_final(txtTelefono_Prov.Text) + val.validarnumerotell(txtTelefono_Prov.Text) + val.rango_8(txtTelefono_Prov.Text));
+            
         }
 
         private void txtTelefono_Prov_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.validarnum(e);
+            
         }
 
         private void txtCorreo_Prov_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtCorreo_Prov, val.txt_vacio(txtCorreo_Prov.Text) + val.espacio_inicio_final(txtCorreo_Prov.Text) + val.validar_correo(txtCorreo_Prov.Text));
+            
 
         }
 
         private void txtDNI_Prov_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.validarnum(e);
+            
         }
     }
 }

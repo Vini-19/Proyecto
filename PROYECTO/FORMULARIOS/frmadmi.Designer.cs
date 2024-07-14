@@ -219,6 +219,7 @@ namespace PROYECTO
             this.button4.Text = "Proveedores";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button14
             // 
@@ -234,6 +235,7 @@ namespace PROYECTO
             this.button14.Text = "Clientes";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
             // btnFacturacion
             // 
@@ -281,6 +283,7 @@ namespace PROYECTO
             this.button2.Text = "Reportes";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // button3
             // 
@@ -296,6 +299,7 @@ namespace PROYECTO
             this.button3.Text = "Envíos";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button8
             // 
@@ -311,6 +315,7 @@ namespace PROYECTO
             this.button8.Text = "comprar";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_2);
             // 
             // button9
             // 
@@ -326,6 +331,7 @@ namespace PROYECTO
             this.button9.Text = "Ventas";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // btnProduct
             // 
@@ -370,6 +376,7 @@ namespace PROYECTO
             this.button19.Text = "Pedidos";
             this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click_1);
             // 
             // button20
             // 
@@ -385,6 +392,7 @@ namespace PROYECTO
             this.button20.Text = "Inventario";
             this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click_1);
             // 
             // button6
             // 

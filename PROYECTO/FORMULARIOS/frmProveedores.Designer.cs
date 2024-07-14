@@ -1,4 +1,7 @@
-﻿namespace Proyecto_de_desarrolo.Formularios
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Proyecto_de_desarrolo.Formularios
 {
     partial class frmProveedores
     {
@@ -114,6 +117,7 @@
             txtDireccion_Prov.Name = "txtDireccion_Prov";
             txtDireccion_Prov.Size = new Size(171, 76);
             txtDireccion_Prov.TabIndex = 19;
+            
             // 
             // label6
             // 

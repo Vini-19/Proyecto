@@ -1,4 +1,7 @@
-﻿namespace Proyecto_de_desarrolo.Formularios
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Proyecto_de_desarrolo.Formularios
 {
     partial class frmRegistro
     {
@@ -28,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             panel1 = new Panel();
@@ -41,7 +45,9 @@
             txtContra = new TextBox();
             txtUsuario = new TextBox();
             label3 = new Label();
+            errorProvider1 = new ErrorProvider(components);
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -87,12 +93,14 @@
             // 
             // cmbPregunta
             // 
+            cmbPregunta.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPregunta.FormattingEnabled = true;
-            cmbPregunta.Items.AddRange(new object[] { "¿Cual es el nombre de tu perro?" });
+            cmbPregunta.Items.AddRange(new object[] { "¿Cuál es el nombre de tu perro?", "¿En que ciudad naciste?", "¿Cuál es tu comida favorita?", "¿Cuál es tu libro favorito?", "¿Cuál es tu pelicula favorita?", "" });
             cmbPregunta.Location = new Point(45, 357);
             cmbPregunta.Name = "cmbPregunta";
             cmbPregunta.Size = new Size(196, 28);
             cmbPregunta.TabIndex = 10;
+            
             // 
             // txtRespuesta
             // 
@@ -100,6 +108,7 @@
             txtRespuesta.Name = "txtRespuesta";
             txtRespuesta.Size = new Size(196, 27);
             txtRespuesta.TabIndex = 9;
+            
             // 
             // label5
             // 
@@ -162,6 +171,7 @@
             txtContra.Name = "txtContra";
             txtContra.Size = new Size(196, 27);
             txtContra.TabIndex = 4;
+            
             // 
             // txtUsuario
             // 
@@ -181,6 +191,10 @@
             label3.TabIndex = 2;
             label3.Text = "Contraseña";
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // frmRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -193,6 +207,7 @@
             Text = "frmRegistro";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
@@ -211,5 +226,6 @@
         private ComboBox cmbPregunta;
         private TextBox txtRespuesta;
         private Label label5;
+        private ErrorProvider errorProvider1;
     }
 }

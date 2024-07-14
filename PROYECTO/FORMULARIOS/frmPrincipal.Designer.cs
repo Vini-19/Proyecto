@@ -1,4 +1,7 @@
-﻿namespace Proyecto_de_desarrolo
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Proyecto_de_desarrolo
 {
     partial class frmPrincipal
     {

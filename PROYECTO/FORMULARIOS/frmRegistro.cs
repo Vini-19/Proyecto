@@ -10,6 +10,8 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO;
+using PROYECTO.CLASES;
 
 namespace Proyecto_de_desarrolo.Formularios
 {

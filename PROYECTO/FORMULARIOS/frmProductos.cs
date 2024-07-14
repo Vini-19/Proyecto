@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

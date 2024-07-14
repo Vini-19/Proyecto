@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -326,7 +326,7 @@ namespace Proyecto_de_desarrolo
 
         private void txtCodigo_Barra_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtCodigo_Barra, val.txt_vacio(txtCodigo_Barra.Text) + val.espacio_inicio_final(txtCodigo_Barra.Text) + val.rango_12(txtCodigo_Barra.Text));
+            
 
         }
 

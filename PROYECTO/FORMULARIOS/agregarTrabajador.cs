@@ -1,4 +1,4 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -279,6 +279,11 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 MessageBox.Show("Por favor, seleccione un cliente para marcar como inactivo.");
             }
+        }
+
+        private void agregarTrabajador_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

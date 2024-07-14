@@ -1,4 +1,5 @@
-﻿using Proyecto_de_desarrolo.Formularios;
+﻿using PROYECTO;
+using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -147,7 +148,7 @@ namespace Proyecto_de_desarrolo
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmInicioSesion sesio = new frmInicioSesion();
+            frmInicioSesion sesio = new frmInicioSesion();  
             sesio.Show();
         }
 
