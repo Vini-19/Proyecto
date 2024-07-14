@@ -19,8 +19,22 @@ namespace PROYECTO.FORMULARIOS
 
         private void reporte_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'productos.Inventario' Puede moverla o quitarla según sea necesario.
+
+            // TODO: esta línea de código carga datos en la tabla 'productos.Inventario' Puede moverla o quitarla según sea necesario.
+        
+            // TODO: esta línea de código carga datos en la tabla 'productos.Inventario' Puede moverla o quitarla según sea necesario.
+
+            // TODO: esta línea de código carga datos en la tabla 'proyecto_CarniceriaDataSet.Inventario' Puede moverla o quitarla según sea necesario.
+
+            // TODO: esta línea de código carga datos en la tabla 'proyecto_CarniceriaDataSet.Inventario' Puede moverla o quitarla según sea necesario.
+
 
             this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
+          
         }
     }
 }

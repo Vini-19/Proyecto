@@ -198,6 +198,11 @@
     <Compile Include="frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Productos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Productos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FORMULARIOS\agregarTrabajador.resx">
@@ -270,7 +275,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
+    <None Include="Productos.xsc">
+      <DependentUpon>Productos.xsd</DependentUpon>
+    </None>
+    <None Include="Productos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Productos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Productos.xss">
+      <DependentUpon>Productos.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
