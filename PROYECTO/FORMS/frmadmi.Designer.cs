@@ -69,6 +69,7 @@ namespace PROYECTO
             this.PN_R = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -432,7 +433,7 @@ namespace PROYECTO
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 1120);
+            this.button5.Location = new System.Drawing.Point(3, 1189);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(260, 81);
             this.button5.TabIndex = 26;
@@ -556,13 +557,14 @@ namespace PROYECTO
             // PN_R
             // 
             this.PN_R.BackColor = System.Drawing.Color.Black;
+            this.PN_R.Controls.Add(this.button1);
             this.PN_R.Controls.Add(this.button13);
             this.PN_R.Controls.Add(this.button15);
             this.PN_R.Dock = System.Windows.Forms.DockStyle.Top;
             this.PN_R.Location = new System.Drawing.Point(3, 976);
             this.PN_R.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PN_R.Name = "PN_R";
-            this.PN_R.Size = new System.Drawing.Size(260, 137);
+            this.PN_R.Size = new System.Drawing.Size(260, 206);
             this.PN_R.TabIndex = 32;
             this.PN_R.Visible = false;
             // 
@@ -597,6 +599,21 @@ namespace PROYECTO
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 130);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(243, 55);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Reportes COMPRAS";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmadmi
             // 
@@ -669,5 +686,6 @@ namespace PROYECTO
         private Panel PN_R;
         private Button button13;
         private Button button15;
+        private Button button1;
     }
 }

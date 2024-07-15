@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto_de_desarrolo;
+using Proyecto_de_desarrolo.Formularios;
 
 namespace PROYECTO
 {
@@ -49,21 +51,10 @@ namespace PROYECTO
 
         }
 
-        private void linkLRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           /* frmRegistro Reg = new frmRegistro();
-            Reg.Show();
-            this.Hide();*/
-        }
+      
 
 
-        private void linkLRecuperacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //frmRecuperacion Rec = new frmRecuperacion();
-            //Rec.Show();
-            /* frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
-             Esp.Show();*/
-        }
+       
 
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
@@ -156,16 +147,16 @@ namespace PROYECTO
                                     frmPrincipal.Show();
                                     break;
                                 case 2:
-                                    /*frmPrincipalEmpleado frm = new frmPrincipalEmpleado();
+                                    frmPrincipalEmpleado frm = new frmPrincipalEmpleado();
                                     frm.SetUsuarioLabel(usuario);
                                     MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San Jose");
                                     frm.Show();
                                     break;
                                 case 3:
-                                    /*frmPrincipalCliente frmPrincipalCliente = new frmPrincipalCliente();
+                                    frmPrincipalCliente frmPrincipalCliente = new frmPrincipalCliente();
                                     frmPrincipalCliente.SetUsuarioLabel(usuario);
                                     MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San Jose");
-                                    frmPrincipalCliente.Show();*/
+                                    frmPrincipalCliente.Show();
                                     break;
                                 default:
                                     MessageBox.Show("El usuario no tiene un rol válido.");
@@ -200,6 +191,21 @@ namespace PROYECTO
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void linkLRegistro_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRegistro Reg = new frmRegistro();
+            Reg.Show();
+            this.Hide();
+        }
+
+        private void linkLRecuperacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRecuperacion Rec = new frmRecuperacion();
+            Rec.Show();
+            frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
+            Esp.Show();
         }
     }
 }

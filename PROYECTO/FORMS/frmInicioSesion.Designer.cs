@@ -104,6 +104,7 @@ namespace PROYECTO
             this.linkLRecuperacion.TabIndex = 10;
             this.linkLRecuperacion.TabStop = true;
             this.linkLRecuperacion.Text = "¿Haz olvidado tu contraseña?";
+            this.linkLRecuperacion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLRecuperacion_LinkClicked);
             // 
             // linkLRegistro
             // 
@@ -115,6 +116,7 @@ namespace PROYECTO
             this.linkLRegistro.TabIndex = 9;
             this.linkLRegistro.TabStop = true;
             this.linkLRegistro.Text = "Regístrate";
+            this.linkLRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLRegistro_LinkClicked_1);
             // 
             // label5
             // 

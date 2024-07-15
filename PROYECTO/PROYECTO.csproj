@@ -182,6 +182,11 @@
     <Compile Include="CLASES\clsValidaciones.cs" />
     <Compile Include="CLASES\clsVentas.cs" />
     <Compile Include="CLASES\Conexion.cs" />
+    <Compile Include="COMPRAS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPRAS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\agregarTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +403,17 @@
       <DependentUpon>REPOR_PRODUCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\RE_VENTA.rdlc" />
+    <None Include="COMPRAS.xsc">
+      <DependentUpon>COMPRAS.xsd</DependentUpon>
+    </None>
+    <None Include="COMPRAS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPRAS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="COMPRAS.xss">
+      <DependentUpon>COMPRAS.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="productos.xsc">
       <DependentUpon>productos.xsd</DependentUpon>
