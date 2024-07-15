@@ -33,5 +33,17 @@ namespace PROYECTO.Properties {
                 return ((string)(this["Proyecto_CarniceriaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=croas.database.windows.net;Initial Catalog=Proyecto_Carniceria;Persis" +
+            "t Security Info=True;User ID=Vini;Password=Cr0as_P4ss;TrustServerCertificate=Tru" +
+            "e")]
+        public string Proyecto_CarniceriaConnectionString1 {
+            get {
+                return ((string)(this["Proyecto_CarniceriaConnectionString1"]));
+            }
+        }
     }
 }

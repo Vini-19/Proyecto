@@ -31,226 +31,236 @@ namespace Proyecto_de_desarrolo
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            label1 = new Label();
-            txtCodigo_Barra = new TextBox();
-            dgvProductos = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            txtRTN = new TextBox();
-            txtFecha = new TextBox();
-            btnGenerar_Factura = new Button();
-            btnEnter = new Button();
-            cmbCliente = new ComboBox();
-            errorProvider1 = new ErrorProvider(components);
-            Codigo = new DataGridViewTextBoxColumn();
-            Descripcion = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Total = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCodigo_Barra = new System.Windows.Forms.TextBox();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRTN = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.btnGenerar_Factura = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(129, 122);
-            label1.Name = "label1";
-            label1.Size = new Size(121, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Código de Barra:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(97, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Código de Barra:";
             // 
             // txtCodigo_Barra
             // 
-            txtCodigo_Barra.Location = new Point(256, 119);
-            txtCodigo_Barra.Name = "txtCodigo_Barra";
-            txtCodigo_Barra.Size = new Size(223, 27);
-            txtCodigo_Barra.TabIndex = 3;
-            txtCodigo_Barra.TextChanged += txtCodigo_Barra_TextChanged;
+            this.txtCodigo_Barra.Location = new System.Drawing.Point(192, 77);
+            this.txtCodigo_Barra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo_Barra.Name = "txtCodigo_Barra";
+            this.txtCodigo_Barra.Size = new System.Drawing.Size(168, 20);
+            this.txtCodigo_Barra.TabIndex = 3;
             // 
             // dgvProductos
             // 
-            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { Codigo, Descripcion, Cantidad, Precio, Total });
-            dgvProductos.Location = new Point(167, 155);
-            dgvProductos.Name = "dgvProductos";
-            dgvProductos.ReadOnly = true;
-            dgvProductos.RowHeadersWidth = 51;
-            dgvProductos.Size = new Size(678, 424);
-            dgvProductos.TabIndex = 2;
-            dgvProductos.CellValueChanged += dgvProductos_CellValueChanged;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Red;
-            button1.Location = new Point(886, 322);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(98, 37);
-            button1.TabIndex = 4;
-            button1.Text = "-";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.DeepSkyBlue;
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(886, 262);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(98, 37);
-            button2.TabIndex = 5;
-            button2.Text = "+";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(748, 69);
-            label2.Name = "label2";
-            label2.Size = new Size(39, 20);
-            label2.TabIndex = 6;
-            label2.Text = "RTN:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(748, 38);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 20);
-            label3.TabIndex = 7;
-            label3.Text = "Cliente:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(748, 99);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 8;
-            label4.Text = "Fecha:";
-            // 
-            // txtRTN
-            // 
-            txtRTN.Enabled = false;
-            txtRTN.Location = new Point(826, 66);
-            txtRTN.Name = "txtRTN";
-            txtRTN.Size = new Size(158, 27);
-            txtRTN.TabIndex = 9;
-            // 
-            // txtFecha
-            // 
-            txtFecha.Enabled = false;
-            txtFecha.Location = new Point(826, 99);
-            txtFecha.Name = "txtFecha";
-            txtFecha.Size = new Size(158, 27);
-            txtFecha.TabIndex = 11;
-            // 
-            // btnGenerar_Factura
-            // 
-            btnGenerar_Factura.Location = new Point(717, 594);
-            btnGenerar_Factura.Name = "btnGenerar_Factura";
-            btnGenerar_Factura.Size = new Size(128, 29);
-            btnGenerar_Factura.TabIndex = 12;
-            btnGenerar_Factura.Text = "Generar Factura";
-            btnGenerar_Factura.UseVisualStyleBackColor = true;
-            btnGenerar_Factura.Click += btnGenerar_Factura_Click;
-            // 
-            // btnEnter
-            // 
-            btnEnter.Location = new Point(485, 118);
-            btnEnter.Name = "btnEnter";
-            btnEnter.Size = new Size(94, 29);
-            btnEnter.TabIndex = 13;
-            btnEnter.Text = "Confirmar";
-            btnEnter.UseVisualStyleBackColor = true;
-            btnEnter.Click += btnEnter_Click;
-            btnEnter.Enter += btnEnter_Enter;
-            // 
-            // cmbCliente
-            // 
-            cmbCliente.FormattingEnabled = true;
-            cmbCliente.Location = new Point(826, 30);
-            cmbCliente.Name = "cmbCliente";
-            cmbCliente.Size = new Size(158, 28);
-            cmbCliente.TabIndex = 14;
-            cmbCliente.SelectedIndexChanged += cmbCliente_SelectedIndexChanged;
-            // 
-            // errorProvider1
-            // 
-            errorProvider1.ContainerControl = this;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Descripcion,
+            this.Cantidad,
+            this.Precio,
+            this.Total});
+            this.dgvProductos.Location = new System.Drawing.Point(125, 101);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.Size = new System.Drawing.Size(508, 276);
+            this.dgvProductos.TabIndex = 2;
             // 
             // Codigo
             // 
-            Codigo.HeaderText = "Codigo de Barra";
-            Codigo.MinimumWidth = 6;
-            Codigo.Name = "Codigo";
-            Codigo.ReadOnly = true;
-            Codigo.Width = 125;
+            this.Codigo.HeaderText = "Codigo de Barra";
+            this.Codigo.MinimumWidth = 6;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 125;
             // 
             // Descripcion
             // 
-            Descripcion.HeaderText = "Descripción";
-            Descripcion.MinimumWidth = 6;
-            Descripcion.Name = "Descripcion";
-            Descripcion.ReadOnly = true;
-            Descripcion.Width = 125;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 125;
             // 
             // Cantidad
             // 
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.MinimumWidth = 6;
-            Cantidad.Name = "Cantidad";
-            Cantidad.ReadOnly = true;
-            Cantidad.Width = 125;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
             // 
             // Precio
             // 
-            Precio.HeaderText = "Precio";
-            Precio.MinimumWidth = 6;
-            Precio.Name = "Precio";
-            Precio.ReadOnly = true;
-            Precio.Width = 125;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 125;
             // 
             // Total
             // 
-            Total.HeaderText = "Total";
-            Total.MinimumWidth = 6;
-            Total.Name = "Total";
-            Total.ReadOnly = true;
-            Total.Width = 125;
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 125;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(664, 209);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 24);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "-";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(664, 170);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(74, 24);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "+";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(561, 45);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "RTN:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(561, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cliente:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(561, 64);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Fecha:";
+            // 
+            // txtRTN
+            // 
+            this.txtRTN.Enabled = false;
+            this.txtRTN.Location = new System.Drawing.Point(620, 43);
+            this.txtRTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN.Name = "txtRTN";
+            this.txtRTN.Size = new System.Drawing.Size(120, 20);
+            this.txtRTN.TabIndex = 9;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Enabled = false;
+            this.txtFecha.Location = new System.Drawing.Point(620, 64);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(120, 20);
+            this.txtFecha.TabIndex = 11;
+            // 
+            // btnGenerar_Factura
+            // 
+            this.btnGenerar_Factura.Location = new System.Drawing.Point(538, 386);
+            this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerar_Factura.Name = "btnGenerar_Factura";
+            this.btnGenerar_Factura.Size = new System.Drawing.Size(96, 19);
+            this.btnGenerar_Factura.TabIndex = 12;
+            this.btnGenerar_Factura.Text = "Generar Factura";
+            this.btnGenerar_Factura.UseVisualStyleBackColor = true;
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.Location = new System.Drawing.Point(364, 77);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(70, 19);
+            this.btnEnter.TabIndex = 13;
+            this.btnEnter.Text = "Confirmar";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(620, 20);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(120, 21);
+            this.cmbCliente.TabIndex = 14;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmVentas
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1027, 635);
-            Controls.Add(cmbCliente);
-            Controls.Add(btnEnter);
-            Controls.Add(btnGenerar_Factura);
-            Controls.Add(txtFecha);
-            Controls.Add(txtRTN);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(txtCodigo_Barra);
-            Controls.Add(dgvProductos);
-            Controls.Add(label1);
-            Name = "frmVentas";
-            Text = "Ventas";
-            Load += frmVentas_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(770, 413);
+            this.Controls.Add(this.cmbCliente);
+            this.Controls.Add(this.btnEnter);
+            this.Controls.Add(this.btnGenerar_Factura);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.txtRTN);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtCodigo_Barra);
+            this.Controls.Add(this.dgvProductos);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmVentas";
+            this.Text = "Ventas";
+            this.Load += new System.EventHandler(this.frmVentas_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

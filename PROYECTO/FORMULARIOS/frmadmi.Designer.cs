@@ -479,6 +479,7 @@ namespace PROYECTO
             this.contenedor.Size = new System.Drawing.Size(889, 973);
             this.contenedor.TabIndex = 25;
             this.contenedor.UseWaitCursor = true;
+            this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint_1);
             // 
             // pnsubusu
             // 

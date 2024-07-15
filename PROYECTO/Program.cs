@@ -1,4 +1,4 @@
-﻿using PROYECTO.FORMULARIOS;
+﻿using PROYECTO.CLASES;
 using System;
 using System.Collections.Generic;
 using System.Linq;

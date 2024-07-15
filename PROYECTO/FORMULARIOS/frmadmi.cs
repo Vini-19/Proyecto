@@ -1,5 +1,5 @@
 ﻿
-using PROYECTO.FORMULARIOS;
+using PROYECTO.CLASES;
 using Proyecto_de_desarrolo;
 using Proyecto_de_desarrolo.Formularios;
 using System;
@@ -350,6 +350,11 @@ namespace PROYECTO
         private void button19_Click_1(object sender, EventArgs e)
         {
             AbriForm(new frmPedido());
+        }
+
+        private void contenedor_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

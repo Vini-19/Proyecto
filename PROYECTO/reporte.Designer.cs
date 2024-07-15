@@ -1,4 +1,4 @@
-﻿namespace PROYECTO.FORMULARIOS
+﻿namespace PROYECTO
 {
     partial class reporte
     {
@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.productos = new PROYECTO.Productos();
-            this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventarioTableAdapter = new PROYECTO.ProductosTableAdapters.InventarioTableAdapter();
+            this.productos = new PROYECTO.productos();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosTableAdapter = new PROYECTO.productosTableAdapters.ProductosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.productos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "productos";
-            reportDataSource1.Value = this.inventarioBindingSource;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.productosBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROYECTO.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -53,17 +53,17 @@
             // 
             // productos
             // 
-            this.productos.DataSetName = "Productos";
+            this.productos.DataSetName = "productos";
             this.productos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // inventarioBindingSource
+            // productosBindingSource
             // 
-            this.inventarioBindingSource.DataMember = "Inventario";
-            this.inventarioBindingSource.DataSource = this.productos;
+            this.productosBindingSource.DataMember = "Productos";
+            this.productosBindingSource.DataSource = this.productos;
             // 
-            // inventarioTableAdapter
+            // productosTableAdapter
             // 
-            this.inventarioTableAdapter.ClearBeforeFill = true;
+            this.productosTableAdapter.ClearBeforeFill = true;
             // 
             // reporte
             // 
@@ -75,15 +75,16 @@
             this.Text = "reporte";
             this.Load += new System.EventHandler(this.reporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private Productos productos;
-        private System.Windows.Forms.BindingSource inventarioBindingSource;
-        private ProductosTableAdapters.InventarioTableAdapter inventarioTableAdapter;
+        private productos productos;
+        private System.Windows.Forms.BindingSource productosBindingSource;
+        private productosTableAdapters.ProductosTableAdapter productosTableAdapter;
     }
 }

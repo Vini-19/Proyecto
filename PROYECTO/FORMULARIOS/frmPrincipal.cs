@@ -1,4 +1,5 @@
-﻿using PROYECTO.FORMULARIOS;
+﻿using PROYECTO;
+using PROYECTO.CLASES;
 using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;

@@ -334,5 +334,10 @@ namespace Proyecto_de_desarrolo
         {
             txtCodigo_Barra.Focus();
         }
+
+        private void frmVentas_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
