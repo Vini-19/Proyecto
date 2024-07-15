@@ -339,7 +339,7 @@ namespace PROYECTO
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-            AbriForm(new reporte());
+            AbriForm(new REPOR_PRODUCT());
         }
 
         private void button20_Click_1(object sender, EventArgs e)

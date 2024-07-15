@@ -136,7 +136,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            AbriForm(new reporte());
+            AbriForm(new REPOR_PRODUCT());
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -226,7 +226,7 @@ namespace Proyecto_de_desarrolo
 
         private void button8_Click(object sender, EventArgs e)
         {
-            AbriForm(new reporte());
+            AbriForm(new REPOR_PRODUCT());
         }
 
         private void button5_Click_2(object sender, EventArgs e)
