@@ -1,5 +1,6 @@
 ﻿
 using PROYECTO.CLASES;
+using PROYECTO.REPORTES;
 using Proyecto_de_desarrolo;
 using Proyecto_de_desarrolo.Formularios;
 using System;
@@ -37,17 +38,22 @@ namespace PROYECTO
         {
             if (FormAct != null)
             {
+                contenedor.Controls.Remove(FormAct);
                 FormAct.Close();
             }
 
-            FormAct = formulario;
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.Dock = DockStyle.Fill;
-            formulario.BackColor = Color.LightBlue;
-            contenedor.Controls.Add(formulario);
-            formulario.Show();
+            if (FormAct != formulario)
+            {
+                FormAct = formulario;
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                formulario.BackColor = Color.LightBlue;
+                contenedor.Controls.Add(formulario);
+                formulario.Show();
+            }
         }
+
 
         private void submenu()
         {
@@ -70,6 +76,10 @@ namespace PROYECTO
             if (pnsubusu.Visible == true)
             {
                 pnsubusu.Visible = false;
+            }
+            if (PN_R.Visible == true)
+            {
+                PN_R.Visible = false;
             }
         }
 
@@ -339,7 +349,7 @@ namespace PROYECTO
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-            AbriForm(new REPOR_PRODUCT());
+            ShowMenu(PN_R);
         }
 
         private void button20_Click_1(object sender, EventArgs e)
@@ -355,6 +365,31 @@ namespace PROYECTO
         private void contenedor_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new REPOR_VENTA());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AbriForm(new REPOR_PRODUCT());
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            AbriForm(new REPOR_VENTA());
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            AbriForm(new REPOR_PRODUCT());
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ShowMenu(PN_R);
         }
     }
 }
