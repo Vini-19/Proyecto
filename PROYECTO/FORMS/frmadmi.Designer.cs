@@ -116,6 +116,7 @@ namespace PROYECTO
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(130, 38);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // lblUsuario
             // 
@@ -123,7 +124,7 @@ namespace PROYECTO
             this.lblUsuario.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(62, 6);
+            this.lblUsuario.Location = new System.Drawing.Point(62, 11);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(0, 19);
             this.lblUsuario.TabIndex = 3;
