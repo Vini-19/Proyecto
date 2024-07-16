@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace PROYECTO.COJUNTO_DE_DATOS {
+namespace PROYECTO {
     
     
     /// <summary>
@@ -765,7 +765,7 @@ namespace PROYECTO.COJUNTO_DE_DATOS {
         }
     }
 }
-namespace PROYECTO.COJUNTO_DE_DATOS.VENTASTableAdapters {
+namespace PROYECTO.VENTASTableAdapters {
     
     
     /// <summary>

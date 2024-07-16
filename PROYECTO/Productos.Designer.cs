@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace PROYECTO.COJUNTO_DE_DATOS {
+namespace PROYECTO {
     
     
     /// <summary>
@@ -818,7 +818,7 @@ namespace PROYECTO.COJUNTO_DE_DATOS {
         }
     }
 }
-namespace PROYECTO.COJUNTO_DE_DATOS.productosTableAdapters {
+namespace PROYECTO.productosTableAdapters {
     
     
     /// <summary>

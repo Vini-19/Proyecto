@@ -184,7 +184,7 @@
     <Compile Include="CLASES\clsValidaciones.cs" />
     <Compile Include="CLASES\clsVentas.cs" />
     <Compile Include="CLASES\Conexion.cs" />
-    <Compile Include="COJUNTO DE DATOS\COMPRAS.Designer.cs">
+    <Compile Include="COMPRAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>COMPRAS.xsd</DependentUpon>
@@ -303,7 +303,7 @@
     <Compile Include="FORMS\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="COJUNTO DE DATOS\productos.Designer.cs">
+    <Compile Include="productos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>productos.xsd</DependentUpon>
@@ -322,10 +322,10 @@
     <Compile Include="REPORTES\REPOR_VENTA.Designer.cs">
       <DependentUpon>REPOR_VENTA.cs</DependentUpon>
     </Compile>
-    <Compile Include="COJUNTO DE DATOS\VENTAS.cs">
+    <Compile Include="VENTAS.cs">
       <DependentUpon>VENTAS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="COJUNTO DE DATOS\VENTAS.Designer.cs">
+    <Compile Include="VENTAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTAS.xsd</DependentUpon>
@@ -405,27 +405,27 @@
       <DependentUpon>REPOR_PRODUCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\RE_VENTA.rdlc" />
-    <None Include="COJUNTO DE DATOS\COMPRAS.xsc">
+    <None Include="COMPRAS.xsc">
       <DependentUpon>COMPRAS.xsd</DependentUpon>
     </None>
-    <None Include="COJUNTO DE DATOS\COMPRAS.xsd">
+    <None Include="COMPRAS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>COMPRAS.Designer.cs</LastGenOutput>
     </None>
-    <None Include="COJUNTO DE DATOS\COMPRAS.xss">
+    <None Include="COMPRAS.xss">
       <DependentUpon>COMPRAS.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="COJUNTO DE DATOS\productos.xsc">
+    <None Include="productos.xsc">
       <DependentUpon>productos.xsd</DependentUpon>
     </None>
-    <None Include="COJUNTO DE DATOS\productos.xsd">
+    <None Include="productos.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>productos.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="COJUNTO DE DATOS\productos.xss">
+    <None Include="productos.xss">
       <DependentUpon>productos.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -437,15 +437,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="COJUNTO DE DATOS\VENTAS.xsc">
+    <None Include="VENTAS.xsc">
       <DependentUpon>VENTAS.xsd</DependentUpon>
     </None>
-    <None Include="COJUNTO DE DATOS\VENTAS.xsd">
+    <None Include="VENTAS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>VENTAS.Designer.cs</LastGenOutput>
     </None>
-    <None Include="COJUNTO DE DATOS\VENTAS.xss">
+    <None Include="VENTAS.xss">
       <DependentUpon>VENTAS.xsd</DependentUpon>
     </None>
   </ItemGroup>
@@ -454,6 +454,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="COJUNTO DE DATOS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
