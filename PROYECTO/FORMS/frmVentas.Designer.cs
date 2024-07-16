@@ -68,7 +68,7 @@ namespace Proyecto_de_desarrolo
             // txtCodigo_Barra
             // 
             this.txtCodigo_Barra.Location = new System.Drawing.Point(192, 77);
-            this.txtCodigo_Barra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo_Barra.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo_Barra.Name = "txtCodigo_Barra";
             this.txtCodigo_Barra.Size = new System.Drawing.Size(168, 20);
             this.txtCodigo_Barra.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace Proyecto_de_desarrolo
             this.Precio,
             this.Total});
             this.dgvProductos.Location = new System.Drawing.Point(125, 101);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
@@ -187,7 +187,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.txtRTN.Enabled = false;
             this.txtRTN.Location = new System.Drawing.Point(620, 43);
-            this.txtRTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN.Margin = new System.Windows.Forms.Padding(2);
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(120, 20);
             this.txtRTN.TabIndex = 9;
@@ -196,7 +196,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.txtFecha.Enabled = false;
             this.txtFecha.Location = new System.Drawing.Point(620, 64);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(120, 20);
             this.txtFecha.TabIndex = 11;
@@ -204,7 +204,7 @@ namespace Proyecto_de_desarrolo
             // btnGenerar_Factura
             // 
             this.btnGenerar_Factura.Location = new System.Drawing.Point(538, 386);
-            this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerar_Factura.Name = "btnGenerar_Factura";
             this.btnGenerar_Factura.Size = new System.Drawing.Size(96, 19);
             this.btnGenerar_Factura.TabIndex = 12;
@@ -214,7 +214,7 @@ namespace Proyecto_de_desarrolo
             // btnEnter
             // 
             this.btnEnter.Location = new System.Drawing.Point(364, 77);
-            this.btnEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(70, 19);
             this.btnEnter.TabIndex = 13;
@@ -225,7 +225,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(620, 20);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(120, 21);
             this.cmbCliente.TabIndex = 14;
@@ -238,7 +238,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 413);
+            this.ClientSize = new System.Drawing.Size(1416, 685);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnGenerar_Factura);
@@ -252,7 +252,7 @@ namespace Proyecto_de_desarrolo
             this.Controls.Add(this.txtCodigo_Barra);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVentas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.frmVentas_Load_1);

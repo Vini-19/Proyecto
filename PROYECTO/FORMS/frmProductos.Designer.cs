@@ -31,164 +31,160 @@ namespace Proyecto_de_desarrolo.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            btnAgregar = new Button();
-            txtCantidadP = new TextBox();
-            label6 = new Label();
-            txtCodbarra = new TextBox();
-            label5 = new Label();
-            txtPrecio = new TextBox();
-            label4 = new Label();
-            txtnomProducto = new TextBox();
-            label3 = new Label();
-            cmbProveedor = new ComboBox();
-            label2 = new Label();
-            label1 = new Label();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtCantidadP = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCodbarra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtnomProducto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbProveedor = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Firebrick;
-            panel1.Controls.Add(btnAgregar);
-            panel1.Controls.Add(txtCantidadP);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(txtCodbarra);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(txtPrecio);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(txtnomProducto);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(cmbProveedor);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(251, 494);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.btnAgregar);
+            this.panel1.Controls.Add(this.txtCantidadP);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtCodbarra);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtPrecio);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtnomProducto);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cmbProveedor);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(215, 428);
+            this.panel1.TabIndex = 0;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(155, 441);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
-            btnAgregar.TabIndex = 11;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            this.btnAgregar.Location = new System.Drawing.Point(133, 382);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(64, 20);
+            this.btnAgregar.TabIndex = 11;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // txtCantidadP
             // 
-            txtCantidadP.Location = new Point(14, 388);
-            txtCantidadP.Name = "txtCantidadP";
-            txtCantidadP.Size = new Size(121, 23);
-            txtCantidadP.TabIndex = 10;
+            this.txtCantidadP.Location = new System.Drawing.Point(12, 336);
+            this.txtCantidadP.Name = "txtCantidadP";
+            this.txtCantidadP.Size = new System.Drawing.Size(104, 20);
+            this.txtCantidadP.TabIndex = 10;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(14, 349);
-            label6.Name = "label6";
-            label6.Size = new Size(123, 15);
-            label6.TabIndex = 9;
-            label6.Text = "Cantidad de Producto";
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(12, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Cantidad de Producto";
             // 
             // txtCodbarra
             // 
-            txtCodbarra.Location = new Point(14, 74);
-            txtCodbarra.Name = "txtCodbarra";
-            txtCodbarra.Size = new Size(121, 23);
-            txtCodbarra.TabIndex = 8;
+            this.txtCodbarra.Location = new System.Drawing.Point(12, 64);
+            this.txtCodbarra.Name = "txtCodbarra";
+            this.txtCodbarra.Size = new System.Drawing.Size(104, 20);
+            this.txtCodbarra.TabIndex = 8;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(14, 56);
-            label5.Name = "label5";
-            label5.Size = new Size(92, 15);
-            label5.TabIndex = 4;
-            label5.Text = "Codigo de barra";
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(12, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Codigo de barra";
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(14, 300);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(121, 23);
-            txtPrecio.TabIndex = 6;
+            this.txtPrecio.Location = new System.Drawing.Point(12, 260);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(104, 20);
+            this.txtPrecio.TabIndex = 6;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(14, 269);
-            label4.Name = "label4";
-            label4.Size = new Size(40, 15);
-            label4.TabIndex = 5;
-            label4.Text = "Precio";
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(12, 233);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Precio";
             // 
             // txtnomProducto
             // 
-            txtnomProducto.Location = new Point(14, 146);
-            txtnomProducto.Name = "txtnomProducto";
-            txtnomProducto.Size = new Size(121, 23);
-            txtnomProducto.TabIndex = 4;
+            this.txtnomProducto.Location = new System.Drawing.Point(12, 127);
+            this.txtnomProducto.Name = "txtnomProducto";
+            this.txtnomProducto.Size = new System.Drawing.Size(104, 20);
+            this.txtnomProducto.TabIndex = 4;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(14, 116);
-            label3.Name = "label3";
-            label3.Size = new Size(119, 15);
-            label3.TabIndex = 3;
-            label3.Text = "Nombre de Producto";
-            label3.Click += label3_Click;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(12, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombre de Producto";
             // 
             // cmbProveedor
             // 
-            cmbProveedor.FormattingEnabled = true;
-            cmbProveedor.Location = new Point(14, 219);
-            cmbProveedor.Name = "cmbProveedor";
-            cmbProveedor.Size = new Size(121, 23);
-            cmbProveedor.TabIndex = 1;
-            cmbProveedor.SelectedIndexChanged += cmbProveedor_SelectedIndexChanged;
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(12, 190);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Size = new System.Drawing.Size(104, 21);
+            this.cmbProveedor.TabIndex = 1;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(14, 192);
-            label2.Name = "label2";
-            label2.Size = new Size(61, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Proveedor";
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(12, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Proveedor";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(12, 30);
-            label1.Name = "label1";
-            label1.Size = new Size(227, 16);
-            label1.TabIndex = 1;
-            label1.Text = "Registro de Productos Nuevos";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(10, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(227, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Registro de Productos Nuevos";
             // 
             // frmProductos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(819, 565);
-            Controls.Add(panel1);
-            Name = "frmProductos";
-            Text = "frmProductos";
-            Load += frmProductos_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(702, 490);
+            this.Controls.Add(this.panel1);
+            this.Name = "frmProductos";
+            this.Text = "frmProductos";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
