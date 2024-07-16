@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using PROYECTO.CLASES;
+using Proyecto_de_desarrolo.Clases;
 using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;

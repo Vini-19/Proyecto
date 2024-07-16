@@ -77,10 +77,11 @@ namespace PROYECTO
             {
                 pnsubusu.Visible = false;
             }
-            if (PN_R.Visible == true)
+            if (PNREPOR.Visible == true)
             {
-                PN_R.Visible = false;
+                PNREPOR.Visible = false;
             }
+
         }
 
         private void ShowMenu(Panel Submenu)
@@ -349,7 +350,7 @@ namespace PROYECTO
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-            ShowMenu(PN_R);
+            
         }
 
         private void button20_Click_1(object sender, EventArgs e)
@@ -377,20 +378,148 @@ namespace PROYECTO
             AbriForm(new REPOR_PRODUCT());
         }
 
-        private void button15_Click_1(object sender, EventArgs e)
+        
+
+       
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void PNREPOR_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
         {
             AbriForm(new REPOR_VENTA());
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void button10_Click_1(object sender, EventArgs e)
         {
             AbriForm(new REPOR_PRODUCT());
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void btnPersonas_Click_1(object sender, EventArgs e)
         {
-            ShowMenu(PN_R);
+            ShowMenu(panelPersonas);
+        }
+
+        private void panelPersonas_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button14_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new frmClientes());
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new frmProveedores());
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new agregarTrabajador());
+        }
+
+        private void btnFacturacion_Click_2(object sender, EventArgs e)
+        {
+            ShowMenu(panelFacturacion);
+        }
+
+        private void panelFacturacion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new frmEnvios());
+        }
+
+        private void button8_Click_3(object sender, EventArgs e)
+        {
+            AbriForm(new frmAgregarCompra());
+        }
+
+        private void btnProduct_Click_2(object sender, EventArgs e)
+        {
+            ShowMenu(panelProductos);
+        }
+
+        private void button20_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new frmInventario());
+        }
+
+        private void button19_Click_2(object sender, EventArgs e)
+        {
+            AbriForm(new frmPedido());
+
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ShowMenu(PNREPOR);
+        }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+            ShowMenu(pnusuario);
+            ShowMenu(pnsubusu);
+        }
+
+        private void button7_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicioSesion sesio = new frmInicioSesion();
+            sesio.Show();
+        }
+
+        private void btnMenu_Click_2(object sender, EventArgs e)
+        {
+            sliderTran.Start();
+        }
+
+        private void sliderTran_Tick_1(object sender, EventArgs e)
+        {
+            
+                if (siderbarExpand)
+                {
+                    slidermenu.Width -= 10;
+                    if (slidermenu.Width <= 60)
+                    {
+                        siderbarExpand = false;
+                        sliderTran.Stop();
+                    }
+                }
+                else
+                {
+                    slidermenu.Width += 10;
+                    if (slidermenu.Width >= 263)
+                    {
+                        siderbarExpand = true;
+                        sliderTran.Stop();
+
+
+
+                    }
+
+
+                }
+            
         }
     }
 }
+
 

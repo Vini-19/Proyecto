@@ -22,7 +22,7 @@ namespace PROYECTO.CLASES
 
         }
 
-        public void RegistroUsu(string contra, string pregunta, string respuesta, string nomUsuario)
+        public void RegistroUsu(string contra, string pregunta, string respuesta, string nomUsuario, int Roles_ID)
         {
 
             Cconexion conexion = new Cconexion();
@@ -37,7 +37,7 @@ namespace PROYECTO.CLASES
 
 
                     comandoExisteUsuario.Parameters.AddWithValue("@Contraseña", contra);
-                    comandoExisteUsuario.Parameters.AddWithValue("@Roles_ID", 3);
+                    comandoExisteUsuario.Parameters.AddWithValue("@Roles_ID", Roles_ID);
                     comandoExisteUsuario.Parameters.AddWithValue("@Pregunta_Recuperacion", pregunta);
                     comandoExisteUsuario.Parameters.AddWithValue("@Respuesta_Recuperacion", respuesta);
                     comandoExisteUsuario.Parameters.AddWithValue("@Nombre_Usuario", nomUsuario);
@@ -46,6 +46,7 @@ namespace PROYECTO.CLASES
                     comandoExisteUsuario.ExecuteNonQuery();
 
                     MessageBox.Show("Usuario registrado correctamente");
+
                 }
                 else
                 {
@@ -59,7 +60,7 @@ namespace PROYECTO.CLASES
         }
 
 
-        public bool VerificarClienteExistente(string nombre)
+        public bool VerificarClienteExistente(string dni)
         {
             Cconexion conexion = new Cconexion();
             bool verificar = true;
@@ -74,9 +75,49 @@ namespace PROYECTO.CLASES
 
                     SqlCommand comandoExisteCliente = new SqlCommand("PA_VerificarClienteExistente", cn);
                     comandoExisteCliente.CommandType = CommandType.StoredProcedure;
-                    comandoExisteCliente.Parameters.AddWithValue("@nombre", nombre);
+                    comandoExisteCliente.Parameters.AddWithValue("@dni", dni);
 
                     int count = (int)comandoExisteCliente.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+
+                        verificar = true;
+
+                    }
+                    else
+                    {
+                        verificar = false;
+
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar conectar: " + ex.Message);
+            }
+            return verificar;
+        }
+        public bool VerificarUsuarioExistente(string usu)
+        {
+            Cconexion conexion = new Cconexion();
+            bool verificar = true;
+            try
+            {
+                using (SqlConnection cn = conexion.leer())
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+
+                    SqlCommand comandoExisteUsuario = new SqlCommand("PA_VerificarUsuarioExistente", cn);
+                    comandoExisteUsuario.CommandType = CommandType.StoredProcedure;
+                    comandoExisteUsuario.Parameters.AddWithValue("@nombre", usu);
+
+                    int count = (int)comandoExisteUsuario.ExecuteScalar();
 
                     if (count > 0)
                     {
@@ -140,5 +181,29 @@ namespace PROYECTO.CLASES
                 MessageBox.Show("Error al intentar conectar: " + ex.Message);
             }
         }
+
+        //public DataTable DataGridViewClientes()
+        //{
+        //    string consultaSql = "SELECT PersonasID, RTN_Persona, DNI_Persona, Roles_ID, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 3";
+
+        //    try
+        //    {
+        //        Cconexion conexion = new Cconexion();
+        //        using (SqlConnection cn = conexion.leer())
+        //        {
+
+        //            DataTable dt = new DataTable();
+        //            SqlCommand cmd = new SqlCommand(consultaSql,cn);
+        //            cmd.Parameters.AddWithValue("PersonasID",)
+
+
+
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error al cargar datos: " + ex.Message);
+        //    }
+        //}
     }
 }

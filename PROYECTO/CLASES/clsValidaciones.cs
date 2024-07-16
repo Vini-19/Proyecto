@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace PROYECTO.CLASES
+namespace Proyecto_de_desarrolo.Clases
 {
     public class clsValidaciones
     {
-        /*public string doble_espacio(string texto)
+        public string doble_espacio(string texto)
         {
             int x = 0;
 
             if (texto.Contains("  "))
             {
-               return "\n No se aceptan espacios dobles";
+                return "No se aceptan espacios dobles \n";
             }
             else
             {
@@ -22,7 +24,7 @@ namespace PROYECTO.CLASES
             }
         }
 
-        public void validarletra(KeyPressEventArgs e) // nesecita letras y espacios
+        public void validarletra(KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
@@ -33,7 +35,7 @@ namespace PROYECTO.CLASES
         {
             if (texto == "")
             {
-                return "\n Este campo es obligatorio";
+                return "Este campo es obligatorio \n";
             }
             else
             {
@@ -47,7 +49,7 @@ namespace PROYECTO.CLASES
 
             if (texto.Contains(" "))
             {
-                return "\n No se aceptan espacios";
+                return " No se aceptan espacios \n";
             }
             else
             {
@@ -55,20 +57,20 @@ namespace PROYECTO.CLASES
             }
         }
 
-        public string espacio_inicio_final (string texto)
+        public string espacio_inicio_final(string texto)
         {
-            string mensaje="";
+            string mensaje = "";
 
             int x = texto.Length;
             if (texto.Length > 0)
             {
-                if (texto[0] == ' ' || texto[x-1]== ' ')
+                if (texto[0] == ' ' || texto[x - 1] == ' ')
                 {
-                    mensaje= "\n No se aceptan espacios al inicio y al final";
+                    mensaje = "No se aceptan espacios al inicio y al final \n";
                 }
                 else
                 {
-                    mensaje ="";
+                    mensaje = "";
                 }
             }
 
@@ -78,34 +80,34 @@ namespace PROYECTO.CLASES
 
         public string txt_vacio(string texto)
         {
-            if(texto=="")
+            if (texto == "")
             {
-                return "\n Rellenar Campos";
+                return " Rellenar Campos \n";
             }
             else
             {
-                
+
                 return "";
             }
-            
+
         }
-       /* public string triple_caracter(string texto)
+        /* public string triple_caracter(string texto)
+         {
+             for(int i = 0; i < texto.Length; i++) 
+             {
+
+             }
+
+             if (texto.Contains())
+                 {
+                 return "Rellenar Campos";
+                 }
+
+         }*/
+
+        public string rango_12(string texto)
         {
-            for(int i = 0; i < texto.Length; i++) 
-            {
-
-            }
-
-            if (texto.Contains())
-                {
-                return "Rellenar Campos";
-                }
-            
-        }*/
-
-        /*public string rango_12(string texto)
-        {
-            if(texto.Length ==12)
+            if (texto.Length == 12)
             {
                 return "";
             }
@@ -147,27 +149,54 @@ namespace PROYECTO.CLASES
             }
         }
 
-        public string caracteres(string texto)
+        public string rango(string texto, int rango)
+        {
+            if (texto.Length == rango)
+            {
+                return "";
+            }
+            else
+            {
+                return "\n Debe contener " + rango + "  dígitos";
+            }
+        }
+
+        /*public bool caracteres(string texto)
         {
             string caracter = @"[!@#$%^&*()\[\]{};:'\""\\|,.<>/?`~]";
 
            if(Regex.IsMatch(texto, caracter))
            {
-                return "";
+                return true;
            }
            else
            {
-                return "\n No se admiten carácteres especiales";
+                return false;
            }
-        }
+        }*/
 
-        public string validar_correo(string texto) 
+        public string caracteres(string texto)
         {
-            if(texto.EndsWith("@gmail.com")|| texto.EndsWith("@yahoo.com"))
+            string caracter = @"[!@#$%^&*()\[\]{};:'\""\\|,.<>/?`~]";
+
+            if (Regex.IsMatch(texto, caracter))
             {
                 return "";
             }
-            else 
+            else
+            {
+                return "\n No se admiten carácteres especiales";
+            }
+        }
+
+
+        public string validar_correo(string texto)
+        {
+            if (texto.EndsWith("@gmail.com") || texto.EndsWith("@yahoo.com"))
+            {
+                return "";
+            }
+            else
             {
                 return "\n EL correo debe contener la siguiente sintaxis: @gmail.com o @yahoo.com";
             }
@@ -179,14 +208,14 @@ namespace PROYECTO.CLASES
 
             if (texto.Length != 0)
             {
-               if (texto[0] == '3' || texto[0] == '8' || texto[0] == '9')
-               {
-                 mensaje= "";
-               }
-               else
-               {
-                 mensaje="El número debe de iniciar con 3,8 o 9";
-               }
+                if (texto[0] == '3' || texto[0] == '8' || texto[0] == '9')
+                {
+                    mensaje = "";
+                }
+                else
+                {
+                    mensaje = "El número debe de iniciar con 3,8 o 9";
+                }
 
             }
             return mensaje;
@@ -206,13 +235,48 @@ namespace PROYECTO.CLASES
 
         public string rango_nombre(string texto)
         {
-            if (texto.Length >=3 && texto.Length <=30)
+            if (texto.Length >= 3 && texto.Length <= 30)
             {
                 return "";
             }
             else
             {
                 return "\n El nombre mínimo 3 carácteres y máximo 30";
+            }
+        }
+        public string rango_direccion(string texto)
+        {
+            if (texto.Length >= 10 && texto.Length <= 50)
+            {
+                return "";
+            }
+            else
+            {
+                return "\n La direccion debe tener mínimo 10 carácteres y máximo 50";
+            }
+        }
+
+        public string rango_usuario(string texto)
+        {
+            if (texto.Length >= 8 && texto.Length <= 16)
+            {
+                return "";
+            }
+            else
+            {
+                return "\n El usuario debe contener mínimo 8 carácteres y máximo 16";
+            }
+        }
+
+        public string rango_contra(string texto)
+        {
+            if (texto.Length >= 8 && texto.Length <= 16)
+            {
+                return "";
+            }
+            else
+            {
+                return "\n La contraseña debe contener mínimo 8 carácteres y máximo 16";
             }
         }
         public string validarletra_espacio(string texto)
@@ -245,33 +309,213 @@ namespace PROYECTO.CLASES
             float precio;
             string num = "[0-9]";
 
-            if(Regex.IsMatch(texto, num))
+            if (Regex.IsMatch(texto, num))
             {
 
-           
 
-            if (texto != "")
-            {
-                precio = float.Parse(texto);
 
-                if (precio < 201 && precio > 19)
+                if (texto != "")
                 {
-                    return "";
+                    if (System.Text.RegularExpressions.Regex.IsMatch(texto, @"[^\w\s]"))
+                    {
+
+                        return "No pueden contener caracteres especiales";
+                    }
+                    else
+                    {
+
+                        precio = float.Parse(texto);
+
+                        if (precio < 201 && precio > 19)
+                        {
+                            return "";
+                        }
+                        else
+                        {
+                            return "El precio tiene que estar entre 20LP y 200LP";
+                        }
+                    }
                 }
                 else
                 {
-                    return "el precio tiene que estar entre 20LP y 200LP";
+                    return "El precio tiene que estar entre 20LP y 200LP";
                 }
-            }
-           else
-            {
-                return "el precio tiene que estar entre 20LP y 200LP";
-            }
             }
             else
             {
                 return "Solo se acepan numeros";
             }
+        }
+
+        public string validar_peso(string texto)
+        {
+            int peso;
+            string num = "[0-9]";
+
+            if (Regex.IsMatch(texto, num))
+            {
+                if (texto != "")
+                {
+                    peso = int.Parse(texto);
+
+                    if (peso < 1000 && peso > 0)
+                    {
+                        return "";
+                    }
+                    else
+                    {
+                        return "El peso no puede ser menor a 0 y mayor a 1000";
+                    }
+                }
+                else
+                {
+                    return "El precio no puede ser menor a 0 y mayor a 1000";
+                }
+            }
+            else
+            {
+                return "Solo se acepan números";
+            }
+        }
+
+        public int validar_pesoPedidos(string texto)
+        {
+            int peso;
+            string num = "[0-9]";
+
+            if (Regex.IsMatch(texto, num))
+            {
+                if (texto != "")
+                {
+                    peso = int.Parse(texto);
+
+                    if (peso < 500 && peso > 0)
+                    {
+                        return 5;
+                    }
+                    else if (peso <= 0)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return 500;
+                    }
+                }
+                else
+                {
+                    return 5;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public string validarnumenteros(string texto)
+        {
+            int x = 0;
+            for (int i = 0; i < texto.Length; i++)
+            {
+
+                char t = texto[i];
+                string o = t.ToString();
+                string vali = "[0-9]";
+                if (Regex.IsMatch(o, vali))
+                {
+
+
+                }
+                else
+                {
+                    x++;
+                }
+
+            }
+            if (x > 0)
+            {
+
+                return "Solo se aceptan numeros enteros";
+            }
+            else
+            {
+
+                return "";
+            }
+        }
+
+        public string validarcontra(string texto)
+        {
+
+            string vali = "[a-zA-Z]";
+            string val = @"[@""!""""#$%&'()*+,-./:;<=>?@[\]^_`{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿×÷""]";
+
+            string can = "", num = "", let = "", esp = "", espacio = "";
+
+            for (int i = 0; i < texto.Length; i++)
+            {
+
+                if (texto.Contains(" "))
+                {
+                    espacio = "la contraseña no tiene que contener espacios \n";
+
+                }
+                else
+                {
+                    espacio = "";
+                }
+
+                if (i < 8)
+                {
+                    can = "la contraseña tiene que tener mas de 8 caracteres \n";
+                }
+                else if (i > 16)
+                {
+                    can = "la contraseña tiene que tener menos de 16 caracteres \n";
+                }
+                else
+                {
+                    can = "";
+                }
+            }
+            if (Regex.IsMatch(texto, @"\d"))
+            {
+                num = "";
+            }
+            else
+            {
+                num = "la contraseña tiene que contener un numero \n";
+            }
+
+
+            if (Regex.IsMatch(texto, vali))
+            {
+                let = "";
+            }
+            else
+            {
+                let = "la contraseña tiene que contener una letra \n";
+            }
+            if (Regex.IsMatch(texto, val))
+            {
+                esp = "";
+            }
+            else
+            {
+                esp = "la contraseña tiene que contener un caracter especial \n";
+            }
+
+            if (let == "" && num == "" && esp == "" && can == "" && espacio == "")
+            {
+                return "";
+            }
+            else
+            {
+                return let + num + can + esp + espacio;
+            }
+
+
         }
 
         public string validar_dni(string texto)
@@ -512,7 +756,7 @@ namespace PROYECTO.CLASES
                 }
                 if (mensage == "")
                 {
-                    if (texto[8] == '0' && texto[9] == '0' && texto[10] == '0')
+                    if (texto.EndsWith("0000"))
                     {
                         mensage = "el dni tiene que ser correcto";
                     }
@@ -528,6 +772,6 @@ namespace PROYECTO.CLASES
             }
 
             return mensage;
-        }*/
+        }
     }
 }

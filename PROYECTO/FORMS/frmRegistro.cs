@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PROYECTO;
 using PROYECTO.CLASES;
+using Proyecto_de_desarrolo.Clases;
 
 namespace Proyecto_de_desarrolo.Formularios
 {
@@ -26,35 +27,8 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
+        clsValidaciones val = new clsValidaciones();
 
-     
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-
-            clsRegistro registro = new clsRegistro();
-            Cconexion conexion = new Cconexion();
-
-
-            registro.setUsu(txtUsuario.Text.Trim());
-            registro.setContra(txtContra.Text);
-            registro.setPregunta(cmbPregunta.Text);
-            registro.setRespuesta(txtRespuesta.Text);
-
-
-            if (string.IsNullOrWhiteSpace(registro.getUsu()) || string.IsNullOrWhiteSpace(registro.getContra()) || string.IsNullOrWhiteSpace(registro.getPregunta()) || string.IsNullOrWhiteSpace(registro.getRespuesta()))
-            {
-                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                return;
-            }
-            conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu());
-
-            frmInicioSesion frmInicioSesion = new frmInicioSesion();
-            frmInicioSesion.Show();
-            this.Close();
-
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -80,6 +54,53 @@ namespace Proyecto_de_desarrolo.Formularios
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            val.validarcm(cmbPregunta.Text);
+            if (txtUsuario.Text == "" || txtContra.Text == "" || txtRespuesta.Text == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+
+            }
+            else
+            {
+                clsRegistro registro = new clsRegistro();
+                Cconexion conexion = new Cconexion();
+                if (errorProvider1.GetError(txtUsuario) == "" && errorProvider1.GetError(txtContra) == "" && errorProvider1.GetError(txtRespuesta) == "")
+                {
+
+                    registro.setUsu(txtUsuario.Text.Trim());
+                    registro.setContra(txtContra.Text);
+                    registro.setPregunta(cmbPregunta.Text);
+                    registro.setRespuesta(txtRespuesta.Text);
+
+                    if (conexion.VerificarUsuarioExistente(txtUsuario.Text))
+                    {
+                        MessageBox.Show("Ya existe este usuario");
+                        return;
+                    }
+
+                    if (string.IsNullOrWhiteSpace(registro.getUsu()) || string.IsNullOrWhiteSpace(registro.getContra()) || string.IsNullOrWhiteSpace(registro.getPregunta()) || string.IsNullOrWhiteSpace(registro.getRespuesta()))
+                    {
+                        MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                        return;
+                    }
+                    conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 3);
+
+
+                    frmInicioSesion frmInicioSesion = new frmInicioSesion();
+                    frmInicioSesion.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                }
+
+            }
         }
     }
 }
