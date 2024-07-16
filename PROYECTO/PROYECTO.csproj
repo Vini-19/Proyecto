@@ -37,11 +37,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Azure.Core, Version=1.38.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Azure.Core.1.38.0\lib\net472\Azure.Core.dll</HintPath>
+    <Reference Include="Azure.Core, Version=1.40.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.40.0\lib\net472\Azure.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Azure.Identity, Version=1.11.3.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Azure.Identity.1.11.3\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    <Reference Include="Azure.Identity, Version=1.12.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Identity.1.12.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -49,11 +49,11 @@
     <Reference Include="Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.SqlClient.5.2.1\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Identity.Client, Version=4.60.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Identity.Client.4.60.3\lib\net462\Microsoft.Identity.Client.dll</HintPath>
+    <Reference Include="Microsoft.Identity.Client, Version=4.61.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.61.3\lib\net462\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.60.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Identity.Client.Extensions.Msal.4.60.3\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.61.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.Extensions.Msal.4.61.3\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.35.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
@@ -91,7 +91,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -182,7 +184,7 @@
     <Compile Include="CLASES\clsValidaciones.cs" />
     <Compile Include="CLASES\clsVentas.cs" />
     <Compile Include="CLASES\Conexion.cs" />
-    <Compile Include="COMPRAS.Designer.cs">
+    <Compile Include="COJUNTO DE DATOS\COMPRAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>COMPRAS.xsd</DependentUpon>
@@ -301,7 +303,7 @@
     <Compile Include="FORMS\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="productos.Designer.cs">
+    <Compile Include="COJUNTO DE DATOS\productos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>productos.xsd</DependentUpon>
@@ -320,10 +322,10 @@
     <Compile Include="REPORTES\REPOR_VENTA.Designer.cs">
       <DependentUpon>REPOR_VENTA.cs</DependentUpon>
     </Compile>
-    <Compile Include="VENTAS.cs">
+    <Compile Include="COJUNTO DE DATOS\VENTAS.cs">
       <DependentUpon>VENTAS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="VENTAS.Designer.cs">
+    <Compile Include="COJUNTO DE DATOS\VENTAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTAS.xsd</DependentUpon>
@@ -403,27 +405,27 @@
       <DependentUpon>REPOR_PRODUCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\RE_VENTA.rdlc" />
-    <None Include="COMPRAS.xsc">
+    <None Include="COJUNTO DE DATOS\COMPRAS.xsc">
       <DependentUpon>COMPRAS.xsd</DependentUpon>
     </None>
-    <None Include="COMPRAS.xsd">
+    <None Include="COJUNTO DE DATOS\COMPRAS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>COMPRAS.Designer.cs</LastGenOutput>
     </None>
-    <None Include="COMPRAS.xss">
+    <None Include="COJUNTO DE DATOS\COMPRAS.xss">
       <DependentUpon>COMPRAS.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="productos.xsc">
+    <None Include="COJUNTO DE DATOS\productos.xsc">
       <DependentUpon>productos.xsd</DependentUpon>
     </None>
-    <None Include="productos.xsd">
+    <None Include="COJUNTO DE DATOS\productos.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>productos.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="productos.xss">
+    <None Include="COJUNTO DE DATOS\productos.xss">
       <DependentUpon>productos.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -435,15 +437,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="VENTAS.xsc">
+    <None Include="COJUNTO DE DATOS\VENTAS.xsc">
       <DependentUpon>VENTAS.xsd</DependentUpon>
     </None>
-    <None Include="VENTAS.xsd">
+    <None Include="COJUNTO DE DATOS\VENTAS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>VENTAS.Designer.cs</LastGenOutput>
     </None>
-    <None Include="VENTAS.xss">
+    <None Include="COJUNTO DE DATOS\VENTAS.xss">
       <DependentUpon>VENTAS.xsd</DependentUpon>
     </None>
   </ItemGroup>
