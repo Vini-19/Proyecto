@@ -48,7 +48,6 @@ namespace PROYECTO
             this.button14 = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
             this.panelFacturacion = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -56,7 +55,7 @@ namespace PROYECTO
             this.panelProductos = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.sliderTran = new System.Windows.Forms.Timer(this.components);
             this.BtnProdu = new System.Windows.Forms.Button();
@@ -69,7 +68,8 @@ namespace PROYECTO
             this.PNREPOR = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -84,6 +84,7 @@ namespace PROYECTO
             this.pnsubusu.SuspendLayout();
             this.pnusuario.SuspendLayout();
             this.PNREPOR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,7 +98,7 @@ namespace PROYECTO
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1152, 38);
+            this.panel1.Size = new System.Drawing.Size(1836, 38);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -111,7 +112,7 @@ namespace PROYECTO
             // 
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(992, 0);
+            this.panel2.Location = new System.Drawing.Point(1676, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(130, 38);
             this.panel2.TabIndex = 4;
@@ -131,7 +132,7 @@ namespace PROYECTO
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1122, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(1806, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -150,6 +151,7 @@ namespace PROYECTO
             this.label1.Size = new System.Drawing.Size(238, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "San José Carniceros | CROAS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMenu
             // 
@@ -171,15 +173,15 @@ namespace PROYECTO
             this.slidermenu.Controls.Add(this.panelFacturacion);
             this.slidermenu.Controls.Add(this.btnProduct);
             this.slidermenu.Controls.Add(this.panelProductos);
-            this.slidermenu.Controls.Add(this.button6);
+            this.slidermenu.Controls.Add(this.btnReporte);
             this.slidermenu.Controls.Add(this.PNREPOR);
-            this.slidermenu.Controls.Add(this.button12);
+            this.slidermenu.Controls.Add(this.btnPedidos);
             this.slidermenu.Controls.Add(this.button5);
             this.slidermenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidermenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.slidermenu.Location = new System.Drawing.Point(0, 38);
             this.slidermenu.Name = "slidermenu";
-            this.slidermenu.Size = new System.Drawing.Size(263, 1272);
+            this.slidermenu.Size = new System.Drawing.Size(263, 1400);
             this.slidermenu.TabIndex = 1;
             this.slidermenu.WrapContents = false;
             // 
@@ -284,32 +286,16 @@ namespace PROYECTO
             // panelFacturacion
             // 
             this.panelFacturacion.BackColor = System.Drawing.Color.Black;
-            this.panelFacturacion.Controls.Add(this.button2);
             this.panelFacturacion.Controls.Add(this.button3);
             this.panelFacturacion.Controls.Add(this.button8);
             this.panelFacturacion.Controls.Add(this.button9);
             this.panelFacturacion.Location = new System.Drawing.Point(3, 371);
             this.panelFacturacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelFacturacion.Name = "panelFacturacion";
-            this.panelFacturacion.Size = new System.Drawing.Size(260, 255);
+            this.panelFacturacion.Size = new System.Drawing.Size(260, 199);
             this.panelFacturacion.TabIndex = 29;
             this.panelFacturacion.Visible = false;
             this.panelFacturacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFacturacion_Paint);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 191);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(243, 55);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Reportes";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -325,6 +311,7 @@ namespace PROYECTO
             this.button3.Text = "Envíos";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // button8
             // 
@@ -366,7 +353,7 @@ namespace PROYECTO
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(3, 633);
+            this.btnProduct.Location = new System.Drawing.Point(3, 577);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(260, 81);
             this.btnProduct.TabIndex = 2;
@@ -380,7 +367,7 @@ namespace PROYECTO
             this.panelProductos.BackColor = System.Drawing.Color.Black;
             this.panelProductos.Controls.Add(this.button19);
             this.panelProductos.Controls.Add(this.button20);
-            this.panelProductos.Location = new System.Drawing.Point(3, 721);
+            this.panelProductos.Location = new System.Drawing.Point(3, 665);
             this.panelProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.Size = new System.Drawing.Size(260, 132);
@@ -419,23 +406,23 @@ namespace PROYECTO
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click_2);
             // 
-            // button6
+            // btnReporte
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 860);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(260, 81);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "                  REPORTES";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnReporte.BackColor = System.Drawing.Color.Black;
+            this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.Location = new System.Drawing.Point(3, 804);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(260, 81);
+            this.btnReporte.TabIndex = 27;
+            this.btnReporte.Text = "                  REPORTES";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -445,7 +432,7 @@ namespace PROYECTO
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 1174);
+            this.button5.Location = new System.Drawing.Point(3, 1118);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(260, 81);
             this.button5.TabIndex = 26;
@@ -496,12 +483,13 @@ namespace PROYECTO
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.logo);
             this.contenedor.Controls.Add(this.pnsubusu);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(263, 38);
             this.contenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(889, 1272);
+            this.contenedor.Size = new System.Drawing.Size(1573, 1400);
             this.contenedor.TabIndex = 25;
             this.contenedor.UseWaitCursor = true;
             // 
@@ -510,9 +498,9 @@ namespace PROYECTO
             this.pnsubusu.BackColor = System.Drawing.Color.Transparent;
             this.pnsubusu.Controls.Add(this.pnusuario);
             this.pnsubusu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnsubusu.Location = new System.Drawing.Point(732, 0);
+            this.pnsubusu.Location = new System.Drawing.Point(1416, 0);
             this.pnsubusu.Name = "pnsubusu";
-            this.pnsubusu.Size = new System.Drawing.Size(157, 1272);
+            this.pnsubusu.Size = new System.Drawing.Size(157, 1400);
             this.pnsubusu.TabIndex = 0;
             this.pnsubusu.UseWaitCursor = true;
             this.pnsubusu.Visible = false;
@@ -551,7 +539,7 @@ namespace PROYECTO
             this.PNREPOR.BackColor = System.Drawing.Color.Black;
             this.PNREPOR.Controls.Add(this.button10);
             this.PNREPOR.Controls.Add(this.button11);
-            this.PNREPOR.Location = new System.Drawing.Point(3, 948);
+            this.PNREPOR.Location = new System.Drawing.Point(3, 892);
             this.PNREPOR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PNREPOR.Name = "PNREPOR";
             this.PNREPOR.Size = new System.Drawing.Size(260, 132);
@@ -591,28 +579,40 @@ namespace PROYECTO
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button12
+            // btnPedidos
             // 
-            this.button12.BackColor = System.Drawing.Color.Black;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(3, 1087);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(260, 81);
-            this.button12.TabIndex = 33;
-            this.button12.Text = "                  Pedidos";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = false;
+            this.btnPedidos.BackColor = System.Drawing.Color.Black;
+            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
+            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(3, 1031);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(260, 81);
+            this.btnPedidos.TabIndex = 33;
+            this.btnPedidos.Text = "                  Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.UseVisualStyleBackColor = false;
+            // 
+            // logo
+            // 
+            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(1416, 1400);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 1;
+            this.logo.TabStop = false;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
             // frmadmi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 1310);
+            this.ClientSize = new System.Drawing.Size(1836, 1438);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.BtnProdu);
             this.Controls.Add(this.panel6);
@@ -637,6 +637,7 @@ namespace PROYECTO
             this.pnsubusu.ResumeLayout(false);
             this.pnusuario.ResumeLayout(false);
             this.PNREPOR.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -659,7 +660,6 @@ namespace PROYECTO
         private Button button3;
         private Button button8;
         private Button button9;
-        private Button button2;
         private Button btnProduct;
         private Panel panelProductos;
         private Button button19;
@@ -667,7 +667,7 @@ namespace PROYECTO
         private Panel contenedor;
         private Button button5;
         private Button button4;
-        private Button button6;
+        private Button btnReporte;
         private Panel panel4;
         private Panel pnsubusu;
         private Panel pnusuario;
@@ -679,6 +679,7 @@ namespace PROYECTO
         private Panel PNREPOR;
         private Button button10;
         private Button button11;
-        private Button button12;
+        private Button btnPedidos;
+        private PictureBox logo;
     }
 }

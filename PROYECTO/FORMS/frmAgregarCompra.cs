@@ -258,6 +258,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
+        private void frmAgregarCompra_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             

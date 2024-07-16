@@ -21,6 +21,7 @@ namespace PROYECTO
         public frmadmi()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
 
         }
         bool menuExpand = false;
@@ -61,6 +62,7 @@ namespace PROYECTO
             {
                 panelProductos.Visible = false;
             }
+
             if (panelPersonas.Visible == true)
             {
                 panelPersonas.Visible = false;
@@ -80,6 +82,55 @@ namespace PROYECTO
             if (PNREPOR.Visible == true)
             {
                 PNREPOR.Visible = false;
+            }
+            
+        }
+
+        private void butons()
+        {
+            if (btnFacturacion.Enabled == true)
+            {
+                btnFacturacion.Enabled = false;
+            }
+            else
+            {
+                btnFacturacion.Enabled = true;
+            }
+
+            if (btnPersonas.Enabled == true)
+            {
+                btnPersonas.Enabled = false;
+            }
+            else
+            {
+                btnPersonas.Enabled = true;
+            }
+
+            if (btnReporte.Enabled == true)
+            {
+                btnReporte.Enabled = false;
+            }
+            else
+            {
+                btnReporte.Enabled = true;
+            }
+
+            if (btnPedidos.Enabled == true)
+            {
+                btnPedidos.Enabled = false;
+            }
+            else
+            {
+                btnPedidos.Enabled = true;
+            }
+
+            if (btnProduct.Enabled == true)
+            {
+                btnProduct.Enabled = false;
+            }
+            else
+            {
+                btnProduct.Enabled = true;
             }
 
         }
@@ -336,6 +387,7 @@ namespace PROYECTO
         private void button9_Click_1(object sender, EventArgs e)
         {
             AbriForm(new frmVentas());
+            
         }
 
         private void button8_Click_2(object sender, EventArgs e)
@@ -395,11 +447,19 @@ namespace PROYECTO
         private void button11_Click(object sender, EventArgs e)
         {
             AbriForm(new REPOR_VENTA());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button10_Click_1(object sender, EventArgs e)
         {
             AbriForm(new REPOR_PRODUCT());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void btnPersonas_Click_1(object sender, EventArgs e)
@@ -415,16 +475,28 @@ namespace PROYECTO
         private void button14_Click_2(object sender, EventArgs e)
         {
             AbriForm(new frmClientes());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button4_Click_2(object sender, EventArgs e)
         {
             AbriForm(new frmProveedores());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             AbriForm(new agregarTrabajador());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void btnFacturacion_Click_2(object sender, EventArgs e)
@@ -440,11 +512,19 @@ namespace PROYECTO
         private void button9_Click_2(object sender, EventArgs e)
         {
             AbriForm(new frmEnvios());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button8_Click_3(object sender, EventArgs e)
         {
             AbriForm(new frmAgregarCompra());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void btnProduct_Click_2(object sender, EventArgs e)
@@ -455,11 +535,19 @@ namespace PROYECTO
         private void button20_Click_2(object sender, EventArgs e)
         {
             AbriForm(new frmInventario());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button19_Click_2(object sender, EventArgs e)
         {
             AbriForm(new frmPedido());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
 
         }
 
@@ -489,6 +577,8 @@ namespace PROYECTO
         private void btnMenu_Click_2(object sender, EventArgs e)
         {
             sliderTran.Start();
+            submenu();
+            butons();
         }
 
         private void sliderTran_Tick_1(object sender, EventArgs e)
@@ -499,6 +589,7 @@ namespace PROYECTO
                     slidermenu.Width -= 10;
                     if (slidermenu.Width <= 60)
                     {
+                            
                         siderbarExpand = false;
                         sliderTran.Stop();
                     }
@@ -508,6 +599,7 @@ namespace PROYECTO
                     slidermenu.Width += 10;
                     if (slidermenu.Width >= 263)
                     {
+                        
                         siderbarExpand = true;
                         sliderTran.Stop();
 
@@ -518,6 +610,27 @@ namespace PROYECTO
 
                 }
             
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            logo.Visible = true;
+            
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

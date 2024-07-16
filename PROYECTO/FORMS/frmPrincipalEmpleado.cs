@@ -1,4 +1,5 @@
 ﻿using PROYECTO;
+using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -156,6 +157,41 @@ namespace Proyecto_de_desarrolo
             this.Hide();
             frmInicioSesion sesio = new frmInicioSesion();  
             sesio.Show();
+        }
+
+        private void btnPersonas_Click_1(object sender, EventArgs e)
+        {
+            ShowMenu(panelPersonas);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            AbriForm(new frmClientes());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbriForm(new frmProveedores());
+        }
+
+        private void btnFacturacion_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbriForm(new frmVentas());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbriForm(new frmAgregarCompra());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

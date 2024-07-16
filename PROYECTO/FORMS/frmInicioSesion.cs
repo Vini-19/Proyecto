@@ -92,16 +92,7 @@ namespace PROYECTO
 
 
 
-                DA.Fill(dataTable);
-                cod = dataTable.Rows[0][0].ToString();
-                per.setcodUsu(cod);
-
-
-
-                // Llenar el DataTable con los resultados de la consulta
-                DA.Fill(dataTable);
-                cod = dataTable.Rows[0][0].ToString();
-                per.setcodUsu(cod);
+                
 
             }
 

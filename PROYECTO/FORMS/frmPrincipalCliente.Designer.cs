@@ -31,278 +31,267 @@ namespace Proyecto_de_desarrolo
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalCliente));
-            contenedor = new Panel();
-            pnsubusu = new Panel();
-            pnusuario = new Panel();
-            button7 = new Button();
-            sliderTran = new System.Windows.Forms.Timer(components);
-            button5 = new Button();
-            button19 = new Button();
-            button20 = new Button();
-            btnProduct = new Button();
-            panelProductos = new Panel();
-            slidermenu = new FlowLayoutPanel();
-            label1 = new Label();
-            btnMenu = new PictureBox();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            lblUsuario = new Label();
-            pictureBox2 = new PictureBox();
-            contenedor.SuspendLayout();
-            pnsubusu.SuspendLayout();
-            pnusuario.SuspendLayout();
-            panelProductos.SuspendLayout();
-            slidermenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnMenu).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            SuspendLayout();
+            this.contenedor = new System.Windows.Forms.Panel();
+            this.pnsubusu = new System.Windows.Forms.Panel();
+            this.pnusuario = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.sliderTran = new System.Windows.Forms.Timer(this.components);
+            this.button5 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.panelProductos = new System.Windows.Forms.Panel();
+            this.slidermenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.contenedor.SuspendLayout();
+            this.pnsubusu.SuspendLayout();
+            this.pnusuario.SuspendLayout();
+            this.panelProductos.SuspendLayout();
+            this.slidermenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
             // 
             // contenedor
             // 
-            contenedor.Controls.Add(pnsubusu);
-            contenedor.Dock = DockStyle.Fill;
-            contenedor.Location = new Point(263, 35);
-            contenedor.Margin = new Padding(3, 2, 3, 2);
-            contenedor.Name = "contenedor";
-            contenedor.Size = new Size(795, 519);
-            contenedor.TabIndex = 30;
-            contenedor.Paint += contenedor_Paint;
+            this.contenedor.Controls.Add(this.pnsubusu);
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(225, 41);
+            this.contenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(1611, 1397);
+            this.contenedor.TabIndex = 30;
             // 
             // pnsubusu
             // 
-            pnsubusu.BackColor = Color.Transparent;
-            pnsubusu.Controls.Add(pnusuario);
-            pnsubusu.Dock = DockStyle.Right;
-            pnsubusu.Location = new Point(638, 0);
-            pnsubusu.Name = "pnsubusu";
-            pnsubusu.Size = new Size(157, 519);
-            pnsubusu.TabIndex = 1;
-            pnsubusu.UseWaitCursor = true;
-            pnsubusu.Visible = false;
+            this.pnsubusu.BackColor = System.Drawing.Color.Transparent;
+            this.pnsubusu.Controls.Add(this.pnusuario);
+            this.pnsubusu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnsubusu.Location = new System.Drawing.Point(1476, 0);
+            this.pnsubusu.Name = "pnsubusu";
+            this.pnsubusu.Size = new System.Drawing.Size(135, 1397);
+            this.pnsubusu.TabIndex = 1;
+            this.pnsubusu.UseWaitCursor = true;
+            this.pnsubusu.Visible = false;
             // 
             // pnusuario
             // 
-            pnusuario.Controls.Add(button7);
-            pnusuario.Dock = DockStyle.Top;
-            pnusuario.Location = new Point(0, 0);
-            pnusuario.Name = "pnusuario";
-            pnusuario.Size = new Size(157, 65);
-            pnusuario.TabIndex = 0;
-            pnusuario.UseWaitCursor = true;
+            this.pnusuario.Controls.Add(this.button7);
+            this.pnusuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnusuario.Location = new System.Drawing.Point(0, 0);
+            this.pnusuario.Name = "pnusuario";
+            this.pnusuario.Size = new System.Drawing.Size(135, 56);
+            this.pnusuario.TabIndex = 0;
+            this.pnusuario.UseWaitCursor = true;
             // 
             // button7
             // 
-            button7.BackColor = Color.IndianRed;
-            button7.Dock = DockStyle.Top;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.White;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(0, 0);
-            button7.Name = "button7";
-            button7.Size = new Size(157, 53);
-            button7.TabIndex = 27;
-            button7.Text = "                  &Cerrar Sesion";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = false;
-            button7.UseWaitCursor = true;
-            button7.Click += button7_Click;
+            this.button7.BackColor = System.Drawing.Color.IndianRed;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(135, 46);
+            this.button7.TabIndex = 27;
+            this.button7.Text = "                  &Cerrar Sesion";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.UseWaitCursor = true;
             // 
             // sliderTran
             // 
-            sliderTran.Interval = 10;
-            sliderTran.Tick += sliderTran_Tick;
+            this.sliderTran.Interval = 10;
             // 
             // button5
             // 
-            button5.BackColor = Color.IndianRed;
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(3, 228);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(297, 81);
-            button5.TabIndex = 26;
-            button5.Text = "                  &Salir";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(3, 195);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(255, 70);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "                  &Salir";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button19
             // 
-            button19.BackColor = Color.Gray;
-            button19.FlatAppearance.BorderSize = 0;
-            button19.FlatStyle = FlatStyle.Flat;
-            button19.ForeColor = Color.White;
-            button19.Location = new Point(0, 64);
-            button19.Name = "button19";
-            button19.Padding = new Padding(40, 0, 0, 0);
-            button19.Size = new Size(243, 51);
-            button19.TabIndex = 17;
-            button19.Text = "Ordenes";
-            button19.TextAlign = ContentAlignment.MiddleLeft;
-            button19.UseVisualStyleBackColor = false;
+            this.button19.BackColor = System.Drawing.Color.Gray;
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(0, 55);
+            this.button19.Name = "button19";
+            this.button19.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button19.Size = new System.Drawing.Size(208, 44);
+            this.button19.TabIndex = 17;
+            this.button19.Text = "Ordenes";
+            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button19.UseVisualStyleBackColor = false;
             // 
             // button20
             // 
-            button20.BackColor = Color.Gray;
-            button20.FlatAppearance.BorderSize = 0;
-            button20.FlatStyle = FlatStyle.Flat;
-            button20.ForeColor = Color.White;
-            button20.Location = new Point(0, 5);
-            button20.Name = "button20";
-            button20.Padding = new Padding(40, 0, 0, 0);
-            button20.Size = new Size(243, 53);
-            button20.TabIndex = 1;
-            button20.Text = "Comprar";
-            button20.TextAlign = ContentAlignment.MiddleLeft;
-            button20.UseVisualStyleBackColor = false;
-            button20.Click += button20_Click;
+            this.button20.BackColor = System.Drawing.Color.Gray;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(0, 4);
+            this.button20.Name = "button20";
+            this.button20.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button20.Size = new System.Drawing.Size(208, 46);
+            this.button20.TabIndex = 1;
+            this.button20.Text = "Comprar";
+            this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button20.UseVisualStyleBackColor = false;
             // 
             // btnProduct
             // 
-            btnProduct.BackColor = Color.Black;
-            btnProduct.FlatAppearance.BorderSize = 0;
-            btnProduct.FlatStyle = FlatStyle.Flat;
-            btnProduct.ForeColor = Color.White;
-            btnProduct.Image = (Image)resources.GetObject("btnProduct.Image");
-            btnProduct.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProduct.Location = new Point(3, 4);
-            btnProduct.Margin = new Padding(3, 4, 3, 4);
-            btnProduct.Name = "btnProduct";
-            btnProduct.Size = new Size(260, 81);
-            btnProduct.TabIndex = 2;
-            btnProduct.Text = "                  Productos";
-            btnProduct.TextAlign = ContentAlignment.MiddleLeft;
-            btnProduct.UseVisualStyleBackColor = false;
-            btnProduct.Click += btnProduct_Click;
+            this.btnProduct.BackColor = System.Drawing.Color.Black;
+            this.btnProduct.FlatAppearance.BorderSize = 0;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.ForeColor = System.Drawing.Color.White;
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.Location = new System.Drawing.Point(3, 3);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(223, 70);
+            this.btnProduct.TabIndex = 2;
+            this.btnProduct.Text = "                  Productos";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.UseVisualStyleBackColor = false;
             // 
             // panelProductos
             // 
-            panelProductos.BackColor = Color.Black;
-            panelProductos.Controls.Add(button19);
-            panelProductos.Controls.Add(button20);
-            panelProductos.Location = new Point(3, 94);
-            panelProductos.Margin = new Padding(3, 5, 3, 5);
-            panelProductos.Name = "panelProductos";
-            panelProductos.Size = new Size(297, 125);
-            panelProductos.TabIndex = 31;
-            panelProductos.Visible = false;
+            this.panelProductos.BackColor = System.Drawing.Color.Black;
+            this.panelProductos.Controls.Add(this.button19);
+            this.panelProductos.Controls.Add(this.button20);
+            this.panelProductos.Location = new System.Drawing.Point(3, 80);
+            this.panelProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelProductos.Name = "panelProductos";
+            this.panelProductos.Size = new System.Drawing.Size(255, 108);
+            this.panelProductos.TabIndex = 31;
+            this.panelProductos.Visible = false;
             // 
             // slidermenu
             // 
-            slidermenu.BackColor = Color.Black;
-            slidermenu.Controls.Add(btnProduct);
-            slidermenu.Controls.Add(panelProductos);
-            slidermenu.Controls.Add(button5);
-            slidermenu.Dock = DockStyle.Left;
-            slidermenu.FlowDirection = FlowDirection.TopDown;
-            slidermenu.Location = new Point(0, 35);
-            slidermenu.Name = "slidermenu";
-            slidermenu.Size = new Size(263, 519);
-            slidermenu.TabIndex = 27;
+            this.slidermenu.BackColor = System.Drawing.Color.Black;
+            this.slidermenu.Controls.Add(this.btnProduct);
+            this.slidermenu.Controls.Add(this.panelProductos);
+            this.slidermenu.Controls.Add(this.button5);
+            this.slidermenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.slidermenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.slidermenu.Location = new System.Drawing.Point(0, 41);
+            this.slidermenu.Name = "slidermenu";
+            this.slidermenu.Size = new System.Drawing.Size(225, 1397);
+            this.slidermenu.TabIndex = 27;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(48, 8);
-            label1.Name = "label1";
-            label1.Size = new Size(238, 19);
-            label1.TabIndex = 1;
-            label1.Text = "San José Carniceros | CROAS";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(41, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "San José Carniceros | CROAS";
             // 
             // btnMenu
             // 
-            btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
-            btnMenu.Location = new Point(9, 5);
-            btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(30, 30);
-            btnMenu.SizeMode = PictureBoxSizeMode.AutoSize;
-            btnMenu.TabIndex = 1;
-            btnMenu.TabStop = false;
-            btnMenu.Click += btnMenu_Click;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(8, 6);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(30, 30);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMenu.TabIndex = 1;
+            this.btnMenu.TabStop = false;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Crimson;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(btnMenu);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1058, 35);
-            panel1.TabIndex = 26;
+            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnMenu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1836, 41);
+            this.panel1.TabIndex = 26;
             // 
             // panel2
             // 
-            panel2.Controls.Add(lblUsuario);
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(898, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(130, 35);
-            panel2.TabIndex = 6;
-            panel2.Paint += panel2_Paint;
+            this.panel2.Controls.Add(this.lblUsuario);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1695, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(111, 41);
+            this.panel2.TabIndex = 6;
             // 
             // lblUsuario
             // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Cursor = Cursors.SizeAll;
-            lblUsuario.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsuario.ForeColor = Color.White;
-            lblUsuario.Location = new Point(62, 6);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(0, 19);
-            lblUsuario.TabIndex = 3;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(53, 5);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 19);
+            this.lblUsuario.TabIndex = 3;
             // 
             // pictureBox2
             // 
-            pictureBox2.Dock = DockStyle.Right;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1028, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 35);
-            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            pictureBox2.WaitOnLoad = true;
-            pictureBox2.Click += pictureBox2_Click_1;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1806, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.WaitOnLoad = true;
             // 
             // frmPrincipalCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1058, 554);
-            Controls.Add(contenedor);
-            Controls.Add(slidermenu);
-            Controls.Add(panel1);
-            Name = "frmPrincipalCliente";
-            Text = "frmPrincipalCliente";
-            Load += frmPrincipalCliente_Load;
-            contenedor.ResumeLayout(false);
-            pnsubusu.ResumeLayout(false);
-            pnusuario.ResumeLayout(false);
-            panelProductos.ResumeLayout(false);
-            slidermenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)btnMenu).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1836, 1438);
+            this.Controls.Add(this.contenedor);
+            this.Controls.Add(this.slidermenu);
+            this.Controls.Add(this.panel1);
+            this.Name = "frmPrincipalCliente";
+            this.Text = "frmPrincipalCliente";
+            this.contenedor.ResumeLayout(false);
+            this.pnsubusu.ResumeLayout(false);
+            this.pnusuario.ResumeLayout(false);
+            this.panelProductos.ResumeLayout(false);
+            this.slidermenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

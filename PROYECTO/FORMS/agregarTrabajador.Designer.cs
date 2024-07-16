@@ -61,14 +61,17 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(317, 19);
+            this.txtBuscar.Location = new System.Drawing.Point(478, 74);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(681, 20);
@@ -145,12 +148,12 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(112, 468);
+            this.btnEliminar.Location = new System.Drawing.Point(111, 191);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 19);
+            this.btnEliminar.Size = new System.Drawing.Size(70, 25);
             this.btnEliminar.TabIndex = 11;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
@@ -158,34 +161,35 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.dgvTrabajador.AllowUserToAddRows = false;
             this.dgvTrabajador.AllowUserToDeleteRows = false;
+            this.dgvTrabajador.BackgroundColor = System.Drawing.Color.Crimson;
             this.dgvTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTrabajador.Location = new System.Drawing.Point(254, 41);
+            this.dgvTrabajador.Location = new System.Drawing.Point(418, 99);
             this.dgvTrabajador.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTrabajador.Name = "dgvTrabajador";
             this.dgvTrabajador.ReadOnly = true;
             this.dgvTrabajador.RowHeadersWidth = 51;
-            this.dgvTrabajador.Size = new System.Drawing.Size(743, 512);
+            this.dgvTrabajador.Size = new System.Drawing.Size(759, 512);
             this.dgvTrabajador.TabIndex = 5;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(22, 468);
+            this.btnLimpiar.Location = new System.Drawing.Point(21, 191);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(70, 19);
+            this.btnLimpiar.Size = new System.Drawing.Size(68, 25);
             this.btnLimpiar.TabIndex = 10;
-            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Text = "&Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(22, 435);
+            this.btnAgregar.Location = new System.Drawing.Point(21, 148);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(70, 19);
+            this.btnAgregar.Size = new System.Drawing.Size(70, 29);
             this.btnAgregar.TabIndex = 7;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "&Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
@@ -234,7 +238,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(44, 19);
+            this.label2.Location = new System.Drawing.Point(37, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 13);
@@ -244,7 +248,9 @@ namespace Proyecto_de_desarrolo.Formularios
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(254, 21);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(431, 81);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
@@ -253,25 +259,19 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(112, 435);
+            this.btnModificar.Location = new System.Drawing.Point(111, 148);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(70, 19);
+            this.btnModificar.Size = new System.Drawing.Size(70, 29);
             this.btnModificar.TabIndex = 9;
-            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Text = "&Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Firebrick;
-            this.panel1.Controls.Add(this.txtCodigo);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtContra);
-            this.panel1.Controls.Add(this.txtUsuario);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtDNI_Trabajador);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtCorreo_Trabajador);
@@ -280,16 +280,12 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.txtDireccion_Trabajador);
             this.panel1.Controls.Add(this.txtNombre_Trabajador);
             this.panel1.Controls.Add(this.txtRTN_Trabajador);
-            this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.btnLimpiar);
-            this.panel1.Controls.Add(this.btnModificar);
-            this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(40, 21);
+            this.panel1.Location = new System.Drawing.Point(189, 80);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 531);
@@ -297,7 +293,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(30, 404);
+            this.txtCodigo.Location = new System.Drawing.Point(29, 117);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(142, 20);
@@ -306,7 +302,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 389);
+            this.label12.Location = new System.Drawing.Point(28, 102);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
@@ -316,7 +312,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 356);
+            this.label11.Location = new System.Drawing.Point(28, 69);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 13);
@@ -326,7 +322,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 318);
+            this.label10.Location = new System.Drawing.Point(28, 31);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
@@ -335,7 +331,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(30, 370);
+            this.txtContra.Location = new System.Drawing.Point(29, 83);
             this.txtContra.Margin = new System.Windows.Forms.Padding(2);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(142, 20);
@@ -343,7 +339,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(30, 333);
+            this.txtUsuario.Location = new System.Drawing.Point(29, 46);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(142, 20);
@@ -353,8 +349,8 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(44, 304);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(31, 10);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 13);
@@ -365,11 +361,42 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Controls.Add(this.txtCodigo);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.btnAgregar);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.btnModificar);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.btnLimpiar);
+            this.panel2.Controls.Add(this.txtContra);
+            this.panel2.Controls.Add(this.btnEliminar);
+            this.panel2.Controls.Add(this.txtUsuario);
+            this.panel2.Location = new System.Drawing.Point(3, 291);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 237);
+            this.panel2.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(435, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(585, 50);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "REGISTRO DE TRABAJADORES";
+            // 
             // agregarTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 586);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1416, 685);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvTrabajador);
             this.Controls.Add(this.label8);
@@ -381,6 +408,8 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +446,7 @@ namespace Proyecto_de_desarrolo.Formularios
         private ErrorProvider errorProvider1;
         private TextBox txtCodigo;
         private Label label12;
+        private Panel panel2;
+        private Label label13;
     }
 }
