@@ -383,6 +383,11 @@ namespace Proyecto_de_desarrolo
         {
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

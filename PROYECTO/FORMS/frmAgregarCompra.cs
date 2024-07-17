@@ -263,6 +263,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             

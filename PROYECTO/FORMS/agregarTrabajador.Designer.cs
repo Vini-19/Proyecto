@@ -53,25 +53,25 @@ namespace Proyecto_de_desarrolo.Formularios
             this.label8 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(478, 74);
+            this.txtBuscar.Location = new System.Drawing.Point(464, 74);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(681, 20);
@@ -163,12 +163,12 @@ namespace Proyecto_de_desarrolo.Formularios
             this.dgvTrabajador.AllowUserToDeleteRows = false;
             this.dgvTrabajador.BackgroundColor = System.Drawing.Color.Crimson;
             this.dgvTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTrabajador.Location = new System.Drawing.Point(418, 99);
+            this.dgvTrabajador.Location = new System.Drawing.Point(417, 99);
             this.dgvTrabajador.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTrabajador.Name = "dgvTrabajador";
             this.dgvTrabajador.ReadOnly = true;
             this.dgvTrabajador.RowHeadersWidth = 51;
-            this.dgvTrabajador.Size = new System.Drawing.Size(759, 512);
+            this.dgvTrabajador.Size = new System.Drawing.Size(727, 512);
             this.dgvTrabajador.TabIndex = 5;
             // 
             // btnLimpiar
@@ -250,7 +250,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(431, 81);
+            this.label8.Location = new System.Drawing.Point(417, 81);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
@@ -285,11 +285,30 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(189, 80);
+            this.panel1.Location = new System.Drawing.Point(175, 80);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 531);
             this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Controls.Add(this.txtCodigo);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.btnAgregar);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.btnModificar);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.btnLimpiar);
+            this.panel2.Controls.Add(this.txtContra);
+            this.panel2.Controls.Add(this.btnEliminar);
+            this.panel2.Controls.Add(this.txtUsuario);
+            this.panel2.Location = new System.Drawing.Point(3, 291);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 237);
+            this.panel2.TabIndex = 8;
             // 
             // txtCodigo
             // 
@@ -298,6 +317,18 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(142, 20);
             this.txtCodigo.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(31, 10);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Credenciales Para Usuario";
             // 
             // label12
             // 
@@ -345,40 +376,9 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtUsuario.Size = new System.Drawing.Size(142, 20);
             this.txtUsuario.TabIndex = 21;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(31, 10);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Credenciales Para Usuario";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightCoral;
-            this.panel2.Controls.Add(this.txtCodigo);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.btnAgregar);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.btnModificar);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.btnLimpiar);
-            this.panel2.Controls.Add(this.txtContra);
-            this.panel2.Controls.Add(this.btnEliminar);
-            this.panel2.Controls.Add(this.txtUsuario);
-            this.panel2.Location = new System.Drawing.Point(3, 291);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 237);
-            this.panel2.TabIndex = 8;
             // 
             // label13
             // 
@@ -407,9 +407,9 @@ namespace Proyecto_de_desarrolo.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -397,7 +397,7 @@ namespace PROYECTO
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            AbriForm(new frmEnvios());
+            
         }
 
         private void button2_Click_2(object sender, EventArgs e)
@@ -511,11 +511,7 @@ namespace PROYECTO
 
         private void button9_Click_2(object sender, EventArgs e)
         {
-            AbriForm(new frmEnvios());
-            if (logo.Visible == true)
-            {
-                logo.Visible = false;
-            }
+           
         }
 
         private void button8_Click_3(object sender, EventArgs e)

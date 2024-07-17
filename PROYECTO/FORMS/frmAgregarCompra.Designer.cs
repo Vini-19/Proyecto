@@ -43,7 +43,6 @@ namespace Proyecto_de_desarrolo.Formularios
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ListaCompras = new System.Windows.Forms.ListBox();
             this.btnFinalizarC = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.lblsubtotal2 = new System.Windows.Forms.Label();
             this.lbltotal2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -68,8 +68,8 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(8, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(366, 113);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 288);
             this.panel1.TabIndex = 0;
@@ -77,7 +77,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnAgregarC
             // 
             this.btnAgregarC.Location = new System.Drawing.Point(162, 109);
-            this.btnAgregarC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarC.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarC.Name = "btnAgregarC";
             this.btnAgregarC.Size = new System.Drawing.Size(70, 19);
             this.btnAgregarC.TabIndex = 24;
@@ -87,7 +87,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(26, 188);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(95, 20);
             this.txtPrecio.TabIndex = 23;
@@ -105,7 +105,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnQuitarC
             // 
             this.btnQuitarC.Location = new System.Drawing.Point(162, 138);
-            this.btnQuitarC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuitarC.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarC.Name = "btnQuitarC";
             this.btnQuitarC.Size = new System.Drawing.Size(70, 19);
             this.btnQuitarC.TabIndex = 12;
@@ -117,7 +117,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProveedor.FormattingEnabled = true;
             this.cmbProveedor.Location = new System.Drawing.Point(26, 46);
-            this.cmbProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProveedor.Name = "cmbProveedor";
             this.cmbProveedor.Size = new System.Drawing.Size(95, 21);
             this.cmbProveedor.TabIndex = 9;
@@ -127,7 +127,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(26, 94);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(95, 21);
             this.cmbCategoria.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(26, 140);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(95, 20);
             this.txtCantidad.TabIndex = 7;
@@ -170,28 +170,18 @@ namespace Proyecto_de_desarrolo.Formularios
             this.label3.TabIndex = 1;
             this.label3.Text = "Categoría";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Añadir Compra";
-            // 
             // ListaCompras
             // 
             this.ListaCompras.FormattingEnabled = true;
-            this.ListaCompras.Location = new System.Drawing.Point(276, 41);
-            this.ListaCompras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListaCompras.Location = new System.Drawing.Point(634, 113);
+            this.ListaCompras.Margin = new System.Windows.Forms.Padding(2);
             this.ListaCompras.Name = "ListaCompras";
             this.ListaCompras.Size = new System.Drawing.Size(208, 264);
             this.ListaCompras.TabIndex = 12;
             // 
             // btnFinalizarC
             // 
-            this.btnFinalizarC.Location = new System.Drawing.Point(382, 315);
+            this.btnFinalizarC.Location = new System.Drawing.Point(740, 387);
             this.btnFinalizarC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFinalizarC.Name = "btnFinalizarC";
             this.btnFinalizarC.Size = new System.Drawing.Size(101, 20);
@@ -202,7 +192,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(436, 280);
+            this.lblTotal.Location = new System.Drawing.Point(794, 352);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(0, 13);
@@ -211,7 +201,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(290, 280);
+            this.label2.Location = new System.Drawing.Point(648, 352);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
@@ -221,7 +211,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblsubtotal
             // 
             this.lblsubtotal.AutoSize = true;
-            this.lblsubtotal.Location = new System.Drawing.Point(290, 265);
+            this.lblsubtotal.Location = new System.Drawing.Point(648, 337);
             this.lblsubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblsubtotal.Name = "lblsubtotal";
             this.lblsubtotal.Size = new System.Drawing.Size(49, 13);
@@ -231,7 +221,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblsubtotal2
             // 
             this.lblsubtotal2.AutoSize = true;
-            this.lblsubtotal2.Location = new System.Drawing.Point(361, 265);
+            this.lblsubtotal2.Location = new System.Drawing.Point(719, 337);
             this.lblsubtotal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblsubtotal2.Name = "lblsubtotal2";
             this.lblsubtotal2.Size = new System.Drawing.Size(35, 13);
@@ -241,7 +231,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lbltotal2
             // 
             this.lbltotal2.AutoSize = true;
-            this.lbltotal2.Location = new System.Drawing.Point(361, 280);
+            this.lbltotal2.Location = new System.Drawing.Point(719, 352);
             this.lbltotal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltotal2.Name = "lbltotal2";
             this.lbltotal2.Size = new System.Drawing.Size(35, 13);
@@ -252,11 +242,23 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(418, 27);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(389, 50);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "AGREGAR COMPRA";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
             // frmAgregarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 343);
+            this.ClientSize = new System.Drawing.Size(1416, 685);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.lbltotal2);
             this.Controls.Add(this.lblsubtotal2);
             this.Controls.Add(this.lblsubtotal);
@@ -264,9 +266,8 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnFinalizarC);
             this.Controls.Add(this.ListaCompras);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAgregarCompra";
             this.Text = "frmAgregarCompra";
             this.Load += new System.EventHandler(this.frmAgregarCompra_Load_2);
@@ -281,7 +282,6 @@ namespace Proyecto_de_desarrolo.Formularios
         #endregion
 
         private Panel panel1;
-        private Label label1;
         private Label label4;
         private Label label3;
         private ComboBox cmbProveedor;
@@ -301,5 +301,6 @@ namespace Proyecto_de_desarrolo.Formularios
         private Label lblsubtotal2;
         private Label lbltotal2;
         private ErrorProvider errorProvider1;
+        private Label label13;
     }
 }

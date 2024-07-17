@@ -369,7 +369,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             }
 
-            RegistrarCarrito(lblCantidad1.Text);
+            //RegistrarCarrito(lblCantidad1.Text);
         }
         private void RegistrarCarrito(string cant)
         {
@@ -406,7 +406,7 @@ namespace Proyecto_de_desarrolo.Formularios
         private void btnMenos1_Click_1(object sender, EventArgs e)
         {
             x1--;
-            lblCantidad1.Text = Convert.ToString(x1);
+            //lblCantidad1.Text = Convert.ToString(x1);
         }
 
         private void btnMas1_Click(object sender, EventArgs e)
@@ -414,7 +414,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x1++;
 
 
-            lblCantidad1.Text = Convert.ToString(x1);
+            //lblCantidad1.Text = Convert.ToString(x1);
 
         }
 
@@ -423,7 +423,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x2++;
 
 
-            lblCantidad2.Text = Convert.ToString(x2);
+            //lblCantidad2.Text = Convert.ToString(x2);
 
         }
 
@@ -432,7 +432,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x3++;
 
 
-            lblCantidad3.Text = Convert.ToString(x3);
+           // lblCantidad3.Text = Convert.ToString(x3);
 
         }
 
@@ -441,7 +441,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x4++;
 
 
-            lblCantidad4.Text = Convert.ToString(x4);
+            //lblCantidad4.Text = Convert.ToString(x4);
 
         }
 
@@ -450,7 +450,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x5++;
 
 
-            lblCantidad5.Text = Convert.ToString(x5);
+           // lblCantidad5.Text = Convert.ToString(x5);
 
         }
 
@@ -459,7 +459,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x6++;
 
 
-            lblCantidad6.Text = Convert.ToString(x6);
+           // lblCantidad6.Text = Convert.ToString(x6);
 
         }
 
@@ -468,7 +468,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x2--;
 
 
-            lblCantidad2.Text = Convert.ToString(x2);
+            //lblCantidad2.Text = Convert.ToString(x2);
 
         }
 
@@ -477,7 +477,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x3--;
 
 
-            lblCantidad3.Text = Convert.ToString(x3);
+            //lblCantidad3.Text = Convert.ToString(x3);
 
         }
 
@@ -486,7 +486,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x4--;
 
 
-            lblCantidad4.Text = Convert.ToString(x4);
+           // lblCantidad4.Text = Convert.ToString(x4);
 
         }
 
@@ -495,7 +495,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x5--;
 
 
-            lblCantidad5.Text = Convert.ToString(x5);
+            //lblCantidad5.Text = Convert.ToString(x5);
         }
 
         private void btnMenos6_Click(object sender, EventArgs e)
@@ -503,7 +503,7 @@ namespace Proyecto_de_desarrolo.Formularios
             x6--;
 
 
-            lblCantidad6.Text = Convert.ToString(x6);
+            //lblCantidad6.Text = Convert.ToString(x6);
         }
 
         private void btnCarrito_Click(object sender, EventArgs e)
@@ -540,7 +540,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            RegistrarCarrito(lblCantidad3.Text);
+            //RegistrarCarrito(lblCantidad3.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -560,7 +560,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            RegistrarCarrito(lblCantidad4.Text);
+            //RegistrarCarrito(lblCantidad4.Text);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -580,7 +580,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            RegistrarCarrito(lblCantidad5.Text);
+            //RegistrarCarrito(lblCantidad5.Text);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -600,7 +600,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            RegistrarCarrito(lblCantidad6.Text);
+            //RegistrarCarrito(lblCantidad6.Text);
         }
 
         private void btnCarrito_Click_1(object sender, EventArgs e)

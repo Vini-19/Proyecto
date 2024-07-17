@@ -48,7 +48,6 @@ namespace PROYECTO
             this.button14 = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
             this.panelFacturacion = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
@@ -56,20 +55,21 @@ namespace PROYECTO
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.PNREPOR = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.sliderTran = new System.Windows.Forms.Timer(this.components);
             this.BtnProdu = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contenedor = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.pnsubusu = new System.Windows.Forms.Panel();
             this.pnusuario = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.PNREPOR = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.btnPedidos = new System.Windows.Forms.Button();
-            this.logo = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,13 +78,13 @@ namespace PROYECTO
             this.panelPersonas.SuspendLayout();
             this.panelFacturacion.SuspendLayout();
             this.panelProductos.SuspendLayout();
+            this.PNREPOR.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnsubusu.SuspendLayout();
             this.pnusuario.SuspendLayout();
-            this.PNREPOR.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -286,32 +286,15 @@ namespace PROYECTO
             // panelFacturacion
             // 
             this.panelFacturacion.BackColor = System.Drawing.Color.Black;
-            this.panelFacturacion.Controls.Add(this.button3);
             this.panelFacturacion.Controls.Add(this.button8);
             this.panelFacturacion.Controls.Add(this.button9);
             this.panelFacturacion.Location = new System.Drawing.Point(3, 371);
             this.panelFacturacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelFacturacion.Name = "panelFacturacion";
-            this.panelFacturacion.Size = new System.Drawing.Size(260, 199);
+            this.panelFacturacion.Size = new System.Drawing.Size(260, 131);
             this.panelFacturacion.TabIndex = 29;
             this.panelFacturacion.Visible = false;
             this.panelFacturacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFacturacion_Paint);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 130);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(243, 55);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Envíos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // button8
             // 
@@ -353,7 +336,7 @@ namespace PROYECTO
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(3, 577);
+            this.btnProduct.Location = new System.Drawing.Point(3, 509);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(260, 81);
             this.btnProduct.TabIndex = 2;
@@ -367,7 +350,7 @@ namespace PROYECTO
             this.panelProductos.BackColor = System.Drawing.Color.Black;
             this.panelProductos.Controls.Add(this.button19);
             this.panelProductos.Controls.Add(this.button20);
-            this.panelProductos.Location = new System.Drawing.Point(3, 665);
+            this.panelProductos.Location = new System.Drawing.Point(3, 597);
             this.panelProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.Size = new System.Drawing.Size(260, 132);
@@ -415,7 +398,7 @@ namespace PROYECTO
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(3, 804);
+            this.btnReporte.Location = new System.Drawing.Point(3, 736);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(260, 81);
             this.btnReporte.TabIndex = 27;
@@ -423,6 +406,69 @@ namespace PROYECTO
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // PNREPOR
+            // 
+            this.PNREPOR.BackColor = System.Drawing.Color.Black;
+            this.PNREPOR.Controls.Add(this.button2);
+            this.PNREPOR.Controls.Add(this.button10);
+            this.PNREPOR.Controls.Add(this.button11);
+            this.PNREPOR.Location = new System.Drawing.Point(3, 824);
+            this.PNREPOR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PNREPOR.Name = "PNREPOR";
+            this.PNREPOR.Size = new System.Drawing.Size(260, 206);
+            this.PNREPOR.TabIndex = 32;
+            this.PNREPOR.Visible = false;
+            this.PNREPOR.Paint += new System.Windows.Forms.PaintEventHandler(this.PNREPOR_Paint);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Gray;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(0, 69);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button10.Size = new System.Drawing.Size(243, 55);
+            this.button10.TabIndex = 17;
+            this.button10.Text = "REPORTES DE PRODCUTOS";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Gray;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(0, 5);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(243, 57);
+            this.button11.TabIndex = 1;
+            this.button11.Text = "REPORTES DE VENTAS";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.BackColor = System.Drawing.Color.Black;
+            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
+            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(3, 1037);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(260, 81);
+            this.btnPedidos.TabIndex = 33;
+            this.btnPedidos.Text = "                  Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -432,7 +478,7 @@ namespace PROYECTO
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 1118);
+            this.button5.Location = new System.Drawing.Point(3, 1124);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(260, 81);
             this.button5.TabIndex = 26;
@@ -493,6 +539,19 @@ namespace PROYECTO
             this.contenedor.TabIndex = 25;
             this.contenedor.UseWaitCursor = true;
             // 
+            // logo
+            // 
+            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(1416, 1400);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 1;
+            this.logo.TabStop = false;
+            this.logo.UseWaitCursor = true;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
+            // 
             // pnsubusu
             // 
             this.pnsubusu.BackColor = System.Drawing.Color.Transparent;
@@ -534,79 +593,20 @@ namespace PROYECTO
             this.button7.UseWaitCursor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_2);
             // 
-            // PNREPOR
+            // button2
             // 
-            this.PNREPOR.BackColor = System.Drawing.Color.Black;
-            this.PNREPOR.Controls.Add(this.button10);
-            this.PNREPOR.Controls.Add(this.button11);
-            this.PNREPOR.Location = new System.Drawing.Point(3, 892);
-            this.PNREPOR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PNREPOR.Name = "PNREPOR";
-            this.PNREPOR.Size = new System.Drawing.Size(260, 132);
-            this.PNREPOR.TabIndex = 32;
-            this.PNREPOR.Visible = false;
-            this.PNREPOR.Paint += new System.Windows.Forms.PaintEventHandler(this.PNREPOR_Paint);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Gray;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 69);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(243, 55);
-            this.button10.TabIndex = 17;
-            this.button10.Text = "REPORTES DE PRODCUTOS";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click_1);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Gray;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 5);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(243, 57);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "REPORTES DE VENTAS";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // btnPedidos
-            // 
-            this.btnPedidos.BackColor = System.Drawing.Color.Black;
-            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(3, 1031);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(260, 81);
-            this.btnPedidos.TabIndex = 33;
-            this.btnPedidos.Text = "                  Pedidos";
-            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.UseVisualStyleBackColor = false;
-            // 
-            // logo
-            // 
-            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(0, 0);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(1416, 1400);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo.TabIndex = 1;
-            this.logo.TabStop = false;
-            this.logo.Click += new System.EventHandler(this.logo_Click);
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 130);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(243, 55);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "REPORTES DE COMPRA CLIENTE";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // frmadmi
             // 
@@ -631,13 +631,13 @@ namespace PROYECTO
             this.panelPersonas.ResumeLayout(false);
             this.panelFacturacion.ResumeLayout(false);
             this.panelProductos.ResumeLayout(false);
+            this.PNREPOR.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.pnsubusu.ResumeLayout(false);
             this.pnusuario.ResumeLayout(false);
-            this.PNREPOR.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -657,7 +657,6 @@ namespace PROYECTO
         private PictureBox pictureBox1;
         private Button btnFacturacion;
         private Panel panelFacturacion;
-        private Button button3;
         private Button button8;
         private Button button9;
         private Button btnProduct;
@@ -681,5 +680,6 @@ namespace PROYECTO
         private Button button11;
         private Button btnPedidos;
         private PictureBox logo;
+        private Button button2;
     }
 }

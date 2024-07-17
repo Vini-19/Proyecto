@@ -51,6 +51,7 @@ namespace Proyecto_de_desarrolo
             this.btnEnter = new System.Windows.Forms.Button();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@ namespace Proyecto_de_desarrolo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 79);
+            this.label1.Location = new System.Drawing.Point(290, 188);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
@@ -67,8 +68,8 @@ namespace Proyecto_de_desarrolo
             // 
             // txtCodigo_Barra
             // 
-            this.txtCodigo_Barra.Location = new System.Drawing.Point(192, 77);
-            this.txtCodigo_Barra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo_Barra.Location = new System.Drawing.Point(385, 186);
+            this.txtCodigo_Barra.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo_Barra.Name = "txtCodigo_Barra";
             this.txtCodigo_Barra.Size = new System.Drawing.Size(168, 20);
             this.txtCodigo_Barra.TabIndex = 3;
@@ -82,8 +83,8 @@ namespace Proyecto_de_desarrolo
             this.Cantidad,
             this.Precio,
             this.Total});
-            this.dgvProductos.Location = new System.Drawing.Point(125, 101);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Location = new System.Drawing.Point(318, 210);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
@@ -133,7 +134,7 @@ namespace Proyecto_de_desarrolo
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(664, 209);
+            this.button1.Location = new System.Drawing.Point(857, 318);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 24);
@@ -145,7 +146,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(664, 170);
+            this.button2.Location = new System.Drawing.Point(857, 279);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 24);
@@ -156,7 +157,7 @@ namespace Proyecto_de_desarrolo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(561, 45);
+            this.label2.Location = new System.Drawing.Point(754, 154);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
@@ -166,7 +167,7 @@ namespace Proyecto_de_desarrolo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(561, 25);
+            this.label3.Location = new System.Drawing.Point(754, 134);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
@@ -176,7 +177,7 @@ namespace Proyecto_de_desarrolo
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(561, 64);
+            this.label4.Location = new System.Drawing.Point(754, 173);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
@@ -186,8 +187,8 @@ namespace Proyecto_de_desarrolo
             // txtRTN
             // 
             this.txtRTN.Enabled = false;
-            this.txtRTN.Location = new System.Drawing.Point(620, 43);
-            this.txtRTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN.Location = new System.Drawing.Point(813, 152);
+            this.txtRTN.Margin = new System.Windows.Forms.Padding(2);
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(120, 20);
             this.txtRTN.TabIndex = 9;
@@ -195,16 +196,16 @@ namespace Proyecto_de_desarrolo
             // txtFecha
             // 
             this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(620, 64);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Location = new System.Drawing.Point(813, 173);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(120, 20);
             this.txtFecha.TabIndex = 11;
             // 
             // btnGenerar_Factura
             // 
-            this.btnGenerar_Factura.Location = new System.Drawing.Point(538, 386);
-            this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerar_Factura.Location = new System.Drawing.Point(731, 495);
+            this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerar_Factura.Name = "btnGenerar_Factura";
             this.btnGenerar_Factura.Size = new System.Drawing.Size(96, 19);
             this.btnGenerar_Factura.TabIndex = 12;
@@ -213,8 +214,8 @@ namespace Proyecto_de_desarrolo
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(364, 77);
-            this.btnEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnter.Location = new System.Drawing.Point(557, 186);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(70, 19);
             this.btnEnter.TabIndex = 13;
@@ -224,8 +225,8 @@ namespace Proyecto_de_desarrolo
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(620, 20);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCliente.Location = new System.Drawing.Point(813, 129);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(120, 21);
             this.cmbCliente.TabIndex = 14;
@@ -234,11 +235,22 @@ namespace Proyecto_de_desarrolo
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(393, 32);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(433, 50);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "REGISTRO DE VENTAS";
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 413);
+            this.ClientSize = new System.Drawing.Size(1416, 685);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnGenerar_Factura);
@@ -252,7 +264,7 @@ namespace Proyecto_de_desarrolo
             this.Controls.Add(this.txtCodigo_Barra);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVentas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.frmVentas_Load_1);
@@ -284,5 +296,6 @@ namespace Proyecto_de_desarrolo
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Total;
+        private Label label13;
     }
 }

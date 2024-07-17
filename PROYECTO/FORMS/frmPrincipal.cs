@@ -110,7 +110,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnEnvios_Click(object sender, EventArgs e)
         {
-            AbriForm(new frmEnvios());
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -231,7 +231,7 @@ namespace Proyecto_de_desarrolo
 
         private void button5_Click_2(object sender, EventArgs e)
         {
-            AbriForm(new frmEnvios());
+            
         }
 
         private void button6_Click(object sender, EventArgs e)

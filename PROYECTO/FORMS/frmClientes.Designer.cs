@@ -31,269 +31,288 @@ namespace Proyecto_de_desarrolo
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            panel1 = new Panel();
-            txtDNI_Cliente = new TextBox();
-            label7 = new Label();
-            txtCorreo_Cliente = new TextBox();
-            label6 = new Label();
-            txtTelefono_Cliente = new TextBox();
-            txtDireccion_Cliente = new TextBox();
-            txtNombre_Cliente = new TextBox();
-            txtRTN_Cliente = new TextBox();
-            btnEliminar = new Button();
-            btnLimpiar = new Button();
-            btnModificar = new Button();
-            btnAgregar = new Button();
-            label1 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            dgvCliente = new DataGridView();
-            label8 = new Label();
-            txtBuscar = new TextBox();
-            errorProvider1 = new ErrorProvider(components);
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCliente).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDNI_Cliente = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCorreo_Cliente = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTelefono_Cliente = new System.Windows.Forms.TextBox();
+            this.txtDireccion_Cliente = new System.Windows.Forms.TextBox();
+            this.txtNombre_Cliente = new System.Windows.Forms.TextBox();
+            this.txtRTN_Cliente = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Firebrick;
-            panel1.Controls.Add(txtDNI_Cliente);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(txtCorreo_Cliente);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(txtTelefono_Cliente);
-            panel1.Controls.Add(txtDireccion_Cliente);
-            panel1.Controls.Add(txtNombre_Cliente);
-            panel1.Controls.Add(txtRTN_Cliente);
-            panel1.Controls.Add(btnEliminar);
-            panel1.Controls.Add(btnLimpiar);
-            panel1.Controls.Add(btnModificar);
-            panel1.Controls.Add(btnAgregar);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(0, 21);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(267, 592);
-            panel1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.txtDNI_Cliente);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtCorreo_Cliente);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtTelefono_Cliente);
+            this.panel1.Controls.Add(this.txtDireccion_Cliente);
+            this.panel1.Controls.Add(this.txtNombre_Cliente);
+            this.panel1.Controls.Add(this.txtRTN_Cliente);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnLimpiar);
+            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.btnAgregar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(98, 114);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 385);
+            this.panel1.TabIndex = 0;
             // 
             // txtDNI_Cliente
             // 
-            txtDNI_Cliente.Location = new Point(40, 154);
-            txtDNI_Cliente.Name = "txtDNI_Cliente";
-            txtDNI_Cliente.Size = new Size(188, 27);
-            txtDNI_Cliente.TabIndex = 19;
-            txtDNI_Cliente.TextChanged += txtDNI_Cliente_TextChanged;
-            txtDNI_Cliente.KeyPress += txtDNI_Cliente_KeyPress;
+            this.txtDNI_Cliente.Location = new System.Drawing.Point(30, 100);
+            this.txtDNI_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI_Cliente.Name = "txtDNI_Cliente";
+            this.txtDNI_Cliente.Size = new System.Drawing.Size(142, 20);
+            this.txtDNI_Cliente.TabIndex = 19;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(40, 130);
-            label7.Name = "label7";
-            label7.Size = new Size(35, 20);
-            label7.TabIndex = 18;
-            label7.Text = "DNI";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 84);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "DNI";
             // 
             // txtCorreo_Cliente
             // 
-            txtCorreo_Cliente.Location = new Point(40, 435);
-            txtCorreo_Cliente.Name = "txtCorreo_Cliente";
-            txtCorreo_Cliente.Size = new Size(188, 27);
-            txtCorreo_Cliente.TabIndex = 17;
-            txtCorreo_Cliente.TextChanged += txtCorreo_Cliente_TextChanged;
+            this.txtCorreo_Cliente.Location = new System.Drawing.Point(30, 283);
+            this.txtCorreo_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo_Cliente.Name = "txtCorreo_Cliente";
+            this.txtCorreo_Cliente.Size = new System.Drawing.Size(142, 20);
+            this.txtCorreo_Cliente.TabIndex = 17;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(40, 412);
-            label6.Name = "label6";
-            label6.Size = new Size(136, 20);
-            label6.TabIndex = 16;
-            label6.Text = "Correo Electrónico ";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 268);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Correo Electrónico ";
             // 
             // txtTelefono_Cliente
             // 
-            txtTelefono_Cliente.Location = new Point(40, 382);
-            txtTelefono_Cliente.Name = "txtTelefono_Cliente";
-            txtTelefono_Cliente.Size = new Size(188, 27);
-            txtTelefono_Cliente.TabIndex = 15;
-            txtTelefono_Cliente.TextChanged += txtTelefono_Cliente_TextChanged;
-            txtTelefono_Cliente.KeyPress += txtTelefono_Cliente_KeyPress;
+            this.txtTelefono_Cliente.Location = new System.Drawing.Point(30, 248);
+            this.txtTelefono_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono_Cliente.Name = "txtTelefono_Cliente";
+            this.txtTelefono_Cliente.Size = new System.Drawing.Size(142, 20);
+            this.txtTelefono_Cliente.TabIndex = 15;
             // 
             // txtDireccion_Cliente
             // 
-            txtDireccion_Cliente.Location = new Point(40, 284);
-            txtDireccion_Cliente.Multiline = true;
-            txtDireccion_Cliente.Name = "txtDireccion_Cliente";
-            txtDireccion_Cliente.Size = new Size(188, 72);
-            txtDireccion_Cliente.TabIndex = 14;
-            txtDireccion_Cliente.TextChanged += txtDireccion_Cliente_TextChanged;
+            this.txtDireccion_Cliente.Location = new System.Drawing.Point(30, 185);
+            this.txtDireccion_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion_Cliente.Multiline = true;
+            this.txtDireccion_Cliente.Name = "txtDireccion_Cliente";
+            this.txtDireccion_Cliente.Size = new System.Drawing.Size(142, 48);
+            this.txtDireccion_Cliente.TabIndex = 14;
             // 
             // txtNombre_Cliente
             // 
-            txtNombre_Cliente.Location = new Point(40, 220);
-            txtNombre_Cliente.Name = "txtNombre_Cliente";
-            txtNombre_Cliente.Size = new Size(188, 27);
-            txtNombre_Cliente.TabIndex = 13;
-            txtNombre_Cliente.TextChanged += txtNombre_Cliente_TextChanged;
-            txtNombre_Cliente.KeyPress += txtNombre_Cliente_KeyPress;
+            this.txtNombre_Cliente.Location = new System.Drawing.Point(30, 143);
+            this.txtNombre_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre_Cliente.Name = "txtNombre_Cliente";
+            this.txtNombre_Cliente.Size = new System.Drawing.Size(142, 20);
+            this.txtNombre_Cliente.TabIndex = 13;
             // 
             // txtRTN_Cliente
             // 
-            txtRTN_Cliente.Location = new Point(40, 96);
-            txtRTN_Cliente.Name = "txtRTN_Cliente";
-            txtRTN_Cliente.Size = new Size(188, 27);
-            txtRTN_Cliente.TabIndex = 1;
-            txtRTN_Cliente.TextChanged += txtRTN_Cliente_TextChanged;
-            txtRTN_Cliente.KeyPress += txtRTN_Cliente_KeyPress;
+            this.txtRTN_Cliente.Location = new System.Drawing.Point(30, 62);
+            this.txtRTN_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN_Cliente.Name = "txtRTN_Cliente";
+            this.txtRTN_Cliente.Size = new System.Drawing.Size(142, 20);
+            this.txtRTN_Cliente.TabIndex = 1;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(148, 541);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
-            btnEliminar.TabIndex = 11;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
+            this.btnEliminar.Location = new System.Drawing.Point(111, 352);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(70, 19);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(29, 541);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(94, 29);
-            btnLimpiar.TabIndex = 10;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
-            btnLimpiar.Click += btnLimpiar_Click_1;
+            this.btnLimpiar.Location = new System.Drawing.Point(22, 352);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(70, 19);
+            this.btnLimpiar.TabIndex = 10;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(148, 494);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(94, 29);
-            btnModificar.TabIndex = 9;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
-            btnModificar.Click += btnModificar_Click;
+            this.btnModificar.Location = new System.Drawing.Point(111, 321);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(70, 19);
+            this.btnModificar.TabIndex = 9;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(29, 494);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 7;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += button1_Click;
+            this.btnAgregar.Location = new System.Drawing.Point(22, 321);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(70, 19);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(40, 359);
-            label1.Name = "label1";
-            label1.Size = new Size(67, 20);
-            label1.TabIndex = 6;
-            label1.Text = "Teléfono";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 233);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Teléfono";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(40, 73);
-            label5.Name = "label5";
-            label5.Size = new Size(36, 20);
-            label5.TabIndex = 5;
-            label5.Text = "RTN";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 47);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "RTN";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(40, 259);
-            label4.Name = "label4";
-            label4.Size = new Size(72, 20);
-            label4.TabIndex = 4;
-            label4.Text = "Dirección";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 168);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Dirección";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(40, 196);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Nombres";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 127);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombres";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(60, 30);
-            label2.Name = "label2";
-            label2.Size = new Size(141, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Registro de Clientes";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(45, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Registro de Clientes";
             // 
             // dgvCliente
             // 
-            dgvCliente.AllowUserToAddRows = false;
-            dgvCliente.AllowUserToDeleteRows = false;
-            dgvCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCliente.Location = new Point(286, 51);
-            dgvCliente.Name = "dgvCliente";
-            dgvCliente.ReadOnly = true;
-            dgvCliente.RowHeadersWidth = 51;
-            dgvCliente.Size = new Size(638, 562);
-            dgvCliente.TabIndex = 1;
-            dgvCliente.CellClick += dgvCliente_CellClick;
+            this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AllowUserToDeleteRows = false;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Location = new System.Drawing.Point(312, 133);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.RowHeadersWidth = 51;
+            this.dgvCliente.Size = new System.Drawing.Size(903, 365);
+            this.dgvCliente.TabIndex = 1;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(286, 21);
-            label8.Name = "label8";
-            label8.Size = new Size(55, 20);
-            label8.TabIndex = 2;
-            label8.Text = "Buscar:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(312, 114);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Buscar:";
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(370, 18);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(542, 27);
-            txtBuscar.TabIndex = 3;
-            txtBuscar.TextChanged += txtBuscar_TextChanged;
+            this.txtBuscar.Location = new System.Drawing.Point(376, 112);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(528, 20);
+            this.txtBuscar.TabIndex = 3;
             // 
             // errorProvider1
             // 
-            errorProvider1.ContainerControl = this;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(416, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(457, 50);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "REGISTRO DE CLIENTES";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // frmClientes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(936, 635);
-            Controls.Add(txtBuscar);
-            Controls.Add(label8);
-            Controls.Add(dgvCliente);
-            Controls.Add(panel1);
-            Name = "frmClientes";
-            Text = "frmClientes";
-            Load += frmClientes_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCliente).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1416, 685);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dgvCliente);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmClientes";
+            this.Text = "frmClientes";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -320,5 +339,6 @@ namespace Proyecto_de_desarrolo
         private Label label8;
         private TextBox txtBuscar;
         private ErrorProvider errorProvider1;
+        private Label label13;
     }
 }
