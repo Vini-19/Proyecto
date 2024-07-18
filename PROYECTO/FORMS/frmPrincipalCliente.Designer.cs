@@ -39,7 +39,6 @@ namespace Proyecto_de_desarrolo
             this.button7 = new System.Windows.Forms.Button();
             this.sliderTran = new System.Windows.Forms.Timer(this.components);
             this.button5 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.panelProductos = new System.Windows.Forms.Panel();
@@ -47,9 +46,10 @@ namespace Proyecto_de_desarrolo
             this.label1 = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.contenedor.SuspendLayout();
             this.pnsubusu.SuspendLayout();
             this.pnusuario.SuspendLayout();
@@ -57,12 +57,14 @@ namespace Proyecto_de_desarrolo
             this.slidermenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.logo);
             this.contenedor.Controls.Add(this.pnsubusu);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(225, 41);
@@ -110,10 +112,12 @@ namespace Proyecto_de_desarrolo
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.UseWaitCursor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // sliderTran
             // 
             this.sliderTran.Interval = 10;
+            this.sliderTran.Tick += new System.EventHandler(this.sliderTran_Tick);
             // 
             // button5
             // 
@@ -124,28 +128,14 @@ namespace Proyecto_de_desarrolo
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 195);
+            this.button5.Location = new System.Drawing.Point(3, 141);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(255, 70);
+            this.button5.Size = new System.Drawing.Size(223, 70);
             this.button5.TabIndex = 26;
             this.button5.Text = "                  &Salir";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.Gray;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(0, 55);
-            this.button19.Name = "button19";
-            this.button19.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button19.Size = new System.Drawing.Size(208, 44);
-            this.button19.TabIndex = 17;
-            this.button19.Text = "Ordenes";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button20
             // 
@@ -158,9 +148,10 @@ namespace Proyecto_de_desarrolo
             this.button20.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.button20.Size = new System.Drawing.Size(208, 46);
             this.button20.TabIndex = 1;
-            this.button20.Text = "Comprar";
+            this.button20.Text = "Comprar Producto";
             this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click_1);
             // 
             // btnProduct
             // 
@@ -177,16 +168,16 @@ namespace Proyecto_de_desarrolo
             this.btnProduct.Text = "                  Productos";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click_1);
             // 
             // panelProductos
             // 
             this.panelProductos.BackColor = System.Drawing.Color.Black;
-            this.panelProductos.Controls.Add(this.button19);
             this.panelProductos.Controls.Add(this.button20);
             this.panelProductos.Location = new System.Drawing.Point(3, 80);
             this.panelProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(255, 108);
+            this.panelProductos.Size = new System.Drawing.Size(223, 54);
             this.panelProductos.TabIndex = 31;
             this.panelProductos.Visible = false;
             // 
@@ -213,6 +204,7 @@ namespace Proyecto_de_desarrolo
             this.label1.Size = new System.Drawing.Size(238, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "San José Carniceros | CROAS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMenu
             // 
@@ -223,6 +215,7 @@ namespace Proyecto_de_desarrolo
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMenu.TabIndex = 1;
             this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click_1);
             // 
             // panel1
             // 
@@ -237,26 +230,6 @@ namespace Proyecto_de_desarrolo
             this.panel1.Size = new System.Drawing.Size(1836, 41);
             this.panel1.TabIndex = 26;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblUsuario);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1695, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(111, 41);
-            this.panel2.TabIndex = 6;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(53, 5);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 19);
-            this.lblUsuario.TabIndex = 3;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -268,6 +241,39 @@ namespace Proyecto_de_desarrolo
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.WaitOnLoad = true;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_2);
+            // 
+            // logo
+            // 
+            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(1476, 1397);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 2;
+            this.logo.TabStop = false;
+            this.logo.UseWaitCursor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblUsuario);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1676, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(130, 41);
+            this.panel2.TabIndex = 6;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(62, 6);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 19);
+            this.lblUsuario.TabIndex = 3;
             // 
             // frmPrincipalCliente
             // 
@@ -279,6 +285,7 @@ namespace Proyecto_de_desarrolo
             this.Controls.Add(this.panel1);
             this.Name = "frmPrincipalCliente";
             this.Text = "frmPrincipalCliente";
+            this.Load += new System.EventHandler(this.frmPrincipalCliente_Load_1);
             this.contenedor.ResumeLayout(false);
             this.pnsubusu.ResumeLayout(false);
             this.pnusuario.ResumeLayout(false);
@@ -287,9 +294,10 @@ namespace Proyecto_de_desarrolo
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,7 +307,6 @@ namespace Proyecto_de_desarrolo
         private Panel contenedor;
         private System.Windows.Forms.Timer sliderTran;
         private Button button5;
-        private Button button19;
         private Button button20;
         private Button btnProduct;
         private Panel panelProductos;
@@ -307,11 +314,12 @@ namespace Proyecto_de_desarrolo
         private Label label1;
         private PictureBox btnMenu;
         private Panel panel1;
-        private Panel panel2;
-        private Label lblUsuario;
         private PictureBox pictureBox2;
         private Panel pnsubusu;
         private Panel pnusuario;
         private Button button7;
+        private PictureBox logo;
+        private Panel panel2;
+        private Label lblUsuario;
     }
 }

@@ -56,6 +56,7 @@ namespace PROYECTO
             this.button20 = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.PNREPOR = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@ namespace PROYECTO
             this.pnsubusu = new System.Windows.Forms.Panel();
             this.pnusuario = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -421,6 +421,21 @@ namespace PROYECTO
             this.PNREPOR.Visible = false;
             this.PNREPOR.Paint += new System.Windows.Forms.PaintEventHandler(this.PNREPOR_Paint);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 130);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(243, 55);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "REPORTES DE COMPRA CLIENTE";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Gray;
@@ -593,21 +608,6 @@ namespace PROYECTO
             this.button7.UseWaitCursor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_2);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 130);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(243, 55);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "REPORTES DE COMPRA CLIENTE";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // frmadmi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -621,6 +621,7 @@ namespace PROYECTO
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "frmadmi";
             this.Text = "frmadmi";
+            this.Load += new System.EventHandler(this.frmadmi_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

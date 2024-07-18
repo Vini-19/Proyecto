@@ -243,12 +243,6 @@
     <Compile Include="FORMS\frmPedidosAdmin.Designer.cs">
       <DependentUpon>frmPedidosAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\frmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </Compile>
     <Compile Include="FORMS\frmPrincipalCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,9 +350,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmPedidosAdmin.resx">
       <DependentUpon>frmPedidosAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmPrincipalCliente.resx">
       <DependentUpon>frmPrincipalCliente.cs</DependentUpon>

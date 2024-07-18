@@ -17,6 +17,7 @@ namespace Proyecto_de_desarrolo
         public frmPrincipalCliente()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private static Form FormAct;
@@ -71,6 +72,81 @@ namespace Proyecto_de_desarrolo
 
         }
         bool siderbarExpand = true;
+       
+
+       
+       
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            AbriForm(new Pedidos_Cliente());
+        }
+
+       
+        public void SetUsuarioLabel(string usuario)
+        {
+            lblUsuario.Text = usuario;
+        }
+      
+
+      
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            sliderTran.Start();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            logo.Visible = true;
+        }
+        private void butons()
+        {
+            if (btnProduct.Enabled == true)
+            {
+                btnProduct.Enabled = false;
+            }
+            else
+            {
+                btnProduct.Enabled = true;
+            }
+
+        }
+        private void btnMenu_Click_1(object sender, EventArgs e)
+        {
+            sliderTran.Start();
+            submenu();
+            butons();
+        }
+
+        private void frmPrincipalCliente_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+            ShowMenu(pnusuario);
+            ShowMenu(pnsubusu);
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicioSesion sesio = new frmInicioSesion();
+            sesio.Show();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnProduct_Click_1(object sender, EventArgs e)
+        {
+            ShowMenu(panelProductos);
+        }
+
         private void sliderTran_Tick(object sender, EventArgs e)
         {
             if (siderbarExpand)
@@ -78,6 +154,7 @@ namespace Proyecto_de_desarrolo
                 slidermenu.Width -= 10;
                 if (slidermenu.Width <= 60)
                 {
+
                     siderbarExpand = false;
                     sliderTran.Stop();
                 }
@@ -87,6 +164,7 @@ namespace Proyecto_de_desarrolo
                 slidermenu.Width += 10;
                 if (slidermenu.Width >= 263)
                 {
+
                     siderbarExpand = true;
                     sliderTran.Stop();
 
@@ -98,63 +176,9 @@ namespace Proyecto_de_desarrolo
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            AbriForm(new frmVentas());
-        }
-
-
-
-
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-            ShowMenu(panelProductos);
-        }
-
-        private void button20_Click(object sender, EventArgs e)
+        private void button20_Click_1(object sender, EventArgs e)
         {
             AbriForm(new Pedidos_Cliente());
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        public void SetUsuarioLabel(string usuario)
-        {
-            lblUsuario.Text = usuario;
-        }
-        private void contenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            ShowMenu(pnusuario);
-            ShowMenu(pnsubusu);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmInicioSesion sesio = new frmInicioSesion();  
-            sesio.Show();
-        }
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            sliderTran.Start();
         }
     }
 }
