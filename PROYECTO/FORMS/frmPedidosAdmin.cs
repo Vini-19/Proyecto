@@ -14,16 +14,7 @@ namespace Proyecto_de_desarrolo.Formularios
 {
     public partial class frmPedidosAdmin : Form
     {
-        public frmPedidosAdmin()
-        {
-            InitializeComponent();
-        }
-
-        private void frmPedidosAdmin_Load(object sender, EventArgs e)
-        {
-            MostrarDatosCarritos();
-        }
-
+        
         public DataTable ObtenerDatosCarritos()
         {
             DataTable dt = new DataTable();
@@ -89,7 +80,9 @@ namespace Proyecto_de_desarrolo.Formularios
             dataGridView1.DataSource = dtCarritos;
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        
+
+        private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -128,6 +121,16 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 MessageBox.Show("Por favor, seleccione una fila de pedido.");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmPedidosAdmin_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

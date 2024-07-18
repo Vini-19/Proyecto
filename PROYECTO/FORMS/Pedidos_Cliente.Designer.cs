@@ -75,78 +75,86 @@ namespace Proyecto_de_desarrolo.Formularios
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(10, 28);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 114);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnsiguiente
             // 
             this.btnsiguiente.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.btnsiguiente.Location = new System.Drawing.Point(350, 454);
-            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(118, 29);
             this.btnsiguiente.TabIndex = 6;
             this.btnsiguiente.Text = "Siguiente >>>";
             this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // anterior
             // 
             this.anterior.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.anterior.Location = new System.Drawing.Point(18, 454);
-            this.anterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.anterior.Margin = new System.Windows.Forms.Padding(2);
             this.anterior.Name = "anterior";
             this.anterior.Size = new System.Drawing.Size(110, 29);
             this.anterior.TabIndex = 7;
             this.anterior.Text = "<<<Anterior";
             this.anterior.UseVisualStyleBackColor = true;
+            this.anterior.Click += new System.EventHandler(this.anterior_Click_1);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(172, 28);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 114);
             this.button2.TabIndex = 8;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(336, 28);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 114);
             this.button3.TabIndex = 9;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(10, 231);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(130, 122);
             this.button4.TabIndex = 10;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(172, 231);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(131, 122);
             this.button5.TabIndex = 11;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(336, 231);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(132, 122);
             this.button6.TabIndex = 12;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // lblNombre1
             // 
@@ -290,6 +298,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas1.TabIndex = 26;
             this.btnMas1.Text = "+";
             this.btnMas1.UseVisualStyleBackColor = true;
+            this.btnMas1.Click += new System.EventHandler(this.btnMas1_Click_1);
             // 
             // btnMenos1
             // 
@@ -301,6 +310,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos1.TabIndex = 27;
             this.btnMenos1.Text = "-";
             this.btnMenos1.UseVisualStyleBackColor = true;
+            this.btnMenos1.Click += new System.EventHandler(this.btnMenos1_Click_2);
             // 
             // btnMenos2
             // 
@@ -312,6 +322,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos2.TabIndex = 28;
             this.btnMenos2.Text = "-";
             this.btnMenos2.UseVisualStyleBackColor = true;
+            this.btnMenos2.Click += new System.EventHandler(this.btnMenos2_Click_1);
             // 
             // btnMas2
             // 
@@ -323,6 +334,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas2.TabIndex = 30;
             this.btnMas2.Text = "+";
             this.btnMas2.UseVisualStyleBackColor = true;
+            this.btnMas2.Click += new System.EventHandler(this.btnMas2_Click_1);
             // 
             // btnMas3
             // 
@@ -334,6 +346,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas3.TabIndex = 32;
             this.btnMas3.Text = "+";
             this.btnMas3.UseVisualStyleBackColor = true;
+            this.btnMas3.Click += new System.EventHandler(this.btnMas3_Click_1);
             // 
             // btnMenos3
             // 
@@ -345,6 +358,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos3.TabIndex = 33;
             this.btnMenos3.Text = "-";
             this.btnMenos3.UseVisualStyleBackColor = true;
+            this.btnMenos3.Click += new System.EventHandler(this.btnMenos3_Click_1);
             // 
             // btnMenos4
             // 
@@ -356,6 +370,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos4.TabIndex = 36;
             this.btnMenos4.Text = "-";
             this.btnMenos4.UseVisualStyleBackColor = true;
+            this.btnMenos4.Click += new System.EventHandler(this.btnMenos4_Click_1);
             // 
             // btnMas4
             // 
@@ -367,6 +382,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas4.TabIndex = 35;
             this.btnMas4.Text = "+";
             this.btnMas4.UseVisualStyleBackColor = true;
+            this.btnMas4.Click += new System.EventHandler(this.btnMas4_Click_1);
             // 
             // btnMenos5
             // 
@@ -378,6 +394,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos5.TabIndex = 39;
             this.btnMenos5.Text = "-";
             this.btnMenos5.UseVisualStyleBackColor = true;
+            this.btnMenos5.Click += new System.EventHandler(this.btnMenos5_Click_1);
             // 
             // btnMas5
             // 
@@ -389,6 +406,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas5.TabIndex = 38;
             this.btnMas5.Text = "+";
             this.btnMas5.UseVisualStyleBackColor = true;
+            this.btnMas5.Click += new System.EventHandler(this.btnMas5_Click_1);
             // 
             // btnMenos6
             // 
@@ -400,6 +418,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos6.TabIndex = 42;
             this.btnMenos6.Text = "-";
             this.btnMenos6.UseVisualStyleBackColor = true;
+            this.btnMenos6.Click += new System.EventHandler(this.btnMenos6_Click_1);
             // 
             // btnMas6
             // 
@@ -411,64 +430,72 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas6.TabIndex = 41;
             this.btnMas6.Text = "+";
             this.btnMas6.UseVisualStyleBackColor = true;
+            this.btnMas6.Click += new System.EventHandler(this.btnMas6_Click_1);
             // 
             // btnCarrito
             // 
             this.btnCarrito.Location = new System.Drawing.Point(379, 8);
-            this.btnCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(2);
             this.btnCarrito.Name = "btnCarrito";
             this.btnCarrito.Size = new System.Drawing.Size(70, 19);
             this.btnCarrito.TabIndex = 43;
             this.btnCarrito.Text = "Carrito";
             this.btnCarrito.UseVisualStyleBackColor = true;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click_2);
             // 
             // txtCantidad1
             // 
             this.txtCantidad1.Location = new System.Drawing.Point(18, 200);
-            this.txtCantidad1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad1.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad1.Name = "txtCantidad1";
             this.txtCantidad1.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad1.TabIndex = 44;
+            this.txtCantidad1.TextChanged += new System.EventHandler(this.txtCantidad1_TextChanged);
             // 
             // txtCantidad2
             // 
             this.txtCantidad2.Location = new System.Drawing.Point(181, 200);
-            this.txtCantidad2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad2.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad2.Name = "txtCantidad2";
             this.txtCantidad2.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad2.TabIndex = 45;
+            this.txtCantidad2.TextChanged += new System.EventHandler(this.txtCantidad2_TextChanged);
             // 
             // txtCantidad3
             // 
             this.txtCantidad3.Location = new System.Drawing.Point(350, 202);
-            this.txtCantidad3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad3.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad3.Name = "txtCantidad3";
             this.txtCantidad3.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad3.TabIndex = 46;
+            this.txtCantidad3.TextChanged += new System.EventHandler(this.txtCantidad3_TextChanged);
             // 
             // txtCantidad4
             // 
             this.txtCantidad4.Location = new System.Drawing.Point(18, 424);
-            this.txtCantidad4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad4.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad4.Name = "txtCantidad4";
             this.txtCantidad4.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad4.TabIndex = 47;
+            this.txtCantidad4.TextChanged += new System.EventHandler(this.txtCantidad4_TextChanged);
             // 
             // txtCantidad5
             // 
             this.txtCantidad5.Location = new System.Drawing.Point(181, 424);
-            this.txtCantidad5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad5.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad5.Name = "txtCantidad5";
             this.txtCantidad5.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad5.TabIndex = 48;
+            this.txtCantidad5.TextChanged += new System.EventHandler(this.txtCantidad5_TextChanged);
             // 
             // txtCantidad6
             // 
             this.txtCantidad6.Location = new System.Drawing.Point(350, 421);
-            this.txtCantidad6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad6.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad6.Name = "txtCantidad6";
             this.txtCantidad6.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad6.TabIndex = 49;
+            this.txtCantidad6.TextChanged += new System.EventHandler(this.txtCantidad6_TextChanged);
             // 
             // Pedidos_Cliente
             // 
@@ -514,7 +541,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.anterior);
             this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pedidos_Cliente";
             this.Text = "Pedidos_Cliente";
             this.ResumeLayout(false);

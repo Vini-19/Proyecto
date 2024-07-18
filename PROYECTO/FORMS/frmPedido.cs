@@ -427,6 +427,95 @@ namespace Proyecto_de_desarrolo
             txtCodigo.Focus();
         }
 
+        private void dgvProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "" || txtNombre.Text == "" || txtNombre_Imagen.Text == "" || cmbCategoria.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+            }
+            else
+            {
+                if (errorProvider1.GetError(txtCodigo) == "" && errorProvider1.GetError(txtNombre) == "" && errorProvider1.GetError(txtNombre_Imagen) == "")
+                {
+                    using (OpenFileDialog dialog = new OpenFileDialog()
+                    {
+                        Filter = "Image files(*.jpg;*.jpeg)|*.jpg;*jpeg",
+                        Multiselect = false
+                    })
+                    {
+                        if (dialog.ShowDialog() == DialogResult.OK)
+                        {
+                            picProducto.Image = Image.FromFile(dialog.FileName);
+                            Insertar(convertimage(picProducto.Image));
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Verifique los campos");
+                }
+            }
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+
+            limpiar();
+            errorProvider1.SetError(txtCodigo, "");
+            errorProvider1.SetError(txtNombre, "");
+            errorProvider1.SetError(txtPrecio, "");
+            errorProvider1.SetError(txtNombre_Imagen, "");
+            btnAgregar.Enabled = true;
+
+            txtCodigo.Focus();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text) || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(cmbCategoria.Text) || (this.txtPrecio.Text == "0" || string.IsNullOrWhiteSpace(this.txtPrecio.Text)) || string.IsNullOrWhiteSpace(txtNombre_Imagen.Text))
+            {
+                MessageBox.Show("Por favor, selecione un producto antes de poder ejecutar la acción.");
+
+                return;
+            }
+            else
+            {
+                if (errorProvider1.GetError(txtCodigo) == "" && errorProvider1.GetError(txtNombre) == "" && errorProvider1.GetError(txtPrecio) == "" && errorProvider1.GetError(txtNombre_Imagen) == "")
+                {
+                    Modificar();
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                }
+            }
+        }
+
+        private void txtNombre_Imagen_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtNombre_Imagen, val.txt_vacio(txtNombre_Imagen.Text) + val.espacio_inicio_final(txtNombre_Imagen.Text) + val.rango_nombre(txtNombre_Imagen.Text));
+        }
+
+        private void txtPrecio_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtPrecio, val.txt_vacio(txtPrecio.Text) + val.espacio_inicio_final(txtPrecio.Text) + val.validar_precio(txtPrecio.Text));
+        }
+
+        private void txtNombre_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtNombre, val.txt_vacio(txtNombre.Text) + val.espacio_inicio_final(txtNombre.Text) + val.rango_nombre(txtNombre.Text) + val.validarletra_espacio(txtNombre.Text));
+        }
+
+        private void txtCodigo_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtCodigo, val.txt_vacio(txtCodigo.Text) + val.espacio_inicio_final(txtCodigo.Text) + val.rango_12(txtCodigo.Text) + val.espacio(txtCodigo.Text));
+        }
     }
 
 

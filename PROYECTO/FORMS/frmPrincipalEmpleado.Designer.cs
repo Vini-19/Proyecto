@@ -34,6 +34,7 @@ namespace Proyecto_de_desarrolo
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalEmpleado));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.pnsubusu = new System.Windows.Forms.Panel();
             this.pnusuario = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace Proyecto_de_desarrolo
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sliderTran = new System.Windows.Forms.Timer(this.components);
             this.button5 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
@@ -51,13 +51,9 @@ namespace Proyecto_de_desarrolo
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.btnPersonas = new System.Windows.Forms.Button();
-            this.panelPersonas = new System.Windows.Forms.Panel();
             this.slidermenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelFacturacion = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,12 +61,12 @@ namespace Proyecto_de_desarrolo
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnsubusu.SuspendLayout();
             this.pnusuario.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelProductos.SuspendLayout();
-            this.panelPersonas.SuspendLayout();
             this.slidermenu.SuspendLayout();
             this.panelFacturacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
@@ -81,6 +77,7 @@ namespace Proyecto_de_desarrolo
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.logo);
             this.contenedor.Controls.Add(this.pnsubusu);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(225, 40);
@@ -88,6 +85,18 @@ namespace Proyecto_de_desarrolo
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1611, 1398);
             this.contenedor.TabIndex = 30;
+            // 
+            // logo
+            // 
+            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(1476, 1398);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 2;
+            this.logo.TabStop = false;
+            this.logo.UseWaitCursor = true;
             // 
             // pnsubusu
             // 
@@ -166,6 +175,7 @@ namespace Proyecto_de_desarrolo
             // sliderTran
             // 
             this.sliderTran.Interval = 10;
+            this.sliderTran.Tick += new System.EventHandler(this.sliderTran_Tick_1);
             // 
             // button5
             // 
@@ -176,28 +186,14 @@ namespace Proyecto_de_desarrolo
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 736);
+            this.button5.Location = new System.Drawing.Point(3, 509);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(223, 70);
             this.button5.TabIndex = 26;
             this.button5.Text = "                  &Salir";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Gray;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(0, 105);
-            this.button18.Name = "button18";
-            this.button18.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button18.Size = new System.Drawing.Size(208, 44);
-            this.button18.TabIndex = 18;
-            this.button18.Text = "Productos Nuevos";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button19
             // 
@@ -210,9 +206,10 @@ namespace Proyecto_de_desarrolo
             this.button19.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.button19.Size = new System.Drawing.Size(208, 44);
             this.button19.TabIndex = 17;
-            this.button19.Text = "Pedidos";
+            this.button19.Text = "Catalogo";
             this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -228,6 +225,7 @@ namespace Proyecto_de_desarrolo
             this.button20.Text = "Inventario";
             this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // btnProduct
             // 
@@ -237,23 +235,23 @@ namespace Proyecto_de_desarrolo
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(3, 425);
+            this.btnProduct.Location = new System.Drawing.Point(3, 243);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(223, 70);
             this.btnProduct.TabIndex = 2;
             this.btnProduct.Text = "                  Productos";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // panelProductos
             // 
             this.panelProductos.BackColor = System.Drawing.Color.Black;
-            this.panelProductos.Controls.Add(this.button18);
             this.panelProductos.Controls.Add(this.button19);
             this.panelProductos.Controls.Add(this.button20);
-            this.panelProductos.Location = new System.Drawing.Point(3, 501);
+            this.panelProductos.Location = new System.Drawing.Point(3, 319);
             this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(223, 153);
+            this.panelProductos.Size = new System.Drawing.Size(223, 108);
             this.panelProductos.TabIndex = 31;
             this.panelProductos.Visible = false;
             // 
@@ -313,7 +311,7 @@ namespace Proyecto_de_desarrolo
             this.btnFacturacion.ForeColor = System.Drawing.Color.White;
             this.btnFacturacion.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturacion.Image")));
             this.btnFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturacion.Location = new System.Drawing.Point(3, 185);
+            this.btnFacturacion.Location = new System.Drawing.Point(3, 3);
             this.btnFacturacion.Name = "btnFacturacion";
             this.btnFacturacion.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnFacturacion.Size = new System.Drawing.Size(223, 70);
@@ -323,77 +321,14 @@ namespace Proyecto_de_desarrolo
             this.btnFacturacion.UseVisualStyleBackColor = false;
             this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click_1);
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 49);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(208, 44);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Proveedores";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Gray;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(0, 0);
-            this.button14.Name = "button14";
-            this.button14.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(208, 44);
-            this.button14.TabIndex = 17;
-            this.button14.Text = "Clientes";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // btnPersonas
-            // 
-            this.btnPersonas.BackColor = System.Drawing.Color.Black;
-            this.btnPersonas.FlatAppearance.BorderSize = 0;
-            this.btnPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonas.ForeColor = System.Drawing.Color.White;
-            this.btnPersonas.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonas.Image")));
-            this.btnPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonas.Location = new System.Drawing.Point(3, 3);
-            this.btnPersonas.Name = "btnPersonas";
-            this.btnPersonas.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.btnPersonas.Size = new System.Drawing.Size(223, 70);
-            this.btnPersonas.TabIndex = 2;
-            this.btnPersonas.Text = "                  Personas";
-            this.btnPersonas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonas.UseVisualStyleBackColor = false;
-            this.btnPersonas.Click += new System.EventHandler(this.btnPersonas_Click_1);
-            // 
-            // panelPersonas
-            // 
-            this.panelPersonas.BackColor = System.Drawing.Color.Black;
-            this.panelPersonas.Controls.Add(this.button4);
-            this.panelPersonas.Controls.Add(this.button14);
-            this.panelPersonas.Location = new System.Drawing.Point(3, 79);
-            this.panelPersonas.Name = "panelPersonas";
-            this.panelPersonas.Size = new System.Drawing.Size(223, 100);
-            this.panelPersonas.TabIndex = 27;
-            this.panelPersonas.Visible = false;
-            // 
             // slidermenu
             // 
             this.slidermenu.BackColor = System.Drawing.Color.Black;
-            this.slidermenu.Controls.Add(this.btnPersonas);
-            this.slidermenu.Controls.Add(this.panelPersonas);
             this.slidermenu.Controls.Add(this.btnFacturacion);
             this.slidermenu.Controls.Add(this.panelFacturacion);
             this.slidermenu.Controls.Add(this.btnProduct);
             this.slidermenu.Controls.Add(this.panelProductos);
-            this.slidermenu.Controls.Add(this.button6);
+            this.slidermenu.Controls.Add(this.btnPedidos);
             this.slidermenu.Controls.Add(this.button5);
             this.slidermenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidermenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -401,6 +336,7 @@ namespace Proyecto_de_desarrolo
             this.slidermenu.Name = "slidermenu";
             this.slidermenu.Size = new System.Drawing.Size(225, 1398);
             this.slidermenu.TabIndex = 27;
+            this.slidermenu.Paint += new System.Windows.Forms.PaintEventHandler(this.slidermenu_Paint);
             // 
             // panelFacturacion
             // 
@@ -408,28 +344,29 @@ namespace Proyecto_de_desarrolo
             this.panelFacturacion.Controls.Add(this.button3);
             this.panelFacturacion.Controls.Add(this.button8);
             this.panelFacturacion.Controls.Add(this.button9);
-            this.panelFacturacion.Location = new System.Drawing.Point(3, 261);
+            this.panelFacturacion.Location = new System.Drawing.Point(3, 79);
             this.panelFacturacion.Name = "panelFacturacion";
             this.panelFacturacion.Size = new System.Drawing.Size(223, 158);
             this.panelFacturacion.TabIndex = 29;
             this.panelFacturacion.Visible = false;
             // 
-            // button6
+            // btnPedidos
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 660);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(223, 70);
-            this.button6.TabIndex = 32;
-            this.button6.Text = "                  Pedidos";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnPedidos.BackColor = System.Drawing.Color.Black;
+            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
+            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(3, 433);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(223, 70);
+            this.btnPedidos.TabIndex = 32;
+            this.btnPedidos.Text = "                  Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -441,6 +378,7 @@ namespace Proyecto_de_desarrolo
             this.label1.Size = new System.Drawing.Size(238, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "San José Carniceros | CROAS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMenu
             // 
@@ -451,6 +389,7 @@ namespace Proyecto_de_desarrolo
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMenu.TabIndex = 1;
             this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click_1);
             // 
             // panel1
             // 
@@ -464,6 +403,7 @@ namespace Proyecto_de_desarrolo
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1836, 40);
             this.panel1.TabIndex = 26;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // panel2
             // 
@@ -509,13 +449,14 @@ namespace Proyecto_de_desarrolo
             this.Controls.Add(this.panel1);
             this.Name = "frmPrincipalEmpleado";
             this.Text = "frmPrincipalEmpleado";
+            this.Load += new System.EventHandler(this.frmPrincipalEmpleado_Load_1);
             this.contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.pnsubusu.ResumeLayout(false);
             this.pnusuario.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelProductos.ResumeLayout(false);
-            this.panelPersonas.ResumeLayout(false);
             this.slidermenu.ResumeLayout(false);
             this.panelFacturacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
@@ -536,7 +477,6 @@ namespace Proyecto_de_desarrolo
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer sliderTran;
         private Button button5;
-        private Button button18;
         private Button button19;
         private Button button20;
         private Button btnProduct;
@@ -545,21 +485,18 @@ namespace Proyecto_de_desarrolo
         private Button button8;
         private Button button9;
         private Button btnFacturacion;
-        private Button button4;
-        private Button button14;
-        private Button btnPersonas;
-        private Panel panelPersonas;
         private FlowLayoutPanel slidermenu;
         private Panel panelFacturacion;
         private Label label1;
         private PictureBox btnMenu;
         private Panel panel1;
-        private Button button6;
+        private Button btnPedidos;
         private Panel panel2;
         private Label lblUsuario;
         private PictureBox pictureBox2;
         private Panel pnsubusu;
         private Panel pnusuario;
         private Button button7;
+        private PictureBox logo;
     }
 }

@@ -200,6 +200,17 @@ namespace Proyecto_de_desarrolo.Formularios
         {
 
         }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            RegistroProducto();
+        }
+
+        private void cmbProveedor_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            clsProveedorProducto proveedorSeleccionado = (clsProveedorProducto)cmbProveedor.SelectedItem;
+            idProveedor = proveedorSeleccionado.Roles_ID;
+        }
     }
 
 }

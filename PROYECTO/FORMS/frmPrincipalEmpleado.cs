@@ -17,12 +17,9 @@ namespace Proyecto_de_desarrolo
         public frmPrincipalEmpleado()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
-        private void frmPrincipalEmpleado_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private static Form FormAct;
 
@@ -32,10 +29,6 @@ namespace Proyecto_de_desarrolo
             if (panelProductos.Visible == true)
             {
                 panelProductos.Visible = false;
-            }
-            if (panelPersonas.Visible == true)
-            {
-                panelPersonas.Visible = false;
             }
             if (panelFacturacion.Visible == true)
             {
@@ -50,6 +43,39 @@ namespace Proyecto_de_desarrolo
                 pnsubusu.Visible = false;
             }
         }
+
+        private void butons()
+        {
+            if (btnFacturacion.Enabled == true)
+            {
+                btnFacturacion.Enabled = false;
+            }
+            else
+            {
+                btnFacturacion.Enabled = true;
+            }
+
+           
+
+            if (btnProduct.Enabled == true)
+            {
+                btnProduct.Enabled = false;
+            }
+            else
+            {
+                btnProduct.Enabled = true;
+            }
+            if (btnPedidos.Enabled == true)
+            {
+                btnPedidos.Enabled = false;
+            }
+            else
+            {
+                btnPedidos.Enabled = true;
+            }
+
+        }
+
 
 
         private void ShowMenu(Panel Submenu)
@@ -82,75 +108,12 @@ namespace Proyecto_de_desarrolo
         }
 
 
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sliderTran_Tick(object sender, EventArgs e)
-        {
-            if (siderbarExpand)
-            {
-                slidermenu.Width -= 10;
-                if (slidermenu.Width <= 60)
-                {
-                    siderbarExpand = false;
-                    sliderTran.Stop();
-                }
-            }
-            else
-            {
-                slidermenu.Width += 10;
-                if (slidermenu.Width >= 263)
-                {
-                    siderbarExpand = true;
-                    sliderTran.Stop();
-
-
-
-                }
-
-
-            }
-        }
-
-        private void btnPersonas_Click(object sender, EventArgs e)
-        {
-            ShowMenu(panelPersonas);
-        }
-
-        private void btnFacturacion_Click(object sender, EventArgs e)
-        {
-            ShowMenu(panelFacturacion);
-        }
+        
         public void SetUsuarioLabel(string usuario)
         {
             lblUsuario.Text = usuario;
         }
-        private void contenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -159,10 +122,7 @@ namespace Proyecto_de_desarrolo
             sesio.Show();
         }
 
-        private void btnPersonas_Click_1(object sender, EventArgs e)
-        {
-            ShowMenu(panelPersonas);
-        }
+        
 
         private void button14_Click(object sender, EventArgs e)
         {
@@ -176,7 +136,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnFacturacion_Click_1(object sender, EventArgs e)
         {
-
+            ShowMenu(panelFacturacion);
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -192,6 +152,89 @@ namespace Proyecto_de_desarrolo
         private void button3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMenu_Click_1(object sender, EventArgs e)
+        {
+            sliderTran.Start();
+            submenu();
+            butons();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            logo.Visible = true;
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmPrincipalEmpleado_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sliderTran_Tick_1(object sender, EventArgs e)
+        {
+            if (siderbarExpand)
+            {
+                slidermenu.Width -= 10;
+                if (slidermenu.Width <= 60)
+                {
+
+                    siderbarExpand = false;
+                    sliderTran.Stop();
+                }
+            }
+            else
+            {
+                slidermenu.Width += 10;
+                if (slidermenu.Width >= 225)
+                {
+
+                    siderbarExpand = true;
+                    sliderTran.Stop();
+
+
+
+                }
+
+
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void slidermenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            AbriForm(new frmPedido());
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            AbriForm(new frmInventario());
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            ShowMenu(panelProductos);
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
 using PROYECTO.CLASES;
+using Proyecto_de_desarrolo.Clases;
 
 namespace Proyecto_de_desarrolo.Formularios
 {
@@ -37,6 +38,37 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
+        private void RegistrarCarrito(int cant)
+        {
+
+            if (cant <= 0)
+            {
+                MessageBox.Show("Seleccione una cantidad valida");
+                return;
+            }
+
+
+            clsPersonasid per = new clsPersonasid();
+
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+
+                string consulta = "INSERT INTO Carritos ([Productos_ID],[Usuarios_ID],[cantidad],[estado]) " +
+                                                  "VALUES ('" + cod1 + "','" + per.getcodUsu() + "','" + cant + "', 'true');";
+
+
+                SqlCommand comando = new SqlCommand(consulta, cn);
+
+
+
+
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Pedido añadido al carrito");
+            }
+
+        }
 
 
         private void cargar_pedido2()
@@ -398,134 +430,320 @@ namespace Proyecto_de_desarrolo.Formularios
         }
 
 
-        private void btnMenos1_Click(object sender, EventArgs e)
+        private void btnMas1_Click_1(object sender, EventArgs e)
         {
+            if (x1 >= 500)
+            {
+                x1 = 500;
+
+            }
+            else
+            {
+                x1++;
+            }
+
+            txtCantidad1.Text = Convert.ToString(x1);
+        }
+
+        private void btnMenos1_Click_2(object sender, EventArgs e)
+        {
+            if (x1 <= 0)
+            {
+                x1 = 0;
+
+            }
+            else
+            {
+                x1--;
+
+            }
+            txtCantidad1.Text = Convert.ToString(x1);
+        }
+
+        clsValidaciones val = new clsValidaciones();
+
+        private void txtCantidad1_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad1.Text) == 500)
+            {
+                txtCantidad1.Text = "500";
+                x1 = 500;
+                txtCantidad1.Select(txtCantidad1.Text.Length, 0);
+
+            }
+            if (txtCantidad1.Text == "")
+            {
+                x1 = 0;
+            }
+            else
+            {
+                x1 = int.Parse(txtCantidad1.Text);
+            }
+        }
+
+        private void btnMas2_Click_1(object sender, EventArgs e)
+        {
+            if (x2 >= 500)
+            {
+                x2 = 500;
+
+            }
+            else
+            {
+                x2++;
+            }
+
+            txtCantidad2.Text = Convert.ToString(x2);
+        }
+
+        private void btnMenos2_Click_1(object sender, EventArgs e)
+        {
+
+            if (x2 <= 0)
+            {
+                x2 = 0;
+
+            }
+            else
+            {
+                x2--;
+
+            }
+            txtCantidad2.Text = Convert.ToString(x2);
+        }
+
+        private void btnMas3_Click_1(object sender, EventArgs e)
+        {
+            if (x3 >= 500)
+            {
+                x3 = 500;
+
+            }
+            else
+            {
+                x3++;
+            }
+
+            txtCantidad3.Text = Convert.ToString(x3);
+        }
+
+        private void btnMenos3_Click_1(object sender, EventArgs e)
+        {
+            if (x3 <= 0)
+            {
+                x3 = 0;
+
+            }
+            else
+            {
+                x3--;
+
+            }
+            txtCantidad3.Text = Convert.ToString(x3);
+        }
+
+        private void txtCantidad3_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad3.Text) == 500)
+            {
+                txtCantidad3.Text = "500";
+                x3 = 500;
+                txtCantidad3.Select(txtCantidad3.Text.Length, 0);
+
+            }
+            if (txtCantidad3.Text == "")
+            {
+                x3 = 0;
+            }
+            else
+            {
+                x3 = int.Parse(txtCantidad3.Text);
+            }
+        }
+
+        private void txtCantidad2_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad2.Text) == 500)
+            {
+                txtCantidad2.Text = "500";
+                x2 = 500;
+                txtCantidad2.Select(txtCantidad2.Text.Length, 0);
+
+            }
+            if (txtCantidad2.Text == "")
+            {
+                x2 = 0;
+            }
+            else
+            {
+                x2 = int.Parse(txtCantidad2.Text);
+            }
+        }
+
+        private void txtCantidad4_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad4.Text) == 500)
+            {
+                txtCantidad4.Text = "500";
+                x4 = 500;
+                txtCantidad4.Select(txtCantidad4.Text.Length, 0);
+
+            }
+            if (txtCantidad4.Text == "")
+            {
+                x4 = 0;
+            }
+            else
+            {
+                x4 = int.Parse(txtCantidad4.Text);
+            }
+        }
+
+        private void btnMas4_Click_1(object sender, EventArgs e)
+        {
+            if (x4 >= 500)
+            {
+                x4 = 500;
+
+            }
+            else
+            {
+                x4++;
+            }
+
+            txtCantidad4.Text = Convert.ToString(x4);
+        }
+
+        private void btnMenos4_Click_1(object sender, EventArgs e)
+        {
+            if (x4 <= 0)
+            {
+                x4 = 0;
+
+            }
+            else
+            {
+                x4--;
+
+            }
+            txtCantidad4.Text = Convert.ToString(x4);
+        }
+
+        private void txtCantidad5_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad5.Text) == 500)
+            {
+                txtCantidad5.Text = "500";
+                x5 = 500;
+                txtCantidad5.Select(txtCantidad5.Text.Length, 0);
+
+            }
+            if (txtCantidad5.Text == "")
+            {
+                x5 = 0;
+            }
+            else
+            {
+                x5 = int.Parse(txtCantidad5.Text);
+            }
+        }
+
+        private void btnMas5_Click_1(object sender, EventArgs e)
+        {
+            if (x5 >= 500)
+            {
+                x5 = 500;
+
+            }
+            else
+            {
+                x5++;
+            }
+
+            txtCantidad5.Text = Convert.ToString(x5);
 
         }
 
-        private void btnMenos1_Click_1(object sender, EventArgs e)
+        private void btnMenos5_Click_1(object sender, EventArgs e)
         {
-            x1--;
-            //lblCantidad1.Text = Convert.ToString(x1);
+            if (x5 <= 0)
+            {
+                x5 = 0;
+
+            }
+            else
+            {
+                x5--;
+
+            }
+            txtCantidad5.Text = Convert.ToString(x5);
         }
 
-        private void btnMas1_Click(object sender, EventArgs e)
+        private void txtCantidad6_TextChanged(object sender, EventArgs e)
         {
-            x1++;
+            if (val.validar_pesoPedidos(txtCantidad6.Text) == 500)
+            {
+                txtCantidad6.Text = "500";
+                x6 = 500;
+                txtCantidad6.Select(txtCantidad6.Text.Length, 0);
 
-
-            //lblCantidad1.Text = Convert.ToString(x1);
-
+            }
+            if (txtCantidad6.Text == "")
+            {
+                x6 = 0;
+            }
+            else
+            {
+                x6 = int.Parse(txtCantidad6.Text);
+            }
         }
 
-        private void btnMas2_Click(object sender, EventArgs e)
+        private void btnMas6_Click_1(object sender, EventArgs e)
         {
-            x2++;
+            if (x6 >= 500)
+            {
+                x6 = 500;
 
+            }
+            else
+            {
+                x6++;
+            }
 
-            //lblCantidad2.Text = Convert.ToString(x2);
-
+            txtCantidad6.Text = Convert.ToString(x6);
         }
 
-        private void btnMas3_Click(object sender, EventArgs e)
+        private void btnMenos6_Click_1(object sender, EventArgs e)
         {
-            x3++;
+            if (x6 <= 0)
+            {
+                x6 = 0;
 
+            }
+            else
+            {
+                x6--;
 
-           // lblCantidad3.Text = Convert.ToString(x3);
-
+            }
+            txtCantidad6.Text = Convert.ToString(x6);
         }
 
-        private void btnMas4_Click(object sender, EventArgs e)
+        private void btnsiguiente_Click(object sender, EventArgs e)
         {
-            x4++;
-
-
-            //lblCantidad4.Text = Convert.ToString(x4);
-
-        }
-
-        private void btnMas5_Click(object sender, EventArgs e)
-        {
-            x5++;
-
-
-           // lblCantidad5.Text = Convert.ToString(x5);
-
-        }
-
-        private void btnMas6_Click(object sender, EventArgs e)
-        {
-            x6++;
-
-
-           // lblCantidad6.Text = Convert.ToString(x6);
-
-        }
-
-        private void btnMenos2_Click(object sender, EventArgs e)
-        {
-            x2--;
-
-
-            //lblCantidad2.Text = Convert.ToString(x2);
-
-        }
-
-        private void btnMenos3_Click(object sender, EventArgs e)
-        {
-            x3--;
-
-
-            //lblCantidad3.Text = Convert.ToString(x3);
-
-        }
-
-        private void btnMenos4_Click(object sender, EventArgs e)
-        {
-            x4--;
-
-
-           // lblCantidad4.Text = Convert.ToString(x4);
-
-        }
-
-        private void btnMenos5_Click(object sender, EventArgs e)
-        {
-            x5--;
-
-
-            //lblCantidad5.Text = Convert.ToString(x5);
-        }
-
-        private void btnMenos6_Click(object sender, EventArgs e)
-        {
-            x6--;
-
-
-            //lblCantidad6.Text = Convert.ToString(x6);
-        }
-
-        private void btnCarrito_Click(object sender, EventArgs e)
-        {
-            frmCarrito frmCarrito = new frmCarrito();
-            frmCarrito.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void Pedidos_Cliente_Load_1(object sender, EventArgs e)
-        {
-
+            cont_pag++;
+            y = true;
+            x1 = 0; x2 = 0; x3 = 0; x4 = 0; x5 = 0; x6 = 0;
+            txtCantidad1.Text = x1.ToString();
+            txtCantidad2.Text = x2.ToString();
+            txtCantidad3.Text = x3.ToString();
+            txtCantidad4.Text = x4.ToString();
+            txtCantidad5.Text = x5.ToString();
+            txtCantidad6.Text = x6.ToString();
+            cargar_pedido2();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             clsPersonasid per = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
@@ -540,12 +758,11 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            //RegistrarCarrito(lblCantidad3.Text);
+            RegistrarCarrito(x3);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             clsPersonasid per = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
@@ -560,12 +777,11 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            //RegistrarCarrito(lblCantidad4.Text);
+            RegistrarCarrito(x4);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
-
             clsPersonasid per = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
@@ -580,12 +796,11 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            //RegistrarCarrito(lblCantidad5.Text);
+            RegistrarCarrito(x5);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
             clsPersonasid per = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
@@ -600,16 +815,97 @@ namespace Proyecto_de_desarrolo.Formularios
                 cod1 = dataTable.Rows[0][0].ToString();
             }
 
-            //RegistrarCarrito(lblCantidad6.Text);
+            RegistrarCarrito(x6);
         }
 
-        private void btnCarrito_Click_1(object sender, EventArgs e)
+        private void anterior_Click_1(object sender, EventArgs e)
+        {
+            cont_pag--;
+
+            y = false;
+            if (button1.Visible)
+            {
+                i--;
+            }
+            if (button2.Visible)
+            {
+                i--;
+            }
+            if (button3.Visible)
+            {
+                i--;
+            }
+            if (button4.Visible)
+            {
+                i--;
+            }
+            if (button5.Visible)
+            {
+                i--;
+            }
+            if (button6.Visible)
+            {
+                i--;
+            }
+
+            i = i - 6;
+
+            x1 = 0; x2 = 0; x3 = 0; x4 = 0; x5 = 0; x6 = 0;
+            txtCantidad1.Text = x1.ToString();
+            txtCantidad2.Text = x2.ToString();
+            txtCantidad3.Text = x3.ToString();
+            txtCantidad4.Text = x4.ToString();
+            txtCantidad5.Text = x5.ToString();
+            txtCantidad6.Text = x6.ToString();
+            cargar_pedido2();
+        }
+
+        private void btnCarrito_Click_2(object sender, EventArgs e)
         {
             frmCarrito frmCarrito = new frmCarrito();
             frmCarrito.Show();
         }
 
-        
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre1.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+
+            }
+
+            RegistrarCarrito(x1);
+            x1 = 0;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre2.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+
+            }
+
+            RegistrarCarrito(x2);
+        }        
      
     }
 }

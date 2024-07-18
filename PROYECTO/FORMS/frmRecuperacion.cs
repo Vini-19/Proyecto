@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PROYECTO.CLASES;
+using Proyecto_de_desarrolo.Clases;
 
 namespace Proyecto_de_desarrolo.Formularios
 {
@@ -19,66 +20,90 @@ namespace Proyecto_de_desarrolo.Formularios
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        clsValidaciones val = new clsValidaciones();
 
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
        public string Usuario { get; set; }
 
+        
+        private void txtNueva_Contraseña1_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtNueva_Contraseña1, val.validarcontra(txtNueva_Contraseña1.Text));
+        }
+
+        private void txtNueva_Contraseña2_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtNueva_Contraseña2, val.validarcontra(txtNueva_Contraseña2.Text));
+        }
+
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            string nuevaContraseña1 = txtNueva_Contraseña1.Text;
-            string nuevaContraseña2 = txtNueva_Contraseña2.Text;
-
-            if (nuevaContraseña1 != nuevaContraseña2)
+            if (txtNueva_Contraseña1.Text == "" || txtNueva_Contraseña2.Text == "")
             {
-                MessageBox.Show("Las contraseñas no coinciden");
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+
             }
             else
             {
-                try
+
+                if (errorProvider1.GetError(txtNueva_Contraseña1) == "" && errorProvider1.GetError(txtNueva_Contraseña2) == "")
                 {
-                    clsRegistro registro = new clsRegistro();
-                    Cconexion objC = new Cconexion();
-                    using (SqlConnection cn = objC.leer())
+                    string nuevaContraseña1 = txtNueva_Contraseña1.Text;
+                    string nuevaContraseña2 = txtNueva_Contraseña2.Text;
+
+                    if (nuevaContraseña1 != nuevaContraseña2)
                     {
-                        if (cn.State == ConnectionState.Open)
-                        {
-                            cn.Close();
-                        }
-
-                        cn.Open();
-
-                        SqlCommand comandoRecuperarContra = new SqlCommand("PA_ActualizarContraseña", cn);
-                        comandoRecuperarContra.CommandType = CommandType.StoredProcedure;
-
-                        comandoRecuperarContra.Parameters.AddWithValue("@nuevaContraseña", nuevaContraseña2);
-                        comandoRecuperarContra.Parameters.AddWithValue("@usuario", Usuario);
-
-                        int filasAfectadas = comandoRecuperarContra.ExecuteNonQuery();
-                        if (filasAfectadas > 0)
-                        {
-                            MessageBox.Show("Contraseña actualizada correctamente");
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error al actualizar la contraseña");
-                        }
-
-                        cn.Close();
+                        MessageBox.Show("Las contraseñas no coinciden");
                     }
+                    else
+                    {
+                        try
+                        {
+                            clsRegistro registro = new clsRegistro();
+                            Cconexion objC = new Cconexion();
+                            using (SqlConnection cn = objC.leer())
+                            {
+                                if (cn.State == ConnectionState.Open)
+                                {
+                                    cn.Close();
+                                }
+
+                                cn.Open();
+
+                                SqlCommand comandoRecuperarContra = new SqlCommand("PA_ActualizarContraseña", cn);
+                                comandoRecuperarContra.CommandType = CommandType.StoredProcedure;
+
+                                comandoRecuperarContra.Parameters.AddWithValue("@nuevaContraseña", nuevaContraseña2);
+                                comandoRecuperarContra.Parameters.AddWithValue("@usuario", Usuario);
+
+                                int filasAfectadas = comandoRecuperarContra.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    MessageBox.Show("Contraseña actualizada correctamente");
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error al actualizar la contraseña");
+                                }
+
+                                cn.Close();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+
                 }
+
             }
         }
     }

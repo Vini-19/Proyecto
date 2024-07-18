@@ -88,7 +88,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(8, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 358);
             this.panel1.TabIndex = 2;
@@ -105,7 +105,7 @@ namespace Proyecto_de_desarrolo.Formularios
             "¿Cuál es tu pelicula favorita?",
             ""});
             this.cmbPregunta.Location = new System.Drawing.Point(34, 232);
-            this.cmbPregunta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPregunta.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPregunta.Name = "cmbPregunta";
             this.cmbPregunta.Size = new System.Drawing.Size(148, 21);
             this.cmbPregunta.TabIndex = 10;
@@ -113,10 +113,11 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtRespuesta
             // 
             this.txtRespuesta.Location = new System.Drawing.Point(34, 273);
-            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(2);
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(148, 20);
             this.txtRespuesta.TabIndex = 9;
+            this.txtRespuesta.TextChanged += new System.EventHandler(this.txtRespuesta_TextChanged);
             // 
             // label5
             // 
@@ -145,30 +146,32 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Firebrick;
             this.btnSalir.Location = new System.Drawing.Point(183, 2);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(38, 19);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(2, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 19);
             this.button1.TabIndex = 3;
             this.button1.Text = "<--";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.Gold;
             this.btnSiguiente.Location = new System.Drawing.Point(68, 305);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(92, 24);
             this.btnSiguiente.TabIndex = 5;
@@ -179,18 +182,20 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtContra
             // 
             this.txtContra.Location = new System.Drawing.Point(34, 163);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(148, 20);
             this.txtContra.TabIndex = 4;
+            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(34, 116);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(148, 20);
             this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // label3
             // 
@@ -214,7 +219,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(241, 374);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistro";

@@ -254,6 +254,7 @@ namespace Proyecto_de_desarrolo
             this.logo.TabIndex = 2;
             this.logo.TabStop = false;
             this.logo.UseWaitCursor = true;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
             // panel2
             // 

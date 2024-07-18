@@ -67,34 +67,14 @@ namespace Proyecto_de_desarrolo
             }
         }
 
-        private void frmPrincipalCliente_Load(object sender, EventArgs e)
-        {
-
-        }
+       
         bool siderbarExpand = true;
-       
 
-       
-       
-
-        private void button20_Click(object sender, EventArgs e)
-        {
-            AbriForm(new Pedidos_Cliente());
-        }
-
-       
         public void SetUsuarioLabel(string usuario)
         {
             lblUsuario.Text = usuario;
         }
       
-
-      
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            sliderTran.Start();
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -162,7 +142,7 @@ namespace Proyecto_de_desarrolo
             else
             {
                 slidermenu.Width += 10;
-                if (slidermenu.Width >= 263)
+                if (slidermenu.Width >= 225)
                 {
 
                     siderbarExpand = true;
@@ -179,6 +159,15 @@ namespace Proyecto_de_desarrolo
         private void button20_Click_1(object sender, EventArgs e)
         {
             AbriForm(new Pedidos_Cliente());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

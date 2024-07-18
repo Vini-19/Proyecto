@@ -200,5 +200,30 @@ namespace Proyecto_de_desarrolo.Formularios
         {
             FiltrarDatos(txtBuscar.Text);
         }
+
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            FiltrarDatos(txtBuscar.Text);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            modoEdicion = !modoEdicion;
+            dataGridView1.ReadOnly = !modoEdicion;
+
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                if (column.Name == "Cantidad_Producto" || column.Name == "Categoria_ID")
+                {
+                    column.ReadOnly = !modoEdicion;
+                }
+                else
+                {
+                    column.ReadOnly = true;
+                }
+            }
+
+            btnModificar.Text = modoEdicion ? "Desactivar Modificación" : "Activar Modificación";
+        }
     }
 }

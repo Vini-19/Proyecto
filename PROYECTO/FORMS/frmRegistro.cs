@@ -29,33 +29,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
         clsValidaciones val = new clsValidaciones();
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmInicioSesion InicioS = new frmInicioSesion();
-            InicioS.Show();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             val.validarcm(cmbPregunta.Text);
@@ -101,6 +74,32 @@ namespace Proyecto_de_desarrolo.Formularios
                 }
 
             }
+        }
+
+        private void txtRespuesta_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtRespuesta, val.txt_vacio(txtRespuesta.Text) + val.rango_nombre(txtRespuesta.Text) + val.espacio_inicio_final(txtRespuesta.Text));
+        }
+
+        private void txtContra_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtContra, val.validarcontra(txtContra.Text));
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtUsuario, val.txt_vacio(txtUsuario.Text) + val.rango_usuario(txtUsuario.Text) + val.espacio_inicio_final(txtUsuario.Text) + val.espacio(txtUsuario.Text));
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmInicioSesion InicioS = new frmInicioSesion();
+            InicioS.Show();
         }
     }
 }

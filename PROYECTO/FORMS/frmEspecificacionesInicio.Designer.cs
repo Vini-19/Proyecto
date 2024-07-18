@@ -31,120 +31,131 @@ namespace Proyecto_de_desarrolo.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            lblIngrese = new Label();
-            txtRespuesta_Recuperacion = new TextBox();
-            label4 = new Label();
-            panel1 = new Panel();
-            lblPregunta = new Label();
-            btnBuscar = new Button();
-            txtUser = new TextBox();
-            btnSiguiente = new Button();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblIngrese = new System.Windows.Forms.Label();
+            this.txtRespuesta_Recuperacion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPregunta = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(17, 121);
-            label1.Name = "label1";
-            label1.Size = new Size(267, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Ingrese el usuario que desea recuperar:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ingrese el usuario que desea recuperar:";
             // 
             // lblIngrese
             // 
-            lblIngrese.AutoSize = true;
-            lblIngrese.Location = new Point(17, 276);
-            lblIngrese.Name = "lblIngrese";
-            lblIngrese.Size = new Size(239, 20);
-            lblIngrese.TabIndex = 3;
-            lblIngrese.Text = " Ingrese la respuesta a la pregunta:";
-            lblIngrese.Visible = false;
+            this.lblIngrese.AutoSize = true;
+            this.lblIngrese.Location = new System.Drawing.Point(13, 179);
+            this.lblIngrese.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngrese.Name = "lblIngrese";
+            this.lblIngrese.Size = new System.Drawing.Size(173, 13);
+            this.lblIngrese.TabIndex = 3;
+            this.lblIngrese.Text = " Ingrese la respuesta a la pregunta:";
+            this.lblIngrese.Visible = false;
             // 
             // txtRespuesta_Recuperacion
             // 
-            txtRespuesta_Recuperacion.Location = new Point(17, 314);
-            txtRespuesta_Recuperacion.Name = "txtRespuesta_Recuperacion";
-            txtRespuesta_Recuperacion.Size = new Size(408, 27);
-            txtRespuesta_Recuperacion.TabIndex = 4;
-            txtRespuesta_Recuperacion.Visible = false;
+            this.txtRespuesta_Recuperacion.Location = new System.Drawing.Point(13, 204);
+            this.txtRespuesta_Recuperacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRespuesta_Recuperacion.Name = "txtRespuesta_Recuperacion";
+            this.txtRespuesta_Recuperacion.Size = new System.Drawing.Size(307, 20);
+            this.txtRespuesta_Recuperacion.TabIndex = 4;
+            this.txtRespuesta_Recuperacion.Visible = false;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Mongolian Baiti", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(17, 30);
-            label4.Name = "label4";
-            label4.Size = new Size(328, 30);
-            label4.TabIndex = 9;
-            label4.Text = "Pregunta de Recuperación";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 20);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(267, 24);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Pregunta de Recuperación";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(lblPregunta);
-            panel1.Controls.Add(btnBuscar);
-            panel1.Controls.Add(txtUser);
-            panel1.Controls.Add(btnSiguiente);
-            panel1.Controls.Add(txtRespuesta_Recuperacion);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(lblIngrese);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(598, 439);
-            panel1.TabIndex = 10;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblPregunta);
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.txtUser);
+            this.panel1.Controls.Add(this.btnSiguiente);
+            this.panel1.Controls.Add(this.txtRespuesta_Recuperacion);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblIngrese);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(9, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(448, 285);
+            this.panel1.TabIndex = 10;
             // 
             // lblPregunta
             // 
-            lblPregunta.AutoSize = true;
-            lblPregunta.Location = new Point(17, 239);
-            lblPregunta.Name = "lblPregunta";
-            lblPregunta.Size = new Size(0, 20);
-            lblPregunta.TabIndex = 13;
-            lblPregunta.Visible = false;
+            this.lblPregunta.AutoSize = true;
+            this.lblPregunta.Location = new System.Drawing.Point(13, 155);
+            this.lblPregunta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPregunta.Name = "lblPregunta";
+            this.lblPregunta.Size = new System.Drawing.Size(0, 13);
+            this.lblPregunta.TabIndex = 13;
+            this.lblPregunta.Visible = false;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(448, 172);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(94, 29);
-            btnBuscar.TabIndex = 12;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
-            btnBuscar.Click += button1_Click;
+            this.btnBuscar.Location = new System.Drawing.Point(336, 112);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(70, 19);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtUser
             // 
-            txtUser.Location = new Point(17, 172);
-            txtUser.Name = "txtUser";
-            txtUser.Size = new Size(408, 27);
-            txtUser.TabIndex = 11;
+            this.txtUser.Location = new System.Drawing.Point(13, 112);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(307, 20);
+            this.txtUser.TabIndex = 11;
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Location = new Point(448, 314);
-            btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(94, 29);
-            btnSiguiente.TabIndex = 10;
-            btnSiguiente.Text = "Siguiente";
-            btnSiguiente.UseVisualStyleBackColor = true;
-            btnSiguiente.Visible = false;
-            btnSiguiente.Click += btnSiguiente_Click;
+            this.btnSiguiente.Location = new System.Drawing.Point(336, 204);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(70, 19);
+            this.btnSiguiente.TabIndex = 10;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Visible = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
             // frmEspecificacionesInicio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Red;
-            ClientSize = new Size(622, 463);
-            Controls.Add(panel1);
-            Name = "frmEspecificacionesInicio";
-            StartPosition = FormStartPosition.CenterScreen;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
+            this.ClientSize = new System.Drawing.Size(466, 301);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmEspecificacionesInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
