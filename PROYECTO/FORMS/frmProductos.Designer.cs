@@ -72,7 +72,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnAgregar.BackColor = System.Drawing.Color.SpringGreen;
             this.btnAgregar.Location = new System.Drawing.Point(133, 382);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(64, 20);
+            this.btnAgregar.Size = new System.Drawing.Size(75, 32);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;

@@ -152,9 +152,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnEliminar.BackColor = System.Drawing.Color.Maroon;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(103, 382);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnEliminar.Name = "btnEliminar";

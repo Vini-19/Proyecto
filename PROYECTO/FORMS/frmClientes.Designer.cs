@@ -163,46 +163,51 @@ namespace Proyecto_de_desarrolo
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Maroon;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(111, 352);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 19);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 32);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.Info;
             this.btnLimpiar.Location = new System.Drawing.Point(22, 352);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(70, 19);
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 32);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.SpringGreen;
             this.btnModificar.Location = new System.Drawing.Point(111, 321);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(70, 19);
+            this.btnModificar.Size = new System.Drawing.Size(75, 32);
             this.btnModificar.TabIndex = 9;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.SpringGreen;
             this.btnAgregar.Location = new System.Drawing.Point(22, 321);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(70, 19);
+            this.btnAgregar.Size = new System.Drawing.Size(75, 32);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
@@ -302,7 +307,6 @@ namespace Proyecto_de_desarrolo
             this.label13.Size = new System.Drawing.Size(457, 50);
             this.label13.TabIndex = 9;
             this.label13.Text = "REGISTRO DE CLIENTES";
-            
             // 
             // frmClientes
             // 
