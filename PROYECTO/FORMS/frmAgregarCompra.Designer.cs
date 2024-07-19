@@ -83,6 +83,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnAgregarC.TabIndex = 24;
             this.btnAgregarC.Text = "Agregar Compra";
             this.btnAgregarC.UseVisualStyleBackColor = true;
+            this.btnAgregarC.Click += new System.EventHandler(this.btnAgregarC_Click_1);
             // 
             // txtPrecio
             // 
@@ -91,6 +92,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(95, 20);
             this.txtPrecio.TabIndex = 23;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged_1);
             // 
             // label10
             // 
@@ -111,6 +113,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnQuitarC.TabIndex = 12;
             this.btnQuitarC.Text = "Quitar";
             this.btnQuitarC.UseVisualStyleBackColor = true;
+            this.btnQuitarC.Click += new System.EventHandler(this.btnQuitarC_Click_1);
             // 
             // cmbProveedor
             // 
@@ -121,6 +124,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.cmbProveedor.Name = "cmbProveedor";
             this.cmbProveedor.Size = new System.Drawing.Size(95, 21);
             this.cmbProveedor.TabIndex = 9;
+            this.cmbProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbProveedor_SelectedIndexChanged_1);
             // 
             // cmbCategoria
             // 
@@ -139,6 +143,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(95, 20);
             this.txtCantidad.TabIndex = 7;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged_1);
             // 
             // label5
             // 
@@ -188,6 +193,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnFinalizarC.TabIndex = 13;
             this.btnFinalizarC.Text = "Finalizar Compra";
             this.btnFinalizarC.UseVisualStyleBackColor = true;
+            this.btnFinalizarC.Click += new System.EventHandler(this.btnFinalizarC_Click_1);
             // 
             // lblTotal
             // 

@@ -97,6 +97,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // label2
             // 
@@ -167,7 +168,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(116, 43);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(548, 20);
             this.txtBuscar.TabIndex = 10;
@@ -204,6 +205,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmInventario";
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmInventario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

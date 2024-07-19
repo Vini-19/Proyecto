@@ -26,10 +26,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-
-
-
-
         public DataTable ObtenerDatosInventario()
         {
             DataTable dt = new DataTable();
@@ -224,6 +220,29 @@ namespace Proyecto_de_desarrolo.Formularios
             }
 
             btnModificar.Text = modoEdicion ? "Desactivar Modificación" : "Activar Modificación";
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmInventario_Load_1(object sender, EventArgs e)
+        {
+           
+                CargarDatosEnDataGridView();
+                CalcularYSumarCantidades();
+
+                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                {
+                    if (column.Name != "Cantidad_Producto")
+                    {
+                        column.ReadOnly = true;
+                    }
+                }
+
+                txtBuscar.Focus();
+            
         }
     }
 }

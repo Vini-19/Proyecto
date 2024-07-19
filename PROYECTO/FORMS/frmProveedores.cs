@@ -466,7 +466,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtNombre_Prov_TextChanged_1(object sender, EventArgs e)
         {
-            //errorProvider1.SetError(txtNombre_Prov, val.txt_vacio(txtNombre_Prov.Text) + val.espacio_inicio_final(txtNombre_Prov.Text) + val.validarletra_espacio(txtNombre_Prov.Text) + val.rango_nombre(txtNombre_Prov.Text) + val.doble_espacio(txtNombre_Prov.Text) + val.validar_tripleCaracter(txtNombre_Prov.Text));
+            errorProvider1.SetError(txtNombre_Prov, val.txt_vacio(txtNombre_Prov.Text) + val.espacio_inicio_final(txtNombre_Prov.Text) + val.validarletra_espacio(txtNombre_Prov.Text) + val.rango_nombre(txtNombre_Prov.Text) + val.doble_espacio(txtNombre_Prov.Text) + val.validar_tripleCaracter(txtNombre_Prov.Text));
         }
 
         private void txtDNI_Prov_TextChanged_1(object sender, EventArgs e)
@@ -476,12 +476,38 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtRTN_Prov_TextChanged_1(object sender, EventArgs e)
         {
-            //errorProvider1.SetError(txtRTN_Prov, val.txt_vacio(txtRTN_Prov.Text) + val.espacio_inicio_final(txtRTN_Prov.Text) + val.rango_14(txtRTN_Prov.Text) + val.espacio(txtRTN_Prov.Text));
+            errorProvider1.SetError(txtRTN_Prov, val.txt_vacio(txtRTN_Prov.Text) + val.espacio_inicio_final(txtRTN_Prov.Text) + val.rango_14(txtRTN_Prov.Text) + val.espacio(txtRTN_Prov.Text));
         }
 
         private void txtBuscar_TextChanged_1(object sender, EventArgs e)
         {
             FiltrarDatos(txtBuscar.Text);
+        }
+
+        private void frmProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void dgv_Prov_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_Prov_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+                txtRTN_Prov.Text = dgv_Prov.CurrentRow.Cells[1].Value.ToString();
+                txtDNI_Prov.Text = dgv_Prov.CurrentRow.Cells[2].Value.ToString();
+                txtNombre_Prov.Text = dgv_Prov.CurrentRow.Cells[4].Value.ToString();
+                txtTelefono_Prov.Text = dgv_Prov.CurrentRow.Cells[6].Value.ToString();
+                txtCorreo_Prov.Text = dgv_Prov.CurrentRow.Cells[7].Value.ToString();
+                txtDireccion_Prov.Text = dgv_Prov.CurrentRow.Cells[8].Value.ToString();
+
+                btnAgregar.Enabled = false;
+            
         }
     }
 }

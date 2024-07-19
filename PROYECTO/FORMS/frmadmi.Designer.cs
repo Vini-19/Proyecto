@@ -59,7 +59,6 @@ namespace PROYECTO
             this.button2 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.btnPedidos = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.sliderTran = new System.Windows.Forms.Timer(this.components);
             this.BtnProdu = new System.Windows.Forms.Button();
@@ -70,6 +69,7 @@ namespace PROYECTO
             this.pnsubusu = new System.Windows.Forms.Panel();
             this.pnusuario = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -176,7 +176,7 @@ namespace PROYECTO
             this.slidermenu.Controls.Add(this.panelProductos);
             this.slidermenu.Controls.Add(this.btnReporte);
             this.slidermenu.Controls.Add(this.PNREPOR);
-            this.slidermenu.Controls.Add(this.btnPedidos);
+            this.slidermenu.Controls.Add(this.button3);
             this.slidermenu.Controls.Add(this.button5);
             this.slidermenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidermenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -469,23 +469,6 @@ namespace PROYECTO
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // btnPedidos
-            // 
-            this.btnPedidos.BackColor = System.Drawing.Color.Black;
-            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(3, 1037);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(260, 81);
-            this.btnPedidos.TabIndex = 33;
-            this.btnPedidos.Text = "                  Pedidos";
-            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.UseVisualStyleBackColor = false;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.IndianRed;
@@ -609,6 +592,24 @@ namespace PROYECTO
             this.button7.UseWaitCursor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_2);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 1037);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(260, 81);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "                  Pedidos";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_3);
+            // 
             // frmadmi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -680,8 +681,8 @@ namespace PROYECTO
         private Panel PNREPOR;
         private Button button10;
         private Button button11;
-        private Button btnPedidos;
         private PictureBox logo;
         private Button button2;
+        private Button button3;
     }
 }

@@ -115,14 +115,7 @@ namespace PROYECTO
                 btnReporte.Enabled = true;
             }
 
-            if (btnPedidos.Enabled == true)
-            {
-                btnPedidos.Enabled = false;
-            }
-            else
-            {
-                btnPedidos.Enabled = true;
-            }
+            
 
             if (btnProduct.Enabled == true)
             {
@@ -511,7 +504,11 @@ namespace PROYECTO
 
         private void button9_Click_2(object sender, EventArgs e)
         {
-           
+            AbriForm(new frmVentas());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button8_Click_3(object sender, EventArgs e)
@@ -637,6 +634,17 @@ namespace PROYECTO
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+       
+
+        private void button3_Click_3(object sender, EventArgs e)
+        {
+            AbriForm(new frmPedidosAdmin());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
     }
 }

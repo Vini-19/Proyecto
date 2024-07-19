@@ -33,10 +33,6 @@ namespace Proyecto_de_desarrolo.Formularios
             cargar_pedido2();
         }
 
-        private void Pedidos_Cliente_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void RegistrarCarrito(int cant)
         {
@@ -332,102 +328,9 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            cont_pag++;
-            y = true;
-            cargar_pedido2();
-
-        }
-
-        private void anterior_Click(object sender, EventArgs e)
-        {
-            cont_pag--;
-
-            y = false;
-            if (button1.Visible)
-            {
-                i--;
-            }
-            if (button2.Visible)
-            {
-                i--;
-            }
-            if (button3.Visible)
-            {
-                i--;
-            }
-            if (button4.Visible)
-            {
-                i--;
-            }
-            if (button5.Visible)
-            {
-                i--;
-            }
-            if (button6.Visible)
-            {
-                i--;
-            }
-
-            i = i - 6;
-
-
-
-            cargar_pedido2();
-
-        }
+        
         string cod1;
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            clsPersonasid per = new clsPersonasid();
-            Cconexion conexion = new Cconexion();
-            using (SqlConnection cn = conexion.leer())
-            {
-                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre1.Text + "'";
-                SqlCommand comando2 = new SqlCommand(consulta, cn);
-                SqlDataAdapter DA = new SqlDataAdapter(comando2);
-                DataTable dataTable = new DataTable();
-
-
-                DA.Fill(dataTable);
-                cod1 = dataTable.Rows[0][0].ToString();
-
-            }
-
-            //RegistrarCarrito(lblCantidad1.Text);
-        }
-        private void RegistrarCarrito(string cant)
-        {
-
-
-            clsPersonasid per = new clsPersonasid();
-
-            Cconexion conexion = new Cconexion();
-            using (SqlConnection cn = conexion.leer())
-            {
-
-                string consulta = "INSERT INTO Carritos ([Productos_ID],[Usuarios_ID],[cantidad],[estado]) " +
-                                                  "VALUES ('" + cod1 + "','" + per.getcodUsu() + "','" + cant + "', 'true');";
-
-
-                SqlCommand comando = new SqlCommand(consulta, cn);
-
-
-
-
-                comando.ExecuteNonQuery();
-
-                MessageBox.Show("Pedido añadido al carrito");
-            }
-
-        }
+        
 
 
         private void btnMas1_Click_1(object sender, EventArgs e)
@@ -799,6 +702,11 @@ namespace Proyecto_de_desarrolo.Formularios
             RegistrarCarrito(x5);
         }
 
+        private void lblNombre1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             clsPersonasid per = new clsPersonasid();
@@ -868,7 +776,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            clsPersonasid per = new clsPersonasid();
+             clsPersonasid per = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
             {

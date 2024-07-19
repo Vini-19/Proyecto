@@ -516,6 +516,42 @@ namespace Proyecto_de_desarrolo
         {
             errorProvider1.SetError(txtCodigo, val.txt_vacio(txtCodigo.Text) + val.espacio_inicio_final(txtCodigo.Text) + val.rango_12(txtCodigo.Text) + val.espacio(txtCodigo.Text));
         }
+
+        private void dgvProducto_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvProducto.Rows[e.RowIndex];
+
+
+                txtCodigo.Text = fila.Cells["Codigo_barra"].Value.ToString();
+                txtNombre.Text = fila.Cells["Nombre_Producto"].Value.ToString();
+                cmbCategoria.Text = fila.Cells["Categoria_ID"].Value.ToString();
+                txtPrecio.Text = fila.Cells["Precio"].Value.ToString();
+                txtNombre_Imagen.Text = fila.Cells["Nombre_Imagen"].Value.ToString();
+
+                btnAgregar.Enabled = false;
+
+                if (fila.Cells["imagen"].Value is byte[])
+                {
+                    byte[] imageBytes = (byte[])fila.Cells["imagen"].Value;
+
+                    // Convertir los bytes a Imagen
+                    Image imagen;
+                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    {
+                        imagen = Image.FromStream(ms);
+                    }
+
+                    picProducto.Image = imagen;
+                }
+                else
+                {
+                    MessageBox.Show("Error...No se encontro imagen");
+                    picProducto.Image = null;
+                }
+            }
+        }
     }
 
 

@@ -62,7 +62,7 @@ namespace Proyecto_de_desarrolo
             this.panel1.Controls.Add(this.dgvProducto);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(34, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(692, 498);
             this.panel1.TabIndex = 4;
@@ -71,12 +71,13 @@ namespace Proyecto_de_desarrolo
             // 
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducto.Location = new System.Drawing.Point(20, 265);
-            this.dgvProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProducto.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.ReadOnly = true;
             this.dgvProducto.RowHeadersWidth = 51;
             this.dgvProducto.Size = new System.Drawing.Size(656, 222);
             this.dgvProducto.TabIndex = 6;
+            this.dgvProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellClick_1);
             this.dgvProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellContentClick);
             // 
             // panel2
@@ -96,7 +97,7 @@ namespace Proyecto_de_desarrolo
             this.panel2.Controls.Add(this.picProducto);
             this.panel2.Controls.Add(this.btnAgregar);
             this.panel2.Location = new System.Drawing.Point(359, 8);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(316, 252);
             this.panel2.TabIndex = 5;
@@ -105,7 +106,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Location = new System.Drawing.Point(212, 215);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(81, 28);
             this.btnModificar.TabIndex = 22;
@@ -117,7 +118,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLimpiar.Location = new System.Drawing.Point(121, 215);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(81, 28);
             this.btnLimpiar.TabIndex = 21;
@@ -130,7 +131,7 @@ namespace Proyecto_de_desarrolo
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(172, 112);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(116, 21);
             this.cmbCategoria.TabIndex = 20;
@@ -148,7 +149,7 @@ namespace Proyecto_de_desarrolo
             // txtNombre_Imagen
             // 
             this.txtNombre_Imagen.Location = new System.Drawing.Point(7, 160);
-            this.txtNombre_Imagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre_Imagen.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre_Imagen.Name = "txtNombre_Imagen";
             this.txtNombre_Imagen.Size = new System.Drawing.Size(149, 20);
             this.txtNombre_Imagen.TabIndex = 18;
@@ -157,7 +158,7 @@ namespace Proyecto_de_desarrolo
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(172, 153);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(116, 20);
             this.txtPrecio.TabIndex = 17;
@@ -166,7 +167,7 @@ namespace Proyecto_de_desarrolo
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(172, 71);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(116, 20);
             this.txtNombre.TabIndex = 15;
@@ -175,7 +176,7 @@ namespace Proyecto_de_desarrolo
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(172, 31);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(116, 20);
             this.txtCodigo.TabIndex = 14;
@@ -224,7 +225,7 @@ namespace Proyecto_de_desarrolo
             // picProducto
             // 
             this.picProducto.Location = new System.Drawing.Point(7, 16);
-            this.picProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picProducto.Margin = new System.Windows.Forms.Padding(2);
             this.picProducto.Name = "picProducto";
             this.picProducto.Size = new System.Drawing.Size(148, 126);
             this.picProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -235,7 +236,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.Location = new System.Drawing.Point(22, 215);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(81, 28);
             this.btnAgregar.TabIndex = 8;
@@ -253,7 +254,7 @@ namespace Proyecto_de_desarrolo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 550);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPedido";
             this.Text = "frmPedido";
             this.panel1.ResumeLayout(false);

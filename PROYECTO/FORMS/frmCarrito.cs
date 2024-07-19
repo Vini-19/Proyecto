@@ -341,6 +341,11 @@ namespace Proyecto_de_desarrolo.Formularios
             Cargarpedido();
         }
 
+        private void btnTerminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnsiguiente_Click(object sender, EventArgs e)
         {
             

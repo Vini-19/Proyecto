@@ -268,6 +268,202 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
+        private void cmbProveedor_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            cmbCategoria.Items.Clear();
+            cmbCategoria.Text = "";
+            Cargarcategoria();
+        }
+
+        private void txtCantidad_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtCantidad, val.txt_vacio(txtCantidad.Text) + val.espacio_inicio_final(txtCantidad.Text) + val.espacio(txtCantidad.Text) + val.validarnumenteros(txtCantidad.Text) + val.validar_peso(txtCantidad.Text));
+        }
+
+        private void txtPrecio_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtPrecio, val.txt_vacio(txtPrecio.Text) + val.espacio_inicio_final(txtPrecio.Text) + val.validar_precio(txtPrecio.Text) + val.espacio(txtPrecio.Text));
+        }
+
+        int o = -1;
+        float totalCompra = 0;
+        List<string> listCompras = new List<string>();
+        List<int> listPersonasId = new List<int>();
+
+        private void btnAgregarC_Click_1(object sender, EventArgs e)
+        {
+            if (txtCantidad.Text == "" || txtPrecio.Text == "" || cmbProveedor.SelectedIndex == -1 || cmbCategoria.SelectedIndex == -1 || cmbProveedor.Text == "" || cmbCategoria.Text == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+
+            }
+            else
+            {
+                if (errorProvider1.GetError(txtCantidad) == "" && errorProvider1.GetError(txtPrecio) == "")
+                {
+                    ListaCompras.Items.Add("Proveedor:  " + cmbProveedor.Text);
+                    ListaCompras.Items.Add("Categoria:  " + cmbCategoria.Text);
+                    ListaCompras.Items.Add("Peso:       " + txtCantidad.Text);
+                    ListaCompras.Items.Add("Precio:     " + txtPrecio.Text);
+                    ListaCompras.Items.Add("--------------------------");
+                    totalCompra = totalCompra + float.Parse(txtPrecio.Text) * float.Parse(txtCantidad.Text);
+                    listCompras.Add(cmbProveedor.Text);
+                    listCompras.Add(cmbCategoria.Text);
+                    listCompras.Add(txtCantidad.Text);
+                    listCompras.Add(txtPrecio.Text);
+                    listCompras.Add(cmbProveedor.SelectedIndex.ToString());
+                    lbltotal2.Text = totalCompra.ToString();
+
+
+                    txtCantidad.Clear();
+                    txtPrecio.Clear();
+                    errorProvider1.SetError(txtCantidad, "");
+                    errorProvider1.SetError(txtPrecio, "");
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                }
+            }
+        }
+
+        private void btnQuitarC_Click_1(object sender, EventArgs e)
+        {
+            if (o != -1)
+            {
+
+
+                float pre = 0, cant = 0;
+                float x = ListaCompras.Items.Count;
+                x = x / 5;
+                int y = -1;
+                int t = 5;
+                List<int> ListPosicion = new List<int>()
+                {
+
+
+                };
+                for (int i = 0; i < x; i++)
+                {
+
+                    if (t != 2)
+                    {
+                        t = 5;
+                        for (int j = 0; j < 5; j++)
+                        {
+                            y++;
+                            ListPosicion.Add(y);
+
+                            if (o == y)
+                            {
+                                t++;
+                            }
+                            else
+                            {
+                                t--;
+                            }
+                        }
+
+                    }
+                    if (t != 2)
+                    {
+                        ListPosicion.Clear();
+                    }
+
+                }
+                for (int i = ListPosicion.Count - 1; i >= 0; i--)
+                {
+                    int indice = ListPosicion[i];
+
+                    if (i == 3)
+                    {
+                        int pre2 = ListPosicion[3];
+                        pre = float.Parse(listCompras[pre2]);
+                    }
+                    else if (i == 2)
+                    {
+                        int cont2 = ListPosicion[2];
+                        cant = float.Parse(listCompras[cont2]);
+                    }
+
+
+
+                    if (indice >= 0 && indice < ListaCompras.Items.Count)
+                    {
+                        ListaCompras.Items.RemoveAt(indice);
+                        listCompras.RemoveAt(indice);
+                    }
+                }
+
+                totalCompra = totalCompra - (cant * pre);
+                lbltotal2.Text = totalCompra.ToString();
+            }
+            o = -1;
+        }
+
+        private void btnFinalizarC_Click_1(object sender, EventArgs e)
+        {
+            Cconexion conexion = new Cconexion();
+            try
+            {
+                SqlConnection cn = conexion.leer();
+                if (cn.State == ConnectionState.Open)
+                {
+
+                    int i = 0;
+                    float po = listCompras.Count / 5;
+
+                    for (int x = 0; x < po; x++)
+                    {
+                        if (i < listCompras.Count)
+                        {
+                            SqlCommand Comandocategoria = new SqlCommand("Select Categoria_ID from Categoria where NombreCategoria= '" + listCompras[i + 1] + "'", cn);
+                            SqlDataAdapter sda = new SqlDataAdapter(Comandocategoria);
+                            DataTable dataTable = new DataTable();
+                            sda.Fill(dataTable);
+                            int d = dataTable.Rows.Count;
+
+                            string categoriaid = "";
+                            for (int n = 0; n < d; n++)
+                            {
+                                categoriaid = dataTable.Rows[n][0].ToString();
+                            }
+
+                            int j = int.Parse(listCompras[i + 4]);
+
+                            string descripcion = "Compra de " + listCompras[i + 1];
+
+                            string query = "INSERT INTO Inventario (Persona_ID, Categoria_ID, Estado, Cantidad_Producto, Descripcion, Precio) " +
+                                "VALUES ('" + listPersonasId[j] + "', '" + categoriaid + "', 'Activo', '" + listCompras[i + 2] + "','" + descripcion + "', '" + listCompras[i + 3] + "')";
+                            SqlCommand comando = new SqlCommand(query, cn);
+                            comando.ExecuteNonQuery();
+
+                            // Actualizar el Stock en la tabla Categoria
+                            string updateStockQuery = "UPDATE Categoria SET Stock = Stock + @cantidad WHERE Categoria_ID = @categoriaId";
+                            SqlCommand updateStockCommand = new SqlCommand(updateStockQuery, cn);
+                            updateStockCommand.Parameters.AddWithValue("@cantidad", listCompras[i + 2]);
+                            updateStockCommand.Parameters.AddWithValue("@categoriaId", categoriaid);
+                            updateStockCommand.ExecuteNonQuery();
+
+                            MessageBox.Show("Materia Prima Ingresada Correctamente a Inventario");
+                            i = i + 5;
+                        }
+                    }
+                    listCompras.Clear();
+                    ListaCompras.Items.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Error de conexión.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar conectar: " + ex.Message);
+            }
+        }
+
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             

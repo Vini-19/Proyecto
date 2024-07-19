@@ -494,5 +494,181 @@ namespace Proyecto_de_desarrolo.Formularios
                 MessageBox.Show("Por favor, seleccione un cliente para marcar como inactivo.");
             }
         }
+
+        private void btnAgregar_Click_2(object sender, EventArgs e)
+        {
+            clsTrabajadores Trabajador = new clsTrabajadores();
+            clsRegistro registro = new clsRegistro();
+
+            Cconexion conexion = new Cconexion();
+
+            if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+
+            }
+            else
+            {
+                Trabajador.setrtn(txtRTN_Trabajador.Text);
+                Trabajador.setdni(txtDNI_Trabajador.Text);
+                Trabajador.setnombre(txtNombre_Trabajador.Text);
+                Trabajador.settelefono(int.Parse(txtTelefono_Trabajador.Text));
+                Trabajador.setcorreo(txtCorreo_Trabajador.Text);
+                Trabajador.setdireccion(txtDireccion_Trabajador.Text);
+                registro.setUsu(txtUsuario.Text);
+                registro.setContra(txtContra.Text);
+                registro.setPregunta("Escriba su codigo de empleado");
+                registro.setRespuesta(txtCodigo.Text);
+
+
+                DateTime fechaInscripcion = DateTime.Today;
+                if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "")
+                {
+
+                    if (conexion.VerificarClienteExistente(Trabajador.getdni()))
+                    {
+                        MessageBox.Show("No se puede agregar el trabajador porque ya existe un trabajador con ese DNI.");
+                        return;
+                    }
+
+
+                    if (string.IsNullOrWhiteSpace(Trabajador.getrtn()) | string.IsNullOrWhiteSpace(Trabajador.getdni()) || string.IsNullOrWhiteSpace(Trabajador.getnombre()) || string.IsNullOrWhiteSpace(Trabajador.gettelefono().ToString()) || string.IsNullOrWhiteSpace(Trabajador.getcorreo()) || string.IsNullOrWhiteSpace(Trabajador.getdireccion()))
+                    {
+                        MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                        return;
+                    }
+
+                    conexion.RegistroCliente(Trabajador.getrtn(), Trabajador.getdni(), Trabajador.getnombre(), Trabajador.getrol(), Trabajador.getestado(), Trabajador.gettelefono(), Trabajador.getcorreo(), Trabajador.getdireccion(), fechaInscripcion);
+                    conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);
+
+                    limpiar();
+                    errorProvider1.SetError(txtRTN_Trabajador, "");
+                    errorProvider1.SetError(txtDNI_Trabajador, "");
+                    errorProvider1.SetError(txtNombre_Trabajador, "");
+                    errorProvider1.SetError(txtTelefono_Trabajador, "");
+                    errorProvider1.SetError(txtCorreo_Trabajador, "");
+                    MessageBox.Show("Se registro correctamente.");
+                    DataGridView();
+                    txtRTN_Trabajador.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                }
+
+            }
+        }
+
+        private void btnModificar_Click_2(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtRTN_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDNI_Trabajador.Text) || string.IsNullOrWhiteSpace(txtNombre_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDireccion_Trabajador.Text) || (this.txtTelefono_Trabajador.Text == "0" || string.IsNullOrWhiteSpace(this.txtTelefono_Trabajador.Text)) || string.IsNullOrWhiteSpace(txtCorreo_Trabajador.Text))
+            {
+                MessageBox.Show("Por favor, seleccione un trabajador antes de poder ejecutar la acción.");
+
+                return;
+            }
+            else
+            {
+                Modificar_Trab();
+            }
+        }
+
+        private void btnLimpiar_Click_2(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void btnEliminar_Click_2(object sender, EventArgs e)
+        {
+            if (dgvTrabajador.SelectedRows.Count > 0)
+            {
+                int TrabajadorID = Convert.ToInt32(dgvTrabajador.SelectedRows[0].Cells["PersonasID"].Value);
+
+                Cconexion conexion = new Cconexion();
+
+                try
+                {
+                    using (SqlConnection cn = conexion.leer())
+                    {
+                        if (cn.State == ConnectionState.Closed)
+                        {
+                            cn.Open();
+                        }
+
+                        SqlCommand comandoEliminarTrabajador = new SqlCommand("PA_MarcarClienteInactivo", cn);
+                        comandoEliminarTrabajador.CommandType = CommandType.StoredProcedure;
+                        comandoEliminarTrabajador.Parameters.AddWithValue("@clienteID", TrabajadorID);
+
+                        comandoEliminarTrabajador.ExecuteNonQuery();
+
+                        MessageBox.Show("Cliente marcado como inactivo correctamente");
+
+
+                        DataGridView();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al intentar conectar: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un cliente para marcar como inactivo.");
+            }
+        }
+
+        private void txtRTN_Trabajador_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtRTN_Trabajador, val.txt_vacio(txtRTN_Trabajador.Text) + val.espacio_inicio_final(txtRTN_Trabajador.Text) + val.rango_14(txtRTN_Trabajador.Text) + val.espacio(txtRTN_Trabajador.Text));
+        }
+
+        private void txtDNI_Trabajador_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtDNI_Trabajador, val.txt_vacio(txtDNI_Trabajador.Text) + val.espacio_inicio_final(txtDNI_Trabajador.Text) + val.rango_13(txtDNI_Trabajador.Text) + val.espacio(txtDNI_Trabajador.Text) + val.validar_dni(txtDNI_Trabajador.Text));
+        }
+
+        private void txtDireccion_Trabajador_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtDireccion_Trabajador, val.txt_vacio(txtDireccion_Trabajador.Text) + val.espacio_inicio_final(txtDireccion_Trabajador.Text) + val.rango_direccion(txtDireccion_Trabajador.Text) + val.doble_espacio(txtDireccion_Trabajador.Text) + val.validar_tripleCaracter(txtDireccion_Trabajador.Text));
+        }
+
+        private void txtTelefono_Trabajador_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtTelefono_Trabajador, val.txt_vacio(txtTelefono_Trabajador.Text) + val.espacio_inicio_final(txtTelefono_Trabajador.Text) + val.validarnumerotell(txtTelefono_Trabajador.Text) + val.rango_8(txtTelefono_Trabajador.Text));
+        }
+
+        private void txtCorreo_Trabajador_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtCorreo_Trabajador, val.txt_vacio(txtCorreo_Trabajador.Text) + val.espacio_inicio_final(txtCorreo_Trabajador.Text) + val.validar_correo(txtCorreo_Trabajador.Text));
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtUsuario, val.txt_vacio(txtUsuario.Text) + val.rango_usuario(txtUsuario.Text) + val.espacio_inicio_final(txtUsuario.Text) + val.espacio(txtUsuario.Text));
+        }
+
+        private void txtContra_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtContra, val.validarcontra(txtContra.Text));
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtCodigo, val.rango_8(txtCodigo.Text));
+        }
+
+        private void dgvTrabajador_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtRTN_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[1].Value.ToString();
+            txtDNI_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[2].Value.ToString();
+            txtNombre_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[3].Value.ToString();
+            txtTelefono_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[4].Value.ToString();
+            txtCorreo_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[5].Value.ToString();
+            txtDireccion_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[6].Value.ToString();
+
+            btnAgregar.Enabled = false;
+        }
     }
 }

@@ -166,6 +166,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.lblNombre1.Size = new System.Drawing.Size(40, 16);
             this.lblNombre1.TabIndex = 13;
             this.lblNombre1.Text = "label1";
+            this.lblNombre1.Click += new System.EventHandler(this.lblNombre1_Click);
             // 
             // lblNombre2
             // 

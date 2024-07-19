@@ -31,345 +31,368 @@ namespace Proyecto_de_desarrolo.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            txtBuscar = new TextBox();
-            txtDNI_Trabajador = new TextBox();
-            label7 = new Label();
-            txtCorreo_Trabajador = new TextBox();
-            label6 = new Label();
-            txtTelefono_Trabajador = new TextBox();
-            txtDireccion_Trabajador = new TextBox();
-            txtNombre_Trabajador = new TextBox();
-            txtRTN_Trabajador = new TextBox();
-            btnEliminar = new Button();
-            dgvTrabajador = new DataGridView();
-            btnLimpiar = new Button();
-            btnAgregar = new Button();
-            label1 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label8 = new Label();
-            btnModificar = new Button();
-            panel1 = new Panel();
-            txtCodigo = new TextBox();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
-            txtContra = new TextBox();
-            txtUsuario = new TextBox();
-            label9 = new Label();
-            errorProvider1 = new ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)dgvTrabajador).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.txtDNI_Trabajador = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCorreo_Trabajador = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTelefono_Trabajador = new System.Windows.Forms.TextBox();
+            this.txtDireccion_Trabajador = new System.Windows.Forms.TextBox();
+            this.txtNombre_Trabajador = new System.Windows.Forms.TextBox();
+            this.txtRTN_Trabajador = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.dgvTrabajador = new System.Windows.Forms.DataGridView();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtContra = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.SuspendLayout();
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(423, 29);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(907, 27);
-            txtBuscar.TabIndex = 7;
-            txtBuscar.TextChanged += txtBuscar_TextChanged;
+            this.txtBuscar.Location = new System.Drawing.Point(317, 19);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(681, 20);
+            this.txtBuscar.TabIndex = 7;
             // 
             // txtDNI_Trabajador
             // 
-            txtDNI_Trabajador.Location = new Point(40, 149);
-            txtDNI_Trabajador.Name = "txtDNI_Trabajador";
-            txtDNI_Trabajador.Size = new Size(188, 27);
-            txtDNI_Trabajador.TabIndex = 19;
-            txtDNI_Trabajador.TextChanged += txtDNI_Trabajador_TextChanged;
-            txtDNI_Trabajador.KeyPress += txtDNI_Trabajador_KeyPress;
+            this.txtDNI_Trabajador.Location = new System.Drawing.Point(30, 97);
+            this.txtDNI_Trabajador.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDNI_Trabajador.Name = "txtDNI_Trabajador";
+            this.txtDNI_Trabajador.Size = new System.Drawing.Size(142, 20);
+            this.txtDNI_Trabajador.TabIndex = 19;
+            this.txtDNI_Trabajador.TextChanged += new System.EventHandler(this.txtDNI_Trabajador_TextChanged_1);
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(40, 126);
-            label7.Name = "label7";
-            label7.Size = new Size(35, 20);
-            label7.TabIndex = 18;
-            label7.Text = "DNI";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 82);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "DNI";
             // 
             // txtCorreo_Trabajador
             // 
-            txtCorreo_Trabajador.Location = new Point(40, 409);
-            txtCorreo_Trabajador.Name = "txtCorreo_Trabajador";
-            txtCorreo_Trabajador.Size = new Size(188, 27);
-            txtCorreo_Trabajador.TabIndex = 17;
-            txtCorreo_Trabajador.TextChanged += txtCorreo_Trabajador_TextChanged;
+            this.txtCorreo_Trabajador.Location = new System.Drawing.Point(30, 266);
+            this.txtCorreo_Trabajador.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo_Trabajador.Name = "txtCorreo_Trabajador";
+            this.txtCorreo_Trabajador.Size = new System.Drawing.Size(142, 20);
+            this.txtCorreo_Trabajador.TabIndex = 17;
+            this.txtCorreo_Trabajador.TextChanged += new System.EventHandler(this.txtCorreo_Trabajador_TextChanged_1);
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(40, 387);
-            label6.Name = "label6";
-            label6.Size = new Size(136, 20);
-            label6.TabIndex = 16;
-            label6.Text = "Correo Electrónico ";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 252);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Correo Electrónico ";
             // 
             // txtTelefono_Trabajador
             // 
-            txtTelefono_Trabajador.Location = new Point(40, 345);
-            txtTelefono_Trabajador.Name = "txtTelefono_Trabajador";
-            txtTelefono_Trabajador.Size = new Size(188, 27);
-            txtTelefono_Trabajador.TabIndex = 15;
-            txtTelefono_Trabajador.TextChanged += txtTelefono_Trabajador_TextChanged;
-            txtTelefono_Trabajador.KeyPress += txtTelefono_Trabajador_KeyPress;
+            this.txtTelefono_Trabajador.Location = new System.Drawing.Point(30, 224);
+            this.txtTelefono_Trabajador.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono_Trabajador.Name = "txtTelefono_Trabajador";
+            this.txtTelefono_Trabajador.Size = new System.Drawing.Size(142, 20);
+            this.txtTelefono_Trabajador.TabIndex = 15;
+            this.txtTelefono_Trabajador.TextChanged += new System.EventHandler(this.txtTelefono_Trabajador_TextChanged_1);
             // 
             // txtDireccion_Trabajador
             // 
-            txtDireccion_Trabajador.Location = new Point(40, 255);
-            txtDireccion_Trabajador.Multiline = true;
-            txtDireccion_Trabajador.Name = "txtDireccion_Trabajador";
-            txtDireccion_Trabajador.Size = new Size(188, 65);
-            txtDireccion_Trabajador.TabIndex = 14;
-            txtDireccion_Trabajador.TextChanged += txtDireccion_Trabajador_TextChanged;
+            this.txtDireccion_Trabajador.Location = new System.Drawing.Point(30, 166);
+            this.txtDireccion_Trabajador.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccion_Trabajador.Multiline = true;
+            this.txtDireccion_Trabajador.Name = "txtDireccion_Trabajador";
+            this.txtDireccion_Trabajador.Size = new System.Drawing.Size(142, 44);
+            this.txtDireccion_Trabajador.TabIndex = 14;
+            this.txtDireccion_Trabajador.TextChanged += new System.EventHandler(this.txtDireccion_Trabajador_TextChanged_1);
             // 
             // txtNombre_Trabajador
             // 
-            txtNombre_Trabajador.Location = new Point(40, 202);
-            txtNombre_Trabajador.Name = "txtNombre_Trabajador";
-            txtNombre_Trabajador.Size = new Size(188, 27);
-            txtNombre_Trabajador.TabIndex = 13;
-            txtNombre_Trabajador.TextChanged += txtNombre_Trabajador_TextChanged;
+            this.txtNombre_Trabajador.Location = new System.Drawing.Point(30, 131);
+            this.txtNombre_Trabajador.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre_Trabajador.Name = "txtNombre_Trabajador";
+            this.txtNombre_Trabajador.Size = new System.Drawing.Size(142, 20);
+            this.txtNombre_Trabajador.TabIndex = 13;
             // 
             // txtRTN_Trabajador
             // 
-            txtRTN_Trabajador.Location = new Point(40, 96);
-            txtRTN_Trabajador.Name = "txtRTN_Trabajador";
-            txtRTN_Trabajador.Size = new Size(188, 27);
-            txtRTN_Trabajador.TabIndex = 1;
-            txtRTN_Trabajador.TextChanged += txtRTN_Cliente_TextChanged;
-            txtRTN_Trabajador.KeyPress += txtRTN_Trabajador_KeyPress;
+            this.txtRTN_Trabajador.Location = new System.Drawing.Point(30, 62);
+            this.txtRTN_Trabajador.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRTN_Trabajador.Name = "txtRTN_Trabajador";
+            this.txtRTN_Trabajador.Size = new System.Drawing.Size(142, 20);
+            this.txtRTN_Trabajador.TabIndex = 1;
+            this.txtRTN_Trabajador.TextChanged += new System.EventHandler(this.txtRTN_Trabajador_TextChanged);
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(150, 720);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
-            btnEliminar.TabIndex = 11;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
+            this.btnEliminar.Location = new System.Drawing.Point(112, 468);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(70, 19);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_2);
             // 
             // dgvTrabajador
             // 
-            dgvTrabajador.AllowUserToAddRows = false;
-            dgvTrabajador.AllowUserToDeleteRows = false;
-            dgvTrabajador.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTrabajador.Location = new Point(339, 63);
-            dgvTrabajador.Name = "dgvTrabajador";
-            dgvTrabajador.ReadOnly = true;
-            dgvTrabajador.RowHeadersWidth = 51;
-            dgvTrabajador.Size = new Size(991, 788);
-            dgvTrabajador.TabIndex = 5;
-            dgvTrabajador.CellClick += dgvTrabajador_CellClick;
-            dgvTrabajador.CellContentClick += dgvCliente_CellContentClick;
+            this.dgvTrabajador.AllowUserToAddRows = false;
+            this.dgvTrabajador.AllowUserToDeleteRows = false;
+            this.dgvTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTrabajador.Location = new System.Drawing.Point(254, 41);
+            this.dgvTrabajador.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvTrabajador.Name = "dgvTrabajador";
+            this.dgvTrabajador.ReadOnly = true;
+            this.dgvTrabajador.RowHeadersWidth = 51;
+            this.dgvTrabajador.Size = new System.Drawing.Size(743, 512);
+            this.dgvTrabajador.TabIndex = 5;
+            this.dgvTrabajador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTrabajador_CellClick_1);
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(30, 720);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(94, 29);
-            btnLimpiar.TabIndex = 10;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
-            btnLimpiar.Click += btnLimpiar_Click;
+            this.btnLimpiar.Location = new System.Drawing.Point(22, 468);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(70, 19);
+            this.btnLimpiar.TabIndex = 10;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_2);
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(30, 670);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 7;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            this.btnAgregar.Location = new System.Drawing.Point(22, 435);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(70, 19);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_2);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(40, 323);
-            label1.Name = "label1";
-            label1.Size = new Size(67, 20);
-            label1.TabIndex = 6;
-            label1.Text = "Teléfono";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 210);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Teléfono";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(40, 73);
-            label5.Name = "label5";
-            label5.Size = new Size(36, 20);
-            label5.TabIndex = 5;
-            label5.Text = "RTN";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 47);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "RTN";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(40, 232);
-            label4.Name = "label4";
-            label4.Size = new Size(72, 20);
-            label4.TabIndex = 4;
-            label4.Text = "Dirección";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 151);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Dirección";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(37, 179);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Nombres";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombres";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(59, 29);
-            label2.Name = "label2";
-            label2.Size = new Size(175, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Registro de Trabajadores";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(44, 19);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Registro de Trabajadores";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(339, 33);
-            label8.Name = "label8";
-            label8.Size = new Size(55, 20);
-            label8.TabIndex = 6;
-            label8.Text = "Buscar:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(254, 21);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Buscar:";
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(150, 670);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(94, 29);
-            btnModificar.TabIndex = 9;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
-            btnModificar.Click += btnModificar_Click;
+            this.btnModificar.Location = new System.Drawing.Point(112, 435);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(70, 19);
+            this.btnModificar.TabIndex = 9;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_2);
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Firebrick;
-            panel1.Controls.Add(txtCodigo);
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(txtContra);
-            panel1.Controls.Add(txtUsuario);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(txtDNI_Trabajador);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(txtCorreo_Trabajador);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(txtTelefono_Trabajador);
-            panel1.Controls.Add(txtDireccion_Trabajador);
-            panel1.Controls.Add(txtNombre_Trabajador);
-            panel1.Controls.Add(txtRTN_Trabajador);
-            panel1.Controls.Add(btnEliminar);
-            panel1.Controls.Add(btnLimpiar);
-            panel1.Controls.Add(btnModificar);
-            panel1.Controls.Add(btnAgregar);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(53, 33);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(267, 817);
-            panel1.TabIndex = 4;
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.txtCodigo);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.txtContra);
+            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txtDNI_Trabajador);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtCorreo_Trabajador);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtTelefono_Trabajador);
+            this.panel1.Controls.Add(this.txtDireccion_Trabajador);
+            this.panel1.Controls.Add(this.txtNombre_Trabajador);
+            this.panel1.Controls.Add(this.txtRTN_Trabajador);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnLimpiar);
+            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.btnAgregar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(40, 21);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 531);
+            this.panel1.TabIndex = 4;
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(40, 622);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(188, 27);
-            txtCodigo.TabIndex = 26;
-            
+            this.txtCodigo.Location = new System.Drawing.Point(30, 404);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(142, 20);
+            this.txtCodigo.TabIndex = 26;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(39, 599);
-            label12.Name = "label12";
-            label12.Size = new Size(58, 20);
-            label12.TabIndex = 25;
-            label12.Text = "Codigo";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(29, 389);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Codigo";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(39, 547);
-            label11.Name = "label11";
-            label11.Size = new Size(83, 20);
-            label11.TabIndex = 24;
-            label11.Text = "Contraseña";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(29, 356);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Contraseña";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(39, 489);
-            label10.Name = "label10";
-            label10.Size = new Size(59, 20);
-            label10.TabIndex = 23;
-            label10.Text = "Usuario";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(29, 318);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Usuario";
             // 
             // txtContra
             // 
-            txtContra.Location = new Point(40, 569);
-            txtContra.Name = "txtContra";
-            txtContra.Size = new Size(188, 27);
-            txtContra.TabIndex = 22;
-            
+            this.txtContra.Location = new System.Drawing.Point(30, 370);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.Size = new System.Drawing.Size(142, 20);
+            this.txtContra.TabIndex = 22;
+            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(40, 512);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(188, 27);
-            txtUsuario.TabIndex = 21;
-            
+            this.txtUsuario.Location = new System.Drawing.Point(30, 333);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(142, 20);
+            this.txtUsuario.TabIndex = 21;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(59, 467);
-            label9.Name = "label9";
-            label9.Size = new Size(179, 20);
-            label9.TabIndex = 20;
-            label9.Text = "Credenciales Para Usuario";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(44, 304);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Credenciales Para Usuario";
             // 
             // errorProvider1
             // 
-            errorProvider1.ContainerControl = this;
+            this.errorProvider1.ContainerControl = this;
             // 
             // agregarTrabajador
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1358, 901);
-            Controls.Add(txtBuscar);
-            Controls.Add(dgvTrabajador);
-            Controls.Add(label8);
-            Controls.Add(panel1);
-            Name = "agregarTrabajador";
-            Text = "agregarTrabajador";
-            Load += agregarTrabajador_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvTrabajador).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1018, 586);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.dgvTrabajador);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "agregarTrabajador";
+            this.Text = "agregarTrabajador";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
