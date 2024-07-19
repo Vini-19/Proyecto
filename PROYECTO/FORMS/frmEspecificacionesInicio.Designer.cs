@@ -67,7 +67,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtRespuesta_Recuperacion
             // 
             this.txtRespuesta_Recuperacion.Location = new System.Drawing.Point(13, 204);
-            this.txtRespuesta_Recuperacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRespuesta_Recuperacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtRespuesta_Recuperacion.Name = "txtRespuesta_Recuperacion";
             this.txtRespuesta_Recuperacion.Size = new System.Drawing.Size(307, 20);
             this.txtRespuesta_Recuperacion.TabIndex = 4;
@@ -96,7 +96,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.lblIngrese);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 285);
             this.panel1.TabIndex = 10;
@@ -114,7 +114,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(336, 112);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(70, 19);
             this.btnBuscar.TabIndex = 12;
@@ -125,15 +125,16 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(13, 112);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(307, 20);
             this.txtUser.TabIndex = 11;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // btnSiguiente
             // 
             this.btnSiguiente.Location = new System.Drawing.Point(336, 204);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(70, 19);
             this.btnSiguiente.TabIndex = 10;
@@ -149,7 +150,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(466, 301);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEspecificacionesInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);

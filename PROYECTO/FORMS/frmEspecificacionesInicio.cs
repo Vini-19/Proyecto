@@ -277,5 +277,10 @@ namespace Proyecto_de_desarrolo.Formularios
                 }
             }
         }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
