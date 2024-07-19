@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO;
 using PROYECTO.CLASES;
 using Proyecto_de_desarrolo.Clases;
 
@@ -81,7 +82,9 @@ namespace Proyecto_de_desarrolo.Formularios
                                 if (filasAfectadas > 0)
                                 {
                                     MessageBox.Show("Contraseña actualizada correctamente");
-                                    this.Close();
+                                    this.Hide();
+                                    frmInicioSesion ini = new frmInicioSesion();
+                                    ini.Show();
                                 }
                                 else
                                 {
