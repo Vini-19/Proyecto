@@ -308,7 +308,7 @@ namespace PROYECTO
             this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(243, 55);
             this.button8.TabIndex = 17;
-            this.button8.Text = "comprar";
+            this.button8.Text = "Comprar";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click_3);
