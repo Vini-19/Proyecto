@@ -302,7 +302,7 @@ namespace Proyecto_de_desarrolo
             this.label13.Size = new System.Drawing.Size(457, 50);
             this.label13.TabIndex = 9;
             this.label13.Text = "REGISTRO DE CLIENTES";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            
             // 
             // frmClientes
             // 
