@@ -31,501 +31,515 @@ namespace Proyecto_de_desarrolo.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            btnsiguiente = new Button();
-            anterior = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            lblNombre1 = new Label();
-            lblNombre2 = new Label();
-            lblNombre3 = new Label();
-            lblNombre4 = new Label();
-            lblNombre5 = new Label();
-            lblNombre6 = new Label();
-            lblPrecio1 = new Label();
-            lblPrecio2 = new Label();
-            lblPrecio3 = new Label();
-            lblPrecio4 = new Label();
-            lblPrecio5 = new Label();
-            lblPrecio6 = new Label();
-            btnMas1 = new Button();
-            btnMenos1 = new Button();
-            btnMenos2 = new Button();
-            btnMas2 = new Button();
-            btnMas3 = new Button();
-            btnMenos3 = new Button();
-            btnMenos4 = new Button();
-            btnMas4 = new Button();
-            btnMenos5 = new Button();
-            btnMas5 = new Button();
-            btnMenos6 = new Button();
-            btnMas6 = new Button();
-            btnCarrito = new Button();
-            txtCantidad1 = new TextBox();
-            txtCantidad2 = new TextBox();
-            txtCantidad3 = new TextBox();
-            txtCantidad4 = new TextBox();
-            txtCantidad5 = new TextBox();
-            txtCantidad6 = new TextBox();
-            SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
+            this.anterior = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.lblNombre1 = new System.Windows.Forms.Label();
+            this.lblNombre2 = new System.Windows.Forms.Label();
+            this.lblNombre3 = new System.Windows.Forms.Label();
+            this.lblNombre4 = new System.Windows.Forms.Label();
+            this.lblNombre5 = new System.Windows.Forms.Label();
+            this.lblNombre6 = new System.Windows.Forms.Label();
+            this.lblPrecio1 = new System.Windows.Forms.Label();
+            this.lblPrecio2 = new System.Windows.Forms.Label();
+            this.lblPrecio3 = new System.Windows.Forms.Label();
+            this.lblPrecio4 = new System.Windows.Forms.Label();
+            this.lblPrecio5 = new System.Windows.Forms.Label();
+            this.lblPrecio6 = new System.Windows.Forms.Label();
+            this.btnMas1 = new System.Windows.Forms.Button();
+            this.btnMenos1 = new System.Windows.Forms.Button();
+            this.btnMenos2 = new System.Windows.Forms.Button();
+            this.btnMas2 = new System.Windows.Forms.Button();
+            this.btnMas3 = new System.Windows.Forms.Button();
+            this.btnMenos3 = new System.Windows.Forms.Button();
+            this.btnMenos4 = new System.Windows.Forms.Button();
+            this.btnMas4 = new System.Windows.Forms.Button();
+            this.btnMenos5 = new System.Windows.Forms.Button();
+            this.btnMas5 = new System.Windows.Forms.Button();
+            this.btnMenos6 = new System.Windows.Forms.Button();
+            this.btnMas6 = new System.Windows.Forms.Button();
+            this.btnCarrito = new System.Windows.Forms.Button();
+            this.txtCantidad1 = new System.Windows.Forms.TextBox();
+            this.txtCantidad2 = new System.Windows.Forms.TextBox();
+            this.txtCantidad3 = new System.Windows.Forms.TextBox();
+            this.txtCantidad4 = new System.Windows.Forms.TextBox();
+            this.txtCantidad5 = new System.Windows.Forms.TextBox();
+            this.txtCantidad6 = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(14, 43);
-            button1.Name = "button1";
-            button1.Size = new Size(174, 175);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(269, 66);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 114);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnsiguiente
             // 
-            btnsiguiente.Font = new Font("Tahoma", 9F, FontStyle.Bold);
-            btnsiguiente.Location = new Point(467, 699);
-            btnsiguiente.Name = "btnsiguiente";
-            btnsiguiente.Size = new Size(157, 29);
-            btnsiguiente.TabIndex = 6;
-            btnsiguiente.Text = "Siguiente >>>";
-            btnsiguiente.UseVisualStyleBackColor = true;
-            btnsiguiente.Click += button7_Click;
+            this.btnsiguiente.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.btnsiguiente.Location = new System.Drawing.Point(609, 492);
+            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(118, 19);
+            this.btnsiguiente.TabIndex = 6;
+            this.btnsiguiente.Text = "Siguiente >>>";
+            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // anterior
             // 
-            anterior.Font = new Font("Tahoma", 9F, FontStyle.Bold);
-            anterior.Location = new Point(24, 699);
-            anterior.Name = "anterior";
-            anterior.Size = new Size(147, 29);
-            anterior.TabIndex = 7;
-            anterior.Text = "<<<Anterior";
-            anterior.UseVisualStyleBackColor = true;
-            anterior.Click += anterior_Click;
+            this.anterior.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.anterior.Location = new System.Drawing.Point(277, 492);
+            this.anterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.anterior.Name = "anterior";
+            this.anterior.Size = new System.Drawing.Size(110, 19);
+            this.anterior.TabIndex = 7;
+            this.anterior.Text = "<<<Anterior";
+            this.anterior.UseVisualStyleBackColor = true;
+            this.anterior.Click += new System.EventHandler(this.anterior_Click_1);
             // 
             // button2
             // 
-            button2.Location = new Point(229, 43);
-            button2.Name = "button2";
-            button2.Size = new Size(175, 175);
-            button2.TabIndex = 8;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Location = new System.Drawing.Point(431, 66);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 114);
+            this.button2.TabIndex = 8;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
-            button3.Location = new Point(448, 43);
-            button3.Name = "button3";
-            button3.Size = new Size(176, 175);
-            button3.TabIndex = 9;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Location = new System.Drawing.Point(595, 66);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 114);
+            this.button3.TabIndex = 9;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
-            button4.Location = new Point(14, 356);
-            button4.Name = "button4";
-            button4.Size = new Size(174, 188);
-            button4.TabIndex = 10;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            this.button4.Location = new System.Drawing.Point(269, 269);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(130, 122);
+            this.button4.TabIndex = 10;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button5
             // 
-            button5.Location = new Point(229, 356);
-            button5.Name = "button5";
-            button5.Size = new Size(175, 188);
-            button5.TabIndex = 11;
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            this.button5.Location = new System.Drawing.Point(431, 269);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(131, 122);
+            this.button5.TabIndex = 11;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button6
             // 
-            button6.Location = new Point(448, 356);
-            button6.Name = "button6";
-            button6.Size = new Size(176, 188);
-            button6.TabIndex = 12;
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            this.button6.Location = new System.Drawing.Point(595, 269);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(132, 122);
+            this.button6.TabIndex = 12;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // lblNombre1
             // 
-            lblNombre1.AutoSize = true;
-            lblNombre1.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblNombre1.Location = new Point(24, 236);
-            lblNombre1.Name = "lblNombre1";
-            lblNombre1.Size = new Size(51, 19);
-            lblNombre1.TabIndex = 13;
-            lblNombre1.Text = "label1";
+            this.lblNombre1.AutoSize = true;
+            this.lblNombre1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre1.Location = new System.Drawing.Point(277, 191);
+            this.lblNombre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre1.Name = "lblNombre1";
+            this.lblNombre1.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre1.TabIndex = 13;
+            this.lblNombre1.Text = "label1";
             // 
             // lblNombre2
             // 
-            lblNombre2.AutoSize = true;
-            lblNombre2.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblNombre2.Location = new Point(241, 236);
-            lblNombre2.Name = "lblNombre2";
-            lblNombre2.Size = new Size(51, 19);
-            lblNombre2.TabIndex = 14;
-            lblNombre2.Text = "label1";
+            this.lblNombre2.AutoSize = true;
+            this.lblNombre2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre2.Location = new System.Drawing.Point(440, 191);
+            this.lblNombre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre2.TabIndex = 14;
+            this.lblNombre2.Text = "label1";
             // 
             // lblNombre3
             // 
-            lblNombre3.AutoSize = true;
-            lblNombre3.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblNombre3.Location = new Point(467, 236);
-            lblNombre3.Name = "lblNombre3";
-            lblNombre3.Size = new Size(51, 19);
-            lblNombre3.TabIndex = 15;
-            lblNombre3.Text = "label1";
+            this.lblNombre3.AutoSize = true;
+            this.lblNombre3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre3.Location = new System.Drawing.Point(609, 191);
+            this.lblNombre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre3.Name = "lblNombre3";
+            this.lblNombre3.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre3.TabIndex = 15;
+            this.lblNombre3.Text = "label1";
             // 
             // lblNombre4
             // 
-            lblNombre4.AutoSize = true;
-            lblNombre4.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblNombre4.Location = new Point(24, 561);
-            lblNombre4.Name = "lblNombre4";
-            lblNombre4.Size = new Size(51, 19);
-            lblNombre4.TabIndex = 16;
-            lblNombre4.Text = "label1";
+            this.lblNombre4.AutoSize = true;
+            this.lblNombre4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre4.Location = new System.Drawing.Point(277, 403);
+            this.lblNombre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre4.Name = "lblNombre4";
+            this.lblNombre4.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre4.TabIndex = 16;
+            this.lblNombre4.Text = "label1";
             // 
             // lblNombre5
             // 
-            lblNombre5.AutoSize = true;
-            lblNombre5.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblNombre5.Location = new Point(241, 561);
-            lblNombre5.Name = "lblNombre5";
-            lblNombre5.Size = new Size(51, 19);
-            lblNombre5.TabIndex = 17;
-            lblNombre5.Text = "label1";
+            this.lblNombre5.AutoSize = true;
+            this.lblNombre5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre5.Location = new System.Drawing.Point(440, 403);
+            this.lblNombre5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre5.Name = "lblNombre5";
+            this.lblNombre5.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre5.TabIndex = 17;
+            this.lblNombre5.Text = "label1";
             // 
             // lblNombre6
             // 
-            lblNombre6.AutoSize = true;
-            lblNombre6.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblNombre6.Location = new Point(467, 561);
-            lblNombre6.Name = "lblNombre6";
-            lblNombre6.Size = new Size(51, 19);
-            lblNombre6.TabIndex = 18;
-            lblNombre6.Text = "label1";
+            this.lblNombre6.AutoSize = true;
+            this.lblNombre6.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre6.Location = new System.Drawing.Point(609, 403);
+            this.lblNombre6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre6.Name = "lblNombre6";
+            this.lblNombre6.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre6.TabIndex = 18;
+            this.lblNombre6.Text = "label1";
             // 
             // lblPrecio1
             // 
-            lblPrecio1.AutoSize = true;
-            lblPrecio1.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblPrecio1.Location = new Point(24, 271);
-            lblPrecio1.Name = "lblPrecio1";
-            lblPrecio1.Size = new Size(51, 19);
-            lblPrecio1.TabIndex = 19;
-            lblPrecio1.Text = "label1";
+            this.lblPrecio1.AutoSize = true;
+            this.lblPrecio1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio1.Location = new System.Drawing.Point(277, 214);
+            this.lblPrecio1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio1.Name = "lblPrecio1";
+            this.lblPrecio1.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio1.TabIndex = 19;
+            this.lblPrecio1.Text = "label1";
             // 
             // lblPrecio2
             // 
-            lblPrecio2.AutoSize = true;
-            lblPrecio2.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblPrecio2.Location = new Point(241, 271);
-            lblPrecio2.Name = "lblPrecio2";
-            lblPrecio2.Size = new Size(51, 19);
-            lblPrecio2.TabIndex = 20;
-            lblPrecio2.Text = "label1";
+            this.lblPrecio2.AutoSize = true;
+            this.lblPrecio2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio2.Location = new System.Drawing.Point(440, 214);
+            this.lblPrecio2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio2.Name = "lblPrecio2";
+            this.lblPrecio2.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio2.TabIndex = 20;
+            this.lblPrecio2.Text = "label1";
             // 
             // lblPrecio3
             // 
-            lblPrecio3.AutoSize = true;
-            lblPrecio3.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblPrecio3.Location = new Point(467, 271);
-            lblPrecio3.Name = "lblPrecio3";
-            lblPrecio3.Size = new Size(51, 19);
-            lblPrecio3.TabIndex = 21;
-            lblPrecio3.Text = "label1";
+            this.lblPrecio3.AutoSize = true;
+            this.lblPrecio3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio3.Location = new System.Drawing.Point(609, 214);
+            this.lblPrecio3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio3.Name = "lblPrecio3";
+            this.lblPrecio3.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio3.TabIndex = 21;
+            this.lblPrecio3.Text = "label1";
             // 
             // lblPrecio4
             // 
-            lblPrecio4.AutoSize = true;
-            lblPrecio4.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblPrecio4.Location = new Point(24, 600);
-            lblPrecio4.Name = "lblPrecio4";
-            lblPrecio4.Size = new Size(51, 19);
-            lblPrecio4.TabIndex = 22;
-            lblPrecio4.Text = "label1";
+            this.lblPrecio4.AutoSize = true;
+            this.lblPrecio4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio4.Location = new System.Drawing.Point(277, 428);
+            this.lblPrecio4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio4.Name = "lblPrecio4";
+            this.lblPrecio4.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio4.TabIndex = 22;
+            this.lblPrecio4.Text = "label1";
             // 
             // lblPrecio5
             // 
-            lblPrecio5.AutoSize = true;
-            lblPrecio5.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblPrecio5.Location = new Point(241, 600);
-            lblPrecio5.Name = "lblPrecio5";
-            lblPrecio5.Size = new Size(51, 19);
-            lblPrecio5.TabIndex = 23;
-            lblPrecio5.Text = "label1";
+            this.lblPrecio5.AutoSize = true;
+            this.lblPrecio5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio5.Location = new System.Drawing.Point(440, 428);
+            this.lblPrecio5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio5.Name = "lblPrecio5";
+            this.lblPrecio5.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio5.TabIndex = 23;
+            this.lblPrecio5.Text = "label1";
             // 
             // lblPrecio6
             // 
-            lblPrecio6.AutoSize = true;
-            lblPrecio6.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold);
-            lblPrecio6.Location = new Point(467, 600);
-            lblPrecio6.Name = "lblPrecio6";
-            lblPrecio6.Size = new Size(51, 19);
-            lblPrecio6.TabIndex = 24;
-            lblPrecio6.Text = "label1";
+            this.lblPrecio6.AutoSize = true;
+            this.lblPrecio6.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio6.Location = new System.Drawing.Point(609, 428);
+            this.lblPrecio6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio6.Name = "lblPrecio6";
+            this.lblPrecio6.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio6.TabIndex = 24;
+            this.lblPrecio6.Text = "label1";
             // 
             // btnMas1
             // 
-            btnMas1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMas1.Location = new Point(74, 307);
-            btnMas1.Margin = new Padding(3, 4, 3, 4);
-            btnMas1.Name = "btnMas1";
-            btnMas1.Size = new Size(41, 31);
-            btnMas1.TabIndex = 26;
-            btnMas1.Text = "+";
-            btnMas1.UseVisualStyleBackColor = true;
-            btnMas1.Click += btnMas1_Click;
+            this.btnMas1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMas1.Location = new System.Drawing.Point(315, 238);
+            this.btnMas1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas1.Name = "btnMas1";
+            this.btnMas1.Size = new System.Drawing.Size(31, 20);
+            this.btnMas1.TabIndex = 26;
+            this.btnMas1.Text = "+";
+            this.btnMas1.UseVisualStyleBackColor = true;
+            this.btnMas1.Click += new System.EventHandler(this.btnMas1_Click_1);
             // 
             // btnMenos1
             // 
-            btnMenos1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMenos1.Location = new Point(122, 307);
-            btnMenos1.Margin = new Padding(3, 4, 3, 4);
-            btnMenos1.Name = "btnMenos1";
-            btnMenos1.Size = new Size(37, 31);
-            btnMenos1.TabIndex = 27;
-            btnMenos1.Text = "-";
-            btnMenos1.UseVisualStyleBackColor = true;
-            btnMenos1.Click += btnMenos1_Click_1;
+            this.btnMenos1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenos1.Location = new System.Drawing.Point(351, 238);
+            this.btnMenos1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos1.Name = "btnMenos1";
+            this.btnMenos1.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos1.TabIndex = 27;
+            this.btnMenos1.Text = "-";
+            this.btnMenos1.UseVisualStyleBackColor = true;
+            this.btnMenos1.Click += new System.EventHandler(this.btnMenos1_Click_2);
             // 
             // btnMenos2
             // 
-            btnMenos2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMenos2.Location = new Point(337, 307);
-            btnMenos2.Margin = new Padding(3, 4, 3, 4);
-            btnMenos2.Name = "btnMenos2";
-            btnMenos2.Size = new Size(37, 31);
-            btnMenos2.TabIndex = 28;
-            btnMenos2.Text = "-";
-            btnMenos2.UseVisualStyleBackColor = true;
-            btnMenos2.Click += btnMenos2_Click;
+            this.btnMenos2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenos2.Location = new System.Drawing.Point(512, 238);
+            this.btnMenos2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos2.Name = "btnMenos2";
+            this.btnMenos2.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos2.TabIndex = 28;
+            this.btnMenos2.Text = "-";
+            this.btnMenos2.UseVisualStyleBackColor = true;
+            this.btnMenos2.Click += new System.EventHandler(this.btnMenos2_Click_1);
             // 
             // btnMas2
             // 
-            btnMas2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMas2.Location = new Point(291, 307);
-            btnMas2.Margin = new Padding(3, 4, 3, 4);
-            btnMas2.Name = "btnMas2";
-            btnMas2.Size = new Size(41, 31);
-            btnMas2.TabIndex = 30;
-            btnMas2.Text = "+";
-            btnMas2.UseVisualStyleBackColor = true;
-            btnMas2.Click += btnMas2_Click;
+            this.btnMas2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMas2.Location = new System.Drawing.Point(477, 238);
+            this.btnMas2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas2.Name = "btnMas2";
+            this.btnMas2.Size = new System.Drawing.Size(31, 20);
+            this.btnMas2.TabIndex = 30;
+            this.btnMas2.Text = "+";
+            this.btnMas2.UseVisualStyleBackColor = true;
+            this.btnMas2.Click += new System.EventHandler(this.btnMas2_Click_1);
             // 
             // btnMas3
             // 
-            btnMas3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMas3.Location = new Point(518, 307);
-            btnMas3.Margin = new Padding(3, 4, 3, 4);
-            btnMas3.Name = "btnMas3";
-            btnMas3.Size = new Size(41, 31);
-            btnMas3.TabIndex = 32;
-            btnMas3.Text = "+";
-            btnMas3.UseVisualStyleBackColor = true;
-            btnMas3.Click += btnMas3_Click;
+            this.btnMas3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMas3.Location = new System.Drawing.Point(647, 238);
+            this.btnMas3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas3.Name = "btnMas3";
+            this.btnMas3.Size = new System.Drawing.Size(31, 20);
+            this.btnMas3.TabIndex = 32;
+            this.btnMas3.Text = "+";
+            this.btnMas3.UseVisualStyleBackColor = true;
+            this.btnMas3.Click += new System.EventHandler(this.btnMas3_Click_1);
             // 
             // btnMenos3
             // 
-            btnMenos3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMenos3.Location = new Point(566, 307);
-            btnMenos3.Margin = new Padding(3, 4, 3, 4);
-            btnMenos3.Name = "btnMenos3";
-            btnMenos3.Size = new Size(37, 31);
-            btnMenos3.TabIndex = 33;
-            btnMenos3.Text = "-";
-            btnMenos3.UseVisualStyleBackColor = true;
-            btnMenos3.Click += btnMenos3_Click;
+            this.btnMenos3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenos3.Location = new System.Drawing.Point(683, 238);
+            this.btnMenos3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos3.Name = "btnMenos3";
+            this.btnMenos3.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos3.TabIndex = 33;
+            this.btnMenos3.Text = "-";
+            this.btnMenos3.UseVisualStyleBackColor = true;
+            this.btnMenos3.Click += new System.EventHandler(this.btnMenos3_Click_1);
             // 
             // btnMenos4
             // 
-            btnMenos4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMenos4.Location = new Point(122, 648);
-            btnMenos4.Margin = new Padding(3, 4, 3, 4);
-            btnMenos4.Name = "btnMenos4";
-            btnMenos4.Size = new Size(37, 31);
-            btnMenos4.TabIndex = 36;
-            btnMenos4.Text = "-";
-            btnMenos4.UseVisualStyleBackColor = true;
-            btnMenos4.Click += btnMenos4_Click;
+            this.btnMenos4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenos4.Location = new System.Drawing.Point(351, 459);
+            this.btnMenos4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos4.Name = "btnMenos4";
+            this.btnMenos4.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos4.TabIndex = 36;
+            this.btnMenos4.Text = "-";
+            this.btnMenos4.UseVisualStyleBackColor = true;
+            this.btnMenos4.Click += new System.EventHandler(this.btnMenos4_Click_1);
             // 
             // btnMas4
             // 
-            btnMas4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMas4.Location = new Point(74, 648);
-            btnMas4.Margin = new Padding(3, 4, 3, 4);
-            btnMas4.Name = "btnMas4";
-            btnMas4.Size = new Size(41, 31);
-            btnMas4.TabIndex = 35;
-            btnMas4.Text = "+";
-            btnMas4.UseVisualStyleBackColor = true;
-            btnMas4.Click += btnMas4_Click;
+            this.btnMas4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMas4.Location = new System.Drawing.Point(315, 459);
+            this.btnMas4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas4.Name = "btnMas4";
+            this.btnMas4.Size = new System.Drawing.Size(31, 20);
+            this.btnMas4.TabIndex = 35;
+            this.btnMas4.Text = "+";
+            this.btnMas4.UseVisualStyleBackColor = true;
+            this.btnMas4.Click += new System.EventHandler(this.btnMas4_Click_1);
             // 
             // btnMenos5
             // 
-            btnMenos5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMenos5.Location = new Point(339, 659);
-            btnMenos5.Margin = new Padding(3, 4, 3, 4);
-            btnMenos5.Name = "btnMenos5";
-            btnMenos5.Size = new Size(37, 31);
-            btnMenos5.TabIndex = 39;
-            btnMenos5.Text = "-";
-            btnMenos5.UseVisualStyleBackColor = true;
-            btnMenos5.Click += btnMenos5_Click;
+            this.btnMenos5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenos5.Location = new System.Drawing.Point(513, 466);
+            this.btnMenos5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos5.Name = "btnMenos5";
+            this.btnMenos5.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos5.TabIndex = 39;
+            this.btnMenos5.Text = "-";
+            this.btnMenos5.UseVisualStyleBackColor = true;
+            this.btnMenos5.Click += new System.EventHandler(this.btnMenos5_Click_1);
             // 
             // btnMas5
             // 
-            btnMas5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMas5.Location = new Point(291, 659);
-            btnMas5.Margin = new Padding(3, 4, 3, 4);
-            btnMas5.Name = "btnMas5";
-            btnMas5.Size = new Size(41, 31);
-            btnMas5.TabIndex = 38;
-            btnMas5.Text = "+";
-            btnMas5.UseVisualStyleBackColor = true;
-            btnMas5.Click += btnMas5_Click;
+            this.btnMas5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMas5.Location = new System.Drawing.Point(477, 466);
+            this.btnMas5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas5.Name = "btnMas5";
+            this.btnMas5.Size = new System.Drawing.Size(31, 20);
+            this.btnMas5.TabIndex = 38;
+            this.btnMas5.Text = "+";
+            this.btnMas5.UseVisualStyleBackColor = true;
+            this.btnMas5.Click += new System.EventHandler(this.btnMas5_Click_1);
             // 
             // btnMenos6
             // 
-            btnMenos6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMenos6.Location = new Point(566, 648);
-            btnMenos6.Margin = new Padding(3, 4, 3, 4);
-            btnMenos6.Name = "btnMenos6";
-            btnMenos6.Size = new Size(37, 31);
-            btnMenos6.TabIndex = 42;
-            btnMenos6.Text = "-";
-            btnMenos6.UseVisualStyleBackColor = true;
-            btnMenos6.Click += btnMenos6_Click;
+            this.btnMenos6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenos6.Location = new System.Drawing.Point(683, 459);
+            this.btnMenos6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos6.Name = "btnMenos6";
+            this.btnMenos6.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos6.TabIndex = 42;
+            this.btnMenos6.Text = "-";
+            this.btnMenos6.UseVisualStyleBackColor = true;
+            this.btnMenos6.Click += new System.EventHandler(this.btnMenos6_Click_1);
             // 
             // btnMas6
             // 
-            btnMas6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMas6.Location = new Point(518, 648);
-            btnMas6.Margin = new Padding(3, 4, 3, 4);
-            btnMas6.Name = "btnMas6";
-            btnMas6.Size = new Size(41, 31);
-            btnMas6.TabIndex = 41;
-            btnMas6.Text = "+";
-            btnMas6.UseVisualStyleBackColor = true;
-            btnMas6.Click += btnMas6_Click;
+            this.btnMas6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMas6.Location = new System.Drawing.Point(647, 459);
+            this.btnMas6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas6.Name = "btnMas6";
+            this.btnMas6.Size = new System.Drawing.Size(31, 20);
+            this.btnMas6.TabIndex = 41;
+            this.btnMas6.Text = "+";
+            this.btnMas6.UseVisualStyleBackColor = true;
+            this.btnMas6.Click += new System.EventHandler(this.btnMas6_Click_1);
             // 
             // btnCarrito
             // 
-            btnCarrito.Location = new Point(505, 12);
-            btnCarrito.Name = "btnCarrito";
-            btnCarrito.Size = new Size(94, 29);
-            btnCarrito.TabIndex = 43;
-            btnCarrito.Text = "Carrito";
-            btnCarrito.UseVisualStyleBackColor = true;
-            btnCarrito.Click += btnCarrito_Click_1;
+            this.btnCarrito.Location = new System.Drawing.Point(638, 46);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCarrito.Name = "btnCarrito";
+            this.btnCarrito.Size = new System.Drawing.Size(70, 19);
+            this.btnCarrito.TabIndex = 43;
+            this.btnCarrito.Text = "Carrito";
+            this.btnCarrito.UseVisualStyleBackColor = true;
             // 
             // txtCantidad1
             // 
-            txtCantidad1.Location = new Point(24, 308);
-            txtCantidad1.Name = "txtCantidad1";
-            txtCantidad1.Size = new Size(44, 27);
-            txtCantidad1.TabIndex = 44;
-            txtCantidad1.TextChanged += txtCantidad1_TextChanged;
-            txtCantidad1.KeyPress += txtCantidad1_KeyPress;
+            this.txtCantidad1.Location = new System.Drawing.Point(277, 238);
+            this.txtCantidad1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad1.Name = "txtCantidad1";
+            this.txtCantidad1.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad1.TabIndex = 44;
             // 
             // txtCantidad2
             // 
-            txtCantidad2.Location = new Point(241, 307);
-            txtCantidad2.Name = "txtCantidad2";
-            txtCantidad2.Size = new Size(44, 27);
-            txtCantidad2.TabIndex = 45;
-            txtCantidad2.TextChanged += txtCantidad2_TextChanged;
-            txtCantidad2.KeyPress += txtCantidad2_KeyPress;
+            this.txtCantidad2.Location = new System.Drawing.Point(440, 238);
+            this.txtCantidad2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad2.Name = "txtCantidad2";
+            this.txtCantidad2.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad2.TabIndex = 45;
             // 
             // txtCantidad3
             // 
-            txtCantidad3.Location = new Point(467, 311);
-            txtCantidad3.Name = "txtCantidad3";
-            txtCantidad3.Size = new Size(44, 27);
-            txtCantidad3.TabIndex = 46;
-            txtCantidad3.TextChanged += txtCantidad3_TextChanged;
-            txtCantidad3.KeyPress += txtCantidad3_KeyPress;
+            this.txtCantidad3.Location = new System.Drawing.Point(609, 240);
+            this.txtCantidad3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad3.Name = "txtCantidad3";
+            this.txtCantidad3.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad3.TabIndex = 46;
             // 
             // txtCantidad4
             // 
-            txtCantidad4.Location = new Point(24, 652);
-            txtCantidad4.Name = "txtCantidad4";
-            txtCantidad4.Size = new Size(44, 27);
-            txtCantidad4.TabIndex = 47;
-            txtCantidad4.TextChanged += txtCantidad4_TextChanged;
-            txtCantidad4.KeyPress += txtCantidad4_KeyPress;
+            this.txtCantidad4.Location = new System.Drawing.Point(277, 462);
+            this.txtCantidad4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad4.Name = "txtCantidad4";
+            this.txtCantidad4.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad4.TabIndex = 47;
             // 
             // txtCantidad5
             // 
-            txtCantidad5.Location = new Point(241, 652);
-            txtCantidad5.Name = "txtCantidad5";
-            txtCantidad5.Size = new Size(44, 27);
-            txtCantidad5.TabIndex = 48;
-            txtCantidad5.TextChanged += txtCantidad5_TextChanged;
-            txtCantidad5.KeyPress += txtCantidad5_KeyPress;
+            this.txtCantidad5.Location = new System.Drawing.Point(440, 462);
+            this.txtCantidad5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad5.Name = "txtCantidad5";
+            this.txtCantidad5.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad5.TabIndex = 48;
             // 
             // txtCantidad6
             // 
-            txtCantidad6.Location = new Point(467, 648);
-            txtCantidad6.Name = "txtCantidad6";
-            txtCantidad6.Size = new Size(44, 27);
-            txtCantidad6.TabIndex = 49;
-            txtCantidad6.TextChanged += txtCantidad6_TextChanged;
-            txtCantidad6.KeyDown += txtCantidad6_KeyDown;
-            txtCantidad6.KeyPress += txtCantidad6_KeyPress;
+            this.txtCantidad6.Location = new System.Drawing.Point(609, 459);
+            this.txtCantidad6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad6.Name = "txtCantidad6";
+            this.txtCantidad6.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad6.TabIndex = 49;
             // 
             // Pedidos_Cliente
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(653, 753);
-            Controls.Add(txtCantidad6);
-            Controls.Add(txtCantidad5);
-            Controls.Add(txtCantidad4);
-            Controls.Add(txtCantidad3);
-            Controls.Add(txtCantidad2);
-            Controls.Add(txtCantidad1);
-            Controls.Add(btnCarrito);
-            Controls.Add(btnMenos6);
-            Controls.Add(btnMas6);
-            Controls.Add(btnMenos5);
-            Controls.Add(btnMas5);
-            Controls.Add(btnMenos4);
-            Controls.Add(btnMas4);
-            Controls.Add(btnMenos3);
-            Controls.Add(btnMas3);
-            Controls.Add(btnMas2);
-            Controls.Add(btnMenos2);
-            Controls.Add(btnMenos1);
-            Controls.Add(btnMas1);
-            Controls.Add(lblPrecio6);
-            Controls.Add(lblPrecio5);
-            Controls.Add(lblPrecio4);
-            Controls.Add(lblPrecio3);
-            Controls.Add(lblPrecio2);
-            Controls.Add(lblPrecio1);
-            Controls.Add(lblNombre6);
-            Controls.Add(lblNombre5);
-            Controls.Add(lblNombre4);
-            Controls.Add(lblNombre3);
-            Controls.Add(lblNombre2);
-            Controls.Add(lblNombre1);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(anterior);
-            Controls.Add(btnsiguiente);
-            Controls.Add(button1);
-            Name = "Pedidos_Cliente";
-            Text = "Pedidos_Cliente";
-            Load += Pedidos_Cliente_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1018, 586);
+            this.Controls.Add(this.txtCantidad6);
+            this.Controls.Add(this.txtCantidad5);
+            this.Controls.Add(this.txtCantidad4);
+            this.Controls.Add(this.txtCantidad3);
+            this.Controls.Add(this.txtCantidad2);
+            this.Controls.Add(this.txtCantidad1);
+            this.Controls.Add(this.btnCarrito);
+            this.Controls.Add(this.btnMenos6);
+            this.Controls.Add(this.btnMas6);
+            this.Controls.Add(this.btnMenos5);
+            this.Controls.Add(this.btnMas5);
+            this.Controls.Add(this.btnMenos4);
+            this.Controls.Add(this.btnMas4);
+            this.Controls.Add(this.btnMenos3);
+            this.Controls.Add(this.btnMas3);
+            this.Controls.Add(this.btnMas2);
+            this.Controls.Add(this.btnMenos2);
+            this.Controls.Add(this.btnMenos1);
+            this.Controls.Add(this.btnMas1);
+            this.Controls.Add(this.lblPrecio6);
+            this.Controls.Add(this.lblPrecio5);
+            this.Controls.Add(this.lblPrecio4);
+            this.Controls.Add(this.lblPrecio3);
+            this.Controls.Add(this.lblPrecio2);
+            this.Controls.Add(this.lblPrecio1);
+            this.Controls.Add(this.lblNombre6);
+            this.Controls.Add(this.lblNombre5);
+            this.Controls.Add(this.lblNombre4);
+            this.Controls.Add(this.lblNombre3);
+            this.Controls.Add(this.lblNombre2);
+            this.Controls.Add(this.lblNombre1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.anterior);
+            this.Controls.Add(this.btnsiguiente);
+            this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Pedidos_Cliente";
+            this.Text = "Pedidos_Cliente";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -51,7 +51,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(180, 102);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -63,7 +63,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(288, 14);
+            this.label1.Location = new System.Drawing.Point(409, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 33);
@@ -75,7 +75,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnModificar.BackColor = System.Drawing.Color.PeachPuff;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.Location = new System.Drawing.Point(453, 387);
+            this.btnModificar.Location = new System.Drawing.Point(574, 427);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(98, 50);
@@ -90,7 +90,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(568, 387);
+            this.btnGuardar.Location = new System.Drawing.Point(689, 427);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(95, 50);
@@ -103,7 +103,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(59, 382);
+            this.label2.Location = new System.Drawing.Point(180, 422);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 16);
@@ -114,7 +114,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(59, 398);
+            this.label3.Location = new System.Drawing.Point(180, 438);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 16);
@@ -125,7 +125,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(245, 382);
+            this.label4.Location = new System.Drawing.Point(366, 422);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
@@ -136,7 +136,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(245, 398);
+            this.label5.Location = new System.Drawing.Point(366, 438);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 16);
@@ -147,7 +147,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblRes.AutoSize = true;
             this.lblRes.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblRes.Location = new System.Drawing.Point(219, 382);
+            this.lblRes.Location = new System.Drawing.Point(340, 422);
             this.lblRes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRes.Name = "lblRes";
             this.lblRes.Size = new System.Drawing.Size(11, 16);
@@ -158,7 +158,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblCerdo.AutoSize = true;
             this.lblCerdo.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCerdo.Location = new System.Drawing.Point(219, 398);
+            this.lblCerdo.Location = new System.Drawing.Point(340, 438);
             this.lblCerdo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerdo.Name = "lblCerdo";
             this.lblCerdo.Size = new System.Drawing.Size(11, 16);
@@ -167,7 +167,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(116, 43);
+            this.txtBuscar.Location = new System.Drawing.Point(237, 83);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(548, 20);
@@ -178,7 +178,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tempus Sans ITC", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(59, 45);
+            this.label6.Location = new System.Drawing.Point(180, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 19);
@@ -189,7 +189,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 449);
+            this.ClientSize = new System.Drawing.Size(1018, 586);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblCerdo);

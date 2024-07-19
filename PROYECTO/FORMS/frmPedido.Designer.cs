@@ -61,7 +61,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.panel1.Controls.Add(this.dgvProducto);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(34, 44);
+            this.panel1.Location = new System.Drawing.Point(160, 35);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(692, 498);
@@ -252,7 +252,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 550);
+            this.ClientSize = new System.Drawing.Size(1018, 586);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPedido";

@@ -63,7 +63,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(37, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(246, 89);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(86, 87);
@@ -75,7 +75,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblNombre1.AutoSize = true;
             this.lblNombre1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre1.Location = new System.Drawing.Point(37, 123);
+            this.lblNombre1.Location = new System.Drawing.Point(246, 187);
             this.lblNombre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre1.Name = "lblNombre1";
             this.lblNombre1.Size = new System.Drawing.Size(55, 16);
@@ -86,7 +86,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblPrecio1.AutoSize = true;
             this.lblPrecio1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio1.Location = new System.Drawing.Point(37, 150);
+            this.lblPrecio1.Location = new System.Drawing.Point(246, 214);
             this.lblPrecio1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio1.Name = "lblPrecio1";
             this.lblPrecio1.Size = new System.Drawing.Size(44, 16);
@@ -97,7 +97,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblCantidad1.AutoSize = true;
             this.lblCantidad1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCantidad1.Location = new System.Drawing.Point(37, 181);
+            this.lblCantidad1.Location = new System.Drawing.Point(246, 245);
             this.lblCantidad1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad1.Name = "lblCantidad1";
             this.lblCantidad1.Size = new System.Drawing.Size(58, 16);
@@ -107,7 +107,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(44, 296);
+            this.lblTotal.Location = new System.Drawing.Point(253, 360);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(35, 13);
@@ -116,7 +116,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnQuitar1
             // 
-            this.btnQuitar1.Location = new System.Drawing.Point(37, 204);
+            this.btnQuitar1.Location = new System.Drawing.Point(246, 268);
             this.btnQuitar1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnQuitar1.Name = "btnQuitar1";
             this.btnQuitar1.Size = new System.Drawing.Size(64, 20);
@@ -126,7 +126,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnTerminar
             // 
-            this.btnTerminar.Location = new System.Drawing.Point(496, 296);
+            this.btnTerminar.Location = new System.Drawing.Point(705, 360);
             this.btnTerminar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(64, 20);
@@ -137,7 +137,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(172, 25);
+            this.pictureBox2.Location = new System.Drawing.Point(381, 89);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(86, 87);
@@ -147,7 +147,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnQuitar2
             // 
-            this.btnQuitar2.Location = new System.Drawing.Point(172, 204);
+            this.btnQuitar2.Location = new System.Drawing.Point(381, 268);
             this.btnQuitar2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnQuitar2.Name = "btnQuitar2";
             this.btnQuitar2.Size = new System.Drawing.Size(64, 20);
@@ -159,7 +159,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblCantidad2.AutoSize = true;
             this.lblCantidad2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCantidad2.Location = new System.Drawing.Point(172, 181);
+            this.lblCantidad2.Location = new System.Drawing.Point(381, 245);
             this.lblCantidad2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad2.Name = "lblCantidad2";
             this.lblCantidad2.Size = new System.Drawing.Size(58, 16);
@@ -170,7 +170,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblPrecio2.AutoSize = true;
             this.lblPrecio2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio2.Location = new System.Drawing.Point(172, 150);
+            this.lblPrecio2.Location = new System.Drawing.Point(381, 214);
             this.lblPrecio2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio2.Name = "lblPrecio2";
             this.lblPrecio2.Size = new System.Drawing.Size(44, 16);
@@ -181,7 +181,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblNombre2.AutoSize = true;
             this.lblNombre2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre2.Location = new System.Drawing.Point(172, 123);
+            this.lblNombre2.Location = new System.Drawing.Point(381, 187);
             this.lblNombre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre2.Name = "lblNombre2";
             this.lblNombre2.Size = new System.Drawing.Size(55, 16);
@@ -190,7 +190,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnQuitar3
             // 
-            this.btnQuitar3.Location = new System.Drawing.Point(307, 204);
+            this.btnQuitar3.Location = new System.Drawing.Point(516, 268);
             this.btnQuitar3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnQuitar3.Name = "btnQuitar3";
             this.btnQuitar3.Size = new System.Drawing.Size(64, 20);
@@ -202,7 +202,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblCantidad3.AutoSize = true;
             this.lblCantidad3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCantidad3.Location = new System.Drawing.Point(307, 181);
+            this.lblCantidad3.Location = new System.Drawing.Point(516, 245);
             this.lblCantidad3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad3.Name = "lblCantidad3";
             this.lblCantidad3.Size = new System.Drawing.Size(58, 16);
@@ -213,7 +213,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblPrecio3.AutoSize = true;
             this.lblPrecio3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio3.Location = new System.Drawing.Point(307, 150);
+            this.lblPrecio3.Location = new System.Drawing.Point(516, 214);
             this.lblPrecio3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio3.Name = "lblPrecio3";
             this.lblPrecio3.Size = new System.Drawing.Size(44, 16);
@@ -224,7 +224,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblNombre3.AutoSize = true;
             this.lblNombre3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre3.Location = new System.Drawing.Point(307, 123);
+            this.lblNombre3.Location = new System.Drawing.Point(516, 187);
             this.lblNombre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre3.Name = "lblNombre3";
             this.lblNombre3.Size = new System.Drawing.Size(55, 16);
@@ -233,7 +233,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(307, 25);
+            this.pictureBox3.Location = new System.Drawing.Point(516, 89);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(86, 87);
@@ -243,7 +243,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(450, 25);
+            this.pictureBox4.Location = new System.Drawing.Point(659, 89);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(86, 87);
@@ -253,7 +253,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnQuitar4
             // 
-            this.btnQuitar4.Location = new System.Drawing.Point(450, 204);
+            this.btnQuitar4.Location = new System.Drawing.Point(659, 268);
             this.btnQuitar4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnQuitar4.Name = "btnQuitar4";
             this.btnQuitar4.Size = new System.Drawing.Size(64, 20);
@@ -265,7 +265,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblCantidad4.AutoSize = true;
             this.lblCantidad4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCantidad4.Location = new System.Drawing.Point(450, 181);
+            this.lblCantidad4.Location = new System.Drawing.Point(659, 245);
             this.lblCantidad4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad4.Name = "lblCantidad4";
             this.lblCantidad4.Size = new System.Drawing.Size(58, 16);
@@ -276,7 +276,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblPrecio4.AutoSize = true;
             this.lblPrecio4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio4.Location = new System.Drawing.Point(450, 150);
+            this.lblPrecio4.Location = new System.Drawing.Point(659, 214);
             this.lblPrecio4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio4.Name = "lblPrecio4";
             this.lblPrecio4.Size = new System.Drawing.Size(44, 16);
@@ -287,7 +287,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblNombre4.AutoSize = true;
             this.lblNombre4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre4.Location = new System.Drawing.Point(450, 123);
+            this.lblNombre4.Location = new System.Drawing.Point(659, 187);
             this.lblNombre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre4.Name = "lblNombre4";
             this.lblNombre4.Size = new System.Drawing.Size(55, 16);
@@ -296,7 +296,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnsiguiente
             // 
-            this.btnsiguiente.Location = new System.Drawing.Point(385, 298);
+            this.btnsiguiente.Location = new System.Drawing.Point(594, 362);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(85, 20);
@@ -306,7 +306,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // anterior
             // 
-            this.anterior.Location = new System.Drawing.Point(109, 298);
+            this.anterior.Location = new System.Drawing.Point(318, 362);
             this.anterior.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.anterior.Name = "anterior";
             this.anterior.Size = new System.Drawing.Size(80, 20);
@@ -318,7 +318,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 347);
+            this.ClientSize = new System.Drawing.Size(1018, 586);
             this.Controls.Add(this.anterior);
             this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.pictureBox4);

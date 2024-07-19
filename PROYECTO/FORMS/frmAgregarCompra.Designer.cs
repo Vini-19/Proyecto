@@ -68,7 +68,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(366, 113);
+            this.panel1.Location = new System.Drawing.Point(456, 147);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 288);
@@ -178,7 +178,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // ListaCompras
             // 
             this.ListaCompras.FormattingEnabled = true;
-            this.ListaCompras.Location = new System.Drawing.Point(634, 113);
+            this.ListaCompras.Location = new System.Drawing.Point(724, 147);
             this.ListaCompras.Margin = new System.Windows.Forms.Padding(2);
             this.ListaCompras.Name = "ListaCompras";
             this.ListaCompras.Size = new System.Drawing.Size(208, 264);
@@ -186,7 +186,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnFinalizarC
             // 
-            this.btnFinalizarC.Location = new System.Drawing.Point(740, 387);
+            this.btnFinalizarC.Location = new System.Drawing.Point(830, 421);
             this.btnFinalizarC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFinalizarC.Name = "btnFinalizarC";
             this.btnFinalizarC.Size = new System.Drawing.Size(101, 20);
@@ -198,7 +198,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(794, 352);
+            this.lblTotal.Location = new System.Drawing.Point(884, 386);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(0, 13);
@@ -207,7 +207,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(648, 352);
+            this.label2.Location = new System.Drawing.Point(738, 386);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
@@ -217,7 +217,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblsubtotal
             // 
             this.lblsubtotal.AutoSize = true;
-            this.lblsubtotal.Location = new System.Drawing.Point(648, 337);
+            this.lblsubtotal.Location = new System.Drawing.Point(738, 371);
             this.lblsubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblsubtotal.Name = "lblsubtotal";
             this.lblsubtotal.Size = new System.Drawing.Size(49, 13);
@@ -227,7 +227,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblsubtotal2
             // 
             this.lblsubtotal2.AutoSize = true;
-            this.lblsubtotal2.Location = new System.Drawing.Point(719, 337);
+            this.lblsubtotal2.Location = new System.Drawing.Point(809, 371);
             this.lblsubtotal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblsubtotal2.Name = "lblsubtotal2";
             this.lblsubtotal2.Size = new System.Drawing.Size(35, 13);
@@ -237,7 +237,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // lbltotal2
             // 
             this.lbltotal2.AutoSize = true;
-            this.lbltotal2.Location = new System.Drawing.Point(719, 352);
+            this.lbltotal2.Location = new System.Drawing.Point(809, 386);
             this.lbltotal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltotal2.Name = "lbltotal2";
             this.lbltotal2.Size = new System.Drawing.Size(35, 13);
@@ -252,7 +252,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(418, 27);
+            this.label13.Location = new System.Drawing.Point(508, 61);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(389, 50);
             this.label13.TabIndex = 19;

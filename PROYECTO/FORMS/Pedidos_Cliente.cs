@@ -863,6 +863,363 @@ namespace Proyecto_de_desarrolo.Formularios
             val.validarnum(e);
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre1.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+
+            }
+
+            RegistrarCarrito(x1);
+            x1 = 0;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre2.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+
+            }
+
+            RegistrarCarrito(x2);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre3.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+            }
+
+            RegistrarCarrito(x3);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre4.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+            }
+
+            RegistrarCarrito(x4);
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre5.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+            }
+
+            RegistrarCarrito(x5);
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            clsPersonasid per = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            using (SqlConnection cn = conexion.leer())
+            {
+                string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre6.Text + "'";
+                SqlCommand comando2 = new SqlCommand(consulta, cn);
+                SqlDataAdapter DA = new SqlDataAdapter(comando2);
+                DataTable dataTable = new DataTable();
+
+
+                DA.Fill(dataTable);
+                cod1 = dataTable.Rows[0][0].ToString();
+            }
+
+            RegistrarCarrito(x6);
+        }
+
+        private void btnMas1_Click_1(object sender, EventArgs e)
+        {
+
+            if (x1 >= 500)
+            {
+                x1 = 500;
+
+            }
+            else
+            {
+                x1++;
+            }
+
+            txtCantidad1.Text = Convert.ToString(x1);
+        }
+
+        private void btnMas2_Click_1(object sender, EventArgs e)
+        {
+            if (x2 >= 500)
+            {
+                x2 = 500;
+
+            }
+            else
+            {
+                x2++;
+            }
+
+            txtCantidad2.Text = Convert.ToString(x2);
+        }
+
+        private void btnMas3_Click_1(object sender, EventArgs e)
+        {
+            if (x3 >= 500)
+            {
+                x3 = 500;
+
+            }
+            else
+            {
+                x3++;
+            }
+
+            txtCantidad3.Text = Convert.ToString(x3);
+        }
+
+        private void btnMas4_Click_1(object sender, EventArgs e)
+        {
+
+            if (x4 >= 500)
+            {
+                x4 = 500;
+
+            }
+            else
+            {
+                x4++;
+            }
+
+            txtCantidad4.Text = Convert.ToString(x4);
+        }
+
+        private void btnMas5_Click_1(object sender, EventArgs e)
+        {
+            if (x5 >= 500)
+            {
+                x5 = 500;
+
+            }
+            else
+            {
+                x5++;
+            }
+
+            txtCantidad5.Text = Convert.ToString(x5);
+        }
+
+        private void btnMas6_Click_1(object sender, EventArgs e)
+        {
+            if (x6 >= 500)
+            {
+                x6 = 500;
+
+            }
+            else
+            {
+                x6++;
+            }
+
+            txtCantidad6.Text = Convert.ToString(x6);
+        }
+
+        private void anterior_Click_1(object sender, EventArgs e)
+        {
+            cont_pag--;
+
+            y = false;
+            if (button1.Visible)
+            {
+                i--;
+            }
+            if (button2.Visible)
+            {
+                i--;
+            }
+            if (button3.Visible)
+            {
+                i--;
+            }
+            if (button4.Visible)
+            {
+                i--;
+            }
+            if (button5.Visible)
+            {
+                i--;
+            }
+            if (button6.Visible)
+            {
+                i--;
+            }
+
+            i = i - 6;
+
+            x1 = 0; x2 = 0; x3 = 0; x4 = 0; x5 = 0; x6 = 0;
+            txtCantidad1.Text = x1.ToString();
+            txtCantidad2.Text = x2.ToString();
+            txtCantidad3.Text = x3.ToString();
+            txtCantidad4.Text = x4.ToString();
+            txtCantidad5.Text = x5.ToString();
+            txtCantidad6.Text = x6.ToString();
+            cargar_pedido2();
+        }
+
+        private void btnsiguiente_Click(object sender, EventArgs e)
+        {
+            cont_pag++;
+            y = true;
+            x1 = 0; x2 = 0; x3 = 0; x4 = 0; x5 = 0; x6 = 0;
+            txtCantidad1.Text = x1.ToString();
+            txtCantidad2.Text = x2.ToString();
+            txtCantidad3.Text = x3.ToString();
+            txtCantidad4.Text = x4.ToString();
+            txtCantidad5.Text = x5.ToString();
+            txtCantidad6.Text = x6.ToString();
+            cargar_pedido2();
+        }
+
+        private void btnMenos1_Click_2(object sender, EventArgs e)
+        {
+            if (x1 <= 0)
+            {
+                x1 = 0;
+
+            }
+            else
+            {
+                x1--;
+
+            }
+            txtCantidad1.Text = Convert.ToString(x1);
+        }
+
+        private void btnMenos2_Click_1(object sender, EventArgs e)
+        {
+            if (x2 <= 0)
+            {
+                x2 = 0;
+
+            }
+            else
+            {
+                x2--;
+
+            }
+            txtCantidad2.Text = Convert.ToString(x2);
+        }
+
+        private void btnMenos3_Click_1(object sender, EventArgs e)
+        {
+            if (x3 <= 0)
+            {
+                x3 = 0;
+
+            }
+            else
+            {
+                x3--;
+
+            }
+            txtCantidad3.Text = Convert.ToString(x3);
+        }
+
+        private void btnMenos4_Click_1(object sender, EventArgs e)
+        {
+            if (x4 <= 0)
+            {
+                x4 = 0;
+
+            }
+            else
+            {
+                x4--;
+
+            }
+            txtCantidad4.Text = Convert.ToString(x4);
+        }
+
+        private void btnMenos5_Click_1(object sender, EventArgs e)
+        {
+            if (x5 <= 0)
+            {
+                x5 = 0;
+
+            }
+            else
+            {
+                x5--;
+
+            }
+            txtCantidad5.Text = Convert.ToString(x5);
+        }
+
+        private void btnMenos6_Click_1(object sender, EventArgs e)
+        {
+            if (x6 <= 0)
+            {
+                x6 = 0;
+
+            }
+            else
+            {
+                x6--;
+
+            }
+            txtCantidad6.Text = Convert.ToString(x6);
+        }
+
         private void txtCantidad3_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
