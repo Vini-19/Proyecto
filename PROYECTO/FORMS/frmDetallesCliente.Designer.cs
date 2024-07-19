@@ -1,4 +1,7 @@
-﻿namespace Proyecto_de_desarrolo.Formularios
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Proyecto_de_desarrolo.Formularios
 {
     partial class frmDetallesCliente
     {
@@ -28,139 +31,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            btnEnviar = new Button();
-            label1 = new Label();
-            txtDireccion = new TextBox();
-            label2 = new Label();
-            txtNombre = new TextBox();
-            label3 = new Label();
-            txtIdentidad = new TextBox();
-            label4 = new Label();
-            txtTelefono = new TextBox();
-            label5 = new Label();
-            errorProvider1 = new ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIdentidad = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.SuspendLayout();
             // 
             // btnEnviar
             // 
-            btnEnviar.Location = new Point(169, 288);
-            btnEnviar.Name = "btnEnviar";
-            btnEnviar.Size = new Size(139, 43);
-            btnEnviar.TabIndex = 5;
-            btnEnviar.Text = "Enviar Pedido";
-            btnEnviar.UseVisualStyleBackColor = true;
-            btnEnviar.Click += btnEnviar_Click;
+            this.btnEnviar.Location = new System.Drawing.Point(127, 187);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(104, 28);
+            this.btnEnviar.TabIndex = 5;
+            this.btnEnviar.Text = "Enviar Pedido";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click_1);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(71, 189);
-            label1.Name = "label1";
-            label1.Size = new Size(151, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Direccion de Entrega:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 123);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Direccion de Entrega:";
             // 
             // txtDireccion
             // 
-            txtDireccion.Location = new Point(228, 186);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(184, 27);
-            txtDireccion.TabIndex = 3;
-            txtDireccion.TextChanged += txtDireccion_TextChanged;
+            this.txtDireccion.Location = new System.Drawing.Point(171, 121);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(139, 20);
+            this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(71, 111);
-            label2.Name = "label2";
-            label2.Size = new Size(138, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Nombre de Cliente:";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(53, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre de Cliente:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(228, 104);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(184, 27);
-            txtNombre.TabIndex = 1;
-            txtNombre.TextChanged += txtNombre_TextChanged;
+            this.txtNombre.Location = new System.Drawing.Point(171, 68);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(139, 20);
+            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged_1);
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(71, 153);
-            label3.Name = "label3";
-            label3.Size = new Size(124, 20);
-            label3.TabIndex = 3;
-            label3.Text = "No. de Identidad:";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 99);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "No. de Identidad:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtIdentidad
             // 
-            txtIdentidad.Location = new Point(228, 146);
-            txtIdentidad.Name = "txtIdentidad";
-            txtIdentidad.Size = new Size(184, 27);
-            txtIdentidad.TabIndex = 2;
-            txtIdentidad.TextChanged += txtIdentidad_TextChanged;
-            txtIdentidad.KeyPress += txtIdentidad_KeyPress;
+            this.txtIdentidad.Location = new System.Drawing.Point(171, 95);
+            this.txtIdentidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdentidad.Name = "txtIdentidad";
+            this.txtIdentidad.Size = new System.Drawing.Size(139, 20);
+            this.txtIdentidad.TabIndex = 2;
+            this.txtIdentidad.TextChanged += new System.EventHandler(this.txtIdentidad_TextChanged);
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(71, 229);
-            label4.Name = "label4";
-            label4.Size = new Size(118, 20);
-            label4.TabIndex = 3;
-            label4.Text = "No. de Telefono:";
-            label4.TextAlign = ContentAlignment.MiddleLeft;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(53, 149);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "No. de Telefono:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(228, 222);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(184, 27);
-            txtTelefono.TabIndex = 4;
-            txtTelefono.TextChanged += txtTelefono_TextChanged;
-            txtTelefono.KeyPress += txtTelefono_KeyPress;
+            this.txtTelefono.Location = new System.Drawing.Point(171, 144);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(139, 20);
+            this.txtTelefono.TabIndex = 4;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(62, 37);
-            label5.Name = "label5";
-            label5.Size = new Size(370, 34);
-            label5.TabIndex = 5;
-            label5.Text = "DETALLES DE SU PEDIDO";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(46, 24);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(294, 27);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "DETALLES DE SU PEDIDO";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // errorProvider1
             // 
-            errorProvider1.ContainerControl = this;
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmDetallesCliente
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(498, 373);
-            Controls.Add(label5);
-            Controls.Add(txtTelefono);
-            Controls.Add(label4);
-            Controls.Add(txtIdentidad);
-            Controls.Add(label3);
-            Controls.Add(txtNombre);
-            Controls.Add(label2);
-            Controls.Add(txtDireccion);
-            Controls.Add(label1);
-            Controls.Add(btnEnviar);
-            Name = "frmDetallesCliente";
-            Text = "frmDetallesCliente";
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(374, 242);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtIdentidad);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnEnviar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmDetallesCliente";
+            this.Text = "frmDetallesCliente";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

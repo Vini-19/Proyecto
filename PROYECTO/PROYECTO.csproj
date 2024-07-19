@@ -219,7 +219,9 @@
     <Compile Include="FORMS\frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\frmDetallesCliente.cs" />
+    <Compile Include="FORMS\frmDetallesCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\frmDetallesCliente.Designer.cs">
       <DependentUpon>frmDetallesCliente.cs</DependentUpon>
     </Compile>

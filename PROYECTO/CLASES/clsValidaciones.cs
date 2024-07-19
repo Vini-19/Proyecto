@@ -113,7 +113,7 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n El código debe contener 12 dígitos";
+                return "El código debe contener 12 dígitos \n ";
             }
         }
 
@@ -133,7 +133,7 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n El RTN debe contener 14 dígitos";
+                return "El RTN debe contener 14 dígitos \n ";
             }
         }
 
@@ -145,7 +145,7 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n El DNI debe contener 13 dígitos";
+                return "El DNI debe contener 13 dígitos \n ";
             }
         }
 
@@ -157,7 +157,7 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n Debe contener " + rango + "  dígitos";
+                return "Debe contener " + rango + "  dígitos \n ";
             }
         }
 
@@ -185,7 +185,7 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n No se admiten carácteres especiales";
+                return " No se admiten carácteres especiales \n";
             }
         }
 
@@ -194,11 +194,19 @@ namespace Proyecto_de_desarrolo.Clases
         {
             if (texto.EndsWith("@gmail.com") || texto.EndsWith("@yahoo.com"))
             {
-                return "";
+                string tex = texto.Substring(0, texto.Length - 10);
+                if (tex.Contains("@") || tex.Contains("."))
+                {
+                    return "No se aceptan puntos(.) ni @ en el correo";
+                }
+                else
+                {
+                    return "";
+                }
             }
             else
             {
-                return "\n EL correo debe contener la siguiente sintaxis: @gmail.com o @yahoo.com";
+                return "EL correo debe contener la siguiente sintaxis: @gmail.com o @yahoo.com \n ";
             }
         }
 
@@ -208,13 +216,13 @@ namespace Proyecto_de_desarrolo.Clases
 
             if (texto.Length != 0)
             {
-                if (texto[0] == '3' || texto[0] == '8' || texto[0] == '9')
+                if (texto[0] == '2' || texto[0] == '3' || texto[0] == '8' || texto[0] == '9')
                 {
                     mensaje = "";
                 }
                 else
                 {
-                    mensaje = "El número debe de iniciar con 3,8 o 9";
+                    mensaje = "El número debe de iniciar con 3,8 o 9 \n ";
                 }
 
             }
@@ -229,7 +237,7 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n El número telefónico debe contener 8 dígitos";
+                return "Debe contener 8 dígitos \n ";
             }
         }
 
@@ -241,7 +249,7 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n El nombre mínimo 3 carácteres y máximo 30";
+                return "El nombre mínimo 3 carácteres y máximo 30 \n";
             }
         }
         public string rango_direccion(string texto)
@@ -252,37 +260,26 @@ namespace Proyecto_de_desarrolo.Clases
             }
             else
             {
-                return "\n La direccion debe tener mínimo 10 carácteres y máximo 50";
+                return "La direccion debe tener mínimo 10 carácteres y máximo 50 \n";
             }
         }
 
         public string rango_usuario(string texto)
         {
-            if (texto.Length >= 8 && texto.Length <= 16)
+            if (texto.Length >= 3 && texto.Length <= 20)
             {
                 return "";
             }
             else
             {
-                return "\n El usuario debe contener mínimo 8 carácteres y máximo 16";
+                return "El usuario debe contener mínimo 3 carácteres y máximo 20 \n";
             }
         }
 
-        public string rango_contra(string texto)
-        {
-            if (texto.Length >= 8 && texto.Length <= 16)
-            {
-                return "";
-            }
-            else
-            {
-                return "\n La contraseña debe contener mínimo 8 carácteres y máximo 16";
-            }
-        }
+
         public string validarletra_espacio(string texto)
         {
-            string mensaje = "";
-
+            int x = 0;
             for (int i = 0; i < texto.Length; i++)
             {
 
@@ -291,18 +288,57 @@ namespace Proyecto_de_desarrolo.Clases
                 string vali = "[a-zA-Z' 'ñ]";
                 if (Regex.IsMatch(o, vali))
                 {
-                    mensaje = "";
+
 
                 }
                 else
                 {
-                    mensaje = "solo se aceptan letras";
+                    x++;
+                }
+
+            }
+            if (x > 0)
+            {
+
+                return "Solo se aceptan letras \n";
+            }
+            else
+            {
+
+                return "";
+            }
+        }
+
+        public string validar_tripleCaracter(string texto)
+        {
+            int x = 0;
+            for (int i = 0; i < texto.Length; i++)
+            {
+                string carcater = texto[i].ToString() + texto[i] + texto[i];
+
+                if (texto.Contains(carcater))
+                {
+                    x++;
+
+                }
+                else
+                {
 
                 }
 
             }
-            return mensaje;
+            if (x > 0)
+            {
+
+                return "No se aceptan 3 caracteres iguales seguidos \n";
+            }
+            else
+            {
+
+                return "";
+            }
         }
+
 
         public string validar_precio(string texto)
         {
@@ -316,7 +352,7 @@ namespace Proyecto_de_desarrolo.Clases
 
                 if (texto != "")
                 {
-                    if (System.Text.RegularExpressions.Regex.IsMatch(texto, @"[^\w\s]"))
+                    if (System.Text.RegularExpressions.Regex.IsMatch(texto, @"[^\w\s.]"))
                     {
 
                         return "No pueden contener caracteres especiales";
@@ -470,7 +506,7 @@ namespace Proyecto_de_desarrolo.Clases
                 {
                     can = "la contraseña tiene que tener mas de 8 caracteres \n";
                 }
-                else if (i > 16)
+                else if (i > 15)
                 {
                     can = "la contraseña tiene que tener menos de 16 caracteres \n";
                 }

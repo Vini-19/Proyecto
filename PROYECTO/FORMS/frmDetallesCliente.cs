@@ -1,4 +1,5 @@
-﻿using Proyecto_de_desarrolo.Clases;
+﻿using PROYECTO.CLASES;
+using Proyecto_de_desarrolo.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -112,10 +113,11 @@ namespace Proyecto_de_desarrolo.Formularios
             }
         }
 
-        private void txtNombre_TextChanged(object sender, EventArgs e)
+
+       
+        private void txtNombre_TextChanged_1(object sender, EventArgs e)
         {
             errorProvider1.SetError(txtNombre, val.txt_vacio(txtNombre.Text) + val.espacio_inicio_final(txtNombre.Text) + val.validarletra_espacio(txtNombre.Text) + val.rango_nombre(txtNombre.Text) + val.doble_espacio(txtNombre.Text) + val.validar_tripleCaracter(txtNombre.Text));
-
         }
 
         private void txtIdentidad_TextChanged(object sender, EventArgs e)
@@ -131,17 +133,43 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtTelefono_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.SetError(txtTelefono, val.txt_vacio(txtTelefono.Text) + val.espacio_inicio_final(txtTelefono.Text) + val.validarnumerotell(txtTelefono.Text) + val.rango_8(txtTelefono.Text));
-
         }
 
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            val.validarnum(e);
-        }
+            clsPersonasid usu = new clsPersonasid();
+            string usuarioId = usu.getcodUsu();
 
-        private void txtIdentidad_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            val.validarnum(e);
+            if (txtNombre.Text == "" || txtIdentidad.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+
+            }
+            else
+            {
+                DataTable carrito = ObtenerDatosCarrito(usuarioId);
+                string nombreCliente = txtNombre.Text;
+                string numeroIdentidad = txtIdentidad.Text;
+                string direccion = txtDireccion.Text;
+                string telefono = txtTelefono.Text;
+
+                if (errorProvider1.GetError(txtNombre) == "" && errorProvider1.GetError(txtIdentidad) == "" && errorProvider1.GetError(txtDireccion) == "" && errorProvider1.GetError(txtTelefono) == "")
+                {
+                    // Insertar los datos en la tabla de Pedidos
+                    InsertarPedido(usuarioId, carrito, nombreCliente, numeroIdentidad, direccion, telefono);
+
+                    // Mostrar mensaje de éxito
+                    MessageBox.Show("Pedido enviado correctamente.");
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                }
+
+
+            }
         }
     }
 
