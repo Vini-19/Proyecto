@@ -12,6 +12,7 @@ using System.IO;
 using System.Drawing.Imaging;
 using Proyecto_de_desarrolo.Clases;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using PROYECTO.CLASES;
 
 namespace Proyecto_de_desarrolo.Formularios
 {

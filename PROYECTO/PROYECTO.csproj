@@ -243,7 +243,9 @@
     <Compile Include="FORMS\frmPedido.Designer.cs">
       <DependentUpon>frmPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\frmPedidosAdmin.cs" />
+    <Compile Include="FORMS\frmPedidosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\frmPedidosAdmin.Designer.cs">
       <DependentUpon>frmPedidosAdmin.cs</DependentUpon>
     </Compile>
@@ -295,7 +297,9 @@
     <Compile Include="FORMS\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\Pedidos_Cliente.cs" />
+    <Compile Include="FORMS\Pedidos_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\Pedidos_Cliente.Designer.cs">
       <DependentUpon>Pedidos_Cliente.cs</DependentUpon>
     </Compile>

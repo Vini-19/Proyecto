@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROYECTO.CLASES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -127,6 +128,11 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 MessageBox.Show("Por favor, seleccione una fila de pedido.");
             }
+        }
+
+        private void frmPedidosAdmin_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
