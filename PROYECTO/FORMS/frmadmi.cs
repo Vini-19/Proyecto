@@ -83,7 +83,8 @@ namespace PROYECTO
             {
                 PNREPOR.Visible = false;
             }
-            
+           
+
         }
 
         private void butons()
@@ -640,11 +641,12 @@ namespace PROYECTO
 
         private void button3_Click_3(object sender, EventArgs e)
         {
-            AbriForm(new frmPedidosAdmin());
-            if (logo.Visible == true)
-            {
-                logo.Visible = false;
-            }
+       
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
