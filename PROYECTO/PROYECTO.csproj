@@ -243,12 +243,6 @@
     <Compile Include="FORMS\frmPedido.Designer.cs">
       <DependentUpon>frmPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\frmPedidosAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\frmPedidosAdmin.Designer.cs">
-      <DependentUpon>frmPedidosAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="FORMS\frmPrincipalCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,12 +284,6 @@
     </Compile>
     <Compile Include="FORMS\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORMS\Pedidos_Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\Pedidos_Cliente.Designer.cs">
-      <DependentUpon>Pedidos_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMS\frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -357,9 +345,6 @@
     <EmbeddedResource Include="FORMS\frmPedido.resx">
       <DependentUpon>frmPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\frmPedidosAdmin.resx">
-      <DependentUpon>frmPedidosAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmPrincipalCliente.resx">
       <DependentUpon>frmPrincipalCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,9 +365,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\Pedidos_Cliente.resx">
-      <DependentUpon>Pedidos_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
