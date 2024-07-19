@@ -81,7 +81,7 @@ namespace Proyecto_de_desarrolo
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(98, 114);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 385);
             this.panel1.TabIndex = 0;
@@ -89,10 +89,11 @@ namespace Proyecto_de_desarrolo
             // txtDNI_Cliente
             // 
             this.txtDNI_Cliente.Location = new System.Drawing.Point(30, 100);
-            this.txtDNI_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI_Cliente.Name = "txtDNI_Cliente";
             this.txtDNI_Cliente.Size = new System.Drawing.Size(142, 20);
             this.txtDNI_Cliente.TabIndex = 19;
+            this.txtDNI_Cliente.TextChanged += new System.EventHandler(this.txtDNI_Cliente_TextChanged_1);
             // 
             // label7
             // 
@@ -107,10 +108,11 @@ namespace Proyecto_de_desarrolo
             // txtCorreo_Cliente
             // 
             this.txtCorreo_Cliente.Location = new System.Drawing.Point(30, 283);
-            this.txtCorreo_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo_Cliente.Name = "txtCorreo_Cliente";
             this.txtCorreo_Cliente.Size = new System.Drawing.Size(142, 20);
             this.txtCorreo_Cliente.TabIndex = 17;
+            this.txtCorreo_Cliente.TextChanged += new System.EventHandler(this.txtCorreo_Cliente_TextChanged_1);
             // 
             // label6
             // 
@@ -125,75 +127,83 @@ namespace Proyecto_de_desarrolo
             // txtTelefono_Cliente
             // 
             this.txtTelefono_Cliente.Location = new System.Drawing.Point(30, 248);
-            this.txtTelefono_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono_Cliente.Name = "txtTelefono_Cliente";
             this.txtTelefono_Cliente.Size = new System.Drawing.Size(142, 20);
             this.txtTelefono_Cliente.TabIndex = 15;
+            this.txtTelefono_Cliente.TextChanged += new System.EventHandler(this.txtTelefono_Cliente_TextChanged_1);
             // 
             // txtDireccion_Cliente
             // 
             this.txtDireccion_Cliente.Location = new System.Drawing.Point(30, 185);
-            this.txtDireccion_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion_Cliente.Multiline = true;
             this.txtDireccion_Cliente.Name = "txtDireccion_Cliente";
             this.txtDireccion_Cliente.Size = new System.Drawing.Size(142, 48);
             this.txtDireccion_Cliente.TabIndex = 14;
+            this.txtDireccion_Cliente.TextChanged += new System.EventHandler(this.txtDireccion_Cliente_TextChanged_1);
             // 
             // txtNombre_Cliente
             // 
             this.txtNombre_Cliente.Location = new System.Drawing.Point(30, 143);
-            this.txtNombre_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre_Cliente.Name = "txtNombre_Cliente";
             this.txtNombre_Cliente.Size = new System.Drawing.Size(142, 20);
             this.txtNombre_Cliente.TabIndex = 13;
+            this.txtNombre_Cliente.TextChanged += new System.EventHandler(this.txtNombre_Cliente_TextChanged_1);
             // 
             // txtRTN_Cliente
             // 
             this.txtRTN_Cliente.Location = new System.Drawing.Point(30, 62);
-            this.txtRTN_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtRTN_Cliente.Name = "txtRTN_Cliente";
             this.txtRTN_Cliente.Size = new System.Drawing.Size(142, 20);
             this.txtRTN_Cliente.TabIndex = 1;
+            this.txtRTN_Cliente.TextChanged += new System.EventHandler(this.txtRTN_Cliente_TextChanged_1);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(111, 352);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 19);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(22, 352);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(70, 19);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(111, 321);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(70, 19);
             this.btnModificar.TabIndex = 9;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(22, 321);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(70, 19);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
@@ -253,7 +263,7 @@ namespace Proyecto_de_desarrolo
             this.dgvCliente.AllowUserToDeleteRows = false;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCliente.Location = new System.Drawing.Point(312, 133);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.RowHeadersWidth = 51;
@@ -273,10 +283,11 @@ namespace Proyecto_de_desarrolo
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(376, 112);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(528, 20);
             this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged_1);
             // 
             // errorProvider1
             // 
@@ -303,7 +314,7 @@ namespace Proyecto_de_desarrolo
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmClientes";
             this.Text = "frmClientes";
             this.panel1.ResumeLayout(false);
