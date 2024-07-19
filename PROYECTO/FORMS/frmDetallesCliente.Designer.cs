@@ -48,13 +48,15 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnEnviar
             // 
+            this.btnEnviar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnEnviar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEnviar.Location = new System.Drawing.Point(127, 187);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(104, 28);
             this.btnEnviar.TabIndex = 5;
             this.btnEnviar.Text = "Enviar Pedido";
-            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click_1);
             // 
             // label1
@@ -70,7 +72,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(171, 121);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(139, 20);
             this.txtDireccion.TabIndex = 3;
@@ -90,7 +92,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(171, 68);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(139, 20);
             this.txtNombre.TabIndex = 1;
@@ -110,7 +112,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtIdentidad
             // 
             this.txtIdentidad.Location = new System.Drawing.Point(171, 95);
-            this.txtIdentidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdentidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(139, 20);
             this.txtIdentidad.TabIndex = 2;
@@ -130,7 +132,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(171, 144);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(139, 20);
             this.txtTelefono.TabIndex = 4;
@@ -167,7 +169,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEnviar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDetallesCliente";
             this.Text = "frmDetallesCliente";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

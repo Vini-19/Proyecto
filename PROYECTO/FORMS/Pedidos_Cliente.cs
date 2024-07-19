@@ -1220,6 +1220,11 @@ namespace Proyecto_de_desarrolo.Formularios
             txtCantidad6.Text = Convert.ToString(x6);
         }
 
+        private void Pedidos_Cliente_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtCantidad3_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);

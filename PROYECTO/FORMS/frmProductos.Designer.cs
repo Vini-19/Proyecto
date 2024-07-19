@@ -69,12 +69,13 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.SpringGreen;
             this.btnAgregar.Location = new System.Drawing.Point(133, 382);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(64, 20);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // txtCantidadP

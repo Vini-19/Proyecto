@@ -67,7 +67,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 327);
             this.panel1.TabIndex = 1;
@@ -75,7 +75,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtNueva_Contraseña2
             // 
             this.txtNueva_Contraseña2.Location = new System.Drawing.Point(23, 190);
-            this.txtNueva_Contraseña2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNueva_Contraseña2.Margin = new System.Windows.Forms.Padding(2);
             this.txtNueva_Contraseña2.Name = "txtNueva_Contraseña2";
             this.txtNueva_Contraseña2.Size = new System.Drawing.Size(182, 20);
             this.txtNueva_Contraseña2.TabIndex = 5;
@@ -83,11 +83,11 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnConfirmar.BackColor = System.Drawing.Color.SpringGreen;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnConfirmar.Location = new System.Drawing.Point(68, 226);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(94, 36);
             this.btnConfirmar.TabIndex = 4;
@@ -98,7 +98,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtNueva_Contraseña1
             // 
             this.txtNueva_Contraseña1.Location = new System.Drawing.Point(20, 110);
-            this.txtNueva_Contraseña1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNueva_Contraseña1.Margin = new System.Windows.Forms.Padding(2);
             this.txtNueva_Contraseña1.Name = "txtNueva_Contraseña1";
             this.txtNueva_Contraseña1.Size = new System.Drawing.Size(182, 20);
             this.txtNueva_Contraseña1.TabIndex = 2;
@@ -148,7 +148,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(257, 335);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRecuperacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRecuperacion";

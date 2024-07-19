@@ -104,7 +104,7 @@ namespace Proyecto_de_desarrolo
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnModificar.BackColor = System.Drawing.SystemColors.Info;
             this.btnModificar.Location = new System.Drawing.Point(212, 215);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
@@ -116,7 +116,7 @@ namespace Proyecto_de_desarrolo
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.Info;
             this.btnLimpiar.Location = new System.Drawing.Point(121, 215);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -234,7 +234,7 @@ namespace Proyecto_de_desarrolo
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAgregar.BackColor = System.Drawing.Color.LightGreen;
             this.btnAgregar.Location = new System.Drawing.Point(22, 215);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";

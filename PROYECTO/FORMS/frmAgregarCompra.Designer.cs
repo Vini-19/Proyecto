@@ -58,6 +58,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.btnAgregarC);
             this.panel1.Controls.Add(this.txtPrecio);
             this.panel1.Controls.Add(this.label10);
@@ -76,13 +77,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnAgregarC
             // 
-            this.btnAgregarC.Location = new System.Drawing.Point(162, 109);
+            this.btnAgregarC.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAgregarC.Location = new System.Drawing.Point(162, 94);
             this.btnAgregarC.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarC.Name = "btnAgregarC";
-            this.btnAgregarC.Size = new System.Drawing.Size(70, 19);
+            this.btnAgregarC.Size = new System.Drawing.Size(70, 34);
             this.btnAgregarC.TabIndex = 24;
             this.btnAgregarC.Text = "Agregar Compra";
-            this.btnAgregarC.UseVisualStyleBackColor = true;
+            this.btnAgregarC.UseVisualStyleBackColor = false;
             this.btnAgregarC.Click += new System.EventHandler(this.btnAgregarC_Click_1);
             // 
             // txtPrecio
@@ -106,13 +108,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnQuitarC
             // 
+            this.btnQuitarC.BackColor = System.Drawing.Color.Maroon;
             this.btnQuitarC.Location = new System.Drawing.Point(162, 138);
             this.btnQuitarC.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarC.Name = "btnQuitarC";
-            this.btnQuitarC.Size = new System.Drawing.Size(70, 19);
+            this.btnQuitarC.Size = new System.Drawing.Size(70, 31);
             this.btnQuitarC.TabIndex = 12;
             this.btnQuitarC.Text = "Quitar";
-            this.btnQuitarC.UseVisualStyleBackColor = true;
+            this.btnQuitarC.UseVisualStyleBackColor = false;
             this.btnQuitarC.Click += new System.EventHandler(this.btnQuitarC_Click_1);
             // 
             // cmbProveedor
@@ -186,13 +189,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnFinalizarC
             // 
+            this.btnFinalizarC.BackColor = System.Drawing.Color.SpringGreen;
             this.btnFinalizarC.Location = new System.Drawing.Point(830, 421);
             this.btnFinalizarC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFinalizarC.Name = "btnFinalizarC";
-            this.btnFinalizarC.Size = new System.Drawing.Size(101, 20);
+            this.btnFinalizarC.Size = new System.Drawing.Size(102, 31);
             this.btnFinalizarC.TabIndex = 13;
             this.btnFinalizarC.Text = "Finalizar Compra";
-            this.btnFinalizarC.UseVisualStyleBackColor = true;
+            this.btnFinalizarC.UseVisualStyleBackColor = false;
             this.btnFinalizarC.Click += new System.EventHandler(this.btnFinalizarC_Click_1);
             // 
             // lblTotal

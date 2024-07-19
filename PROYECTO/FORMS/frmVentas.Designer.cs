@@ -62,18 +62,19 @@ namespace Proyecto_de_desarrolo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label1.Location = new System.Drawing.Point(78, 110);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código de Barra:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtCodigo_Barra
             // 
             this.txtCodigo_Barra.Location = new System.Drawing.Point(188, 107);
-            this.txtCodigo_Barra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo_Barra.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo_Barra.Name = "txtCodigo_Barra";
             this.txtCodigo_Barra.Size = new System.Drawing.Size(168, 20);
             this.txtCodigo_Barra.TabIndex = 3;
@@ -88,13 +89,12 @@ namespace Proyecto_de_desarrolo
             this.Precio,
             this.Total});
             this.dgvProductos.Location = new System.Drawing.Point(78, 131);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.Size = new System.Drawing.Size(495, 302);
             this.dgvProductos.TabIndex = 2;
-            
             // 
             // Codigo
             // 
@@ -168,41 +168,44 @@ namespace Proyecto_de_desarrolo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label2.Location = new System.Drawing.Point(534, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
+            this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "RTN:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.Location = new System.Drawing.Point(532, 84);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Cliente:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label4.Location = new System.Drawing.Point(534, 103);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Fecha:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtRTN
             // 
             this.txtRTN.Enabled = false;
             this.txtRTN.Location = new System.Drawing.Point(593, 82);
-            this.txtRTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN.Margin = new System.Windows.Forms.Padding(2);
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(120, 20);
             this.txtRTN.TabIndex = 9;
@@ -211,7 +214,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.txtFecha.Enabled = false;
             this.txtFecha.Location = new System.Drawing.Point(593, 103);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(120, 20);
             this.txtFecha.TabIndex = 11;
@@ -220,9 +223,9 @@ namespace Proyecto_de_desarrolo
             // 
             this.btnGenerar_Factura.BackColor = System.Drawing.Color.YellowGreen;
             this.btnGenerar_Factura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerar_Factura.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar_Factura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnGenerar_Factura.Location = new System.Drawing.Point(593, 322);
-            this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerar_Factura.Name = "btnGenerar_Factura";
             this.btnGenerar_Factura.Size = new System.Drawing.Size(124, 25);
             this.btnGenerar_Factura.TabIndex = 12;
@@ -234,9 +237,9 @@ namespace Proyecto_de_desarrolo
             // 
             this.btnEnter.BackColor = System.Drawing.Color.PeachPuff;
             this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnter.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnEnter.Location = new System.Drawing.Point(360, 97);
-            this.btnEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(82, 29);
             this.btnEnter.TabIndex = 13;
@@ -248,7 +251,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(593, 58);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(120, 21);
             this.cmbCliente.TabIndex = 14;
@@ -262,9 +265,9 @@ namespace Proyecto_de_desarrolo
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnEliminar.Location = new System.Drawing.Point(615, 244);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(86, 26);
             this.btnEliminar.TabIndex = 15;
@@ -291,7 +294,7 @@ namespace Proyecto_de_desarrolo
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(124, 81);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(770, 475);
             this.panel1.TabIndex = 16;
@@ -314,10 +317,11 @@ namespace Proyecto_de_desarrolo
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1036, 636);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVentas";
             this.Text = "Ventas";
-            
+            this.Load += new System.EventHandler(this.frmVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);

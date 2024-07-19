@@ -72,7 +72,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnModificar.BackColor = System.Drawing.Color.LightGreen;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnModificar.Location = new System.Drawing.Point(574, 427);
@@ -86,7 +86,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnGuardar.BackColor = System.Drawing.Color.SpringGreen;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Sylfaen", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;

@@ -88,7 +88,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnsiguiente.Location = new System.Drawing.Point(609, 492);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(118, 19);
+            this.btnsiguiente.Size = new System.Drawing.Size(118, 29);
             this.btnsiguiente.TabIndex = 6;
             this.btnsiguiente.Text = "Siguiente >>>";
             this.btnsiguiente.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.anterior.Location = new System.Drawing.Point(277, 492);
             this.anterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.anterior.Name = "anterior";
-            this.anterior.Size = new System.Drawing.Size(110, 19);
+            this.anterior.Size = new System.Drawing.Size(110, 29);
             this.anterior.TabIndex = 7;
             this.anterior.Text = "<<<Anterior";
             this.anterior.UseVisualStyleBackColor = true;
@@ -291,10 +291,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnMas1
             // 
             this.btnMas1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas1.Location = new System.Drawing.Point(315, 238);
+            this.btnMas1.Location = new System.Drawing.Point(315, 233);
             this.btnMas1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMas1.Name = "btnMas1";
-            this.btnMas1.Size = new System.Drawing.Size(31, 20);
+            this.btnMas1.Size = new System.Drawing.Size(31, 28);
             this.btnMas1.TabIndex = 26;
             this.btnMas1.Text = "+";
             this.btnMas1.UseVisualStyleBackColor = true;
@@ -303,10 +303,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnMenos1
             // 
             this.btnMenos1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos1.Location = new System.Drawing.Point(351, 238);
+            this.btnMenos1.Location = new System.Drawing.Point(351, 233);
             this.btnMenos1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMenos1.Name = "btnMenos1";
-            this.btnMenos1.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos1.Size = new System.Drawing.Size(31, 28);
             this.btnMenos1.TabIndex = 27;
             this.btnMenos1.Text = "-";
             this.btnMenos1.UseVisualStyleBackColor = true;
@@ -315,10 +315,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnMenos2
             // 
             this.btnMenos2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos2.Location = new System.Drawing.Point(512, 238);
+            this.btnMenos2.Location = new System.Drawing.Point(512, 233);
             this.btnMenos2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMenos2.Name = "btnMenos2";
-            this.btnMenos2.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos2.Size = new System.Drawing.Size(31, 28);
             this.btnMenos2.TabIndex = 28;
             this.btnMenos2.Text = "-";
             this.btnMenos2.UseVisualStyleBackColor = true;
@@ -327,10 +327,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnMas2
             // 
             this.btnMas2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas2.Location = new System.Drawing.Point(477, 238);
+            this.btnMas2.Location = new System.Drawing.Point(477, 233);
             this.btnMas2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMas2.Name = "btnMas2";
-            this.btnMas2.Size = new System.Drawing.Size(31, 20);
+            this.btnMas2.Size = new System.Drawing.Size(31, 28);
             this.btnMas2.TabIndex = 30;
             this.btnMas2.Text = "+";
             this.btnMas2.UseVisualStyleBackColor = true;
@@ -339,10 +339,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnMas3
             // 
             this.btnMas3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas3.Location = new System.Drawing.Point(647, 238);
+            this.btnMas3.Location = new System.Drawing.Point(647, 237);
             this.btnMas3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMas3.Name = "btnMas3";
-            this.btnMas3.Size = new System.Drawing.Size(31, 20);
+            this.btnMas3.Size = new System.Drawing.Size(31, 28);
             this.btnMas3.TabIndex = 32;
             this.btnMas3.Text = "+";
             this.btnMas3.UseVisualStyleBackColor = true;
@@ -354,7 +354,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos3.Location = new System.Drawing.Point(683, 238);
             this.btnMenos3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMenos3.Name = "btnMenos3";
-            this.btnMenos3.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos3.Size = new System.Drawing.Size(31, 28);
             this.btnMenos3.TabIndex = 33;
             this.btnMenos3.Text = "-";
             this.btnMenos3.UseVisualStyleBackColor = true;
@@ -366,7 +366,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos4.Location = new System.Drawing.Point(351, 459);
             this.btnMenos4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMenos4.Name = "btnMenos4";
-            this.btnMenos4.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos4.Size = new System.Drawing.Size(31, 28);
             this.btnMenos4.TabIndex = 36;
             this.btnMenos4.Text = "-";
             this.btnMenos4.UseVisualStyleBackColor = true;
@@ -378,7 +378,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas4.Location = new System.Drawing.Point(315, 459);
             this.btnMas4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMas4.Name = "btnMas4";
-            this.btnMas4.Size = new System.Drawing.Size(31, 20);
+            this.btnMas4.Size = new System.Drawing.Size(31, 28);
             this.btnMas4.TabIndex = 35;
             this.btnMas4.Text = "+";
             this.btnMas4.UseVisualStyleBackColor = true;
@@ -387,10 +387,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnMenos5
             // 
             this.btnMenos5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos5.Location = new System.Drawing.Point(513, 466);
+            this.btnMenos5.Location = new System.Drawing.Point(513, 459);
             this.btnMenos5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMenos5.Name = "btnMenos5";
-            this.btnMenos5.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos5.Size = new System.Drawing.Size(31, 28);
             this.btnMenos5.TabIndex = 39;
             this.btnMenos5.Text = "-";
             this.btnMenos5.UseVisualStyleBackColor = true;
@@ -399,10 +399,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnMas5
             // 
             this.btnMas5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas5.Location = new System.Drawing.Point(477, 466);
+            this.btnMas5.Location = new System.Drawing.Point(477, 459);
             this.btnMas5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMas5.Name = "btnMas5";
-            this.btnMas5.Size = new System.Drawing.Size(31, 20);
+            this.btnMas5.Size = new System.Drawing.Size(31, 28);
             this.btnMas5.TabIndex = 38;
             this.btnMas5.Text = "+";
             this.btnMas5.UseVisualStyleBackColor = true;
@@ -414,7 +414,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMenos6.Location = new System.Drawing.Point(683, 459);
             this.btnMenos6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMenos6.Name = "btnMenos6";
-            this.btnMenos6.Size = new System.Drawing.Size(28, 20);
+            this.btnMenos6.Size = new System.Drawing.Size(31, 28);
             this.btnMenos6.TabIndex = 42;
             this.btnMenos6.Text = "-";
             this.btnMenos6.UseVisualStyleBackColor = true;
@@ -426,7 +426,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnMas6.Location = new System.Drawing.Point(647, 459);
             this.btnMas6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMas6.Name = "btnMas6";
-            this.btnMas6.Size = new System.Drawing.Size(31, 20);
+            this.btnMas6.Size = new System.Drawing.Size(31, 28);
             this.btnMas6.TabIndex = 41;
             this.btnMas6.Text = "+";
             this.btnMas6.UseVisualStyleBackColor = true;
@@ -537,6 +537,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Pedidos_Cliente";
             this.Text = "Pedidos_Cliente";
+            this.Load += new System.EventHandler(this.Pedidos_Cliente_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
