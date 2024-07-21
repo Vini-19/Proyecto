@@ -47,7 +47,6 @@ namespace Proyecto_de_desarrolo
             this.button20 = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.panelProductos = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
@@ -186,7 +185,7 @@ namespace Proyecto_de_desarrolo
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 509);
+            this.button5.Location = new System.Drawing.Point(3, 456);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(223, 70);
             this.button5.TabIndex = 26;
@@ -235,7 +234,7 @@ namespace Proyecto_de_desarrolo
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(3, 243);
+            this.btnProduct.Location = new System.Drawing.Point(3, 190);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(223, 70);
             this.btnProduct.TabIndex = 2;
@@ -249,27 +248,11 @@ namespace Proyecto_de_desarrolo
             this.panelProductos.BackColor = System.Drawing.Color.Black;
             this.panelProductos.Controls.Add(this.button19);
             this.panelProductos.Controls.Add(this.button20);
-            this.panelProductos.Location = new System.Drawing.Point(3, 319);
+            this.panelProductos.Location = new System.Drawing.Point(3, 266);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.Size = new System.Drawing.Size(223, 108);
             this.panelProductos.TabIndex = 31;
             this.panelProductos.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 105);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(208, 44);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Envíos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button8
             // 
@@ -341,12 +324,11 @@ namespace Proyecto_de_desarrolo
             // panelFacturacion
             // 
             this.panelFacturacion.BackColor = System.Drawing.Color.Black;
-            this.panelFacturacion.Controls.Add(this.button3);
             this.panelFacturacion.Controls.Add(this.button8);
             this.panelFacturacion.Controls.Add(this.button9);
             this.panelFacturacion.Location = new System.Drawing.Point(3, 79);
             this.panelFacturacion.Name = "panelFacturacion";
-            this.panelFacturacion.Size = new System.Drawing.Size(223, 158);
+            this.panelFacturacion.Size = new System.Drawing.Size(223, 105);
             this.panelFacturacion.TabIndex = 29;
             this.panelFacturacion.Visible = false;
             // 
@@ -359,7 +341,7 @@ namespace Proyecto_de_desarrolo
             this.btnPedidos.ForeColor = System.Drawing.Color.White;
             this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
             this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(3, 433);
+            this.btnPedidos.Location = new System.Drawing.Point(3, 380);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(223, 70);
             this.btnPedidos.TabIndex = 32;
@@ -481,7 +463,6 @@ namespace Proyecto_de_desarrolo
         private Button button20;
         private Button btnProduct;
         private Panel panelProductos;
-        private Button button3;
         private Button button8;
         private Button button9;
         private Button btnFacturacion;
