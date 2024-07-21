@@ -92,8 +92,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     MessageBox.Show("Se agrego su pedido correctamente");
 
-                    LlamarActualizarFormulario1();
-
 
                 }
             }
@@ -151,6 +149,9 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     // Mostrar mensaje de éxito
                     MessageBox.Show("Pedido enviado correctamente.");
+                    
+                    frmCarrito Carrito = new frmCarrito();
+                    Carrito.Show();
                     this.Hide();
                 }
                 else

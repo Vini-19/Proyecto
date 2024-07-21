@@ -1,4 +1,5 @@
 ﻿using PROYECTO;
+using PROYECTO.FORMS;
 using Proyecto_de_desarrolo.Formularios;
 using System;
 using System.Collections.Generic;
@@ -168,6 +169,15 @@ namespace Proyecto_de_desarrolo
         private void logo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOrdenes_Click(object sender, EventArgs e)
+        {
+            AbriForm(new frmHistorialPedidos());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
     }
 }

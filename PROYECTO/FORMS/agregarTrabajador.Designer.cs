@@ -142,6 +142,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtNombre_Trabajador.Name = "txtNombre_Trabajador";
             this.txtNombre_Trabajador.Size = new System.Drawing.Size(188, 22);
             this.txtNombre_Trabajador.TabIndex = 13;
+            this.txtNombre_Trabajador.TextChanged += new System.EventHandler(this.txtNombre_Trabajador_TextChanged_1);
             // 
             // txtRTN_Trabajador
             // 

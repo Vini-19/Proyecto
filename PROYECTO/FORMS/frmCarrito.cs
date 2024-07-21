@@ -86,14 +86,6 @@ namespace Proyecto_de_desarrolo.Formularios
             DA.Fill(dataTable);
 
 
- 
-
-
-
-
-
-
-
             cont_filas = dataTable.Rows.Count;
             cont_filas = cont_filas - 1;
 
@@ -452,8 +444,10 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void btnTerminar_Click(object sender, EventArgs e)
         {
-            frmDetallesCliente frmdetalles = new frmDetallesCliente(this);
+            frmDetallesCliente frmdetalles = new frmDetallesCliente();
             frmdetalles.Show();
+            this.Hide();
+
         }
     }
 }

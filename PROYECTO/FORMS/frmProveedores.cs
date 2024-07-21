@@ -505,7 +505,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 txtDireccion_Prov.Text = dgv_Prov.CurrentRow.Cells[6].Value.ToString();
 
                 btnAgregar.Enabled = false;
-            
+
         }
 
         private void txtRTN_Prov_KeyPress(object sender, KeyPressEventArgs e)

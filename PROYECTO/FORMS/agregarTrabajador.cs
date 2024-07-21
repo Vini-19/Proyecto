@@ -627,6 +627,7 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtDNI_Trabajador_TextChanged_1(object sender, EventArgs e)
         {
             errorProvider1.SetError(txtDNI_Trabajador, val.txt_vacio(txtDNI_Trabajador.Text) + val.espacio_inicio_final(txtDNI_Trabajador.Text) + val.rango_13(txtDNI_Trabajador.Text) + val.espacio(txtDNI_Trabajador.Text) + val.validar_dni(txtDNI_Trabajador.Text));
+
         }
 
         private void txtDireccion_Trabajador_TextChanged_1(object sender, EventArgs e)
@@ -661,14 +662,19 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void dgvTrabajador_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            txtRTN_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[1].Value.ToString();
-            txtDNI_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[2].Value.ToString();
-            txtNombre_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[3].Value.ToString();
-            txtTelefono_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[4].Value.ToString();
-            txtCorreo_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[5].Value.ToString();
-            txtDireccion_Trabajador.Text = dgvTrabajador.CurrentRow.Cells[6].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvTrabajador.Rows[e.RowIndex];
 
-            btnAgregar.Enabled = false;
+                txtRTN_Trabajador.Text = row.Cells["RTN_Persona"].Value.ToString();
+                txtDNI_Trabajador.Text = row.Cells["DNI_Persona"].Value.ToString();
+                txtNombre_Trabajador.Text = row.Cells["Primer_Nombre"].Value.ToString();
+                txtTelefono_Trabajador.Text = row.Cells["Numero_Telefono"].Value.ToString();
+                txtCorreo_Trabajador.Text = row.Cells["Correo"].Value.ToString();
+                txtDireccion_Trabajador.Text = row.Cells["Direccion"].Value.ToString();
+
+                btnAgregar.Enabled = false;
+            }
         }
 
         private void txtRTN_Trabajador_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -689,6 +695,11 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
+        }
+
+        private void txtNombre_Trabajador_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

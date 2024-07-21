@@ -409,13 +409,17 @@ namespace Proyecto_de_desarrolo
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            txtRTN_Cliente.Text = dgvCliente.CurrentRow.Cells[0].Value.ToString();
-            txtDNI_Cliente.Text = dgvCliente.CurrentRow.Cells[1].Value.ToString();
-            txtNombre_Cliente.Text = dgvCliente.CurrentRow.Cells[2].Value.ToString();
-            txtTelefono_Cliente.Text = dgvCliente.CurrentRow.Cells[4].Value.ToString();
-            txtCorreo_Cliente.Text = dgvCliente.CurrentRow.Cells[5].Value.ToString();
-            txtDireccion_Cliente.Text = dgvCliente.CurrentRow.Cells[6].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvCliente.Rows[e.RowIndex];
 
+                txtRTN_Cliente.Text = row.Cells["RTN_Persona"].Value.ToString();
+                txtDNI_Cliente.Text = row.Cells["DNI_Persona"].Value.ToString();
+                txtNombre_Cliente.Text = row.Cells["Primer_Nombre"].Value.ToString();
+                txtTelefono_Cliente.Text = row.Cells["Numero_Telefono"].Value.ToString();
+                txtCorreo_Cliente.Text = row.Cells["Correo"].Value.ToString();
+                txtDireccion_Cliente.Text = row.Cells["Direccion"].Value.ToString();
+            }
             btnAgregar.Enabled = false;
 
         }

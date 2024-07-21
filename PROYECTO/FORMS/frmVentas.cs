@@ -488,5 +488,10 @@ namespace Proyecto_de_desarrolo
         {
 
         }
+
+        private void btnGenerar_Factura_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -474,6 +474,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnCarrito.TabIndex = 43;
             this.btnCarrito.Text = "Carrito";
             this.btnCarrito.UseVisualStyleBackColor = false;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
             // 
             // txtCantidad1
             // 
