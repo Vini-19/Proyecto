@@ -117,6 +117,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtDireccion_Prov.Name = "txtDireccion_Prov";
             this.txtDireccion_Prov.Size = new System.Drawing.Size(191, 62);
             this.txtDireccion_Prov.TabIndex = 19;
+            this.txtDireccion_Prov.TextChanged += new System.EventHandler(this.txtDireccion_Prov_TextChanged);
             // 
             // label6
             // 

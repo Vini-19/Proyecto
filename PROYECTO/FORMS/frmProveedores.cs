@@ -438,7 +438,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     }
                     else
                     {
-                        MessageBox.Show("Error");
+                        MessageBox.Show("Por favor, seleccione un proveedor para marcar como inactivo.");
                     }
 
                 }
@@ -521,6 +521,13 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtTelefono_Prov_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
+        }
+
+        private void txtDireccion_Prov_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtDireccion_Prov, val.txt_vacio(txtDireccion_Prov.Text) + val.espacio_inicio_final(txtDireccion_Prov.Text) + val.rango_direccion(txtDireccion_Prov.Text) + val.doble_espacio(txtDireccion_Prov.Text) + val.validar_tripleCaracter(txtDireccion_Prov.Text));
+
+
         }
     }
 }

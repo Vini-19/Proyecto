@@ -259,9 +259,9 @@ namespace Proyecto_de_desarrolo.Formularios
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(37, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Nombres";
+            this.label3.Text = "Nombre";
             // 
             // label8
             // 

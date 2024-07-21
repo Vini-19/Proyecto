@@ -70,11 +70,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);
 
                     limpiar();
-                    errorProvider1.SetError(txtRTN_Trabajador, "");
-                    errorProvider1.SetError(txtDNI_Trabajador, "");
-                    errorProvider1.SetError(txtNombre_Trabajador, "");
-                    errorProvider1.SetError(txtTelefono_Trabajador, "");
-                    errorProvider1.SetError(txtCorreo_Trabajador, "");
+                    errorProvider1.SetError(txtCodigo, "");
                     MessageBox.Show("Se registro correctamente.");
                     DataGridView();
                     txtRTN_Trabajador.Focus();
@@ -176,6 +172,8 @@ namespace Proyecto_de_desarrolo.Formularios
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
+
+           
         }
         public void limpiar()
         {
@@ -185,6 +183,22 @@ namespace Proyecto_de_desarrolo.Formularios
             txtTelefono_Trabajador.Text = "";
             txtCorreo_Trabajador.Text = "";
             txtDireccion_Trabajador.Text = "";
+            txtUsuario.Text = "";
+            txtContra.Text = "";
+            txtCodigo.Text = "";
+
+
+            errorProvider1.SetError(txtRTN_Trabajador, "");
+            errorProvider1.SetError(txtDNI_Trabajador, "");
+            errorProvider1.SetError(txtNombre_Trabajador, "");
+            errorProvider1.SetError(txtTelefono_Trabajador, "");
+            errorProvider1.SetError(txtCorreo_Trabajador, "");
+            errorProvider1.SetError(txtDireccion_Trabajador, "");
+            errorProvider1.SetError(txtUsuario, "");
+            errorProvider1.SetError(txtContra, "");
+            errorProvider1.SetError(txtCodigo, "");
+
+            txtRTN_Trabajador.Focus();
         }
         private void txtRTN_Cliente_TextChanged(object sender, EventArgs e)
         {
@@ -299,7 +313,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
                         comandoEliminarTrabajador.ExecuteNonQuery();
 
-                        MessageBox.Show("Cliente marcado como inactivo correctamente");
+                        MessageBox.Show("Trabajador marcado como inactivo correctamente");
 
 
                         DataGridView();
@@ -312,7 +326,7 @@ namespace Proyecto_de_desarrolo.Formularios
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione un cliente para marcar como inactivo.");
+                MessageBox.Show("Por favor, seleccione un trabajador para marcar como inactivo.");
             }
         }
 
@@ -419,11 +433,6 @@ namespace Proyecto_de_desarrolo.Formularios
                     conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);
 
                     limpiar();
-                    errorProvider1.SetError(txtRTN_Trabajador, "");
-                    errorProvider1.SetError(txtDNI_Trabajador, "");
-                    errorProvider1.SetError(txtNombre_Trabajador, "");
-                    errorProvider1.SetError(txtTelefono_Trabajador, "");
-                    errorProvider1.SetError(txtCorreo_Trabajador, "");
                     MessageBox.Show("Se registro correctamente.");
                     DataGridView();
                     txtRTN_Trabajador.Focus();
@@ -543,11 +552,6 @@ namespace Proyecto_de_desarrolo.Formularios
                     conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);
 
                     limpiar();
-                    errorProvider1.SetError(txtRTN_Trabajador, "");
-                    errorProvider1.SetError(txtDNI_Trabajador, "");
-                    errorProvider1.SetError(txtNombre_Trabajador, "");
-                    errorProvider1.SetError(txtTelefono_Trabajador, "");
-                    errorProvider1.SetError(txtCorreo_Trabajador, "");
                     MessageBox.Show("Se registro correctamente.");
                     DataGridView();
                     txtRTN_Trabajador.Focus();
@@ -603,8 +607,6 @@ namespace Proyecto_de_desarrolo.Formularios
                         comandoEliminarTrabajador.ExecuteNonQuery();
 
                         MessageBox.Show("Cliente marcado como inactivo correctamente");
-
-
                         DataGridView();
                     }
                 }
@@ -699,7 +701,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtNombre_Trabajador_TextChanged_1(object sender, EventArgs e)
         {
-
+            errorProvider1.SetError(txtNombre_Trabajador, val.txt_vacio(txtNombre_Trabajador.Text) + val.espacio_inicio_final(txtNombre_Trabajador.Text) + val.validarletra_espacio(txtNombre_Trabajador.Text) + val.rango_nombre(txtNombre_Trabajador.Text) + val.doble_espacio(txtNombre_Trabajador.Text) + val.validar_tripleCaracter(txtNombre_Trabajador.Text));
         }
     }
 }
