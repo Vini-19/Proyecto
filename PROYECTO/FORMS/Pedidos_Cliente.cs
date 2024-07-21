@@ -28,6 +28,9 @@ namespace Proyecto_de_desarrolo.Formularios
         int x1 = 0, x2 = 0, x3 = 0, x4 = 0, x5 = 0, x6 = 0;
 
 
+
+
+
         public Pedidos_Cliente()
         {
             InitializeComponent();
@@ -1258,6 +1261,12 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtCantidad6_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
+        }
+
+        private void btnCarrito_Click_2(object sender, EventArgs e)
+        {
+            frmCarrito carrito = new frmCarrito();
+            carrito.Show();
         }
 
         private void txtCantidad3_KeyPress(object sender, KeyPressEventArgs e)
