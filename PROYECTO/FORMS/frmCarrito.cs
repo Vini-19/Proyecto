@@ -1,11 +1,14 @@
 ﻿using PROYECTO.CLASES;
+using Proyecto_de_desarrolo.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,28 +28,45 @@ namespace Proyecto_de_desarrolo.Formularios
         int cont_filas = 0;
         int cont_pag = 1;
         bool y = true;
-        int x1 = 0, x2 = 0, x3 = 0, x4 = 0;
         string codP;
         float total = 0;
+        int j1 = -4, j2 = -3, j3 = -2, j4 = -1;
 
-        private void frmCarrito_Load(object sender, EventArgs e)
+        public void frmCarrito_Load(object sender, EventArgs e)
         {
 
-
-
+            Cargarpedido();
+            Obtenertotal();
+           
         }
 
-        private double Obtenertotal()
+        public void Actualizar()
         {
+            Cargarpedido();
+            Obtenertotal();
+            MessageBox.Show("ola");
+        }
 
-            Cconexion conexion = new Cconexion();
-            SqlConnection cn = conexion.leer();
-            clsPersonasid usuario = new clsPersonasid();
+        private void Obtenertotal()
+        {
+            if (pictureBox1.Visible == true)
+            {
+                Cconexion conexion = new Cconexion();
+                SqlConnection cn = conexion.leer();
+                clsPersonasid usuario = new clsPersonasid();
 
-            SqlCommand comandoObtenertotal = new SqlCommand("ObtenerTotalValorProductosPorUsuario", cn);
-            comandoObtenertotal.CommandType = CommandType.StoredProcedure;
-            comandoObtenertotal.Parameters.AddWithValue("@UsuarioID", usuario.getcodUsu());
-            return (double)comandoObtenertotal.ExecuteScalar();
+                SqlCommand comandoObtenertotal = new SqlCommand("ObtenerTotalValorProductosPorUsuario", cn);
+                comandoObtenertotal.CommandType = CommandType.StoredProcedure;
+                comandoObtenertotal.Parameters.AddWithValue("@UsuarioID", usuario.getcodUsu());
+                double tot = (double)comandoObtenertotal.ExecuteScalar();
+                lblTotal.Text = tot.ToString();
+            }
+            else
+            {
+                lblTotal.Text = "0";
+            }
+
+
 
         }
 
@@ -59,14 +79,14 @@ namespace Proyecto_de_desarrolo.Formularios
             SqlConnection cn = conexion.leer();
             clsPersonasid usu = new clsPersonasid();
 
-            string consulta = "Select Productos_ID,cantidad from Carritos where Usuarios_ID= '" + usu.getcodUsu() + "'";
+            string consulta = "Select Productos_ID,cantidad from Carritos where Usuarios_ID= '" + usu.getcodUsu() + "' and estado=1";
             SqlCommand comando = new SqlCommand(consulta, cn);
             SqlDataAdapter DA = new SqlDataAdapter(comando);
             DataTable dataTable = new DataTable();
             DA.Fill(dataTable);
 
 
-
+ 
 
 
 
@@ -109,6 +129,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblNombre1.Visible = true;
                 lblPrecio1.Visible = true;
                 btnQuitar1.Visible = true;
+                j1 = j1 + 4; j2 = j2 + 4; j3 = j3 + 4; j4 = j4 + 4;
 
                 codP = dataTable.Rows[i][0].ToString();
 
@@ -116,7 +137,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
                 da.Fill(DS, "Productos");
-
+               
                 string consulta2 = "Select Nombre_Producto,Precio from Productos where Productos_ID='" + codP + "'";
                 SqlCommand comando2 = new SqlCommand(consulta2, cn);
                 SqlDataAdapter DA2 = new SqlDataAdapter(comando2);
@@ -128,9 +149,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad1.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                
+                MemoryStream stm = new MemoryStream(bytedata);
 
-                
+                pictureBox1.Image = Image.FromStream(stm);
             }
             else
             {
@@ -180,9 +201,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad2.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                
+                MemoryStream stm = new MemoryStream(bytedata);
 
-                
+                pictureBox2.Image = Image.FromStream(stm);
             }
             else
             {
@@ -231,9 +252,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad3.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                
+                MemoryStream stm = new MemoryStream(bytedata);
 
-                
+                pictureBox3.Image = Image.FromStream(stm);
             }
             else
             {
@@ -283,9 +304,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 lblCantidad4.Text = dataTable.Rows[i][1].ToString();
 
                 byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[0]["imagen"]);
-                
+                MemoryStream stm = new MemoryStream(bytedata);
 
-                
+                pictureBox4.Image = Image.FromStream(stm);
             }
             else
             {
@@ -319,19 +340,27 @@ namespace Proyecto_de_desarrolo.Formularios
             if (pictureBox1.Visible)
             {
                 i--;
+
             }
+            j1 = j1 - 8;
             if (pictureBox2.Visible)
             {
                 i--;
+
             }
+            j2 = j2 - 8;
             if (pictureBox3.Visible)
             {
                 i--;
+
             }
+            j3 = j3 - 8;
             if (pictureBox4.Visible)
             {
                 i--;
+
             }
+            j4 = j4 - 8;
 
 
             i = i - 4;
@@ -341,26 +370,9 @@ namespace Proyecto_de_desarrolo.Formularios
             Cargarpedido();
         }
 
-        private void btnTerminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnsiguiente_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void frmCarrito_Load_1(object sender, EventArgs e)
         {
-            Cargarpedido();
-            lblTotal.Text = Obtenertotal().ToString();
-
+            
         }
 
         private void btnsiguiente_Click_1(object sender, EventArgs e)
@@ -368,6 +380,80 @@ namespace Proyecto_de_desarrolo.Formularios
             cont_pag++;
             y = true;
             Cargarpedido();
+        }
+        public void eliminarcompra(int posicion)
+        {
+            clsPersonasid id = new clsPersonasid();
+            Cconexion conexion = new Cconexion();
+            SqlConnection cn = conexion.leer();
+            string consulta2 = "Select Carrito_ID from Carritos where Usuarios_ID='" + id.getcodUsu() + "'";
+            SqlCommand comando2 = new SqlCommand(consulta2, cn);
+            SqlDataAdapter DA2 = new SqlDataAdapter(comando2);
+            DataTable dataTable2 = new DataTable();
+            DA2.Fill(dataTable2);
+
+            string eliminar = "Delete from Carritos where Carrito_ID='" + dataTable2.Rows[posicion][0] + "'";
+            SqlCommand comandoeliminar = new SqlCommand(eliminar, cn);
+            comandoeliminar.ExecuteNonQuery();
+            MessageBox.Show("Se elimino correctamente");
+            i = -1;
+            cont_pag = 1;
+
+
+
+        }
+
+        private void btnQuitar1_Click(object sender, EventArgs e)
+        {
+            eliminarcompra(j1);
+            j1 = -4; j2 = -3; j3 = -2; j4 = -1;
+            Cargarpedido();
+            Obtenertotal();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQuitar2_Click(object sender, EventArgs e)
+        {
+            eliminarcompra(j2);
+            j1 = -4; j2 = -3; j3 = -2; j4 = -1;
+            Cargarpedido();
+            Obtenertotal();
+        }
+
+        private void btnQuitar3_Click(object sender, EventArgs e)
+        {
+            eliminarcompra(j3);
+            j1 = -4; j2 = -3; j3 = -2; j4 = -1;
+            Cargarpedido();
+            Obtenertotal();
+        }
+
+        private void btnQuitar4_Click(object sender, EventArgs e)
+        {
+            eliminarcompra(j4);
+            j1 = -4; j2 = -3; j3 = -2; j4 = -1;
+            Cargarpedido();
+            Obtenertotal();
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTerminar_Click(object sender, EventArgs e)
+        {
+            frmDetallesCliente frmdetalles = new frmDetallesCliente(this);
+            frmdetalles.Show();
         }
     }
 }
