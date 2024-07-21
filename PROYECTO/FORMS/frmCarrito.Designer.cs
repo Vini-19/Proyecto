@@ -63,6 +63,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Location = new System.Drawing.Point(261, 99);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -70,37 +71,38 @@ namespace Proyecto_de_desarrolo.Formularios
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblNombre1
             // 
             this.lblNombre1.AutoSize = true;
-            this.lblNombre1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre1.Location = new System.Drawing.Point(261, 197);
             this.lblNombre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(55, 16);
+            this.lblNombre1.Size = new System.Drawing.Size(58, 15);
             this.lblNombre1.TabIndex = 1;
             this.lblNombre1.Text = "Nombre";
             // 
             // lblPrecio1
             // 
             this.lblPrecio1.AutoSize = true;
-            this.lblPrecio1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio1.Location = new System.Drawing.Point(261, 224);
             this.lblPrecio1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio1.Name = "lblPrecio1";
-            this.lblPrecio1.Size = new System.Drawing.Size(44, 16);
+            this.lblPrecio1.Size = new System.Drawing.Size(48, 15);
             this.lblPrecio1.TabIndex = 2;
             this.lblPrecio1.Text = "Precio";
             // 
             // lblCantidad1
             // 
             this.lblCantidad1.AutoSize = true;
-            this.lblCantidad1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCantidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblCantidad1.Location = new System.Drawing.Point(261, 255);
             this.lblCantidad1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad1.Name = "lblCantidad1";
-            this.lblCantidad1.Size = new System.Drawing.Size(58, 16);
+            this.lblCantidad1.Size = new System.Drawing.Size(64, 15);
             this.lblCantidad1.TabIndex = 3;
             this.lblCantidad1.Text = "Cantidad";
             // 
@@ -125,6 +127,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnQuitar1.TabIndex = 6;
             this.btnQuitar1.Text = "Eliminar";
             this.btnQuitar1.UseVisualStyleBackColor = false;
+            this.btnQuitar1.Click += new System.EventHandler(this.btnQuitar1_Click);
             // 
             // btnTerminar
             // 
@@ -147,6 +150,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnQuitar2
             // 
@@ -159,37 +163,38 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnQuitar2.TabIndex = 12;
             this.btnQuitar2.Text = "Eliminar";
             this.btnQuitar2.UseVisualStyleBackColor = false;
+            this.btnQuitar2.Click += new System.EventHandler(this.btnQuitar2_Click);
             // 
             // lblCantidad2
             // 
             this.lblCantidad2.AutoSize = true;
-            this.lblCantidad2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCantidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblCantidad2.Location = new System.Drawing.Point(396, 255);
             this.lblCantidad2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad2.Name = "lblCantidad2";
-            this.lblCantidad2.Size = new System.Drawing.Size(58, 16);
+            this.lblCantidad2.Size = new System.Drawing.Size(64, 15);
             this.lblCantidad2.TabIndex = 11;
             this.lblCantidad2.Text = "Cantidad";
             // 
             // lblPrecio2
             // 
             this.lblPrecio2.AutoSize = true;
-            this.lblPrecio2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio2.Location = new System.Drawing.Point(396, 224);
             this.lblPrecio2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio2.Name = "lblPrecio2";
-            this.lblPrecio2.Size = new System.Drawing.Size(44, 16);
+            this.lblPrecio2.Size = new System.Drawing.Size(48, 15);
             this.lblPrecio2.TabIndex = 10;
             this.lblPrecio2.Text = "Precio";
             // 
             // lblNombre2
             // 
             this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre2.Location = new System.Drawing.Point(396, 197);
             this.lblNombre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(55, 16);
+            this.lblNombre2.Size = new System.Drawing.Size(58, 15);
             this.lblNombre2.TabIndex = 9;
             this.lblNombre2.Text = "Nombre";
             // 
@@ -204,37 +209,38 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnQuitar3.TabIndex = 16;
             this.btnQuitar3.Text = "Eliminar";
             this.btnQuitar3.UseVisualStyleBackColor = false;
+            this.btnQuitar3.Click += new System.EventHandler(this.btnQuitar3_Click);
             // 
             // lblCantidad3
             // 
             this.lblCantidad3.AutoSize = true;
-            this.lblCantidad3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCantidad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblCantidad3.Location = new System.Drawing.Point(531, 255);
             this.lblCantidad3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad3.Name = "lblCantidad3";
-            this.lblCantidad3.Size = new System.Drawing.Size(58, 16);
+            this.lblCantidad3.Size = new System.Drawing.Size(64, 15);
             this.lblCantidad3.TabIndex = 15;
             this.lblCantidad3.Text = "Cantidad";
             // 
             // lblPrecio3
             // 
             this.lblPrecio3.AutoSize = true;
-            this.lblPrecio3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio3.Location = new System.Drawing.Point(531, 224);
             this.lblPrecio3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio3.Name = "lblPrecio3";
-            this.lblPrecio3.Size = new System.Drawing.Size(44, 16);
+            this.lblPrecio3.Size = new System.Drawing.Size(48, 15);
             this.lblPrecio3.TabIndex = 14;
             this.lblPrecio3.Text = "Precio";
             // 
             // lblNombre3
             // 
             this.lblNombre3.AutoSize = true;
-            this.lblNombre3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre3.Location = new System.Drawing.Point(531, 197);
             this.lblNombre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre3.Name = "lblNombre3";
-            this.lblNombre3.Size = new System.Drawing.Size(55, 16);
+            this.lblNombre3.Size = new System.Drawing.Size(58, 15);
             this.lblNombre3.TabIndex = 13;
             this.lblNombre3.Text = "Nombre";
             // 
@@ -247,6 +253,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.btnQuitar3_Click);
             // 
             // pictureBox4
             // 
@@ -269,37 +276,38 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnQuitar4.TabIndex = 21;
             this.btnQuitar4.Text = "Eliminar";
             this.btnQuitar4.UseVisualStyleBackColor = false;
+            this.btnQuitar4.Click += new System.EventHandler(this.btnQuitar4_Click);
             // 
             // lblCantidad4
             // 
             this.lblCantidad4.AutoSize = true;
-            this.lblCantidad4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCantidad4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblCantidad4.Location = new System.Drawing.Point(674, 255);
             this.lblCantidad4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad4.Name = "lblCantidad4";
-            this.lblCantidad4.Size = new System.Drawing.Size(58, 16);
+            this.lblCantidad4.Size = new System.Drawing.Size(64, 15);
             this.lblCantidad4.TabIndex = 20;
             this.lblCantidad4.Text = "Cantidad";
             // 
             // lblPrecio4
             // 
             this.lblPrecio4.AutoSize = true;
-            this.lblPrecio4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio4.Location = new System.Drawing.Point(674, 224);
             this.lblPrecio4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio4.Name = "lblPrecio4";
-            this.lblPrecio4.Size = new System.Drawing.Size(44, 16);
+            this.lblPrecio4.Size = new System.Drawing.Size(48, 15);
             this.lblPrecio4.TabIndex = 19;
             this.lblPrecio4.Text = "Precio";
             // 
             // lblNombre4
             // 
             this.lblNombre4.AutoSize = true;
-            this.lblNombre4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre4.Location = new System.Drawing.Point(674, 197);
             this.lblNombre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre4.Name = "lblNombre4";
-            this.lblNombre4.Size = new System.Drawing.Size(55, 16);
+            this.lblNombre4.Size = new System.Drawing.Size(58, 15);
             this.lblNombre4.TabIndex = 18;
             this.lblNombre4.Text = "Nombre";
             // 
@@ -313,6 +321,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnsiguiente.TabIndex = 23;
             this.btnsiguiente.Text = "Siguiente>>>";
             this.btnsiguiente.UseVisualStyleBackColor = false;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click_1);
             // 
             // anterior
             // 
@@ -324,6 +333,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.anterior.TabIndex = 24;
             this.anterior.Text = "<<<Anterior";
             this.anterior.UseVisualStyleBackColor = false;
+            this.anterior.Click += new System.EventHandler(this.anterior_Click);
             // 
             // frmCarrito
             // 
@@ -357,6 +367,8 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmCarrito";
             this.Text = "frmCarrito";
+            this.Load += new System.EventHandler(this.frmCarrito_Load);
+            this.Click += new System.EventHandler(this.frmCarrito_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

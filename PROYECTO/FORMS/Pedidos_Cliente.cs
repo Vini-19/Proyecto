@@ -417,7 +417,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
                 SqlCommand comando = new SqlCommand(consulta, cn);
 
-
+               
 
 
                 comando.ExecuteNonQuery();

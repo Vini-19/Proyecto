@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,43 +26,27 @@ namespace Proyecto_de_desarrolo.Formularios
         {
 
 
-            clsPersonasid usu = new clsPersonasid();
-            string usuarioId = usu.getcodUsu();
+        }
+        private frmCarrito Formulario1;
+        public frmDetallesCliente(frmCarrito form1)
+        {
+            InitializeComponent();
+            this.Formulario1 = form1; // Asignamos la referencia recibida a nuestra variable local
+        }
 
-            if (txtNombre.Text == "" || txtIdentidad.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == "")
+        // Método para llamar a actualizar en Formulario1
+        private void LlamarActualizarFormulario1()
+        {
+            if (Formulario1 != null)
             {
-                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                return;
-
+                Formulario1.Actualizar(); // Llamamos al método actualizar en la instancia de Formulario1
             }
             else
             {
-                DataTable carrito = ObtenerDatosCarrito(usuarioId);
-                string nombreCliente = txtNombre.Text;
-                string numeroIdentidad = txtIdentidad.Text;
-                string direccion = txtDireccion.Text;
-                string telefono = txtTelefono.Text;
-
-                if (errorProvider1.GetError(txtNombre) == "" && errorProvider1.GetError(txtIdentidad) == "" && errorProvider1.GetError(txtDireccion) == "" && errorProvider1.GetError(txtTelefono) == "")
-                {
-                    // Insertar los datos en la tabla de Pedidos
-                    InsertarPedido(usuarioId, carrito, nombreCliente, numeroIdentidad, direccion, telefono);
-
-                    // Mostrar mensaje de éxito
-                    MessageBox.Show("Pedido enviado correctamente.");
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
-                }
-
-
+                MessageBox.Show("olis2");
             }
-
-
-
         }
+
 
         private DataTable ObtenerDatosCarrito(string usuarioId)
         {
@@ -81,35 +66,40 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void InsertarPedido(string usuarioId, DataTable carrito, string nombreCliente, string numeroIdentidad, string direccion, string telefono)
         {
-            Cconexion conexion = new Cconexion();
-            SqlConnection cn = conexion.leer();
+            Cconexion conexion = new Cconexion(); 
+            clsPersonasid usuario =new clsPersonasid();
+           
 
-            foreach (DataRow row in carrito.Rows)
+            try
             {
-                string consultaCarritoID = "SELECT TOP 1 Carrito_ID FROM Carritos WHERE Usuarios_ID = @UsuarioID AND estado = 1";
-                SqlCommand comandoCarritoID = new SqlCommand(consultaCarritoID, cn);
-                comandoCarritoID.Parameters.AddWithValue("@UsuarioID", usuarioId);
-                int carritoID = (int)comandoCarritoID.ExecuteScalar();
+                using (SqlConnection cn = conexion.leer())
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+
+                    SqlCommand comandoMandarPedido = new SqlCommand("CrearPedido", cn);
+                  
+                    comandoMandarPedido.CommandType = CommandType.StoredProcedure;
+                    comandoMandarPedido.Parameters.AddWithValue("@NombreCliente",nombreCliente);
+                    comandoMandarPedido.Parameters.AddWithValue("@numeroIdentidad", numeroIdentidad);
+                    comandoMandarPedido.Parameters.AddWithValue("@Direccion",direccion);
+                    comandoMandarPedido.Parameters.AddWithValue("@telefono", telefono);
+                    comandoMandarPedido.Parameters.AddWithValue("@usuarioID", usuario.getcodUsu());
+
+                    comandoMandarPedido.ExecuteNonQuery();
+
+                    MessageBox.Show("Se agrego su pedido correctamente");
+
+                    LlamarActualizarFormulario1();
 
 
-
-                string consulta = @"INSERT INTO Pedidos 
-                            (Nombre_Cliente, Numero_Identidad, Direccion, Telefono, Carrito_ID, Productos_ID, Usuarios_ID, Cantidad, Fecha, Estado) 
-                            VALUES 
-                            (@NombreCliente, @NumeroIdentidad, @Direccion, @Telefono, @CarritoID, @ProductoID, @UsuarioID, @Cantidad, @Fecha, @Estado)";
-                SqlCommand comando = new SqlCommand(consulta, cn);
-                comando.Parameters.AddWithValue("@NombreCliente", nombreCliente);
-                comando.Parameters.AddWithValue("@NumeroIdentidad", numeroIdentidad);
-                comando.Parameters.AddWithValue("@Direccion", direccion);
-                comando.Parameters.AddWithValue("@Telefono", telefono);
-                comando.Parameters.AddWithValue("@CarritoID", carritoID);
-                comando.Parameters.AddWithValue("@ProductoID", (int)row["Productos_ID"]);
-                comando.Parameters.AddWithValue("@UsuarioID", usuarioId);
-                comando.Parameters.AddWithValue("@Cantidad", (int)row["cantidad"]);
-                comando.Parameters.AddWithValue("@Fecha", DateTime.Now);
-                comando.Parameters.AddWithValue("@Estado", 1);
-
-                comando.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar conectar: " + ex.Message);
             }
         }
 
@@ -167,7 +157,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 {
                     MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
                 }
-
+                
 
             }
         }

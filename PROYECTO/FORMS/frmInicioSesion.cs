@@ -91,8 +91,22 @@ namespace PROYECTO
                 DataTable dataTable = new DataTable();
 
 
+                DA.Fill(dataTable);
 
-                
+                if (dataTable.Rows.Count > 0)
+                {
+                    cod = dataTable.Rows[0][0].ToString();
+                    per.setcodUsu(cod);
+                }
+                else
+                {
+                    txtUsuario.Text = "";
+                    txtContra.Text = "";
+                    MessageBox.Show("Datos incorrectos. Por favor revisar datos.");
+                    return;
+                }
+
+
 
             }
 

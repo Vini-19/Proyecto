@@ -75,7 +75,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(269, 66);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 114);
             this.button1.TabIndex = 0;
@@ -87,7 +87,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnsiguiente.BackColor = System.Drawing.Color.Aquamarine;
             this.btnsiguiente.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.btnsiguiente.Location = new System.Drawing.Point(609, 492);
-            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(118, 29);
             this.btnsiguiente.TabIndex = 6;
@@ -100,7 +100,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.anterior.BackColor = System.Drawing.Color.Aquamarine;
             this.anterior.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.anterior.Location = new System.Drawing.Point(277, 492);
-            this.anterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.anterior.Margin = new System.Windows.Forms.Padding(2);
             this.anterior.Name = "anterior";
             this.anterior.Size = new System.Drawing.Size(110, 29);
             this.anterior.TabIndex = 7;
@@ -111,7 +111,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(431, 66);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 114);
             this.button2.TabIndex = 8;
@@ -121,7 +121,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(595, 66);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 114);
             this.button3.TabIndex = 9;
@@ -131,7 +131,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(269, 269);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(130, 122);
             this.button4.TabIndex = 10;
@@ -141,7 +141,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(431, 269);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(131, 122);
             this.button5.TabIndex = 11;
@@ -151,7 +151,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(595, 269);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(132, 122);
             this.button6.TabIndex = 12;
@@ -161,132 +161,132 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblNombre1
             // 
             this.lblNombre1.AutoSize = true;
-            this.lblNombre1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre1.Location = new System.Drawing.Point(277, 191);
             this.lblNombre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre1.Size = new System.Drawing.Size(47, 15);
             this.lblNombre1.TabIndex = 13;
             this.lblNombre1.Text = "label1";
             // 
             // lblNombre2
             // 
             this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre2.Location = new System.Drawing.Point(440, 191);
             this.lblNombre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre2.Size = new System.Drawing.Size(47, 15);
             this.lblNombre2.TabIndex = 14;
             this.lblNombre2.Text = "label1";
             // 
             // lblNombre3
             // 
             this.lblNombre3.AutoSize = true;
-            this.lblNombre3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre3.Location = new System.Drawing.Point(609, 191);
             this.lblNombre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre3.Name = "lblNombre3";
-            this.lblNombre3.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre3.Size = new System.Drawing.Size(47, 15);
             this.lblNombre3.TabIndex = 15;
             this.lblNombre3.Text = "label1";
             // 
             // lblNombre4
             // 
             this.lblNombre4.AutoSize = true;
-            this.lblNombre4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre4.Location = new System.Drawing.Point(277, 403);
             this.lblNombre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre4.Name = "lblNombre4";
-            this.lblNombre4.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre4.Size = new System.Drawing.Size(47, 15);
             this.lblNombre4.TabIndex = 16;
             this.lblNombre4.Text = "label1";
             // 
             // lblNombre5
             // 
             this.lblNombre5.AutoSize = true;
-            this.lblNombre5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre5.Location = new System.Drawing.Point(440, 403);
             this.lblNombre5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre5.Name = "lblNombre5";
-            this.lblNombre5.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre5.Size = new System.Drawing.Size(47, 15);
             this.lblNombre5.TabIndex = 17;
             this.lblNombre5.Text = "label1";
             // 
             // lblNombre6
             // 
             this.lblNombre6.AutoSize = true;
-            this.lblNombre6.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre6.Location = new System.Drawing.Point(609, 403);
             this.lblNombre6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre6.Name = "lblNombre6";
-            this.lblNombre6.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre6.Size = new System.Drawing.Size(47, 15);
             this.lblNombre6.TabIndex = 18;
             this.lblNombre6.Text = "label1";
             // 
             // lblPrecio1
             // 
             this.lblPrecio1.AutoSize = true;
-            this.lblPrecio1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio1.Location = new System.Drawing.Point(277, 214);
             this.lblPrecio1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio1.Name = "lblPrecio1";
-            this.lblPrecio1.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio1.Size = new System.Drawing.Size(47, 15);
             this.lblPrecio1.TabIndex = 19;
             this.lblPrecio1.Text = "label1";
             // 
             // lblPrecio2
             // 
             this.lblPrecio2.AutoSize = true;
-            this.lblPrecio2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio2.Location = new System.Drawing.Point(440, 214);
             this.lblPrecio2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio2.Name = "lblPrecio2";
-            this.lblPrecio2.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio2.Size = new System.Drawing.Size(47, 15);
             this.lblPrecio2.TabIndex = 20;
             this.lblPrecio2.Text = "label1";
             // 
             // lblPrecio3
             // 
             this.lblPrecio3.AutoSize = true;
-            this.lblPrecio3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio3.Location = new System.Drawing.Point(609, 214);
             this.lblPrecio3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio3.Name = "lblPrecio3";
-            this.lblPrecio3.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio3.Size = new System.Drawing.Size(47, 15);
             this.lblPrecio3.TabIndex = 21;
             this.lblPrecio3.Text = "label1";
             // 
             // lblPrecio4
             // 
             this.lblPrecio4.AutoSize = true;
-            this.lblPrecio4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio4.Location = new System.Drawing.Point(277, 428);
             this.lblPrecio4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio4.Name = "lblPrecio4";
-            this.lblPrecio4.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio4.Size = new System.Drawing.Size(47, 15);
             this.lblPrecio4.TabIndex = 22;
             this.lblPrecio4.Text = "label1";
             // 
             // lblPrecio5
             // 
             this.lblPrecio5.AutoSize = true;
-            this.lblPrecio5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio5.Location = new System.Drawing.Point(440, 428);
             this.lblPrecio5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio5.Name = "lblPrecio5";
-            this.lblPrecio5.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio5.Size = new System.Drawing.Size(47, 15);
             this.lblPrecio5.TabIndex = 23;
             this.lblPrecio5.Text = "label1";
             // 
             // lblPrecio6
             // 
             this.lblPrecio6.AutoSize = true;
-            this.lblPrecio6.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblPrecio6.Location = new System.Drawing.Point(609, 428);
             this.lblPrecio6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio6.Name = "lblPrecio6";
-            this.lblPrecio6.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio6.Size = new System.Drawing.Size(47, 15);
             this.lblPrecio6.TabIndex = 24;
             this.lblPrecio6.Text = "label1";
             // 
@@ -449,17 +449,18 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnCarrito
             // 
             this.btnCarrito.Location = new System.Drawing.Point(638, 46);
-            this.btnCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(2);
             this.btnCarrito.Name = "btnCarrito";
             this.btnCarrito.Size = new System.Drawing.Size(70, 19);
             this.btnCarrito.TabIndex = 43;
             this.btnCarrito.Text = "Carrito";
             this.btnCarrito.UseVisualStyleBackColor = true;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
             // 
             // txtCantidad1
             // 
             this.txtCantidad1.Location = new System.Drawing.Point(277, 238);
-            this.txtCantidad1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad1.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad1.Name = "txtCantidad1";
             this.txtCantidad1.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad1.TabIndex = 44;
@@ -467,7 +468,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCantidad2
             // 
             this.txtCantidad2.Location = new System.Drawing.Point(440, 238);
-            this.txtCantidad2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad2.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad2.Name = "txtCantidad2";
             this.txtCantidad2.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad2.TabIndex = 45;
@@ -475,7 +476,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCantidad3
             // 
             this.txtCantidad3.Location = new System.Drawing.Point(609, 240);
-            this.txtCantidad3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad3.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad3.Name = "txtCantidad3";
             this.txtCantidad3.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad3.TabIndex = 46;
@@ -483,7 +484,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCantidad4
             // 
             this.txtCantidad4.Location = new System.Drawing.Point(277, 462);
-            this.txtCantidad4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad4.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad4.Name = "txtCantidad4";
             this.txtCantidad4.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad4.TabIndex = 47;
@@ -491,7 +492,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCantidad5
             // 
             this.txtCantidad5.Location = new System.Drawing.Point(440, 462);
-            this.txtCantidad5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad5.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad5.Name = "txtCantidad5";
             this.txtCantidad5.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad5.TabIndex = 48;
@@ -499,7 +500,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCantidad6
             // 
             this.txtCantidad6.Location = new System.Drawing.Point(609, 459);
-            this.txtCantidad6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad6.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad6.Name = "txtCantidad6";
             this.txtCantidad6.Size = new System.Drawing.Size(34, 20);
             this.txtCantidad6.TabIndex = 49;
@@ -548,7 +549,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.anterior);
             this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pedidos_Cliente";
             this.Text = "Pedidos_Cliente";
             this.Load += new System.EventHandler(this.Pedidos_Cliente_Load_1);
