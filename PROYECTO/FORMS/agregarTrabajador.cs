@@ -670,5 +670,25 @@ namespace Proyecto_de_desarrolo.Formularios
 
             btnAgregar.Enabled = false;
         }
+
+        private void txtRTN_Trabajador_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtDNI_Trabajador_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtTelefono_Trabajador_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
     }
 }

@@ -122,7 +122,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         public void DataGridView()
         {
-            string consultaSql = "SELECT PersonasID,RTN_Persona, DNI_Persona, Roles_ID, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion, Categoria FROM Personas WHERE Roles_ID = 4";
+            string consultaSql = "SELECT RTN_Persona, DNI_Persona,Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion, Categoria FROM Personas WHERE Roles_ID = 4";
 
             dgv_Prov.DataSource = null;
             dgv_Prov.Rows.Clear();
@@ -141,10 +141,9 @@ namespace Proyecto_de_desarrolo.Formularios
 
                 dgv_Prov.DataSource = dataSet.Tables["Personas"];
 
-                dgv_Prov.Columns["PersonasID"].HeaderText = "ID Proveedores";
+               
                 dgv_Prov.Columns["RTN_Persona"].HeaderText = "RTN";
                 dgv_Prov.Columns["DNI_Persona"].HeaderText = "DNI";
-                dgv_Prov.Columns["Roles_ID"].HeaderText = "Rol";
                 dgv_Prov.Columns["Primer_Nombre"].HeaderText = "Nombre";
                 dgv_Prov.Columns["Estado"].HeaderText = "Estado";
                 dgv_Prov.Columns["Numero_Telefono"].HeaderText = "Telefono";
@@ -498,16 +497,30 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void dgv_Prov_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-                txtRTN_Prov.Text = dgv_Prov.CurrentRow.Cells[1].Value.ToString();
-                txtDNI_Prov.Text = dgv_Prov.CurrentRow.Cells[2].Value.ToString();
-                txtNombre_Prov.Text = dgv_Prov.CurrentRow.Cells[4].Value.ToString();
-                txtTelefono_Prov.Text = dgv_Prov.CurrentRow.Cells[6].Value.ToString();
-                txtCorreo_Prov.Text = dgv_Prov.CurrentRow.Cells[7].Value.ToString();
-                txtDireccion_Prov.Text = dgv_Prov.CurrentRow.Cells[8].Value.ToString();
+                txtRTN_Prov.Text = dgv_Prov.CurrentRow.Cells[0].Value.ToString();
+                txtDNI_Prov.Text = dgv_Prov.CurrentRow.Cells[1].Value.ToString();
+                txtNombre_Prov.Text = dgv_Prov.CurrentRow.Cells[2].Value.ToString();
+                txtTelefono_Prov.Text = dgv_Prov.CurrentRow.Cells[4].Value.ToString();
+                txtCorreo_Prov.Text = dgv_Prov.CurrentRow.Cells[5].Value.ToString();
+                txtDireccion_Prov.Text = dgv_Prov.CurrentRow.Cells[6].Value.ToString();
 
                 btnAgregar.Enabled = false;
             
+        }
+
+        private void txtRTN_Prov_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtDNI_Prov_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtTelefono_Prov_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
         }
     }
 }

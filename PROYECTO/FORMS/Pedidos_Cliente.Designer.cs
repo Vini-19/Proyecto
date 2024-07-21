@@ -74,22 +74,26 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(269, 66);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(288, 81);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 114);
+            this.button1.Size = new System.Drawing.Size(173, 140);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnsiguiente
             // 
-            this.btnsiguiente.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnsiguiente.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnsiguiente.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnsiguiente.FlatAppearance.BorderSize = 4;
+            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsiguiente.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.btnsiguiente.Location = new System.Drawing.Point(609, 492);
-            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsiguiente.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnsiguiente.Location = new System.Drawing.Point(898, 625);
+            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(118, 29);
+            this.btnsiguiente.Size = new System.Drawing.Size(163, 51);
             this.btnsiguiente.TabIndex = 6;
             this.btnsiguiente.Text = "Siguiente >>>";
             this.btnsiguiente.UseVisualStyleBackColor = false;
@@ -97,12 +101,16 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // anterior
             // 
-            this.anterior.BackColor = System.Drawing.Color.Aquamarine;
+            this.anterior.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.anterior.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.anterior.FlatAppearance.BorderSize = 4;
+            this.anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.anterior.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.anterior.Location = new System.Drawing.Point(277, 492);
-            this.anterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.anterior.ForeColor = System.Drawing.Color.Firebrick;
+            this.anterior.Location = new System.Drawing.Point(242, 625);
+            this.anterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.anterior.Name = "anterior";
-            this.anterior.Size = new System.Drawing.Size(110, 29);
+            this.anterior.Size = new System.Drawing.Size(149, 51);
             this.anterior.TabIndex = 7;
             this.anterior.Text = "<<<Anterior";
             this.anterior.UseVisualStyleBackColor = false;
@@ -110,50 +118,50 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(431, 66);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(562, 81);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 114);
+            this.button2.Size = new System.Drawing.Size(175, 140);
             this.button2.TabIndex = 8;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(595, 66);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(833, 81);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 114);
+            this.button3.Size = new System.Drawing.Size(176, 140);
             this.button3.TabIndex = 9;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(269, 269);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(288, 331);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 122);
+            this.button4.Size = new System.Drawing.Size(173, 150);
             this.button4.TabIndex = 10;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(431, 269);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Location = new System.Drawing.Point(562, 331);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 122);
+            this.button5.Size = new System.Drawing.Size(175, 150);
             this.button5.TabIndex = 11;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(595, 269);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Location = new System.Drawing.Point(833, 331);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(132, 122);
+            this.button6.Size = new System.Drawing.Size(176, 150);
             this.button6.TabIndex = 12;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
@@ -161,143 +169,134 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblNombre1
             // 
             this.lblNombre1.AutoSize = true;
-            this.lblNombre1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre1.Location = new System.Drawing.Point(277, 191);
-            this.lblNombre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre1.Location = new System.Drawing.Point(285, 235);
             this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre1.Size = new System.Drawing.Size(50, 16);
             this.lblNombre1.TabIndex = 13;
             this.lblNombre1.Text = "label1";
             // 
             // lblNombre2
             // 
             this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre2.Location = new System.Drawing.Point(440, 191);
-            this.lblNombre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre2.Location = new System.Drawing.Point(559, 235);
             this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre2.Size = new System.Drawing.Size(50, 16);
             this.lblNombre2.TabIndex = 14;
             this.lblNombre2.Text = "label1";
             // 
             // lblNombre3
             // 
             this.lblNombre3.AutoSize = true;
-            this.lblNombre3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre3.Location = new System.Drawing.Point(609, 191);
-            this.lblNombre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre3.Location = new System.Drawing.Point(830, 235);
             this.lblNombre3.Name = "lblNombre3";
-            this.lblNombre3.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre3.Size = new System.Drawing.Size(50, 16);
             this.lblNombre3.TabIndex = 15;
             this.lblNombre3.Text = "label1";
             // 
             // lblNombre4
             // 
             this.lblNombre4.AutoSize = true;
-            this.lblNombre4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre4.Location = new System.Drawing.Point(277, 403);
-            this.lblNombre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre4.Location = new System.Drawing.Point(288, 496);
             this.lblNombre4.Name = "lblNombre4";
-            this.lblNombre4.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre4.Size = new System.Drawing.Size(50, 16);
             this.lblNombre4.TabIndex = 16;
             this.lblNombre4.Text = "label1";
             // 
             // lblNombre5
             // 
             this.lblNombre5.AutoSize = true;
-            this.lblNombre5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre5.Location = new System.Drawing.Point(440, 403);
-            this.lblNombre5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre5.Location = new System.Drawing.Point(559, 496);
             this.lblNombre5.Name = "lblNombre5";
-            this.lblNombre5.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre5.Size = new System.Drawing.Size(50, 16);
             this.lblNombre5.TabIndex = 17;
             this.lblNombre5.Text = "label1";
             // 
             // lblNombre6
             // 
             this.lblNombre6.AutoSize = true;
-            this.lblNombre6.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre6.Location = new System.Drawing.Point(609, 403);
-            this.lblNombre6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre6.Location = new System.Drawing.Point(833, 496);
             this.lblNombre6.Name = "lblNombre6";
-            this.lblNombre6.Size = new System.Drawing.Size(40, 16);
+            this.lblNombre6.Size = new System.Drawing.Size(50, 16);
             this.lblNombre6.TabIndex = 18;
             this.lblNombre6.Text = "label1";
             // 
             // lblPrecio1
             // 
             this.lblPrecio1.AutoSize = true;
-            this.lblPrecio1.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio1.Location = new System.Drawing.Point(277, 214);
-            this.lblPrecio1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio1.Location = new System.Drawing.Point(285, 263);
             this.lblPrecio1.Name = "lblPrecio1";
-            this.lblPrecio1.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio1.Size = new System.Drawing.Size(50, 16);
             this.lblPrecio1.TabIndex = 19;
             this.lblPrecio1.Text = "label1";
             // 
             // lblPrecio2
             // 
             this.lblPrecio2.AutoSize = true;
-            this.lblPrecio2.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio2.Location = new System.Drawing.Point(440, 214);
-            this.lblPrecio2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio2.Location = new System.Drawing.Point(559, 263);
             this.lblPrecio2.Name = "lblPrecio2";
-            this.lblPrecio2.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio2.Size = new System.Drawing.Size(50, 16);
             this.lblPrecio2.TabIndex = 20;
             this.lblPrecio2.Text = "label1";
             // 
             // lblPrecio3
             // 
             this.lblPrecio3.AutoSize = true;
-            this.lblPrecio3.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio3.Location = new System.Drawing.Point(609, 214);
-            this.lblPrecio3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio3.Location = new System.Drawing.Point(830, 263);
             this.lblPrecio3.Name = "lblPrecio3";
-            this.lblPrecio3.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio3.Size = new System.Drawing.Size(50, 16);
             this.lblPrecio3.TabIndex = 21;
             this.lblPrecio3.Text = "label1";
+            this.lblPrecio3.Click += new System.EventHandler(this.lblPrecio3_Click);
             // 
             // lblPrecio4
             // 
             this.lblPrecio4.AutoSize = true;
-            this.lblPrecio4.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio4.Location = new System.Drawing.Point(277, 428);
-            this.lblPrecio4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio4.Location = new System.Drawing.Point(288, 527);
             this.lblPrecio4.Name = "lblPrecio4";
-            this.lblPrecio4.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio4.Size = new System.Drawing.Size(50, 16);
             this.lblPrecio4.TabIndex = 22;
             this.lblPrecio4.Text = "label1";
             // 
             // lblPrecio5
             // 
             this.lblPrecio5.AutoSize = true;
-            this.lblPrecio5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio5.Location = new System.Drawing.Point(440, 428);
-            this.lblPrecio5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio5.Location = new System.Drawing.Point(559, 527);
             this.lblPrecio5.Name = "lblPrecio5";
-            this.lblPrecio5.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio5.Size = new System.Drawing.Size(50, 16);
             this.lblPrecio5.TabIndex = 23;
             this.lblPrecio5.Text = "label1";
             // 
             // lblPrecio6
             // 
             this.lblPrecio6.AutoSize = true;
-            this.lblPrecio6.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio6.Location = new System.Drawing.Point(609, 428);
-            this.lblPrecio6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecio6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio6.Location = new System.Drawing.Point(833, 527);
             this.lblPrecio6.Name = "lblPrecio6";
-            this.lblPrecio6.Size = new System.Drawing.Size(40, 16);
+            this.lblPrecio6.Size = new System.Drawing.Size(50, 16);
             this.lblPrecio6.TabIndex = 24;
             this.lblPrecio6.Text = "label1";
             // 
             // btnMas1
             // 
-            this.btnMas1.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnMas1.BackColor = System.Drawing.Color.Firebrick;
+            this.btnMas1.FlatAppearance.BorderSize = 0;
+            this.btnMas1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMas1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas1.Location = new System.Drawing.Point(315, 233);
-            this.btnMas1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas1.Location = new System.Drawing.Point(350, 287);
+            this.btnMas1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMas1.Name = "btnMas1";
-            this.btnMas1.Size = new System.Drawing.Size(31, 28);
+            this.btnMas1.Size = new System.Drawing.Size(41, 34);
             this.btnMas1.TabIndex = 26;
             this.btnMas1.Text = "+";
             this.btnMas1.UseVisualStyleBackColor = false;
@@ -305,12 +304,13 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMenos1
             // 
-            this.btnMenos1.BackColor = System.Drawing.Color.Maroon;
+            this.btnMenos1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnMenos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenos1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos1.Location = new System.Drawing.Point(351, 233);
-            this.btnMenos1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos1.Location = new System.Drawing.Point(397, 286);
+            this.btnMenos1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenos1.Name = "btnMenos1";
-            this.btnMenos1.Size = new System.Drawing.Size(31, 28);
+            this.btnMenos1.Size = new System.Drawing.Size(41, 34);
             this.btnMenos1.TabIndex = 27;
             this.btnMenos1.Text = "-";
             this.btnMenos1.UseVisualStyleBackColor = false;
@@ -318,12 +318,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMenos2
             // 
-            this.btnMenos2.BackColor = System.Drawing.Color.Maroon;
+            this.btnMenos2.BackColor = System.Drawing.Color.White;
+            this.btnMenos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenos2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos2.Location = new System.Drawing.Point(512, 233);
-            this.btnMenos2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMenos2.Location = new System.Drawing.Point(668, 286);
+            this.btnMenos2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenos2.Name = "btnMenos2";
-            this.btnMenos2.Size = new System.Drawing.Size(31, 28);
+            this.btnMenos2.Size = new System.Drawing.Size(41, 34);
             this.btnMenos2.TabIndex = 28;
             this.btnMenos2.Text = "-";
             this.btnMenos2.UseVisualStyleBackColor = false;
@@ -331,12 +333,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMas2
             // 
-            this.btnMas2.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnMas2.BackColor = System.Drawing.Color.Firebrick;
+            this.btnMas2.FlatAppearance.BorderSize = 0;
+            this.btnMas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMas2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas2.Location = new System.Drawing.Point(477, 233);
-            this.btnMas2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas2.Location = new System.Drawing.Point(621, 286);
+            this.btnMas2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMas2.Name = "btnMas2";
-            this.btnMas2.Size = new System.Drawing.Size(31, 28);
+            this.btnMas2.Size = new System.Drawing.Size(41, 34);
             this.btnMas2.TabIndex = 30;
             this.btnMas2.Text = "+";
             this.btnMas2.UseVisualStyleBackColor = false;
@@ -344,12 +348,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMas3
             // 
-            this.btnMas3.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnMas3.BackColor = System.Drawing.Color.Firebrick;
+            this.btnMas3.FlatAppearance.BorderSize = 0;
+            this.btnMas3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMas3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas3.Location = new System.Drawing.Point(647, 237);
-            this.btnMas3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas3.Location = new System.Drawing.Point(898, 287);
+            this.btnMas3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMas3.Name = "btnMas3";
-            this.btnMas3.Size = new System.Drawing.Size(31, 28);
+            this.btnMas3.Size = new System.Drawing.Size(41, 34);
             this.btnMas3.TabIndex = 32;
             this.btnMas3.Text = "+";
             this.btnMas3.UseVisualStyleBackColor = false;
@@ -357,12 +363,13 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMenos3
             // 
-            this.btnMenos3.BackColor = System.Drawing.Color.Maroon;
+            this.btnMenos3.BackColor = System.Drawing.Color.White;
+            this.btnMenos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenos3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos3.Location = new System.Drawing.Point(683, 238);
-            this.btnMenos3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos3.Location = new System.Drawing.Point(945, 286);
+            this.btnMenos3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenos3.Name = "btnMenos3";
-            this.btnMenos3.Size = new System.Drawing.Size(31, 28);
+            this.btnMenos3.Size = new System.Drawing.Size(41, 34);
             this.btnMenos3.TabIndex = 33;
             this.btnMenos3.Text = "-";
             this.btnMenos3.UseVisualStyleBackColor = false;
@@ -370,12 +377,13 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMenos4
             // 
-            this.btnMenos4.BackColor = System.Drawing.Color.Maroon;
+            this.btnMenos4.BackColor = System.Drawing.Color.White;
+            this.btnMenos4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenos4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos4.Location = new System.Drawing.Point(351, 459);
-            this.btnMenos4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos4.Location = new System.Drawing.Point(397, 565);
+            this.btnMenos4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenos4.Name = "btnMenos4";
-            this.btnMenos4.Size = new System.Drawing.Size(31, 28);
+            this.btnMenos4.Size = new System.Drawing.Size(41, 34);
             this.btnMenos4.TabIndex = 36;
             this.btnMenos4.Text = "-";
             this.btnMenos4.UseVisualStyleBackColor = false;
@@ -383,12 +391,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMas4
             // 
-            this.btnMas4.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnMas4.BackColor = System.Drawing.Color.Firebrick;
+            this.btnMas4.FlatAppearance.BorderSize = 0;
+            this.btnMas4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMas4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas4.Location = new System.Drawing.Point(315, 459);
-            this.btnMas4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas4.Location = new System.Drawing.Point(350, 565);
+            this.btnMas4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMas4.Name = "btnMas4";
-            this.btnMas4.Size = new System.Drawing.Size(31, 28);
+            this.btnMas4.Size = new System.Drawing.Size(41, 34);
             this.btnMas4.TabIndex = 35;
             this.btnMas4.Text = "+";
             this.btnMas4.UseVisualStyleBackColor = false;
@@ -396,12 +406,13 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMenos5
             // 
-            this.btnMenos5.BackColor = System.Drawing.Color.Maroon;
+            this.btnMenos5.BackColor = System.Drawing.Color.White;
+            this.btnMenos5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenos5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos5.Location = new System.Drawing.Point(513, 459);
-            this.btnMenos5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos5.Location = new System.Drawing.Point(668, 565);
+            this.btnMenos5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenos5.Name = "btnMenos5";
-            this.btnMenos5.Size = new System.Drawing.Size(31, 28);
+            this.btnMenos5.Size = new System.Drawing.Size(41, 34);
             this.btnMenos5.TabIndex = 39;
             this.btnMenos5.Text = "-";
             this.btnMenos5.UseVisualStyleBackColor = false;
@@ -409,12 +420,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMas5
             // 
-            this.btnMas5.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnMas5.BackColor = System.Drawing.Color.Firebrick;
+            this.btnMas5.FlatAppearance.BorderSize = 0;
+            this.btnMas5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMas5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas5.Location = new System.Drawing.Point(477, 459);
-            this.btnMas5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas5.Location = new System.Drawing.Point(621, 565);
+            this.btnMas5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMas5.Name = "btnMas5";
-            this.btnMas5.Size = new System.Drawing.Size(31, 28);
+            this.btnMas5.Size = new System.Drawing.Size(41, 34);
             this.btnMas5.TabIndex = 38;
             this.btnMas5.Text = "+";
             this.btnMas5.UseVisualStyleBackColor = false;
@@ -422,12 +435,13 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMenos6
             // 
-            this.btnMenos6.BackColor = System.Drawing.Color.Maroon;
+            this.btnMenos6.BackColor = System.Drawing.Color.White;
+            this.btnMenos6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenos6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenos6.Location = new System.Drawing.Point(683, 459);
-            this.btnMenos6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMenos6.Location = new System.Drawing.Point(945, 565);
+            this.btnMenos6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenos6.Name = "btnMenos6";
-            this.btnMenos6.Size = new System.Drawing.Size(31, 28);
+            this.btnMenos6.Size = new System.Drawing.Size(41, 34);
             this.btnMenos6.TabIndex = 42;
             this.btnMenos6.Text = "-";
             this.btnMenos6.UseVisualStyleBackColor = false;
@@ -435,12 +449,14 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnMas6
             // 
-            this.btnMas6.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnMas6.BackColor = System.Drawing.Color.Firebrick;
+            this.btnMas6.FlatAppearance.BorderSize = 0;
+            this.btnMas6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMas6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMas6.Location = new System.Drawing.Point(647, 459);
-            this.btnMas6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMas6.Location = new System.Drawing.Point(898, 565);
+            this.btnMas6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMas6.Name = "btnMas6";
-            this.btnMas6.Size = new System.Drawing.Size(31, 28);
+            this.btnMas6.Size = new System.Drawing.Size(41, 34);
             this.btnMas6.TabIndex = 41;
             this.btnMas6.Text = "+";
             this.btnMas6.UseVisualStyleBackColor = false;
@@ -448,67 +464,76 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnCarrito
             // 
-            this.btnCarrito.Location = new System.Drawing.Point(638, 46);
-            this.btnCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCarrito.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarrito.ForeColor = System.Drawing.Color.White;
+            this.btnCarrito.Location = new System.Drawing.Point(898, 11);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(70, 19);
+            this.btnCarrito.Size = new System.Drawing.Size(131, 45);
             this.btnCarrito.TabIndex = 43;
             this.btnCarrito.Text = "Carrito";
-            this.btnCarrito.UseVisualStyleBackColor = true;
+            this.btnCarrito.UseVisualStyleBackColor = false;
             // 
             // txtCantidad1
             // 
-            this.txtCantidad1.Location = new System.Drawing.Point(277, 238);
-            this.txtCantidad1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad1.Location = new System.Drawing.Point(288, 293);
+            this.txtCantidad1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad1.Name = "txtCantidad1";
-            this.txtCantidad1.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad1.Size = new System.Drawing.Size(44, 22);
             this.txtCantidad1.TabIndex = 44;
+            this.txtCantidad1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad1_KeyPress_1);
             // 
             // txtCantidad2
             // 
-            this.txtCantidad2.Location = new System.Drawing.Point(440, 238);
-            this.txtCantidad2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad2.Location = new System.Drawing.Point(562, 293);
+            this.txtCantidad2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad2.Name = "txtCantidad2";
-            this.txtCantidad2.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad2.Size = new System.Drawing.Size(44, 22);
             this.txtCantidad2.TabIndex = 45;
+            this.txtCantidad2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad2_KeyPress_1);
             // 
             // txtCantidad3
             // 
-            this.txtCantidad3.Location = new System.Drawing.Point(609, 240);
-            this.txtCantidad3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad3.Location = new System.Drawing.Point(836, 295);
+            this.txtCantidad3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad3.Name = "txtCantidad3";
-            this.txtCantidad3.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad3.Size = new System.Drawing.Size(44, 22);
             this.txtCantidad3.TabIndex = 46;
+            this.txtCantidad3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad3_KeyPress_1);
             // 
             // txtCantidad4
             // 
-            this.txtCantidad4.Location = new System.Drawing.Point(277, 462);
-            this.txtCantidad4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad4.Location = new System.Drawing.Point(288, 574);
+            this.txtCantidad4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad4.Name = "txtCantidad4";
-            this.txtCantidad4.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad4.Size = new System.Drawing.Size(44, 22);
             this.txtCantidad4.TabIndex = 47;
+            this.txtCantidad4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad4_KeyPress_1);
             // 
             // txtCantidad5
             // 
-            this.txtCantidad5.Location = new System.Drawing.Point(440, 462);
-            this.txtCantidad5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad5.Location = new System.Drawing.Point(562, 574);
+            this.txtCantidad5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad5.Name = "txtCantidad5";
-            this.txtCantidad5.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad5.Size = new System.Drawing.Size(44, 22);
             this.txtCantidad5.TabIndex = 48;
+            this.txtCantidad5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad5_KeyPress_1);
             // 
             // txtCantidad6
             // 
-            this.txtCantidad6.Location = new System.Drawing.Point(609, 459);
-            this.txtCantidad6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad6.Location = new System.Drawing.Point(836, 565);
+            this.txtCantidad6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad6.Name = "txtCantidad6";
-            this.txtCantidad6.Size = new System.Drawing.Size(34, 20);
+            this.txtCantidad6.Size = new System.Drawing.Size(44, 22);
             this.txtCantidad6.TabIndex = 49;
+            this.txtCantidad6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad6_KeyPress_1);
             // 
             // Pedidos_Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 586);
+            this.ClientSize = new System.Drawing.Size(1357, 721);
             this.Controls.Add(this.txtCantidad6);
             this.Controls.Add(this.txtCantidad5);
             this.Controls.Add(this.txtCantidad4);
@@ -548,7 +573,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.anterior);
             this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Pedidos_Cliente";
             this.Text = "Pedidos_Cliente";
             this.Load += new System.EventHandler(this.Pedidos_Cliente_Load_1);

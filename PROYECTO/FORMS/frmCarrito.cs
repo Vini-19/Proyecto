@@ -346,6 +346,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnsiguiente_Click(object sender, EventArgs e)
         {
             

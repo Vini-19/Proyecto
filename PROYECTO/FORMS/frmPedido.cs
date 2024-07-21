@@ -552,6 +552,26 @@ namespace Proyecto_de_desarrolo
                 }
             }
         }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvProducto_CellClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Text = dgvProducto.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgvProducto.CurrentRow.Cells[2].Value.ToString();
+            txtPrecio.Text = dgvProducto.CurrentRow.Cells[4].Value.ToString();
+            txtNombre_Imagen.Text = dgvProducto.CurrentRow.Cells[5].Value.ToString();
+
+            btnAgregar.Enabled = false;
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
     }
 
 

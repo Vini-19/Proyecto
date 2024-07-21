@@ -183,7 +183,7 @@ namespace Proyecto_de_desarrolo.Formularios
         {
             modoEdicion = !modoEdicion; // Cambiar el estado de edición
             dataGridView1.ReadOnly = !modoEdicion; // Habilitar/deshabilitar edición según el estado
-            btnModificar.Text = modoEdicion ? "Desactivar Modificación" : "Activar Modificación";
+           
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -219,7 +219,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 }
             }
 
-            btnModificar.Text = modoEdicion ? "Desactivar Modificación" : "Activar Modificación";
+           
         }
 
         private void btnGuardar_Click_1(object sender, EventArgs e)

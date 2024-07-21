@@ -49,7 +49,7 @@ namespace Proyecto_de_desarrolo
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
-            formulario.BackColor = Color.IndianRed;
+            formulario.BackColor = Color.White;
             contenedor.Controls.Add(formulario);
             formulario.Show();
         }

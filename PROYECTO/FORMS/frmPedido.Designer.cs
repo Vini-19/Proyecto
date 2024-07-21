@@ -32,8 +32,7 @@ namespace Proyecto_de_desarrolo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvProducto = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -49,39 +48,21 @@ namespace Proyecto_de_desarrolo
             this.label3 = new System.Windows.Forms.Label();
             this.picProducto = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
+            this.dgvProducto = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // errorProvider1
             // 
-            this.panel1.Controls.Add(this.dgvProducto);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(160, 35);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 498);
-            this.panel1.TabIndex = 4;
-            // 
-            // dgvProducto
-            // 
-            this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducto.Location = new System.Drawing.Point(20, 265);
-            this.dgvProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvProducto.Name = "dgvProducto";
-            this.dgvProducto.ReadOnly = true;
-            this.dgvProducto.RowHeadersWidth = 51;
-            this.dgvProducto.Size = new System.Drawing.Size(656, 222);
-            this.dgvProducto.TabIndex = 6;
-            this.dgvProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellClick_1);
-            this.dgvProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellContentClick);
+            this.errorProvider1.ContainerControl = this;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Firebrick;
             this.panel2.Controls.Add(this.btnModificar);
             this.panel2.Controls.Add(this.btnLimpiar);
             this.panel2.Controls.Add(this.cmbCategoria);
@@ -96,19 +77,25 @@ namespace Proyecto_de_desarrolo
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.picProducto);
             this.panel2.Controls.Add(this.btnAgregar);
-            this.panel2.Location = new System.Drawing.Point(359, 8);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(59, 154);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(316, 252);
+            this.panel2.Size = new System.Drawing.Size(536, 446);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.SystemColors.Info;
-            this.btnModificar.Location = new System.Drawing.Point(212, 215);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.GrayText;
+            this.btnModificar.FlatAppearance.BorderSize = 4;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnModificar.Location = new System.Drawing.Point(218, 365);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(81, 28);
+            this.btnModificar.Size = new System.Drawing.Size(108, 34);
             this.btnModificar.TabIndex = 22;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -116,11 +103,16 @@ namespace Proyecto_de_desarrolo
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.SystemColors.Info;
-            this.btnLimpiar.Location = new System.Drawing.Point(121, 215);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.SystemColors.GrayText;
+            this.btnLimpiar.FlatAppearance.BorderSize = 4;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnLimpiar.Location = new System.Drawing.Point(372, 365);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(81, 28);
+            this.btnLimpiar.Size = new System.Drawing.Size(108, 34);
             this.btnLimpiar.TabIndex = 21;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -130,161 +122,192 @@ namespace Proyecto_de_desarrolo
             // 
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(172, 112);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbCategoria.Location = new System.Drawing.Point(55, 281);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(116, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(153, 24);
             this.cmbCategoria.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 145);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label7.Location = new System.Drawing.Point(254, 252);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 13);
+            this.label7.Size = new System.Drawing.Size(156, 16);
             this.label7.TabIndex = 19;
             this.label7.Text = "Nombre de la Imagen";
             // 
             // txtNombre_Imagen
             // 
-            this.txtNombre_Imagen.Location = new System.Drawing.Point(7, 160);
-            this.txtNombre_Imagen.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre_Imagen.Location = new System.Drawing.Point(257, 283);
+            this.txtNombre_Imagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre_Imagen.Name = "txtNombre_Imagen";
-            this.txtNombre_Imagen.Size = new System.Drawing.Size(149, 20);
+            this.txtNombre_Imagen.Size = new System.Drawing.Size(197, 22);
             this.txtNombre_Imagen.TabIndex = 18;
             this.txtNombre_Imagen.TextChanged += new System.EventHandler(this.txtNombre_Imagen_TextChanged_1);
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(172, 153);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.Location = new System.Drawing.Point(55, 211);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(116, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(153, 22);
             this.txtPrecio.TabIndex = 17;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged_1);
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(172, 71);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(55, 148);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(116, 20);
+            this.txtNombre.Size = new System.Drawing.Size(153, 22);
             this.txtNombre.TabIndex = 15;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged_1);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(172, 31);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Location = new System.Drawing.Point(55, 80);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(116, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(153, 22);
             this.txtCodigo.TabIndex = 14;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged_1);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(201, 97);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label6.Location = new System.Drawing.Point(52, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.Size = new System.Drawing.Size(75, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "Categoría";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(212, 138);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label5.Location = new System.Drawing.Point(52, 184);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Precio";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(159, 56);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.Location = new System.Drawing.Point(52, 120);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 13);
+            this.label4.Size = new System.Drawing.Size(125, 16);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Nombre de Producto/Corte";
+            this.label4.Text = "Nombre de Corte";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(188, 16);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label3.Location = new System.Drawing.Point(52, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(121, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Código de Barra";
             // 
             // picProducto
             // 
-            this.picProducto.Location = new System.Drawing.Point(7, 16);
-            this.picProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.picProducto.Location = new System.Drawing.Point(257, 32);
+            this.picProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picProducto.Name = "picProducto";
-            this.picProducto.Size = new System.Drawing.Size(148, 126);
+            this.picProducto.Size = new System.Drawing.Size(223, 201);
             this.picProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picProducto.TabIndex = 9;
             this.picProducto.TabStop = false;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.LightGreen;
-            this.btnAgregar.Location = new System.Drawing.Point(22, 215);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.BackColor = System.Drawing.Color.White;
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.SystemColors.GrayText;
+            this.btnAgregar.FlatAppearance.BorderSize = 4;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnAgregar.Location = new System.Drawing.Point(55, 365);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(81, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(108, 34);
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
-            // errorProvider1
+            // dgvProducto
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducto.Location = new System.Drawing.Point(630, 154);
+            this.dgvProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProducto.Name = "dgvProducto";
+            this.dgvProducto.ReadOnly = true;
+            this.dgvProducto.RowHeadersWidth = 51;
+            this.dgvProducto.Size = new System.Drawing.Size(785, 446);
+            this.dgvProducto.TabIndex = 7;
+            this.dgvProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellClick_2);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(623, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 40);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Catálogo";
             // 
             // frmPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 586);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientSize = new System.Drawing.Size(1888, 843);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvProducto);
+            this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPedido";
             this.Text = "frmPedido";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Panel panel1;
+        private ErrorProvider errorProvider1;
+        private DataGridView dgvProducto;
         private Panel panel2;
-        private Button btnAgregar;
-        private PictureBox picProducto;
-        private Label label5;
-        private Label label4;
-        private Label label3;
+        private Button btnModificar;
+        private Button btnLimpiar;
+        private ComboBox cmbCategoria;
+        private Label label7;
+        private TextBox txtNombre_Imagen;
         private TextBox txtPrecio;
         private TextBox txtNombre;
         private TextBox txtCodigo;
         private Label label6;
-        private Label label7;
-        private TextBox txtNombre_Imagen;
-        private ComboBox cmbCategoria;
-        private DataGridView dgvProducto;
-        private Button btnLimpiar;
-        private Button btnModificar;
-        private ErrorProvider errorProvider1;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private PictureBox picProducto;
+        private Button btnAgregar;
+        private Label label1;
     }
 }

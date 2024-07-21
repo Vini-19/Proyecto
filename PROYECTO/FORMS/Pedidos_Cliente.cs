@@ -1225,6 +1225,41 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
+        private void lblPrecio3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad1_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtCantidad2_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtCantidad3_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtCantidad4_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtCantidad5_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtCantidad6_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
         private void txtCantidad3_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);

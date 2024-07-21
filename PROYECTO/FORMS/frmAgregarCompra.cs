@@ -27,11 +27,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
         clsValidaciones val = new clsValidaciones();
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CargarDatosProveedores()
         {
             Cconexion conexion = new Cconexion();
@@ -462,6 +457,11 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 MessageBox.Show("Error al intentar conectar: " + ex.Message);
             }
+        }
+
+        private void txtCantidad_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)

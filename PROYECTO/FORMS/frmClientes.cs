@@ -29,7 +29,7 @@ namespace Proyecto_de_desarrolo
 
         public void DataGridView()
         {
-            string consultaSql = "SELECT PersonasID, RTN_Persona, DNI_Persona, Roles_ID, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 3";
+            string consultaSql = "SELECT RTN_Persona, DNI_Persona, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 3";
 
             try
             {
@@ -42,10 +42,8 @@ namespace Proyecto_de_desarrolo
 
                     dgvCliente.DataSource = dataSet.Tables["Personas"];
 
-                    dgvCliente.Columns["PersonasID"].HeaderText = "ID Cliente";
                     dgvCliente.Columns["RTN_Persona"].HeaderText = "RTN";
                     dgvCliente.Columns["DNI_Persona"].HeaderText = "DNI";
-                    dgvCliente.Columns["Roles_ID"].HeaderText = "Rol";
                     dgvCliente.Columns["Primer_Nombre"].HeaderText = "Nombre";
                     dgvCliente.Columns["Estado"].HeaderText = "Estado";
                     dgvCliente.Columns["Numero_Telefono"].HeaderText = "Teléfono";
@@ -231,12 +229,6 @@ namespace Proyecto_de_desarrolo
 
         }
 
-      
-
-       
-
-       
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsClientes clientes = new clsClientes();
@@ -407,6 +399,40 @@ namespace Proyecto_de_desarrolo
         private void txtBuscar_TextChanged_1(object sender, EventArgs e)
         {
             FiltrarDatos(txtBuscar.Text);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            txtRTN_Cliente.Text = dgvCliente.CurrentRow.Cells[0].Value.ToString();
+            txtDNI_Cliente.Text = dgvCliente.CurrentRow.Cells[1].Value.ToString();
+            txtNombre_Cliente.Text = dgvCliente.CurrentRow.Cells[2].Value.ToString();
+            txtTelefono_Cliente.Text = dgvCliente.CurrentRow.Cells[4].Value.ToString();
+            txtCorreo_Cliente.Text = dgvCliente.CurrentRow.Cells[5].Value.ToString();
+            txtDireccion_Cliente.Text = dgvCliente.CurrentRow.Cells[6].Value.ToString();
+
+            btnAgregar.Enabled = false;
+
+        }
+
+        private void txtRTN_Cliente_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtDNI_Cliente_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtTelefono_Cliente_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
         }
     }
 

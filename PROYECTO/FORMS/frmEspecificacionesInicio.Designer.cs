@@ -46,30 +46,28 @@ namespace Proyecto_de_desarrolo.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(17, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 13);
+            this.label1.Size = new System.Drawing.Size(245, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese el usuario que desea recuperar:";
             // 
             // lblIngrese
             // 
             this.lblIngrese.AutoSize = true;
-            this.lblIngrese.Location = new System.Drawing.Point(13, 179);
-            this.lblIngrese.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngrese.Location = new System.Drawing.Point(17, 220);
             this.lblIngrese.Name = "lblIngrese";
-            this.lblIngrese.Size = new System.Drawing.Size(173, 13);
+            this.lblIngrese.Size = new System.Drawing.Size(216, 16);
             this.lblIngrese.TabIndex = 3;
             this.lblIngrese.Text = " Ingrese la respuesta a la pregunta:";
             this.lblIngrese.Visible = false;
             // 
             // txtRespuesta_Recuperacion
             // 
-            this.txtRespuesta_Recuperacion.Location = new System.Drawing.Point(13, 204);
-            this.txtRespuesta_Recuperacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRespuesta_Recuperacion.Location = new System.Drawing.Point(17, 251);
+            this.txtRespuesta_Recuperacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRespuesta_Recuperacion.Name = "txtRespuesta_Recuperacion";
-            this.txtRespuesta_Recuperacion.Size = new System.Drawing.Size(307, 20);
+            this.txtRespuesta_Recuperacion.Size = new System.Drawing.Size(408, 22);
             this.txtRespuesta_Recuperacion.TabIndex = 4;
             this.txtRespuesta_Recuperacion.Visible = false;
             // 
@@ -77,10 +75,9 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(17, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(267, 24);
+            this.label4.Size = new System.Drawing.Size(328, 30);
             this.label4.TabIndex = 9;
             this.label4.Text = "Pregunta de Recuperación";
             // 
@@ -95,62 +92,65 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblIngrese);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(9, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(12, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(448, 285);
+            this.panel1.Size = new System.Drawing.Size(597, 351);
             this.panel1.TabIndex = 10;
             // 
             // lblPregunta
             // 
             this.lblPregunta.AutoSize = true;
-            this.lblPregunta.Location = new System.Drawing.Point(13, 155);
-            this.lblPregunta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPregunta.Location = new System.Drawing.Point(17, 191);
             this.lblPregunta.Name = "lblPregunta";
-            this.lblPregunta.Size = new System.Drawing.Size(0, 13);
+            this.lblPregunta.Size = new System.Drawing.Size(0, 16);
             this.lblPregunta.TabIndex = 13;
             this.lblPregunta.Visible = false;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(336, 112);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.BackColor = System.Drawing.Color.Gold;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(448, 133);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(70, 19);
+            this.btnBuscar.Size = new System.Drawing.Size(93, 32);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(13, 112);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.Location = new System.Drawing.Point(17, 138);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(307, 20);
+            this.txtUser.Size = new System.Drawing.Size(408, 22);
             this.txtUser.TabIndex = 11;
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(336, 204);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSiguiente.BackColor = System.Drawing.Color.Gold;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguiente.Location = new System.Drawing.Point(448, 246);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(70, 19);
+            this.btnSiguiente.Size = new System.Drawing.Size(93, 33);
             this.btnSiguiente.TabIndex = 10;
             this.btnSiguiente.Text = "Siguiente";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Visible = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
             // frmEspecificacionesInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(466, 301);
+            this.ClientSize = new System.Drawing.Size(621, 370);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmEspecificacionesInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
