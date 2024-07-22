@@ -21,6 +21,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         int numpedido=1;
         int estado=1;
+        string pedidosid;
         DataTable dtCount = new DataTable();
 
         private void frmPedidosAdmin_Load(object sender, EventArgs e)
@@ -41,8 +42,22 @@ namespace Proyecto_de_desarrolo.Formularios
             SqlDataAdapter DACount = new SqlDataAdapter(CantPed);
             dtCount.Clear();
             DACount.Fill(dtCount);
+            if (dtCount.Rows.Count == 0)
+            {
+                btnSiguiente.Enabled = false;
+                btnAnterior.Enabled = false;
+                btnCancelar.Enabled = false;
 
-            lblNumPed.Text = numpedido.ToString() + " / " + dtCount.Rows.Count;
+            }
+            else
+            {
+                btnSiguiente.Enabled = true;
+                btnAnterior.Enabled = true;
+                btnCancelar.Enabled = true;
+            }
+            if (dtCount.Rows.Count != 0)
+            {
+                lblNumPed.Text = numpedido.ToString() + " / " + dtCount.Rows.Count;
 
             if (numpedido < 2)
             {
@@ -79,6 +94,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     da.Fill(dt);
                     DataView data = new DataView(dt);
 
+                    pedidosid= dt.Rows[0][0].ToString();
                     lblPedido.Text = dt.Rows[0][0].ToString();
                     lblNombre_Cliente.Text = dt.Rows[0][1].ToString();
                     lblIdentidad.Text = dt.Rows[0][2].ToString();
@@ -93,12 +109,18 @@ namespace Proyecto_de_desarrolo.Formularios
                 {
                     MessageBox.Show("Error de conexión.");
                 }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al intentar conectar: " + ex.Message);
             }
-
+            }
+            else
+            {
+                DataTable dataTable = new DataTable();
+                dataGridView1.DataSource = dataTable;
+            }
             return dt;
         }
 
@@ -215,6 +237,27 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void lblFecha_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Cconexion conexion = new Cconexion();
+            SqlConnection cn = conexion.leer();
+
+            SqlCommand cancelarCarrito = new SqlCommand("Delete from Carritos where Pedido_ID='" + pedidosid + "'", cn);
+            SqlCommand cancelarPedido = new SqlCommand("Delete from Pedidos where Pedido_ID='" + pedidosid + "'", cn);
+            cancelarCarrito.ExecuteNonQuery();
+            cancelarPedido.ExecuteNonQuery();
+            lblNumPed.Text = "0" + " / " + "0";
+            lblTelefono.Text = "";
+            lblNombre_Cliente.Text = "";
+            lblDireccion.Text = "";
+            lblIdentidad.Text = "";
+            lblFecha.Text = "";
+            numpedido = 1;
+            lblPedido.Text = "";
+            ObtenerDatosCarritos();
 
         }
     }

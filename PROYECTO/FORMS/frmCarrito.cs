@@ -44,7 +44,7 @@ namespace Proyecto_de_desarrolo.Formularios
         {
             Cargarpedido();
             Obtenertotal();
-            MessageBox.Show("ola");
+       
         }
 
         private void Obtenertotal()
@@ -90,7 +90,20 @@ namespace Proyecto_de_desarrolo.Formularios
             cont_filas = cont_filas - 1;
 
 
+            if(dataTable.Rows.Count==0)
+            {
+                lblVacio.Visible = true;
+              
+                lblTotal.Visible = false;
+                btnTerminar.Visible = false;
+            }
+            else
+            {
 
+                lblVacio.Visible = false;
+                lblTotal.Visible = true;
+                btnTerminar.Visible = true;
+            }
 
             if (cont_pag == 1)
             {
@@ -427,6 +440,11 @@ namespace Proyecto_de_desarrolo.Formularios
             j1 = -4; j2 = -3; j3 = -2; j4 = -1;
             Cargarpedido();
             Obtenertotal();
+        }
+
+        private void lblVacio_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnQuitar4_Click(object sender, EventArgs e)

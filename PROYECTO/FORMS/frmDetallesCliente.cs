@@ -41,10 +41,7 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 Formulario1.Actualizar(); // Llamamos al método actualizar en la instancia de Formulario1
             }
-            else
-            {
-                MessageBox.Show("olis2");
-            }
+            
         }
 
 

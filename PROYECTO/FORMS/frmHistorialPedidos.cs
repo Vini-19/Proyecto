@@ -22,8 +22,9 @@ namespace PROYECTO.FORMS
 
         int numpedido = 1;
         int estado = 1;
+        string pedidosid;
         DataTable dtCount = new DataTable();
-        public DataTable ObtenerDatosCarritos()
+        public void ObtenerDatosCarritos()
         {
             DataTable dt = new DataTable();
             Cconexion conexion = new Cconexion();
@@ -35,70 +36,109 @@ namespace PROYECTO.FORMS
             SqlDataAdapter DACount = new SqlDataAdapter(CantPed);
             dtCount.Clear();
             DACount.Fill(dtCount);
-
-            lblNumPed.Text = numpedido.ToString() + " / " + dtCount.Rows.Count;
-
-            if (numpedido < 2)
+           if(dtCount.Rows.Count == 0)
             {
-                btnAnterior.Visible = false;
+                btnSiguiente.Enabled = false;
+                btnAnterior.Enabled = false;
+                btnCancelar.Enabled = false;
+
             }
-            else
+           else
             {
-                btnAnterior.Visible = true;
+                btnSiguiente.Enabled = true;
+                btnAnterior.Enabled = true;
+                btnCancelar.Enabled = true;
             }
-
-            if (numpedido > dtCount.Rows.Count - 1)
+            if (dtCount.Rows.Count!=0)
             {
-                btnSiguiente.Visible = false;
-            }
-            else
-            {
-                btnSiguiente.Visible = true;
-            }
+                lblNumPed.Text = numpedido.ToString() + " / " + dtCount.Rows.Count;
 
-            try
-            {
-
-                if (cn.State == ConnectionState.Open)
+                if (numpedido < 2)
                 {
-                    
-
-                    SqlCommand ExtraerPedido = new SqlCommand("ObtenerDatosCarritoCliente", cn);
-
-                    ExtraerPedido.CommandType = CommandType.StoredProcedure;
-                    ExtraerPedido.Parameters.AddWithValue("@pedido ", numpedido);
-                    ExtraerPedido.Parameters.AddWithValue("@estado ", estado);
-                    ExtraerPedido.Parameters.AddWithValue("@usuarioID ", per.getcodUsu());
-
-
-                    SqlDataAdapter da = new SqlDataAdapter(ExtraerPedido);
-                    da.Fill(dt);
-                    DataView data = new DataView(dt);
-
-                 
-                    lblNombre_Cliente.Text = dt.Rows[0][1].ToString();
-                    lblIdentidad.Text = dt.Rows[0][2].ToString();
-                    lblDireccion.Text = dt.Rows[0][3].ToString();
-                    lblTelefono.Text = dt.Rows[0][4].ToString();
-                    lblFecha.Text = dt.Rows[0][5].ToString();
-
-                    dataGridView1.DataSource = data.ToTable(false, "nombre_producto", "Precio", "cantidad");
-
+                    btnAnterior.Visible = false;
                 }
                 else
                 {
-                    MessageBox.Show("Error de conexión.");
+                    btnAnterior.Visible = true;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al intentar conectar: " + ex.Message);
-            }
 
-            return dt;
+                if (numpedido > dtCount.Rows.Count - 1)
+                {
+                    btnSiguiente.Visible = false;
+                }
+                else
+                {
+                    btnSiguiente.Visible = true;
+                }
+
+                try
+                {
+
+                    if (cn.State == ConnectionState.Open)
+                    {
+
+
+                        SqlCommand ExtraerPedido = new SqlCommand("ObtenerDatosCarritoCliente", cn);
+
+                        ExtraerPedido.CommandType = CommandType.StoredProcedure;
+                        ExtraerPedido.Parameters.AddWithValue("@pedido ", numpedido);
+                        ExtraerPedido.Parameters.AddWithValue("@estado ", estado);
+                        ExtraerPedido.Parameters.AddWithValue("@usuarioID ", per.getcodUsu());
+
+
+                        SqlDataAdapter da = new SqlDataAdapter(ExtraerPedido);
+                        da.Fill(dt);
+                        DataView data = new DataView(dt);
+
+                        pedidosid = dt.Rows[0][0].ToString();
+                        lblNombre_Cliente.Text = dt.Rows[0][1].ToString();
+                        lblIdentidad.Text = dt.Rows[0][2].ToString();
+                        lblDireccion.Text = dt.Rows[0][3].ToString();
+                        lblTelefono.Text = dt.Rows[0][4].ToString();
+                        lblFecha.Text = dt.Rows[0][5].ToString();
+
+                        dataGridView1.DataSource = data.ToTable(false, "nombre_producto", "Precio", "cantidad");
+
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Error de conexión.");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al intentar conectar: " + ex.Message);
+                }
+                
+      
+            }
+            else
+            {
+                DataTable dataTable = new DataTable();
+                dataGridView1.DataSource=dataTable;
+            }
+           
+            
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            Cconexion conexion = new Cconexion();
+            SqlConnection cn = conexion.leer();
+
+            SqlCommand cancelarCarrito = new SqlCommand("Delete from Carritos where Pedido_ID='"+pedidosid+"'",cn);
+            SqlCommand cancelarPedido = new SqlCommand("Delete from Pedidos where Pedido_ID='" + pedidosid + "'",cn);
+            cancelarCarrito.ExecuteNonQuery();
+            cancelarPedido.ExecuteNonQuery();
+            lblNumPed.Text = "0" + " / " +"0";
+            lblTelefono.Text = "";
+            lblNombre_Cliente.Text = "";
+            lblDireccion.Text = "";
+            lblIdentidad.Text = "";
+            lblFecha.Text = "";
+            numpedido = 1;
+            ObtenerDatosCarritos();
 
         }
 
@@ -120,7 +160,9 @@ namespace PROYECTO.FORMS
 
         private void frmHistorialPedidos_Load(object sender, EventArgs e)
         {
+            lblNumPed.Text = "0" + " / " + "0";
             ObtenerDatosCarritos();
+            
         }
     }
 }
