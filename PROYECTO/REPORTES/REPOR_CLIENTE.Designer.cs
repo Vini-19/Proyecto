@@ -30,36 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.productos = new PROYECTO.productos();
             this.compraclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productos = new PROYECTO.productos();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.compra_clienteTableAdapter = new PROYECTO.productosTableAdapters.Compra_clienteTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.productos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compraclienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productos)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // compraclienteBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.compraclienteBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROYECTO.REPORTES.RE_CLIENTE.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
+            this.compraclienteBindingSource.DataMember = "Compra_cliente";
+            this.compraclienteBindingSource.DataSource = this.productos;
             // 
             // productos
             // 
             this.productos.DataSetName = "productos";
             this.productos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // compraclienteBindingSource
+            // reportViewer1
             // 
-            this.compraclienteBindingSource.DataMember = "Compra_cliente";
-            this.compraclienteBindingSource.DataSource = this.productos;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.compraclienteBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROYECTO.REPORTES.RE_CLIENTE.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(370, -1);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(628, 845);
+            this.reportViewer1.TabIndex = 0;
             // 
             // compra_clienteTableAdapter
             // 
@@ -69,13 +68,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1888, 843);
             this.Controls.Add(this.reportViewer1);
             this.Name = "REPOR_CLIENTE";
             this.Text = "REPOR_CLIENTE";
             this.Load += new System.EventHandler(this.REPOR_CLIENTE_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.compraclienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productos)).EndInit();
             this.ResumeLayout(false);
 
         }

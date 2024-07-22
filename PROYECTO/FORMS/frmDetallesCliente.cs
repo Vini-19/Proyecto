@@ -156,6 +156,16 @@ namespace Proyecto_de_desarrolo.Formularios
 
             }
         }
+
+        private void txtIdentidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
     }
 
 }

@@ -464,6 +464,11 @@ namespace Proyecto_de_desarrolo.Formularios
             val.validarnum(e);
         }
 
+        private void txtPrecio_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
+
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             

@@ -212,6 +212,11 @@ namespace PROYECTO
             frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
             Esp.Show();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
