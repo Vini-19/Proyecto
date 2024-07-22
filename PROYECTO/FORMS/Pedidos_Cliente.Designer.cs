@@ -583,7 +583,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Pedidos_Cliente";
             this.Text = "Pedidos_Cliente";
-            this.Load += new System.EventHandler(this.Pedidos_Cliente_Load_1);
+            this.Load += new System.EventHandler(this.Pedidos_Cliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -18,22 +18,33 @@ namespace Proyecto_de_desarrolo.Formularios
 {
     public partial class Pedidos_Cliente : Form
     {
-
         int i = -1;
 
         int num_pag = 0;
         int cont_filas = 0;
         int cont_pag = 1;
         bool y = true;
+
         int x1 = 0, x2 = 0, x3 = 0, x4 = 0, x5 = 0, x6 = 0;
-
-
-
-
 
         public Pedidos_Cliente()
         {
+
             InitializeComponent();
+
+        }
+
+        clsValidaciones val = new clsValidaciones();
+        private void Pedidos_Cliente_Load(object sender, EventArgs e)
+        {
+            i = -1;
+
+            num_pag = 0;
+            cont_filas = 0;
+            cont_pag = 1;
+            y = true;
+
+            
             cargar_pedido2();
             txtCantidad1.Text = x1.ToString();
             txtCantidad2.Text = x2.ToString();
@@ -42,14 +53,6 @@ namespace Proyecto_de_desarrolo.Formularios
             txtCantidad5.Text = x5.ToString();
             txtCantidad6.Text = x6.ToString();
         }
-
-        clsValidaciones val = new clsValidaciones();
-        private void Pedidos_Cliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         private void cargar_pedido2()
         {
@@ -868,8 +871,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-
             clsPersonasid per = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
@@ -887,6 +888,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             RegistrarCarrito(x1);
             x1 = 0;
+            txtCantidad1.Text = "0";
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -907,6 +909,8 @@ namespace Proyecto_de_desarrolo.Formularios
             }
 
             RegistrarCarrito(x2);
+            x2 = 0;
+            txtCantidad2.Text = "0";
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -926,6 +930,8 @@ namespace Proyecto_de_desarrolo.Formularios
             }
 
             RegistrarCarrito(x3);
+            x3 = 0;
+            txtCantidad3.Text = "0";
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -945,6 +951,8 @@ namespace Proyecto_de_desarrolo.Formularios
             }
 
             RegistrarCarrito(x4);
+            x4 = 0;
+            txtCantidad4.Text = "0";
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -964,6 +972,8 @@ namespace Proyecto_de_desarrolo.Formularios
             }
 
             RegistrarCarrito(x5);
+            x5 = 0;
+            txtCantidad5.Text = "0";
         }
 
         private void button6_Click_1(object sender, EventArgs e)
@@ -983,6 +993,8 @@ namespace Proyecto_de_desarrolo.Formularios
             }
 
             RegistrarCarrito(x6);
+            x6 = 0;
+            txtCantidad6.Text = "0";
         }
 
         private void btnMas1_Click_1(object sender, EventArgs e)
@@ -1223,10 +1235,7 @@ namespace Proyecto_de_desarrolo.Formularios
             txtCantidad6.Text = Convert.ToString(x6);
         }
 
-        private void Pedidos_Cliente_Load_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void lblPrecio3_Click(object sender, EventArgs e)
         {
@@ -1381,6 +1390,11 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 x6 = int.Parse(txtCantidad6.Text);
             }
+        }
+
+        private void Pedidos_Cliente_Load_1(object sender, EventArgs e)
+        {
+
         }
 
         private void txtCantidad3_KeyPress(object sender, KeyPressEventArgs e)

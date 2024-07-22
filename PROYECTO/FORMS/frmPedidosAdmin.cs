@@ -132,19 +132,12 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void btnConfirmar_Click_1(object sender, EventArgs e)
-        {
             Cconexion conexion = new Cconexion();
             SqlConnection cn = conexion.leer();
 
-            SqlCommand ConfirmarPedido = new SqlCommand("Update Pedidos set Estado = 0 where Pedido_ID='"+lblPedido.Text+"'", cn);
+            SqlCommand ConfirmarPedido = new SqlCommand("Update Pedidos set Estado = 0 where Pedido_ID='" + lblPedido.Text + "'", cn);
             ConfirmarPedido.ExecuteNonQuery();
             ObtenerDatosCarritos();
-
-
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)

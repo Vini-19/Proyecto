@@ -391,7 +391,7 @@ namespace Proyecto_de_desarrolo.Formularios
             clsPersonasid id = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             SqlConnection cn = conexion.leer();
-            string consulta2 = "Select Carrito_ID from Carritos where Usuarios_ID='" + id.getcodUsu() + "'";
+            string consulta2 = "Select Carrito_ID from Carritos where Usuarios_ID='" + id.getcodUsu() + "' and Estado=1";
             SqlCommand comando2 = new SqlCommand(consulta2, cn);
             SqlDataAdapter DA2 = new SqlDataAdapter(comando2);
             DataTable dataTable2 = new DataTable();
@@ -400,7 +400,7 @@ namespace Proyecto_de_desarrolo.Formularios
             string eliminar = "Delete from Carritos where Carrito_ID='" + dataTable2.Rows[posicion][0] + "'";
             SqlCommand comandoeliminar = new SqlCommand(eliminar, cn);
             comandoeliminar.ExecuteNonQuery();
-            MessageBox.Show("Se elimino correctamente");
+            MessageBox.Show("Producto eliminado correctamente");
             i = -1;
             cont_pag = 1;
 

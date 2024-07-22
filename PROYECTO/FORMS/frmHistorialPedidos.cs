@@ -138,6 +138,7 @@ namespace PROYECTO.FORMS
             lblIdentidad.Text = "";
             lblFecha.Text = "";
             numpedido = 1;
+            pedidosid = "";
             ObtenerDatosCarritos();
 
         }
