@@ -182,7 +182,7 @@ namespace PROYECTO
             this.slidermenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.slidermenu.Location = new System.Drawing.Point(0, 38);
             this.slidermenu.Name = "slidermenu";
-            this.slidermenu.Size = new System.Drawing.Size(263, 1400);
+            this.slidermenu.Size = new System.Drawing.Size(263, 1023);
             this.slidermenu.TabIndex = 1;
             this.slidermenu.WrapContents = false;
             // 
@@ -436,6 +436,7 @@ namespace PROYECTO
             this.button2.Text = "Reportes de Compras Clientes";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_4);
             // 
             // button10
             // 
@@ -552,7 +553,7 @@ namespace PROYECTO
             this.contenedor.Location = new System.Drawing.Point(263, 38);
             this.contenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1573, 1400);
+            this.contenedor.Size = new System.Drawing.Size(1573, 1023);
             this.contenedor.TabIndex = 25;
             this.contenedor.UseWaitCursor = true;
             // 
@@ -562,7 +563,7 @@ namespace PROYECTO
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.Location = new System.Drawing.Point(0, 0);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(1416, 1400);
+            this.logo.Size = new System.Drawing.Size(1416, 1023);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
@@ -576,7 +577,7 @@ namespace PROYECTO
             this.pnsubusu.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnsubusu.Location = new System.Drawing.Point(1416, 0);
             this.pnsubusu.Name = "pnsubusu";
-            this.pnsubusu.Size = new System.Drawing.Size(157, 1400);
+            this.pnsubusu.Size = new System.Drawing.Size(157, 1023);
             this.pnsubusu.TabIndex = 0;
             this.pnsubusu.UseWaitCursor = true;
             this.pnsubusu.Visible = false;
@@ -614,7 +615,7 @@ namespace PROYECTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1836, 1438);
+            this.ClientSize = new System.Drawing.Size(1836, 1061);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.BtnProdu);
             this.Controls.Add(this.panel6);

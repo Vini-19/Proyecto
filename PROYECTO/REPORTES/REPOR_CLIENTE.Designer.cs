@@ -1,6 +1,6 @@
-﻿namespace PROYECTO
+﻿namespace PROYECTO.REPORTES
 {
-    partial class REPOR_PRODUCT
+    partial class REPOR_CLIENTE
     {
         /// <summary>
         /// Required designer variable.
@@ -30,69 +30,61 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productos = new PROYECTO.productos();
-            this.productosTableAdapter = new PROYECTO.productosTableAdapters.ProductosTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.productosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
+            this.productos = new PROYECTO.productos();
+            this.compraclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.compra_clienteTableAdapter = new PROYECTO.productosTableAdapters.Compra_clienteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.productos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraclienteBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productosBindingSource
-            // 
-            this.productosBindingSource.DataMember = "Productos";
-            this.productosBindingSource.DataSource = this.productos;
-            // 
-            // productos
-            // 
-            this.productos.DataSetName = "productos";
-            this.productos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productosTableAdapter
-            // 
-            this.productosTableAdapter.ClearBeforeFill = true;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.productosBindingSource1;
+            reportDataSource1.Value = this.compraclienteBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROYECTO.REPORTES.RE_PRODUCT.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROYECTO.REPORTES.RE_CLIENTE.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // productosBindingSource1
+            // productos
             // 
-            this.productosBindingSource1.DataMember = "Productos";
-            this.productosBindingSource1.DataSource = this.productos;
+            this.productos.DataSetName = "productos";
+            this.productos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // REPOR_PRODUCT
+            // compraclienteBindingSource
+            // 
+            this.compraclienteBindingSource.DataMember = "Compra_cliente";
+            this.compraclienteBindingSource.DataSource = this.productos;
+            // 
+            // compra_clienteTableAdapter
+            // 
+            this.compra_clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // REPOR_CLIENTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "REPOR_PRODUCT";
-            this.Text = "reporte";
-            this.Load += new System.EventHandler(this.reporte_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
+            this.Name = "REPOR_CLIENTE";
+            this.Text = "REPOR_CLIENTE";
+            this.Load += new System.EventHandler(this.REPOR_CLIENTE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraclienteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private productos productos;
-        private System.Windows.Forms.BindingSource productosBindingSource;
-        private productosTableAdapters.ProductosTableAdapter productosTableAdapter;
+
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource productosBindingSource1;
+        private productos productos;
+        private System.Windows.Forms.BindingSource compraclienteBindingSource;
+        private productosTableAdapters.Compra_clienteTableAdapter compra_clienteTableAdapter;
     }
 }

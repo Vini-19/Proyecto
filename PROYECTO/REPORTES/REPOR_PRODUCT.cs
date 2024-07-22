@@ -25,6 +25,7 @@ namespace PROYECTO
             this.productosTableAdapter.Fill(this.productos.Productos);
 
             this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
