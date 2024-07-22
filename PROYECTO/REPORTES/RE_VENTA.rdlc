@@ -9,7 +9,7 @@
               <Width>1.67979cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.52646cm</Width>
+              <Width>3.65031cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -366,7 +366,7 @@
         <Top>2.09516cm</Top>
         <Left>2.85433cm</Left>
         <Height>1.2cm</Height>
-        <Width>13.18792cm</Width>
+        <Width>14.31177cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -374,10 +374,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>6.13542in</Height>
+    <Height>5.95833in</Height>
     <Style />
   </Body>
-  <Width>7.11248in</Width>
+  <Width>7.61768in</Width>
   <Page>
     <PageHeader>
       <Height>3.98708cm</Height>

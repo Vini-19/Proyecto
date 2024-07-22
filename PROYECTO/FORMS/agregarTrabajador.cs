@@ -549,6 +549,12 @@ namespace Proyecto_de_desarrolo.Formularios
                         return;
                     }
 
+                    if (conexion.VerificarUsuarioExistente(registro.getUsu()))
+                    {
+                        MessageBox.Show("No se puede agregar el trabajador porque ya existe un trabajador o Usuario con el mismo nombre.");
+                        return;
+                    }
+
 
                     if (string.IsNullOrWhiteSpace(Trabajador.getrtn()) | string.IsNullOrWhiteSpace(Trabajador.getdni()) || string.IsNullOrWhiteSpace(Trabajador.getnombre()) || string.IsNullOrWhiteSpace(Trabajador.gettelefono().ToString()) || string.IsNullOrWhiteSpace(Trabajador.getcorreo()) || string.IsNullOrWhiteSpace(Trabajador.getdireccion()))
                     {
@@ -710,6 +716,16 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtNombre_Trabajador_TextChanged_1(object sender, EventArgs e)
         {
             errorProvider1.SetError(txtNombre_Trabajador, val.txt_vacio(txtNombre_Trabajador.Text) + val.espacio_inicio_final(txtNombre_Trabajador.Text) + val.validarletra_espacio(txtNombre_Trabajador.Text) + val.rango_nombre(txtNombre_Trabajador.Text) + val.doble_espacio(txtNombre_Trabajador.Text) + val.validar_tripleCaracter(txtNombre_Trabajador.Text));
+        }
+
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            FiltrarDatos(txtBuscar.Text);
+        }
+
+        private void agregarTrabajador_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -211,6 +211,11 @@ namespace Proyecto_de_desarrolo.Formularios
             clsProveedorProducto proveedorSeleccionado = (clsProveedorProducto)cmbProveedor.SelectedItem;
             idProveedor = proveedorSeleccionado.Roles_ID;
         }
+
+        private void txtCantidadP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

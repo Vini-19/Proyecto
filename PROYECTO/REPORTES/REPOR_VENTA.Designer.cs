@@ -30,36 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.vENTAS = new PROYECTO.VENTAS();
             this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTAS = new PROYECTO.VENTAS();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ventasTableAdapter = new PROYECTO.VENTASTableAdapters.VentasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTAS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTAS)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // ventasBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.ventasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROYECTO.REPORTES.RE_VENTA.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
+            this.ventasBindingSource.DataMember = "Ventas";
+            this.ventasBindingSource.DataSource = this.vENTAS;
             // 
             // vENTAS
             // 
             this.vENTAS.DataSetName = "VENTAS";
             this.vENTAS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ventasBindingSource
+            // reportViewer1
             // 
-            this.ventasBindingSource.DataMember = "Ventas";
-            this.ventasBindingSource.DataSource = this.vENTAS;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ventasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROYECTO.REPORTES.RE_VENTA.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(370, -1);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(628, 845);
+            this.reportViewer1.TabIndex = 0;
             // 
             // ventasTableAdapter
             // 
@@ -69,13 +68,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1888, 843);
             this.Controls.Add(this.reportViewer1);
             this.Name = "REPOR_VENTA";
+            this.RightToLeftLayout = true;
             this.Text = "REPOR_VENTA";
             this.Load += new System.EventHandler(this.REPOR_VENTA_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.vENTAS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTAS)).EndInit();
             this.ResumeLayout(false);
 
         }

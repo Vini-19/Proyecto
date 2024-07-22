@@ -49,21 +49,22 @@ namespace Proyecto_de_desarrolo.Formularios
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(259, 152);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(332, 208);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(959, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(719, 316);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(658, 49);
+            this.label1.Location = new System.Drawing.Point(632, 124);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 40);
+            this.label1.Size = new System.Drawing.Size(158, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Inventario";
             // 
@@ -71,9 +72,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(256, 562);
+            this.label2.Location = new System.Drawing.Point(330, 541);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 16);
+            this.label2.Size = new System.Drawing.Size(145, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Cantidad Actual de Res:";
             // 
@@ -81,9 +83,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(256, 593);
+            this.label3.Location = new System.Drawing.Point(330, 566);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 16);
+            this.label3.Size = new System.Drawing.Size(156, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Cantidad Actual de Cerdo:";
             // 
@@ -91,9 +94,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(500, 562);
+            this.label4.Location = new System.Drawing.Point(513, 541);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Libras";
             // 
@@ -101,9 +105,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(500, 593);
+            this.label5.Location = new System.Drawing.Point(513, 566);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 16);
+            this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Libras";
             // 
@@ -111,9 +116,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblRes.AutoSize = true;
             this.lblRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRes.Location = new System.Drawing.Point(464, 562);
+            this.lblRes.Location = new System.Drawing.Point(486, 541);
+            this.lblRes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRes.Name = "lblRes";
-            this.lblRes.Size = new System.Drawing.Size(11, 16);
+            this.lblRes.Size = new System.Drawing.Size(11, 13);
             this.lblRes.TabIndex = 8;
             this.lblRes.Text = ".";
             // 
@@ -121,18 +127,19 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.lblCerdo.AutoSize = true;
             this.lblCerdo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCerdo.Location = new System.Drawing.Point(464, 593);
+            this.lblCerdo.Location = new System.Drawing.Point(486, 566);
+            this.lblCerdo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerdo.Name = "lblCerdo";
-            this.lblCerdo.Size = new System.Drawing.Size(11, 16);
+            this.lblCerdo.Size = new System.Drawing.Size(11, 13);
             this.lblCerdo.TabIndex = 9;
             this.lblCerdo.Text = ".";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(321, 108);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscar.Location = new System.Drawing.Point(379, 172);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(897, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(674, 20);
             this.txtBuscar.TabIndex = 10;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged_1);
             // 
@@ -140,17 +147,18 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(256, 108);
+            this.label6.Location = new System.Drawing.Point(330, 172);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 16);
+            this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Buscar:";
             // 
             // frmInventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1357, 721);
+            this.ClientSize = new System.Drawing.Size(1416, 685);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblCerdo);
@@ -161,7 +169,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmInventario";
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmInventario_Load_1);

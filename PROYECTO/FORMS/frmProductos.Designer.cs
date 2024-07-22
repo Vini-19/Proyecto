@@ -84,6 +84,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.txtCantidadP.Name = "txtCantidadP";
             this.txtCantidadP.Size = new System.Drawing.Size(104, 20);
             this.txtCantidadP.TabIndex = 10;
+            this.txtCantidadP.TextChanged += new System.EventHandler(this.txtCantidadP_TextChanged);
             // 
             // label6
             // 
