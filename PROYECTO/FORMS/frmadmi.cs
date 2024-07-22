@@ -652,6 +652,15 @@ namespace PROYECTO
         {
 
         }
+
+        private void button2_Click_4(object sender, EventArgs e)
+        {
+            AbriForm(new REPOR_CLIENTE());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
+        }
     }
 }
 
