@@ -438,6 +438,11 @@ namespace Proyecto_de_desarrolo
         {
             val.validarnum(e);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

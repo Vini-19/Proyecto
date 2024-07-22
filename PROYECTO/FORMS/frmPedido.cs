@@ -320,6 +320,7 @@ namespace Proyecto_de_desarrolo
                 cmbCategoria.Text = fila.Cells["Categoria_ID"].Value.ToString();
                 txtPrecio.Text = fila.Cells["Precio"].Value.ToString();
                 txtNombre_Imagen.Text = fila.Cells["Nombre_Imagen"].Value.ToString();
+                cmbCategoria.SelectedItem=Convert.ToInt32(fila.Cells["Categoria_ID"].Value.ToString())-1;
 
                 btnAgregar.Enabled = false;
 
@@ -529,6 +530,7 @@ namespace Proyecto_de_desarrolo
                 cmbCategoria.Text = fila.Cells["Categoria_ID"].Value.ToString();
                 txtPrecio.Text = fila.Cells["Precio"].Value.ToString();
                 txtNombre_Imagen.Text = fila.Cells["Nombre_Imagen"].Value.ToString();
+                cmbCategoria.SelectedItem = 1;
 
                 btnAgregar.Enabled = false;
 
@@ -560,17 +562,55 @@ namespace Proyecto_de_desarrolo
 
         private void dgvProducto_CellClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            txtCodigo.Text = dgvProducto.CurrentRow.Cells[1].Value.ToString();
-            txtNombre.Text = dgvProducto.CurrentRow.Cells[2].Value.ToString();
-            txtPrecio.Text = dgvProducto.CurrentRow.Cells[4].Value.ToString();
-            txtNombre_Imagen.Text = dgvProducto.CurrentRow.Cells[5].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvProducto.Rows[e.RowIndex];
 
-            btnAgregar.Enabled = false;
+
+                txtCodigo.Text = fila.Cells["Codigo_barra"].Value.ToString();
+                txtNombre.Text = fila.Cells["Nombre_Producto"].Value.ToString();
+                txtPrecio.Text = fila.Cells["Precio"].Value.ToString();
+                txtNombre_Imagen.Text = fila.Cells["Nombre_Imagen"].Value.ToString();
+                
+                MessageBox.Show(fila.Cells["Categoria_ID"].Value.ToString());
+
+                btnAgregar.Enabled = false;
+
+                if (fila.Cells["imagen"].Value is byte[])
+                {
+                    byte[] imageBytes = (byte[])fila.Cells["imagen"].Value;
+
+                    // Convertir los bytes a Imagen
+                    Image imagen;
+                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    {
+                        imagen = Image.FromStream(ms);
+                    }
+
+                    picProducto.Image = imagen;
+                }
+                else
+                {
+                    MessageBox.Show("Error...No se encontro imagen");
+                    picProducto.Image = null;
+                }
+            }
+            
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
+        }
+
+        private void cmbCategoria_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPedido_Load_1(object sender, EventArgs e)
+        {
+            
         }
     }
 

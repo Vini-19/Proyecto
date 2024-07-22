@@ -1269,6 +1269,120 @@ namespace Proyecto_de_desarrolo.Formularios
             carrito.Show();
         }
 
+        private void txtCantidad1_TextChanged_1(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad1.Text) == 500)
+            {
+                txtCantidad1.Text = "500";
+                x1 = 500;
+                txtCantidad1.Select(txtCantidad1.Text.Length, 0);
+
+            }
+            if (txtCantidad1.Text == "")
+            {
+                x1 = 0;
+            }
+            else
+            {
+                x1 = int.Parse(txtCantidad1.Text);
+            }
+        }
+
+        private void txtCantidad2_TextChanged_1(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad2.Text) == 500)
+            {
+                txtCantidad2.Text = "500";
+                x2 = 500;
+                txtCantidad2.Select(txtCantidad2.Text.Length, 0);
+
+            }
+            if (txtCantidad2.Text == "")
+            {
+                x2 = 0;
+            }
+            else
+            {
+                x2 = int.Parse(txtCantidad2.Text);
+            }
+        }
+
+        private void txtCantidad3_TextChanged_1(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad3.Text) == 500)
+            {
+                txtCantidad3.Text = "500";
+                x3 = 500;
+                txtCantidad3.Select(txtCantidad3.Text.Length, 0);
+
+            }
+            if (txtCantidad3.Text == "")
+            {
+                x3 = 0;
+            }
+            else
+            {
+                x3 = int.Parse(txtCantidad3.Text);
+            }
+        }
+
+        private void txtCantidad4_TextChanged_1(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad4.Text) == 500)
+            {
+                txtCantidad4.Text = "500";
+                x4 = 500;
+                txtCantidad4.Select(txtCantidad4.Text.Length, 0);
+
+            }
+            if (txtCantidad4.Text == "")
+            {
+                x4 = 0;
+            }
+            else
+            {
+                x4 = int.Parse(txtCantidad4.Text);
+            }
+        }
+
+        private void txtCantidad5_TextChanged_1(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad5.Text) == 500)
+            {
+                txtCantidad5.Text = "500";
+                x5 = 500;
+                txtCantidad5.Select(txtCantidad5.Text.Length, 0);
+
+            }
+            if (txtCantidad5.Text == "")
+            {
+                x5 = 0;
+            }
+            else
+            {
+                x5 = int.Parse(txtCantidad5.Text);
+            }
+        }
+
+        private void txtCantidad6_TextChanged_1(object sender, EventArgs e)
+        {
+            if (val.validar_pesoPedidos(txtCantidad6.Text) == 500)
+            {
+                txtCantidad6.Text = "500";
+                x6 = 500;
+                txtCantidad6.Select(txtCantidad6.Text.Length, 0);
+
+            }
+            if (txtCantidad6.Text == "")
+            {
+                x6 = 0;
+            }
+            else
+            {
+                x6 = int.Parse(txtCantidad6.Text);
+            }
+        }
+
         private void txtCantidad3_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);

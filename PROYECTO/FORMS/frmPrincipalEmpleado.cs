@@ -102,7 +102,7 @@ namespace Proyecto_de_desarrolo
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
-            formulario.BackColor = Color.LightBlue;
+            formulario.BackColor = Color.White;
             contenedor.Controls.Add(formulario);
             formulario.Show();
         }
@@ -127,11 +127,19 @@ namespace Proyecto_de_desarrolo
         private void button14_Click(object sender, EventArgs e)
         {
             AbriForm(new frmClientes());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             AbriForm(new frmProveedores());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void btnFacturacion_Click_1(object sender, EventArgs e)
@@ -142,11 +150,19 @@ namespace Proyecto_de_desarrolo
         private void button9_Click(object sender, EventArgs e)
         {
             AbriForm(new frmVentas());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             AbriForm(new frmAgregarCompra());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -212,7 +228,7 @@ namespace Proyecto_de_desarrolo
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            AbriForm(new frmPedidosAdmin());
         }
 
         private void slidermenu_Paint(object sender, PaintEventArgs e)
@@ -225,16 +241,29 @@ namespace Proyecto_de_desarrolo
         private void button19_Click(object sender, EventArgs e)
         {
             AbriForm(new frmPedido());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
             AbriForm(new frmInventario());
+            if (logo.Visible == true)
+            {
+                logo.Visible = false;
+            }
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
             ShowMenu(panelProductos);
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }

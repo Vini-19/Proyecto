@@ -171,102 +171,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnGenerar_Factura_Click(object sender, EventArgs e)
         {
-            /*string fechaVenta = DateTime.Now.ToString("yyyy-MM-dd");
-            string cliente = cmbCliente.Text;
-            string rtnCliente = txtRTN.Text;
-            decimal totalVenta = CalcularTotalVenta();
 
-            Cconexion conexion = new Cconexion();
-            try
-            {
-                using (SqlConnection cn = conexion.leer())
-                {
-                    if (cn.State == ConnectionState.Open)
-                    {
-                        string queryInsertVenta = @"INSERT INTO Ventas (FechaVenta, Cliente, RTN_Cliente, Total) 
-                                            VALUES (@FechaVenta, @Cliente, @RTN_Cliente, @Total)";
-                        using (SqlCommand cmd = new SqlCommand(queryInsertVenta, cn))
-                        {
-                            cmd.Parameters.AddWithValue("@FechaVenta", fechaVenta);
-                            cmd.Parameters.AddWithValue("@Cliente", cliente);
-                            cmd.Parameters.AddWithValue("@RTN_Cliente", rtnCliente);
-                            cmd.Parameters.AddWithValue("@Total", totalVenta);
-
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Venta registrada correctamente.");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error de conexión.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al intentar registrar la venta: " + ex.Message);
-            }*/
-            string fechaVenta = DateTime.Now.ToString("yyyy-MM-dd");
-            string cliente = cmbCliente.Text;
-            string rtnCliente = txtRTN.Text;
-            decimal totalVenta = CalcularTotalVenta();
-
-            Cconexion conexion = new Cconexion();
-            try
-            {
-                using (SqlConnection cn = conexion.leer())
-                {
-                    if (cn.State == ConnectionState.Open)
-                    {
-                        string queryInsertVenta = @"INSERT INTO Ventas (FechaVenta, Cliente, RTN_Cliente, Total) 
-                                            VALUES (@FechaVenta, @Cliente, @RTN_Cliente, @Total);
-                                            SELECT SCOPE_IDENTITY();";
-                        using (SqlCommand cmd = new SqlCommand(queryInsertVenta, cn))
-                        {
-                            cmd.Parameters.AddWithValue("@FechaVenta", fechaVenta);
-                            cmd.Parameters.AddWithValue("@Cliente", cliente);
-                            cmd.Parameters.AddWithValue("@RTN_Cliente", rtnCliente);
-                            cmd.Parameters.AddWithValue("@Total", totalVenta);
-
-                            int ventaId = Convert.ToInt32(cmd.ExecuteScalar());
-
-                            //detalles de la venta
-                            foreach (DataGridViewRow row in dgvProductos.Rows)
-                            {
-                                if (!row.IsNewRow)
-                                {
-                                    string codigoBarra = row.Cells["Codigo"].Value.ToString();
-                                    int cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value);
-
-                                    string queryInsertDetalle = @"INSERT INTO DetallesVenta (VentaID, ProductoID, Cantidad) 
-                                                          VALUES (@VentaID, 
-                                                          (SELECT Productos_ID FROM Productos WHERE Codigo_barra = @Codigo_barra), 
-                                                          @Cantidad)";
-                                    using (SqlCommand cmdDetalle = new SqlCommand(queryInsertDetalle, cn))
-                                    {
-                                        cmdDetalle.Parameters.AddWithValue("@VentaID", ventaId);
-                                        cmdDetalle.Parameters.AddWithValue("@Codigo_barra", codigoBarra);
-                                        cmdDetalle.Parameters.AddWithValue("@Cantidad", cantidad);
-
-                                        cmdDetalle.ExecuteNonQuery();
-                                    }
-                                }
-                            }
-
-                            MessageBox.Show("Venta registrada correctamente.");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error de conexión.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al intentar registrar la venta: " + ex.Message);
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -336,12 +241,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnEnter_Click_2(object sender, EventArgs e)
         {
-            string codigoBarra = txtCodigo_Barra.Text;
-            if (!string.IsNullOrEmpty(codigoBarra))
-            {
-                AgregarProductoAlDataGridView(codigoBarra);
-            }
-            txtCodigo_Barra.Clear();
+
         }
 
         private void cmbCliente_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -485,11 +385,6 @@ namespace Proyecto_de_desarrolo
         }
 
         private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGenerar_Factura_Click_2(object sender, EventArgs e)
         {
 
         }

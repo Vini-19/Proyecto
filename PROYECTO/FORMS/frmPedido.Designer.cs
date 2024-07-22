@@ -127,6 +127,7 @@ namespace Proyecto_de_desarrolo
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(153, 24);
             this.cmbCategoria.TabIndex = 20;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged_1);
             // 
             // label7
             // 
@@ -257,7 +258,7 @@ namespace Proyecto_de_desarrolo
             this.dgvProducto.RowHeadersWidth = 51;
             this.dgvProducto.Size = new System.Drawing.Size(785, 446);
             this.dgvProducto.TabIndex = 7;
-            this.dgvProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellClick_2);
+            this.dgvProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellClick);
             // 
             // label1
             // 
@@ -280,6 +281,7 @@ namespace Proyecto_de_desarrolo
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPedido";
             this.Text = "frmPedido";
+            this.Load += new System.EventHandler(this.frmPedido_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -207,7 +207,7 @@ namespace Proyecto_de_desarrolo
             this.btnEnter.TabIndex = 13;
             this.btnEnter.Text = "Confirmar";
             this.btnEnter.UseVisualStyleBackColor = false;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click_2);
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click_1);
             // 
             // cmbCliente
             // 
@@ -271,7 +271,7 @@ namespace Proyecto_de_desarrolo
             this.btnGenerar_Factura.TabIndex = 17;
             this.btnGenerar_Factura.Text = "Generar Factura";
             this.btnGenerar_Factura.UseVisualStyleBackColor = false;
-            this.btnGenerar_Factura.Click += new System.EventHandler(this.btnGenerar_Factura_Click_2);
+            this.btnGenerar_Factura.Click += new System.EventHandler(this.btnGenerar_Factura_Click_1);
             // 
             // btnEliminar
             // 
@@ -288,6 +288,7 @@ namespace Proyecto_de_desarrolo
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar ";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // button1
             // 
@@ -304,6 +305,7 @@ namespace Proyecto_de_desarrolo
             this.button1.TabIndex = 7;
             this.button1.Text = "-";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -320,6 +322,7 @@ namespace Proyecto_de_desarrolo
             this.button2.TabIndex = 6;
             this.button2.Text = "+";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 

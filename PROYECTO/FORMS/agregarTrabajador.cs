@@ -135,7 +135,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         public void DataGridView()
         {
-            string consultaSql = "SELECT  RTN_Persona, DNI_Persona, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 2";
+            string consultaSql = "SELECT PersonasID, RTN_Persona, DNI_Persona, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 2";
 
             try
             {
@@ -149,6 +149,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     dgvTrabajador.DataSource = dataSet.Tables["Personas"];
 
 
+                    dgvTrabajador.Columns["PersonasID"].HeaderText = "Personas ID";
                     dgvTrabajador.Columns["RTN_Persona"].HeaderText = "RTN";
                     dgvTrabajador.Columns["DNI_Persona"].HeaderText = "DNI";
                     dgvTrabajador.Columns["Primer_Nombre"].HeaderText = "Nombre";
@@ -247,7 +248,7 @@ namespace Proyecto_de_desarrolo.Formularios
                             actualizarTrabajador.Parameters.AddWithValue("@telefono", Trabajador.gettelefono());
                             actualizarTrabajador.Parameters.AddWithValue("@correo", Trabajador.getcorreo());
                             actualizarTrabajador.Parameters.AddWithValue("@direccion", Trabajador.getdireccion());
-                            actualizarTrabajador.Parameters.AddWithValue("@TrabajadorID", ID_Trabajador);
+                            actualizarTrabajador.Parameters.AddWithValue("@ClienteID", ID_Trabajador);
 
                             int Actualizacion = actualizarTrabajador.ExecuteNonQuery();
                             DataGridView();
@@ -278,7 +279,7 @@ namespace Proyecto_de_desarrolo.Formularios
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtRTN_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDNI_Trabajador.Text) || string.IsNullOrWhiteSpace(txtNombre_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDireccion_Trabajador.Text) || (this.txtTelefono_Trabajador.Text == "0" || string.IsNullOrWhiteSpace(this.txtTelefono_Trabajador.Text)) || string.IsNullOrWhiteSpace(txtCorreo_Trabajador.Text))
+            if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
             {
                 MessageBox.Show("Por favor, seleccione un trabajador antes de poder ejecutar la acción.");
 
@@ -286,7 +287,14 @@ namespace Proyecto_de_desarrolo.Formularios
             }
             else
             {
-                Modificar_Trab();
+                if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "" && errorProvider1.GetError(txtDireccion_Trabajador) == "")
+                {
+                    Modificar_Trab();
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                }
             }
         }
 
