@@ -87,7 +87,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     SqlCommand ExtraerPedido = new SqlCommand("ObtenerDatosCarritoPorPedidoID", cn);
 
                     ExtraerPedido.CommandType = CommandType.StoredProcedure;
-                    ExtraerPedido.Parameters.AddWithValue("@pedido ", numpedido-1);
+                    ExtraerPedido.Parameters.AddWithValue("@pedido ", numpedido -1);
                     ExtraerPedido.Parameters.AddWithValue("@estado ", estado);
 
                     SqlDataAdapter da = new SqlDataAdapter(ExtraerPedido);
@@ -120,6 +120,14 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 DataTable dataTable = new DataTable();
                 dataGridView1.DataSource = dataTable;
+                lblNumPed.Text = "0" + " / " + "0";
+                lblTelefono.Text = "";
+                lblNombre_Cliente.Text = "";
+                lblDireccion.Text = "";
+                lblIdentidad.Text = "";
+                lblFecha.Text = "";
+                numpedido = 1;
+                lblPedido.Text = "";
             }
             return dt;
         }
@@ -132,18 +140,18 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-           
+            Cconexion conexion = new Cconexion();
+            SqlConnection cn = conexion.leer();
+
+            SqlCommand ConfirmarPedido = new SqlCommand("Update Pedidos set Estado = 0 where Pedido_ID='" + lblPedido.Text + "'", cn);
+            ConfirmarPedido.ExecuteNonQuery();
+            ObtenerDatosCarritos();
+
         }
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
-            Cconexion conexion = new Cconexion();
-            SqlConnection cn = conexion.leer();
-
-            SqlCommand ConfirmarPedido = new SqlCommand("Update Pedidos set Estado = 0 where Pedido_ID='"+lblPedido.Text+"'", cn);
-            ConfirmarPedido.ExecuteNonQuery();
-            ObtenerDatosCarritos();
-
+            
 
         }
 

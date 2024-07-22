@@ -18,26 +18,26 @@ namespace Proyecto_de_desarrolo.Formularios
         public agregarTrabajador()
         {
             InitializeComponent();
-            DataGridView();
+            DataGridView(); //llamada a la funcion de llenado del data grid view. Siempre al inicializar el formulario.
         }
 
-        clsValidaciones val = new clsValidaciones();
+        clsValidaciones val = new clsValidaciones();    //declaracion de la clase de validaciones.
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsTrabajadores Trabajador = new clsTrabajadores();
             clsRegistro registro = new clsRegistro();
 
-            Cconexion conexion = new Cconexion();
+            Cconexion conexion = new Cconexion();       //declaracion de la clase de conexion para conectar a la base de datos.
 
             if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                return;
+                return; //encaso de que los campos esten vacios no pernitira agregar un nuevo trabajador.
 
             }
             else
             {
-                Trabajador.setrtn(txtRTN_Trabajador.Text);
+                Trabajador.setrtn(txtRTN_Trabajador.Text);      //lamado al set de cada dato mediante la clase clsTrabajadores y sus atributos privados.
                 Trabajador.setdni(txtDNI_Trabajador.Text);
                 Trabajador.setnombre(txtNombre_Trabajador.Text);
                 Trabajador.settelefono(int.Parse(txtTelefono_Trabajador.Text));
@@ -49,31 +49,32 @@ namespace Proyecto_de_desarrolo.Formularios
                 registro.setRespuesta(txtCodigo.Text);
 
 
-                DateTime fechaInscripcion = DateTime.Today;
+                DateTime fechaInscripcion = DateTime.Today;     //saca la fecha actual para registrarla correctamente.
                 if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "")
                 {
 
                     if (conexion.VerificarClienteExistente(Trabajador.getdni()))
                     {
-                        MessageBox.Show("No se puede agregar el trabajador porque ya existe un trabajador con ese DNI.");
+                        MessageBox.Show("No se puede agregar el trabajador porque ya existe un trabajador con ese DNI.");   //si es DNI esta repetido no permite ingresar el trabajador.
                         return;
                     }
 
 
                     if (string.IsNullOrWhiteSpace(Trabajador.getrtn()) | string.IsNullOrWhiteSpace(Trabajador.getdni()) || string.IsNullOrWhiteSpace(Trabajador.getnombre()) || string.IsNullOrWhiteSpace(Trabajador.gettelefono().ToString()) || string.IsNullOrWhiteSpace(Trabajador.getcorreo()) || string.IsNullOrWhiteSpace(Trabajador.getdireccion()))
                     {
-                        MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                        MessageBox.Show("Por favor, complete todos los campos obligatorios.");  //si es null o esta en blanco el if no permite pasar.
                         return;
                     }
 
                     conexion.RegistroCliente(Trabajador.getrtn(), Trabajador.getdni(), Trabajador.getnombre(), Trabajador.getrol(), Trabajador.getestado(), Trabajador.gettelefono(), Trabajador.getcorreo(), Trabajador.getdireccion(), fechaInscripcion);
                     conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);
+                    //llamada a las funciones de registro de cliente y registro de usuario, enviamos los datos para que se almacenen en los datos privados.
 
-                    limpiar();
+                    limpiar();  //llamada a la funcion limpiar que limpia los textbox y otros campos.
                     errorProvider1.SetError(txtCodigo, "");
                     MessageBox.Show("Se registro correctamente.");
                     DataGridView();
-                    txtRTN_Trabajador.Focus();
+                    txtRTN_Trabajador.Focus();      //focus al textbox del rtn en caso de que se haya registrado correctamente todos los datos.
                 }
                 else
                 {
@@ -87,11 +88,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0)    //si el rowindex es distinto de cero, es decir si hay datos se agregaran al data grid view.
             {
                 DataGridViewRow row = dgvTrabajador.Rows[e.RowIndex];
 
-                txtRTN_Trabajador.Text = row.Cells["RTN_Persona"].Value.ToString();
+                txtRTN_Trabajador.Text = row.Cells["RTN_Persona"].Value.ToString();     //agregamos las filas del data grid.
                 txtDNI_Trabajador.Text = row.Cells["DNI_Persona"].Value.ToString();
                 txtNombre_Trabajador.Text = row.Cells["Primer_Nombre"].Value.ToString();
                 txtTelefono_Trabajador.Text = row.Cells["Numero_Telefono"].Value.ToString();
@@ -102,30 +103,30 @@ namespace Proyecto_de_desarrolo.Formularios
             }
         }
 
-        private void FiltrarDatos(string texto)
+        private void FiltrarDatos(string texto)     //funcion para el boton buscar, filtra los datos en base al primer nombre del trabajdor.
         {
             DataTable dt = (DataTable)dgvTrabajador.DataSource;
             if (dt != null)
             {
-                dgvTrabajador.ClearSelection();
+                dgvTrabajador.ClearSelection(); //borra la selecicon de las celdas seleciconadas en caso de que no haya datos en el campo.
 
                 if (!string.IsNullOrEmpty(texto))
                 {
-                    bool encontrado = false;
+                    bool encontrado = false;    //variable booleana para verificar si se encuentra el trabajdor buscado.
 
                     foreach (DataGridViewRow row in dgvTrabajador.Rows)
                     {
                         if (row.Cells["Primer_Nombre"].Value != null && row.Cells["Primer_Nombre"].Value.ToString().ToLower().Contains(texto.ToLower()))
                         {
                             row.Selected = true;
-                            dgvTrabajador.FirstDisplayedScrollingRowIndex = row.Index;
+                            dgvTrabajador.FirstDisplayedScrollingRowIndex = row.Index;      //muestra y selecciona el primer indice encontrado.
                             encontrado = true;
                             break; // Selecciona la primera y termina
                         }
                     }
                     if (!encontrado)
                     {
-                        dgvTrabajador.ClearSelection();
+                        dgvTrabajador.ClearSelection();     //si no encuentra uno quita las filas seleccionadas y deja en blanco
                     }
                 }
             }
@@ -133,23 +134,24 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
 
-        public void DataGridView()
+        public void DataGridView()  //funcion para llenar nuestro data grid view del formulario de Personas.
         {
             string consultaSql = "SELECT PersonasID, RTN_Persona, DNI_Persona, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 2";
+            //consulta select sql para poder seleccionar los datos de la tabla Personas para llenar el data grid view.
 
             try
             {
-                Cconexion conexion = new Cconexion();
-                using (SqlConnection cn = conexion.leer())
+                Cconexion conexion = new Cconexion();   //delcaracion de la clase conexion.
+                using (SqlConnection cn = conexion.leer())      //utilizando la clase cionexion se llama al metodo leer.
                 {
-                    SqlDataAdapter adaptador = new SqlDataAdapter(consultaSql, cn);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(consultaSql, cn);     //sql adapter para almacenar los datos recibidos de la consulta sql.
                     DataSet dataSet = new DataSet();
-                    adaptador.Fill(dataSet, "Personas");
+                    adaptador.Fill(dataSet, "Personas"); //llena el data set denominado como personas con los datos recbidos del sql.
 
-                    dgvTrabajador.DataSource = dataSet.Tables["Personas"];
+                    dgvTrabajador.DataSource = dataSet.Tables["Personas"];      //enviamos al data grid view llamado dgvTrabajador los datos obtenidos en el dataset Personas.
 
 
-                    dgvTrabajador.Columns["PersonasID"].HeaderText = "Personas ID";
+                    dgvTrabajador.Columns["PersonasID"].HeaderText = "Personas ID";         //Todos los datos obtenidos tienen su mismo nombre de headers en las columnas.
                     dgvTrabajador.Columns["RTN_Persona"].HeaderText = "RTN";
                     dgvTrabajador.Columns["DNI_Persona"].HeaderText = "DNI";
                     dgvTrabajador.Columns["Primer_Nombre"].HeaderText = "Nombre";
@@ -162,23 +164,23 @@ namespace Proyecto_de_desarrolo.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar datos: " + ex.Message);
+                MessageBox.Show("Error al cargar datos: " + ex.Message);    //catch con mensaje de error en caso de que la accion no se complete correctamente.
             }
         }
         private void agregarTrabajador_Load(object sender, EventArgs e)
         {
-            txtRTN_Trabajador.Focus();
+            txtRTN_Trabajador.Focus();      //al cargar el formulario por predeterminado el focus sera en el primer campo de trabajador, que es el RTN
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            limpiar();
+            limpiar();      //FUNCION para llamar al boton de limpiar para limpiar los campos actuales y dejarlo en blanco.
 
            
         }
-        public void limpiar()
+        public void limpiar()       //funcion limpiar   para limpiar los campos actuales y dejarlo en blanco
         {
-            txtRTN_Trabajador.Text = "";
+            txtRTN_Trabajador.Text = "";        //declaracion de todos los campos en blanco, en este caso todos los textbox.
             txtDNI_Trabajador.Text = "";
             txtNombre_Trabajador.Text = "";
             txtTelefono_Trabajador.Text = "";
@@ -189,7 +191,7 @@ namespace Proyecto_de_desarrolo.Formularios
             txtCodigo.Text = "";
 
 
-            errorProvider1.SetError(txtRTN_Trabajador, "");
+            errorProvider1.SetError(txtRTN_Trabajador, "");     //error provider para dar un mensaje de error en caso de que las validaciones no se cumplan.
             errorProvider1.SetError(txtDNI_Trabajador, "");
             errorProvider1.SetError(txtNombre_Trabajador, "");
             errorProvider1.SetError(txtTelefono_Trabajador, "");
@@ -204,19 +206,19 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtRTN_Cliente_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.SetError(txtRTN_Trabajador, val.txt_vacio(txtRTN_Trabajador.Text) + val.espacio_inicio_final(txtRTN_Trabajador.Text) + val.rango_14(txtRTN_Trabajador.Text) + val.espacio(txtRTN_Trabajador.Text));
-
+            //evento textchanged del rtn con error provider para identificar errores que no coincidanc con las validaciones.
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            FiltrarDatos(txtBuscar.Text);
+            FiltrarDatos(txtBuscar.Text);   //al momento de que cambie el texto escrito en el txtBuscar, se llama a filtrar datos para ir buscando mientras se escribe.
         }
 
-        public void Modificar_Trab()
+        public void Modificar_Trab()    //funcion para modificar un trabajador
         {
-            clsTrabajadores Trabajador = new clsTrabajadores();
+            clsTrabajadores Trabajador = new clsTrabajadores(); //llamado nuevamente a la clase trabajadores.
 
-            Trabajador.setrtn(txtRTN_Trabajador.Text);
+            Trabajador.setrtn(txtRTN_Trabajador.Text);      //enviamos con set a la clase trabajadores con atributos privados el contenido de los textbox.
             Trabajador.setdni(txtDNI_Trabajador.Text);
             Trabajador.setnombre(txtNombre_Trabajador.Text);
             Trabajador.settelefono(int.Parse(txtTelefono_Trabajador.Text));
@@ -226,23 +228,23 @@ namespace Proyecto_de_desarrolo.Formularios
 
             try
             {
-                using (SqlConnection cn = conexion.leer())
+                using (SqlConnection cn = conexion.leer())      //abre y cierra la conexion para evitar errores de conectividad con formularios anteriores.
                 {
                     if (cn.State == ConnectionState.Open)
                     {
-                        cn.Close();
-                        cn.Open();
+                        cn.Close();     //cierra la conexion
+                        cn.Open();      //la abre la conexion nuevamente.
                     }
 
-                    if (cn.State == ConnectionState.Open)
+                    if (cn.State == ConnectionState.Open)       //si la conexion esta abierta
                     {
-                        int ID_Trabajador = Convert.ToInt32(dgvTrabajador.SelectedRows[0].Cells["PersonasID"].Value);
+                        int ID_Trabajador = Convert.ToInt32(dgvTrabajador.SelectedRows[0].Cells["PersonasID"].Value);   //sacamos el id del trabajdor y lo almacenamos para buscar en PersonasID.
 
-                        SqlCommand actualizarTrabajador = new SqlCommand("PA_ActualizarCliente", cn);
-                        actualizarTrabajador.CommandType = CommandType.StoredProcedure;
-                        using (SqlCommand comando = new SqlCommand("PA_ActualizarCliente", cn))
+                        SqlCommand actualizarTrabajador = new SqlCommand("PA_ActualizarCliente", cn);       //dictamos que enviaremos un comando sql.
+                        actualizarTrabajador.CommandType = CommandType.StoredProcedure;         //ese comando sera identificado como un procedimiento almacenado.
+                        using (SqlCommand comando = new SqlCommand("PA_ActualizarCliente", cn))         //nombre del procedimiento almacenado para actualizar
                         {
-                            actualizarTrabajador.Parameters.AddWithValue("@RTN", Trabajador.getrtn());
+                            actualizarTrabajador.Parameters.AddWithValue("@RTN", Trabajador.getrtn());      //obtenemos los datos guardados en la clase de trabajador en sus atributos privados.
                             actualizarTrabajador.Parameters.AddWithValue("@DNI", Trabajador.getdni());
                             actualizarTrabajador.Parameters.AddWithValue("@nombre", Trabajador.getnombre());
                             actualizarTrabajador.Parameters.AddWithValue("@telefono", Trabajador.gettelefono());
@@ -251,37 +253,37 @@ namespace Proyecto_de_desarrolo.Formularios
                             actualizarTrabajador.Parameters.AddWithValue("@ClienteID", ID_Trabajador);
 
                             int Actualizacion = actualizarTrabajador.ExecuteNonQuery();
-                            DataGridView();
+                            DataGridView();     //llamada a la funcion para actualizar ese data grid view.
 
-                            if (Actualizacion > 0)
+                            if (Actualizacion > 0)      //si si se actualizo algo
                             {
-                                limpiar();
-                                btnAgregar.Enabled = true;
-                                MessageBox.Show("Trabajador modificado correctamente");
-                                txtRTN_Trabajador.Focus();
+                                limpiar();      //limpia todos los textbox
+                                btnAgregar.Enabled = true;      //permite usar el boton de agregar.
+                                MessageBox.Show("Trabajador modificado correctamente");  //mensake de confimracion de que el trabajdor se modifico correctamente.
+                                txtRTN_Trabajador.Focus();          //focus al textbox de rtn por si se requiere agregar o modificar otro trabajdor.
                             }
                             else
                             {
-                                MessageBox.Show("No se pudo modificar el trabajador");
+                                MessageBox.Show("No se pudo modificar el trabajador");      //mensaje de error en caso de que haya habido problemas modificando el trabajador
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Error de conexión.");
+                        MessageBox.Show("Error de conexión.");      //mensaje en caso de que por algun motivo no se haya podido establecer conexion con la base de datos y el servidor.
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al intentar conectar: " + ex.Message);
+                MessageBox.Show("Error al intentar conectar: " + ex.Message); //mensaje en caso de que por algun motivo no se haya podido establecer conexion con la base de datos y el servidor.
             }
         }
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)     //instancia del evento click del boton modificar.
         {
             if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
             {
-                MessageBox.Show("Por favor, seleccione un trabajador antes de poder ejecutar la acción.");
+                MessageBox.Show("Por favor, seleccione un trabajador antes de poder ejecutar la acción.");  //si estan vacios los campos no permite avanzar.
 
                 return;
             }
@@ -289,22 +291,23 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "" && errorProvider1.GetError(txtDireccion_Trabajador) == "")
                 {
-                    Modificar_Trab();
+                    Modificar_Trab();       //si todos lso campos estan llenos y no se encuentran errores en las validaciones, permite llamar a la funcion modificar.
                 }
                 else
                 {
                     MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                    //mensaje en caos de que los campos si esten llenos pero no cumplan con las especificaciones de las validaciones.
                 }
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)      //evento click del boton eliminar.
         {
             if (dgvTrabajador.SelectedRows.Count > 0)
             {
-                int TrabajadorID = Convert.ToInt32(dgvTrabajador.SelectedRows[0].Cells["PersonasID"].Value);
+                int TrabajadorID = Convert.ToInt32(dgvTrabajador.SelectedRows[0].Cells["PersonasID"].Value);        //obtenermos el id del trabajador
 
-                Cconexion conexion = new Cconexion();
+                Cconexion conexion = new Cconexion();       //instancia de la clase conexion.
 
                 try
                 {
@@ -312,29 +315,29 @@ namespace Proyecto_de_desarrolo.Formularios
                     {
                         if (cn.State == ConnectionState.Closed)
                         {
-                            cn.Open();
+                            cn.Open();      //abrimos la conexion nuevamente con el servidor y con la base de datos.
                         }
 
-                        SqlCommand comandoEliminarTrabajador = new SqlCommand("PA_MarcarClienteInactivo", cn);
-                        comandoEliminarTrabajador.CommandType = CommandType.StoredProcedure;
+                        SqlCommand comandoEliminarTrabajador = new SqlCommand("PA_MarcarClienteInactivo", cn);      //procedimeinto almacenado para marcar como inactivo un trabajdor.
+                        comandoEliminarTrabajador.CommandType = CommandType.StoredProcedure;        //instancia que lo enviado es un procedimeinto almacenado.
                         comandoEliminarTrabajador.Parameters.AddWithValue("@clienteID", TrabajadorID);
 
                         comandoEliminarTrabajador.ExecuteNonQuery();
 
-                        MessageBox.Show("Trabajador marcado como inactivo correctamente");
+                        MessageBox.Show("Trabajador marcado como inactivo correctamente");  //los trabajdores eliminados se marcan como inactivos.
 
 
-                        DataGridView();
+                        DataGridView();     //se actualiza el data grid view desde la base de datos.
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al intentar conectar: " + ex.Message);
+                    MessageBox.Show("Error al intentar conectar: " + ex.Message);       //error de conexion mientras se hacian los cambios.
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione un trabajador para marcar como inactivo.");
+                MessageBox.Show("Por favor, seleccione un trabajador para marcar como inactivo.");      //en caso de no haber seleccionado en el data grid view.    
             }
         }
 

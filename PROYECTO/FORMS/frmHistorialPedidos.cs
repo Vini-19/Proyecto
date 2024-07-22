@@ -118,6 +118,12 @@ namespace PROYECTO.FORMS
             {
                 DataTable dataTable = new DataTable();
                 dataGridView1.DataSource=dataTable;
+                lblNumPed.Text = "0" + " / " + "0";
+                lblTelefono.Text = "";
+                lblNombre_Cliente.Text = "";
+                lblDireccion.Text = "";
+                lblIdentidad.Text = "";
+                lblFecha.Text = "";
             }
            
             
