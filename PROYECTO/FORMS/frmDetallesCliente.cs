@@ -46,18 +46,18 @@ namespace Proyecto_de_desarrolo.Formularios
         }
 
 
-        private DataTable ObtenerDatosCarrito(string usuarioId)
+        private DataTable ObtenerDatosCarrito(string usuarioId)     //saca los datos del carrito.
         {
             Cconexion conexion = new Cconexion();
             SqlConnection cn = conexion.leer();
 
             string consulta = "SELECT Productos_ID, cantidad FROM Carritos WHERE Usuarios_ID = @UsuarioID AND estado = 1";
-            SqlCommand comando = new SqlCommand(consulta, cn);
+            SqlCommand comando = new SqlCommand(consulta, cn);      //consulta sql para sacar los datos de prodycotos id y carritos donde el estado sea 1 o inactivo.
             comando.Parameters.AddWithValue("@UsuarioID", usuarioId);
 
             SqlDataAdapter da = new SqlDataAdapter(comando);
             DataTable dataTable = new DataTable();
-            da.Fill(dataTable);
+            da.Fill(dataTable);     //llena el datatable con los datos de la consulta sql.
 
             return dataTable;
         }
@@ -77,7 +77,7 @@ namespace Proyecto_de_desarrolo.Formularios
                         cn.Open();
                     }
 
-                    SqlCommand comandoMandarPedido = new SqlCommand("CrearPedido", cn);
+                    SqlCommand comandoMandarPedido = new SqlCommand("CrearPedido", cn); //comando para crear un nuevo pedido con los detalles de cliente.
                   
                     comandoMandarPedido.CommandType = CommandType.StoredProcedure;
                     comandoMandarPedido.Parameters.AddWithValue("@NombreCliente",nombreCliente);
@@ -89,7 +89,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     comandoMandarPedido.ExecuteNonQuery();
 
                     MessageBox.Show("Se agrego su pedido correctamente");
-
+                    //en caso de que todos los datos del pedido esten correctos.
 
                 }
             }
@@ -134,7 +134,7 @@ namespace Proyecto_de_desarrolo.Formularios
             }
             else
             {
-                DataTable carrito = ObtenerDatosCarrito(usuarioId);
+                DataTable carrito = ObtenerDatosCarrito(usuarioId);     //saca los datos de los cortes del carrito.
                 string nombreCliente = txtNombre.Text;
                 string numeroIdentidad = txtIdentidad.Text;
                 string direccion = txtDireccion.Text;

@@ -23,17 +23,17 @@ namespace PROYECTO.FORMS
         int numpedido = 1;
         int estado = 1;
         string pedidosid;
-        DataTable dtCount = new DataTable();
-        public void ObtenerDatosCarritos()
+        DataTable dtCount = new DataTable();        //declaracion del datatable para almacenar los datos
+        public void ObtenerDatosCarritos()      //funcion para obtener los datos del carrito
         {
             DataTable dt = new DataTable();
             Cconexion conexion = new Cconexion();
-
+            //declaracion de las clases necesarias
             clsPersonasid per = new clsPersonasid();
 
             SqlConnection cn = conexion.leer();
             SqlCommand CantPed = new SqlCommand("SELECT DISTINCT  p.Pedido_ID FROM Pedidos p INNER JOIN Carritos c ON p.Pedido_ID = c.Pedido_ID WHERE p.Estado = 1 AND c.Usuarios_ID = '"+per.getcodUsu()+"'", cn);
-            SqlDataAdapter DACount = new SqlDataAdapter(CantPed);
+            SqlDataAdapter DACount = new SqlDataAdapter(CantPed);   //obtener solo la cantidad del pedido desde la tabla pedidos y carritos con el estado de aun no aceptado o igual a 1.
             dtCount.Clear();
             DACount.Fill(dtCount);
            if(dtCount.Rows.Count == 0)
@@ -55,7 +55,7 @@ namespace PROYECTO.FORMS
 
                 if (numpedido < 2)
                 {
-                    btnAnterior.Visible = false;
+                    btnAnterior.Visible = false;//muestra los botones necesarios y va cambiando segun sea el pedido.
                 }
                 else
                 {
@@ -79,7 +79,7 @@ namespace PROYECTO.FORMS
 
 
                         SqlCommand ExtraerPedido = new SqlCommand("ObtenerDatosCarritoCliente", cn);
-
+                        //procedimiento almacenado para obtener los datos del carrito.
                         ExtraerPedido.CommandType = CommandType.StoredProcedure;
                         ExtraerPedido.Parameters.AddWithValue("@pedido ", numpedido);
                         ExtraerPedido.Parameters.AddWithValue("@estado ", estado);
@@ -98,7 +98,7 @@ namespace PROYECTO.FORMS
                         lblFecha.Text = dt.Rows[0][5].ToString();
 
                         dataGridView1.DataSource = data.ToTable(false, "nombre_producto", "Precio", "cantidad");
-
+                        //al data grid view se usan los datos del datatable para mostrar el pedido.
                     }
 
                     else
@@ -118,7 +118,7 @@ namespace PROYECTO.FORMS
             {
                 DataTable dataTable = new DataTable();
                 dataGridView1.DataSource=dataTable;
-                lblNumPed.Text = "0" + " / " + "0";
+                lblNumPed.Text = "0" + " / " + "0";     //si no encuentra pedidos limpia todo slos campos y reinicia el contador de pedidos en el label.
                 lblTelefono.Text = "";
                 lblNombre_Cliente.Text = "";
                 lblDireccion.Text = "";
@@ -132,7 +132,8 @@ namespace PROYECTO.FORMS
         {
             Cconexion conexion = new Cconexion();
             SqlConnection cn = conexion.leer();
-
+            //para eliminar un pedido en caso de no ser apto a ojos del administrados
+            //consulta sql para borrar el pedido de carritos y de pedidos.
             SqlCommand cancelarCarrito = new SqlCommand("Delete from Carritos where Pedido_ID='"+pedidosid+"'",cn);
             SqlCommand cancelarPedido = new SqlCommand("Delete from Pedidos where Pedido_ID='" + pedidosid + "'",cn);
             cancelarCarrito.ExecuteNonQuery();
@@ -145,7 +146,7 @@ namespace PROYECTO.FORMS
             lblFecha.Text = "";
             numpedido = 1;
             pedidosid = "";
-            ObtenerDatosCarritos();
+            ObtenerDatosCarritos();     //limpia todos los campos y trata de obtener nuevos datos del carrito.
 
         }
 
