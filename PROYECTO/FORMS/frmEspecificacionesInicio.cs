@@ -35,7 +35,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             if (string.IsNullOrEmpty(usuario))
             {
-                MessageBox.Show("Por favor ingresar los datos");
+                MessageBox.Show("Por favor ingresar los datos");    //en caso de que el usuario este vacio para recup la contraseña
             }
             else
             {
@@ -54,7 +54,7 @@ namespace Proyecto_de_desarrolo.Formularios
                         
 
                         SqlCommand comandoPreguntaRecuperacion = new SqlCommand("PA_ObtenerPreguntaRecuperacion", cn);
-                        comandoPreguntaRecuperacion.CommandType = CommandType.StoredProcedure;
+                        comandoPreguntaRecuperacion.CommandType = CommandType.StoredProcedure;  //obtiene la pregunta de recuperacion con un procedimiento almacenado.
 
                         comandoPreguntaRecuperacion.Parameters.AddWithValue("@usuario", usuario);
 
@@ -64,7 +64,7 @@ namespace Proyecto_de_desarrolo.Formularios
                         {
                             string preguntaRecuperacion = reader["Pregunta_Recuperacion"].ToString();
                             lblPregunta.Text = preguntaRecuperacion;
-
+                            //muestra la pregunta de recuperacion del usuario obtenida en un label.
                             MessageBox.Show("Usuario encontrado");
                             label1.Enabled = false;
                             txtUser.Enabled = false;
@@ -81,7 +81,7 @@ namespace Proyecto_de_desarrolo.Formularios
                         }
 
                         reader.Close();
-                        cn.Close();
+                        cn.Close();     //cierra la conexion.
                     }
                 }
                 catch (Exception ex)
@@ -99,7 +99,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(respuestaIngresada))
             {
-                MessageBox.Show("Por favor ingresar todos los datos");
+                MessageBox.Show("Por favor ingresar todos los datos");  //en caso de que el usuarip o la respuesta esten en blanco.
             }
             else
             {
@@ -117,7 +117,7 @@ namespace Proyecto_de_desarrolo.Formularios
                         
                         SqlCommand comandoRespuestaRecuperacion = new SqlCommand("PA_ObtenerRespuestaRecuperacion", cn);
                         comandoRespuestaRecuperacion.CommandType = CommandType.StoredProcedure;
-
+                        //procedimiento almacenado para obtener la respuesta de recuperacion de contraseña que uso el usuairo al registrarse.
                         comandoRespuestaRecuperacion.Parameters.AddWithValue("@usuario", usuario);
 
                         SqlDataReader reader = comandoRespuestaRecuperacion.ExecuteReader();
@@ -128,7 +128,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
                             if (respuestaIngresada == respuestaRecuperacion)
                             {
-                                frmRecuperacion frm = new frmRecuperacion();
+                                frmRecuperacion frm = new frmRecuperacion();    //si la respuesta de recuperacion coincide con lo obtenido del procedimeinto almacenado muestra el formulario de cambio de contraseña
                                 frm.Show();
                                 frm.Usuario = txtUser.Text;
                                 this.Hide();
@@ -161,7 +161,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(respuestaIngresada))
             {
-                MessageBox.Show("Por favor ingresar todos los datos");
+                MessageBox.Show("Por favor ingresar todos los datos");      //valida que para poder continuar almenos haya ingresado algo de datos a los textbox.
             }
             else
             {
@@ -256,7 +256,7 @@ namespace Proyecto_de_desarrolo.Formularios
                             label1.Enabled = false;
                             txtUser.Enabled = false;
                             btnBuscar.Enabled = false;
-
+                            //busca si encuentra un usuario con ese nombre, sino dice que el usuario no fue encontrado.
                             lblPregunta.Show();
                             lblIngrese.Show();
                             txtRespuesta_Recuperacion.Show();

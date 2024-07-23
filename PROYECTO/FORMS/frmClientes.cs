@@ -27,13 +27,13 @@ namespace Proyecto_de_desarrolo
         
 
 
-        public void DataGridView()
+        public void DataGridView()      //funcion para llenar el data grid view de clientes.
         {
             string consultaSql = "SELECT RTN_Persona, DNI_Persona, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 3";
-
+            //consulta select en sql para obtener todos los datos de la tabla personas pero solo de aquellos cuyo rol sea el de clientes que es 3.
             try
             {
-                Cconexion conexion = new Cconexion();
+                Cconexion conexion = new Cconexion();       //instancia de la calse de conexion.
                 using (SqlConnection cn = conexion.leer())
                 {
                     SqlDataAdapter adaptador = new SqlDataAdapter(consultaSql, cn);
@@ -41,7 +41,7 @@ namespace Proyecto_de_desarrolo
                     adaptador.Fill(dataSet, "Personas");
 
                     dgvCliente.DataSource = dataSet.Tables["Personas"];
-
+                    //rellena el data grid view con columnas nuevas una para cada dato obtenido enla consulta sql. metemos igualado a las avriables anteriores.
                     dgvCliente.Columns["RTN_Persona"].HeaderText = "RTN";
                     dgvCliente.Columns["DNI_Persona"].HeaderText = "DNI";
                     dgvCliente.Columns["Primer_Nombre"].HeaderText = "Nombre";
@@ -55,12 +55,13 @@ namespace Proyecto_de_desarrolo
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar datos: " + ex.Message);
+                //mensaje de error en caso de qu eno pueda cargar los datos.
             }
         }
 
         
 
-        public void limpiar()
+        public void limpiar()       //funcion para limpiar los texbox de los clientes.
         {
             txtRTN_Cliente.Text = "";
             txtDNI_Cliente.Text = "";
@@ -72,10 +73,10 @@ namespace Proyecto_de_desarrolo
 
 
         public void Modificar_Cliente()
-        {
+        {       //funcion para poder modificar un cliente que ya existe.
             clsClientes clientes = new clsClientes();
 
-            clientes.setrtn(txtRTN_Cliente.Text);
+            clientes.setrtn(txtRTN_Cliente.Text);       //envia los datos con set a la clase de clientes para almacenarlos en atributos privados.
             clientes.setdni(txtDNI_Cliente.Text);
             clientes.setnombre(txtNombre_Cliente.Text);
             clientes.settelefono(int.Parse(txtTelefono_Cliente.Text));
@@ -89,7 +90,7 @@ namespace Proyecto_de_desarrolo
                 {
                     if (cn.State == ConnectionState.Open)
                     {
-                        cn.Close();
+                        cn.Close();     //cierra y abre la conexio para evitar errores.
                         cn.Open();
                     }
 
@@ -97,11 +98,11 @@ namespace Proyecto_de_desarrolo
                     {
                         int ID_Cliente = Convert.ToInt32(dgvCliente.SelectedRows[0].Cells["PersonasID"].Value);
 
-                        SqlCommand actualizarCliente = new SqlCommand("PA_ActualizarCliente", cn);
+                        SqlCommand actualizarCliente = new SqlCommand("PA_ActualizarCliente", cn);      //prodecimientoa lmacenado en sql para actualizar el cliente.
                         actualizarCliente.CommandType = CommandType.StoredProcedure;
                         using (SqlCommand comando = new SqlCommand("PA_ActualizarCliente", cn))
                         {
-                            actualizarCliente.Parameters.AddWithValue("@RTN", clientes.getrtn());
+                            actualizarCliente.Parameters.AddWithValue("@RTN", clientes.getrtn());       //obtenemos los datos guardados en los atributos privados de la clase clientes.
                             actualizarCliente.Parameters.AddWithValue("@DNI", clientes.getdni());
                             actualizarCliente.Parameters.AddWithValue("@nombre", clientes.getnombre());
                             actualizarCliente.Parameters.AddWithValue("@telefono", clientes.gettelefono());
@@ -110,13 +111,13 @@ namespace Proyecto_de_desarrolo
                             actualizarCliente.Parameters.AddWithValue("@clienteID", ID_Cliente);
 
                             int Actualizacion = actualizarCliente.ExecuteNonQuery();
-                            DataGridView();
+                            DataGridView();     //actializamos los datos mostrados en el data gridview y lo llenamos de nuevo.
 
                             if (Actualizacion > 0)
                             {
-                                limpiar();
+                                limpiar();      //limpiamos todos los controles
                                 btnAgregar.Enabled = true;
-                                txtRTN_Cliente.Focus();
+                                txtRTN_Cliente.Focus();     //damos focus en el primer control que pide que es el rtn.
                                 errorProvider1.SetError(txtRTN_Cliente, "");
                                 errorProvider1.SetError(txtDNI_Cliente, "");
                                 errorProvider1.SetError(txtNombre_Cliente, "");
@@ -128,31 +129,31 @@ namespace Proyecto_de_desarrolo
                             }
                             else
                             {
-                                MessageBox.Show("No se pudo modificar el proveedor");
+                                MessageBox.Show("No se pudo modificar el proveedor");       //mensaje en caso de error de no poder modificar el proveedor,
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Error de conexión.");
+                        MessageBox.Show("Error de conexión.");      //erro de conexion en caso de tener probelmas para conectar con la base de datos
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al intentar conectar: " + ex.Message);
+                MessageBox.Show("Error al intentar conectar: " + ex.Message);       //error de conexion en caso de tener problemas para conectars econ el servidor.
             }
         }
        
 
         
 
-        private void FiltrarDatos(string texto)
+        private void FiltrarDatos(string texto)     //funcion para filtrar los datos del textbox buscar para mostrar y seleccionar el primeor al buscar y escribir.
         {
             DataTable dt = (DataTable)dgvCliente.DataSource;
             if (dt != null)
             {
-                dgvCliente.ClearSelection();
+                dgvCliente.ClearSelection();    //limpia la seleccion dek data grid view.
 
                 if (!string.IsNullOrEmpty(texto))
                 {
@@ -162,7 +163,7 @@ namespace Proyecto_de_desarrolo
                     {
                         if (row.Cells["Primer_Nombre"].Value != null && row.Cells["Primer_Nombre"].Value.ToString().ToLower().Contains(texto.ToLower()))
                         {
-                            row.Selected = true;
+                            row.Selected = true;    
                             dgvCliente.FirstDisplayedScrollingRowIndex = row.Index;
                             encontrado = true;
                             break; // Selecciona la primera y termina
@@ -170,7 +171,7 @@ namespace Proyecto_de_desarrolo
                     }
                     if (!encontrado)
                     {
-                        dgvCliente.ClearSelection();
+                        dgvCliente.ClearSelection();    //limpia la seleccion del data grid view.
                     }
                 }
             }
@@ -178,7 +179,7 @@ namespace Proyecto_de_desarrolo
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            FiltrarDatos(txtBuscar.Text);
+            FiltrarDatos(txtBuscar.Text);       //llama a filtrar datos funcion cada que el texto cambia en el textbox buscar.
         }
 
         private void txtRTN_Cliente_TextChanged(object sender, EventArgs e)
@@ -229,7 +230,7 @@ namespace Proyecto_de_desarrolo
 
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)       //boton de agregar un nuevo cliente.
         {
             clsClientes clientes = new clsClientes();
             Cconexion conexion = new Cconexion();
@@ -237,7 +238,7 @@ namespace Proyecto_de_desarrolo
             if (txtRTN_Cliente.Text == "" || txtDNI_Cliente.Text == "" || txtNombre_Cliente.Text == "" || txtTelefono_Cliente.Text == "" || txtCorreo_Cliente.Text == "" || txtDireccion_Cliente.Text == "")
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                return;
+                return;     //validacion en caso de que los campos esten vacios.
 
             }
             else
@@ -288,7 +289,7 @@ namespace Proyecto_de_desarrolo
             if (txtRTN_Cliente.Text == "" || txtDNI_Cliente.Text == "" || txtNombre_Cliente.Text == "" || txtTelefono_Cliente.Text == "" || txtCorreo_Cliente.Text == "" || txtDireccion_Cliente.Text == "")
             {
                 MessageBox.Show("Por favor, seleccione un cliente antes de poder ejecutar la acción.");
-
+                //validacion para modificar en caso de que quiera modificar y los campos esten vacios.
                 return;
             }
             else
@@ -308,7 +309,7 @@ namespace Proyecto_de_desarrolo
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
-            errorProvider1.SetError(txtRTN_Cliente, "");
+            errorProvider1.SetError(txtRTN_Cliente, "");        //muestra los botones de error parpadeantes
             errorProvider1.SetError(txtDNI_Cliente, "");
             errorProvider1.SetError(txtNombre_Cliente, "");
             errorProvider1.SetError(txtTelefono_Cliente, "");
@@ -320,7 +321,7 @@ namespace Proyecto_de_desarrolo
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            if (dgvCliente.SelectedRows.Count > 0)
+            if (dgvCliente.SelectedRows.Count > 0)      //eliminar marca al cliente como inactivo para mantener la integridad de la base de datos.
             {
                 int clienteID = Convert.ToInt32(dgvCliente.SelectedRows[0].Cells["PersonasID"].Value);
 
@@ -335,7 +336,7 @@ namespace Proyecto_de_desarrolo
                             cn.Open();
                         }
                         SqlCommand comandoEliminarCliente = new SqlCommand("PA_MarcarClienteInactivo", cn);
-                        comandoEliminarCliente.CommandType = CommandType.StoredProcedure;
+                        comandoEliminarCliente.CommandType = CommandType.StoredProcedure;//procedimiento almacenado para marcar el cliente como inactivo.
                         comandoEliminarCliente.Parameters.AddWithValue("@clienteID", clienteID);
 
                         comandoEliminarCliente.ExecuteNonQuery();

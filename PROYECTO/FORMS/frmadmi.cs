@@ -21,7 +21,7 @@ namespace PROYECTO
         public frmadmi()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;       //hace que el programa inicie en pantalla completa con el formulario de administrador.
 
         }
         bool menuExpand = false;
@@ -35,7 +35,7 @@ namespace PROYECTO
 
         bool siderbarExpand = true;
 
-        private void AbriForm(Form formulario)
+        private void AbriForm(Form formulario)  //funcion para abrir el formulario
         {
             if (FormAct != null)
             {
@@ -46,7 +46,7 @@ namespace PROYECTO
             if (FormAct != formulario)
             {
                 FormAct = formulario;
-                formulario.TopLevel = false;
+                formulario.TopLevel = false;        //multiples especifiaciones de edicion de los formulariios.
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
                 formulario.BackColor = Color.White;
@@ -58,7 +58,7 @@ namespace PROYECTO
 
         private void submenu()
         {
-            if (panelProductos.Visible == true)
+            if (panelProductos.Visible == true)     //habilita los paneles del submenu
             {
                 panelProductos.Visible = false;
             }
@@ -87,7 +87,7 @@ namespace PROYECTO
 
         }
 
-        private void butons()
+        private void butons()       //habilita y deshabilita los botones del submenu.
         {
             if (btnFacturacion.Enabled == true)
             {
@@ -131,7 +131,7 @@ namespace PROYECTO
 
         private void ShowMenu(Panel Submenu)
         {
-            if (Submenu.Visible == false)
+            if (Submenu.Visible == false)   //muestra el submenu de las categorias.
             {
                 submenu();
                 Submenu.Visible = true;
@@ -183,7 +183,7 @@ namespace PROYECTO
 
         private void button16_Click_1(object sender, EventArgs e)
         {
-            ShowMenu(panelPersonas);
+            ShowMenu(panelPersonas);    //muestra el panel de personas
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -193,12 +193,12 @@ namespace PROYECTO
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ShowMenu(panelProductos);
+            ShowMenu(panelProductos);//muestra el panel de productos
         }
 
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
-            ShowMenu(panelFacturacion);
+            ShowMenu(panelFacturacion);     //muestra el panel de facturacion
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -292,7 +292,7 @@ namespace PROYECTO
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide();        //esconde el formulario principal y devuelve al inicio de sesion.
             frmInicioSesion sesio = new frmInicioSesion();
             sesio.Show();
            
@@ -305,22 +305,22 @@ namespace PROYECTO
 
         private void btnPersonas_Click(object sender, EventArgs e)
         {
-            ShowMenu(panelPersonas);
+            ShowMenu(panelPersonas);    //muestra el panel de personas
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit();     //se sale de toda la aplicacion y quita todos los formularios.
         }
 
         private void btnFacturacion_Click_1(object sender, EventArgs e)
         {
-            ShowMenu(panelFacturacion);
+            ShowMenu(panelFacturacion); //muestra el panel de facturacion
         }
 
         private void btnProduct_Click_1(object sender, EventArgs e)
         {
-            ShowMenu(panelProductos);
+            ShowMenu(panelProductos);   //muestra el panel de productos
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -331,7 +331,7 @@ namespace PROYECTO
 
         private void btnMenu_Click_1(object sender, EventArgs e)
         {
-            sliderTran.Start();
+            sliderTran.Start();     //panel movil.
         }
 
         private void sliderTran_Tick(object sender, EventArgs e)

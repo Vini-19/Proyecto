@@ -18,16 +18,16 @@ namespace Proyecto_de_desarrolo.Formularios
 
         public frmAgregarCompra()
         {
-            InitializeComponent();
-            CargarDatosProveedores();
-            Cargarcategoria();
+            InitializeComponent();      
+            CargarDatosProveedores();       //al cargar el formulario carga los datos de los proveedores para la compra de materia prima y carga la categoria de esos proveedores.
+            Cargarcategoria();          //aqui carga el combobox de categoria
 
 
         }
 
-        clsValidaciones val = new clsValidaciones();
-
-        private void CargarDatosProveedores()
+        clsValidaciones val = new clsValidaciones();        //declaracion global de la clase de validaciones.
+            
+        private void CargarDatosProveedores()       //funcion para cargar los datos de  los proveedores.
         {
             Cconexion conexion = new Cconexion();
 
@@ -38,30 +38,32 @@ namespace Proyecto_de_desarrolo.Formularios
                 {
                     string queryExisteProducto = "SELECT R.[Roles_ID], R.Rol, P.[Primer_Nombre] FROM [dbo].[Personas] P INNER JOIN [dbo].[Roles] R ON R.Roles_ID = P.Roles_ID WHERE R.Rol LIKE 'Proveedor'";
                     SqlCommand comandoExisteProducto = new SqlCommand(queryExisteProducto, cn);
+                    //query sql con instrucciones de sacar los datos de los proveedores
+
 
                     SqlDataReader reader = comandoExisteProducto.ExecuteReader();
 
-                    cmbProveedor.Items.Clear();
+                    cmbProveedor.Items.Clear(); //limpia los items del combobox para luego llenarlo con los datos nuevos.
 
                     while (reader.Read())
                     {
-                        int rolesID = Convert.ToInt32(reader["Roles_ID"]);
-                        string proveedorNombre = reader["Primer_Nombre"].ToString();
+                        int rolesID = Convert.ToInt32(reader["Roles_ID"]);      //saca el valor del rol. para solo mostrar los que sean proveedores.
+                        string proveedorNombre = reader["Primer_Nombre"].ToString();    //saca el nombre de los proveedores.
 
                         clsProveedorProducto proveedor = new clsProveedorProducto(rolesID, proveedorNombre);
-                        cmbProveedor.Items.Add(proveedor);
+                        cmbProveedor.Items.Add(proveedor);      //agrega como items los nombres de los proveedores encontrados.
                     }
 
                     reader.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error de conexión.");
+                    MessageBox.Show("Error de conexión.");      //validacion de error de correcion.
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al intentar conectar: " + ex.Message);
+                MessageBox.Show("Error al intentar conectar: " + ex.Message);       //error al intentar conectar.
             }
         }
 
@@ -72,15 +74,15 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
         }
-        float precio, total, subtotal;
+        float precio, total, subtotal;      //delcaracion de variables de calculo.
 
-        private void btnAgregarC_Click(object sender, EventArgs e)
+        private void btnAgregarC_Click(object sender, EventArgs e)  //evento click del boton agregar.
         {
             int cant;
-            int indiceprove = cmbProveedor.SelectedIndex;
+            int indiceprove = cmbProveedor.SelectedIndex;       //delcaracion de variables para asignar al indice seleciconado.
             int indicecate = cmbCategoria.SelectedIndex;
 
-            ListaCompras.Items.Add(cmbProveedor.Items[indiceprove].ToString());
+            ListaCompras.Items.Add(cmbProveedor.Items[indiceprove].ToString());     //agrega  los datos al listbox de la lista de compras como items.
             ListaCompras.Items.Add(cmbCategoria.Items[indicecate].ToString());
 
 
@@ -89,7 +91,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             
 
-            cant = int.Parse(txtCantidad.Text);
+            cant = int.Parse(txtCantidad.Text);     //declaracion de una variable para giuardar la cantidad del textbox.
             precio = float.Parse(txtPrecio.Text);
 
             subtotal = cant * precio;
@@ -114,15 +116,15 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbCategoria.Items.Clear();
+            cmbCategoria.Items.Clear();     //saca el indice seleciconado del combobox del proveedor.
             cmbCategoria.Text = "";
-            Cargarcategoria();
+            Cargarcategoria();      //carga la categoria del combobox nuevamente.
         }
 
-        public void Cargarcategoria()
+        public void Cargarcategoria()       //funcion para cargar la categoria del combobox.
         {
             Cconexion conexion = new Cconexion();
-            string nombreProve = cmbProveedor.Text;
+            string nombreProve = cmbProveedor.Text;     //declaracion de variable que contiene el nombre del proveedor en base al indice seleccionado en el combobox.
 
             try
             {
@@ -131,7 +133,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     if (cn.State == ConnectionState.Open)
                     {
                         string queryExisteProducto = "Select P.Categoria from dbo.Personas P WHERE P.Primer_Nombre = @nombre";
-                        SqlCommand comando = new SqlCommand(queryExisteProducto, cn);
+                        SqlCommand comando = new SqlCommand(queryExisteProducto, cn);   //query sql con instruccion de sacar la categoria  de ese proveedor en base a su nombre.
                         {
                             comando.Parameters.AddWithValue("@nombre", nombreProve);
 
@@ -142,7 +144,7 @@ namespace Proyecto_de_desarrolo.Formularios
                                 while (reader.Read())
                                 {
                                     string nombreCategoria = reader["Categoria"].ToString();
-                                    cmbCategoria.Items.Add(nombreCategoria);
+                                    cmbCategoria.Items.Add(nombreCategoria);        //agrega el nombre de la categoria a la que pertenece ese proveedor.
                                 }
                             }
                         }
@@ -150,6 +152,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     else
                     {
                         MessageBox.Show("Error de conexión.");
+                        //error en caso de problemas de conexion con el servidor.
                     }
                 }
             }
@@ -164,13 +167,8 @@ namespace Proyecto_de_desarrolo.Formularios
         {
             if (ListaCompras.SelectedIndex > -1)
             {
-                ListaCompras.Items.RemoveAt(ListaCompras.SelectedIndex);
+                ListaCompras.Items.RemoveAt(ListaCompras.SelectedIndex);        //quita la compra del indice seleccionado.
             }
-
-
-
-
-
         }
 
         private void frmAgregarCompra_Load(object sender, EventArgs e)
@@ -182,10 +180,10 @@ namespace Proyecto_de_desarrolo.Formularios
         private void button1_Click_1(object sender, EventArgs e)
         {
             frmProveedores prove = new frmProveedores();
-            prove.Show();
+            prove.Show();       //muestra el formulario de proveedores.
         }
 
-        private void btnFinalizarC_Click(object sender, EventArgs e)
+        private void btnFinalizarC_Click(object sender, EventArgs e)        //evento lcick del boton finalizar.
         {
             Cconexion conexion = new Cconexion();
             try
@@ -193,9 +191,9 @@ namespace Proyecto_de_desarrolo.Formularios
                 SqlConnection cn = conexion.leer();
                 if (cn.State == ConnectionState.Open)
                 {
-                    int personaId = ((clsProveedorProducto)cmbProveedor.SelectedItem).Roles_ID;
+                    int personaId = ((clsProveedorProducto)cmbProveedor.SelectedItem).Roles_ID; //instancia de que rol contiene ese proveedore,
                     int categoriaId = cmbCategoria.SelectedIndex + 1;
-                    int cantidadProducto = int.Parse(txtCantidad.Text);
+                    int cantidadProducto = int.Parse(txtCantidad.Text);     //instancia de la cantidad de materia prima ingresada.
                     DateTime fechaIngreso = DateTime.Now;
                     string descripcion = "Compra de " + cmbCategoria.SelectedItem.ToString();
                     float precio = float.Parse(txtPrecio.Text);
@@ -217,11 +215,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Compra finalizada y registrada con éxito.");
+                        MessageBox.Show("Compra finalizada y registrada con éxito.");   //mensaje de exito en caso de que la compra sea exitosa.
                     }
                     else
                     {
-                        MessageBox.Show("Error al registrar la compra.");
+                        MessageBox.Show("Error al registrar la compra.");       //encaso de encontrar un error en la compra da este mensaje,
                     }
                 }
                 else
@@ -267,7 +265,7 @@ namespace Proyecto_de_desarrolo.Formularios
         {
             cmbCategoria.Items.Clear();
             cmbCategoria.Text = "";
-            Cargarcategoria();
+            Cargarcategoria();      //en caso de cambiar de proveedor limpia la categoria del combobox y vuelve a buscar a la que pertenece ese proveedor.
         }
 
         private void txtCantidad_TextChanged_1(object sender, EventArgs e)
@@ -290,14 +288,14 @@ namespace Proyecto_de_desarrolo.Formularios
             if (txtCantidad.Text == "" || txtPrecio.Text == "" || cmbProveedor.SelectedIndex == -1 || cmbCategoria.SelectedIndex == -1 || cmbProveedor.Text == "" || cmbCategoria.Text == "")
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                return;
+                return;     //en caso de que al agregar haya campos vacios no deja pasar.
 
             }
             else
             {
                 if (errorProvider1.GetError(txtCantidad) == "" && errorProvider1.GetError(txtPrecio) == "")
                 {
-                    ListaCompras.Items.Add("Proveedor:  " + cmbProveedor.Text);
+                    ListaCompras.Items.Add("Proveedor:  " + cmbProveedor.Text);     //agrega al listbox los datos de la compra ingresados por el usuario,
                     ListaCompras.Items.Add("Categoria:  " + cmbCategoria.Text);
                     ListaCompras.Items.Add("Peso:       " + txtCantidad.Text);
                     ListaCompras.Items.Add("Precio:     " + txtPrecio.Text);
@@ -311,7 +309,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     lbltotal2.Text = totalCompra.ToString();
 
 
-                    txtCantidad.Clear();
+                    txtCantidad.Clear();        //limpia los textbox luego de agregar.
                     txtPrecio.Clear();
                     errorProvider1.SetError(txtCantidad, "");
                     errorProvider1.SetError(txtPrecio, "");
@@ -319,11 +317,12 @@ namespace Proyecto_de_desarrolo.Formularios
                 else
                 {
                     MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                    //en caso de que los campos no cunplan con las validaciones de la clase de validaciones.
                 }
             }
         }
 
-        private void btnQuitarC_Click_1(object sender, EventArgs e)
+        private void btnQuitarC_Click_1(object sender, EventArgs e)     //evento click del boton de quitar.
         {
             if (o != -1)
             {
@@ -397,7 +396,7 @@ namespace Proyecto_de_desarrolo.Formularios
             o = -1;
         }
 
-        private void btnFinalizarC_Click_1(object sender, EventArgs e)
+        private void btnFinalizarC_Click_1(object sender, EventArgs e)      //evento click del boton finalizar.
         {
             Cconexion conexion = new Cconexion();
             try
@@ -429,6 +428,8 @@ namespace Proyecto_de_desarrolo.Formularios
 
                             string descripcion = "Compra de " + listCompras[i + 1];
 
+
+                            //inserta en la tabla inventario mediante una consulta sql los valores obtenidos en el formulario.
                             string query = "INSERT INTO Inventario (Persona_ID, Categoria_ID, Estado, Cantidad_Producto, Descripcion, Precio) " +
                                 "VALUES ('" + listPersonasId[j] + "', '" + categoriaid + "', 'Activo', '" + listCompras[i + 2] + "','" + descripcion + "', '" + listCompras[i + 3] + "')";
                             SqlCommand comando = new SqlCommand(query, cn);
@@ -441,12 +442,12 @@ namespace Proyecto_de_desarrolo.Formularios
                             updateStockCommand.Parameters.AddWithValue("@categoriaId", categoriaid);
                             updateStockCommand.ExecuteNonQuery();
 
-                            MessageBox.Show("Materia Prima Ingresada Correctamente a Inventario");
+                            MessageBox.Show("Materia Prima Ingresada Correctamente a Inventario");      //ingresa la materia prima al inventario.
                             i = i + 5;
                         }
                     }
                     listCompras.Clear();
-                    ListaCompras.Items.Clear();
+                    ListaCompras.Items.Clear();     //linpia los listbox y sus items.
                 }
                 else
                 {
