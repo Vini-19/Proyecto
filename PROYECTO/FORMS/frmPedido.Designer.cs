@@ -32,6 +32,7 @@ namespace Proyecto_de_desarrolo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPedido));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -78,7 +79,7 @@ namespace Proyecto_de_desarrolo
             this.panel2.Controls.Add(this.picProducto);
             this.panel2.Controls.Add(this.btnAgregar);
             this.panel2.Location = new System.Drawing.Point(130, 169);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(402, 362);
             this.panel2.TabIndex = 5;
@@ -93,7 +94,7 @@ namespace Proyecto_de_desarrolo
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btnModificar.Location = new System.Drawing.Point(164, 297);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(81, 28);
             this.btnModificar.TabIndex = 22;
@@ -110,7 +111,7 @@ namespace Proyecto_de_desarrolo
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btnLimpiar.Location = new System.Drawing.Point(279, 297);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(81, 28);
             this.btnLimpiar.TabIndex = 21;
@@ -123,7 +124,7 @@ namespace Proyecto_de_desarrolo
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(41, 228);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(116, 21);
             this.cmbCategoria.TabIndex = 20;
@@ -144,7 +145,7 @@ namespace Proyecto_de_desarrolo
             // txtNombre_Imagen
             // 
             this.txtNombre_Imagen.Location = new System.Drawing.Point(193, 230);
-            this.txtNombre_Imagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre_Imagen.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre_Imagen.Name = "txtNombre_Imagen";
             this.txtNombre_Imagen.Size = new System.Drawing.Size(149, 20);
             this.txtNombre_Imagen.TabIndex = 18;
@@ -153,7 +154,7 @@ namespace Proyecto_de_desarrolo
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(41, 171);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(116, 20);
             this.txtPrecio.TabIndex = 17;
@@ -163,7 +164,7 @@ namespace Proyecto_de_desarrolo
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(41, 120);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(116, 20);
             this.txtNombre.TabIndex = 15;
@@ -172,7 +173,7 @@ namespace Proyecto_de_desarrolo
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(41, 65);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(116, 20);
             this.txtCodigo.TabIndex = 14;
@@ -229,7 +230,7 @@ namespace Proyecto_de_desarrolo
             // picProducto
             // 
             this.picProducto.Location = new System.Drawing.Point(193, 26);
-            this.picProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picProducto.Margin = new System.Windows.Forms.Padding(2);
             this.picProducto.Name = "picProducto";
             this.picProducto.Size = new System.Drawing.Size(167, 163);
             this.picProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,7 +246,7 @@ namespace Proyecto_de_desarrolo
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btnAgregar.Location = new System.Drawing.Point(41, 297);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(81, 28);
             this.btnAgregar.TabIndex = 8;
@@ -257,7 +258,7 @@ namespace Proyecto_de_desarrolo
             // 
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducto.Location = new System.Drawing.Point(558, 169);
-            this.dgvProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProducto.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.ReadOnly = true;
             this.dgvProducto.RowHeadersWidth = 51;
@@ -284,7 +285,8 @@ namespace Proyecto_de_desarrolo
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvProducto);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPedido";
             this.Text = "frmPedido";
             this.Load += new System.EventHandler(this.frmPedido_Load_1);

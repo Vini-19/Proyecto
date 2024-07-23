@@ -595,6 +595,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.anterior);
             this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Pedidos_Cliente";
             this.Text = "Pedidos_Cliente";

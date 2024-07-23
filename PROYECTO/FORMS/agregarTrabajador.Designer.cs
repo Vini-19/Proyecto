@@ -32,6 +32,7 @@ namespace Proyecto_de_desarrolo.Formularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarTrabajador));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.txtDNI_Trabajador = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(358, 85);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(686, 20);
             this.txtBuscar.TabIndex = 7;
@@ -78,7 +79,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtDNI_Trabajador
             // 
             this.txtDNI_Trabajador.Location = new System.Drawing.Point(30, 84);
-            this.txtDNI_Trabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI_Trabajador.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI_Trabajador.Name = "txtDNI_Trabajador";
             this.txtDNI_Trabajador.Size = new System.Drawing.Size(142, 20);
             this.txtDNI_Trabajador.TabIndex = 19;
@@ -100,7 +101,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCorreo_Trabajador
             // 
             this.txtCorreo_Trabajador.Location = new System.Drawing.Point(30, 255);
-            this.txtCorreo_Trabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo_Trabajador.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo_Trabajador.Name = "txtCorreo_Trabajador";
             this.txtCorreo_Trabajador.Size = new System.Drawing.Size(142, 20);
             this.txtCorreo_Trabajador.TabIndex = 17;
@@ -121,7 +122,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtTelefono_Trabajador
             // 
             this.txtTelefono_Trabajador.Location = new System.Drawing.Point(30, 218);
-            this.txtTelefono_Trabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono_Trabajador.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono_Trabajador.Name = "txtTelefono_Trabajador";
             this.txtTelefono_Trabajador.Size = new System.Drawing.Size(142, 20);
             this.txtTelefono_Trabajador.TabIndex = 15;
@@ -131,7 +132,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtDireccion_Trabajador
             // 
             this.txtDireccion_Trabajador.Location = new System.Drawing.Point(30, 158);
-            this.txtDireccion_Trabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion_Trabajador.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion_Trabajador.Multiline = true;
             this.txtDireccion_Trabajador.Name = "txtDireccion_Trabajador";
             this.txtDireccion_Trabajador.Size = new System.Drawing.Size(142, 44);
@@ -141,7 +142,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtNombre_Trabajador
             // 
             this.txtNombre_Trabajador.Location = new System.Drawing.Point(30, 123);
-            this.txtNombre_Trabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre_Trabajador.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre_Trabajador.Name = "txtNombre_Trabajador";
             this.txtNombre_Trabajador.Size = new System.Drawing.Size(142, 20);
             this.txtNombre_Trabajador.TabIndex = 13;
@@ -150,7 +151,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtRTN_Trabajador
             // 
             this.txtRTN_Trabajador.Location = new System.Drawing.Point(30, 47);
-            this.txtRTN_Trabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN_Trabajador.Margin = new System.Windows.Forms.Padding(2);
             this.txtRTN_Trabajador.Name = "txtRTN_Trabajador";
             this.txtRTN_Trabajador.Size = new System.Drawing.Size(142, 20);
             this.txtRTN_Trabajador.TabIndex = 1;
@@ -166,7 +167,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Crimson;
             this.btnEliminar.Location = new System.Drawing.Point(110, 475);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 32);
             this.btnEliminar.TabIndex = 11;
@@ -180,7 +181,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.dgvTrabajador.AllowUserToDeleteRows = false;
             this.dgvTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTrabajador.Location = new System.Drawing.Point(312, 114);
-            this.dgvTrabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTrabajador.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTrabajador.Name = "dgvTrabajador";
             this.dgvTrabajador.ReadOnly = true;
             this.dgvTrabajador.RowHeadersWidth = 51;
@@ -197,7 +198,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btnLimpiar.Location = new System.Drawing.Point(20, 475);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 32);
             this.btnLimpiar.TabIndex = 10;
@@ -214,7 +215,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btnAgregar.Location = new System.Drawing.Point(20, 436);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 32);
             this.btnAgregar.TabIndex = 7;
@@ -290,7 +291,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btnModificar.Location = new System.Drawing.Point(110, 436);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 32);
             this.btnModificar.TabIndex = 9;
@@ -325,7 +326,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(55, 93);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 531);
             this.panel1.TabIndex = 4;
@@ -333,7 +334,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(30, 404);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(142, 20);
             this.txtCodigo.TabIndex = 26;
@@ -379,7 +380,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtContra
             // 
             this.txtContra.Location = new System.Drawing.Point(30, 370);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(142, 20);
             this.txtContra.TabIndex = 22;
@@ -388,7 +389,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(30, 333);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(142, 20);
             this.txtUsuario.TabIndex = 21;
@@ -431,7 +432,8 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.dgvTrabajador);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "agregarTrabajador";
             this.Text = "agregarTrabajador";
             this.Load += new System.EventHandler(this.agregarTrabajador_Load_1);

@@ -622,6 +622,7 @@ namespace PROYECTO
             this.Controls.Add(this.slidermenu);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmadmi";
             this.Text = "frmadmi";
             this.Load += new System.EventHandler(this.frmadmi_Load_1);

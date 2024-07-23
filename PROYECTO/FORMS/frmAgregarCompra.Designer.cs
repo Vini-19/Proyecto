@@ -32,6 +32,7 @@ namespace Proyecto_de_desarrolo.Formularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarCompra));
             this.lblTotal = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -82,7 +83,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel2.Controls.Add(this.ListaCompras);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Location = new System.Drawing.Point(263, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(907, 573);
             this.panel2.TabIndex = 20;
@@ -159,7 +160,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.ListaCompras.FormattingEnabled = true;
             this.ListaCompras.Location = new System.Drawing.Point(490, 128);
-            this.ListaCompras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListaCompras.Margin = new System.Windows.Forms.Padding(2);
             this.ListaCompras.Name = "ListaCompras";
             this.ListaCompras.Size = new System.Drawing.Size(247, 368);
             this.ListaCompras.TabIndex = 19;
@@ -178,7 +179,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(164, 128);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(224, 370);
             this.panel1.TabIndex = 1;
@@ -192,7 +193,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnAgregarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarC.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btnAgregarC.Location = new System.Drawing.Point(27, 259);
-            this.btnAgregarC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarC.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarC.Name = "btnAgregarC";
             this.btnAgregarC.Size = new System.Drawing.Size(76, 38);
             this.btnAgregarC.TabIndex = 24;
@@ -202,7 +203,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(46, 200);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(135, 20);
             this.txtPrecio.TabIndex = 23;
@@ -229,7 +230,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnQuitarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarC.ForeColor = System.Drawing.Color.Crimson;
             this.btnQuitarC.Location = new System.Drawing.Point(119, 259);
-            this.btnQuitarC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuitarC.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarC.Name = "btnQuitarC";
             this.btnQuitarC.Size = new System.Drawing.Size(75, 38);
             this.btnQuitarC.TabIndex = 12;
@@ -241,7 +242,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProveedor.FormattingEnabled = true;
             this.cmbProveedor.Location = new System.Drawing.Point(46, 57);
-            this.cmbProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProveedor.Name = "cmbProveedor";
             this.cmbProveedor.Size = new System.Drawing.Size(135, 21);
             this.cmbProveedor.TabIndex = 9;
@@ -251,7 +252,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(46, 105);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(135, 21);
             this.cmbCategoria.TabIndex = 8;
@@ -259,7 +260,7 @@ namespace Proyecto_de_desarrolo.Formularios
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(46, 151);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(135, 20);
             this.txtCantidad.TabIndex = 7;
@@ -308,7 +309,8 @@ namespace Proyecto_de_desarrolo.Formularios
             this.ClientSize = new System.Drawing.Size(1416, 685);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblTotal);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAgregarCompra";
             this.Text = "frmAgregarCompra";
             this.Load += new System.EventHandler(this.frmAgregarCompra_Load_2);

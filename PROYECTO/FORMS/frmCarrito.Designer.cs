@@ -31,6 +31,7 @@ namespace Proyecto_de_desarrolo.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarrito));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombre1 = new System.Windows.Forms.Label();
             this.lblPrecio1 = new System.Windows.Forms.Label();
@@ -433,6 +434,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.lblPrecio1);
             this.Controls.Add(this.lblNombre1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmCarrito";
             this.Text = "frmCarrito";

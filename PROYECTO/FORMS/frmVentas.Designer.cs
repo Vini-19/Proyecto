@@ -32,6 +32,7 @@ namespace Proyecto_de_desarrolo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo_Barra = new System.Windows.Forms.TextBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -343,6 +344,7 @@ namespace Proyecto_de_desarrolo
             this.ClientSize = new System.Drawing.Size(1888, 843);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVentas";
             this.Text = "Ventas";
