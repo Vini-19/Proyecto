@@ -258,12 +258,12 @@ namespace Proyecto_de_desarrolo
             // 
             // btnGenerar_Factura
             // 
-            this.btnGenerar_Factura.BackColor = System.Drawing.Color.White;
+            this.btnGenerar_Factura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnGenerar_Factura.FlatAppearance.BorderColor = System.Drawing.SystemColors.GrayText;
             this.btnGenerar_Factura.FlatAppearance.BorderSize = 4;
             this.btnGenerar_Factura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerar_Factura.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar_Factura.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnGenerar_Factura.ForeColor = System.Drawing.Color.Black;
             this.btnGenerar_Factura.Location = new System.Drawing.Point(18, 294);
             this.btnGenerar_Factura.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerar_Factura.Name = "btnGenerar_Factura";

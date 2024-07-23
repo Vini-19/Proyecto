@@ -56,10 +56,14 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnsiguiente = new System.Windows.Forms.Button();
             this.anterior = new System.Windows.Forms.Button();
             this.lblVacio = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -110,7 +114,8 @@ namespace Proyecto_de_desarrolo.Formularios
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(268, 370);
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(117, 8);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(35, 13);
@@ -134,12 +139,12 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // btnTerminar
             // 
-            this.btnTerminar.BackColor = System.Drawing.Color.White;
+            this.btnTerminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTerminar.FlatAppearance.BorderSize = 4;
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTerminar.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnTerminar.Location = new System.Drawing.Point(734, 372);
+            this.btnTerminar.ForeColor = System.Drawing.Color.Black;
+            this.btnTerminar.Location = new System.Drawing.Point(813, 87);
             this.btnTerminar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(70, 31);
@@ -331,7 +336,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsiguiente.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnsiguiente.Location = new System.Drawing.Point(608, 372);
+            this.btnsiguiente.Location = new System.Drawing.Point(596, 404);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(86, 31);
@@ -347,7 +352,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.anterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.anterior.ForeColor = System.Drawing.Color.Firebrick;
-            this.anterior.Location = new System.Drawing.Point(333, 372);
+            this.anterior.Location = new System.Drawing.Point(321, 404);
             this.anterior.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.anterior.Name = "anterior";
             this.anterior.Size = new System.Drawing.Size(85, 31);
@@ -367,11 +372,43 @@ namespace Proyecto_de_desarrolo.Formularios
             this.lblVacio.Text = "CARRITO VACIO";
             this.lblVacio.Click += new System.EventHandler(this.lblVacio_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(90, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "LPS.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(8, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "TOTAL PAGAR:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblTotal);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(766, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(160, 30);
+            this.panel1.TabIndex = 28;
+            // 
             // frmCarrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 570);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblVacio);
             this.Controls.Add(this.anterior);
             this.Controls.Add(this.btnsiguiente);
@@ -392,7 +429,6 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.btnQuitar1);
-            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblCantidad1);
             this.Controls.Add(this.lblPrecio1);
             this.Controls.Add(this.lblNombre1);
@@ -406,6 +442,8 @@ namespace Proyecto_de_desarrolo.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,5 +476,8 @@ namespace Proyecto_de_desarrolo.Formularios
         private Button btnsiguiente;
         private Button anterior;
         private Label lblVacio;
+        private Label label1;
+        private Label label2;
+        private Panel panel1;
     }
 }

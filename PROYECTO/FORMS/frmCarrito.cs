@@ -20,6 +20,7 @@ namespace Proyecto_de_desarrolo.Formularios
         public frmCarrito()
         {
             InitializeComponent();
+            CenterToScreen();
 
         }
         int i = -1;

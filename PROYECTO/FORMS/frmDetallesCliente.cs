@@ -19,6 +19,7 @@ namespace Proyecto_de_desarrolo.Formularios
         public frmDetallesCliente()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         clsValidaciones val = new clsValidaciones();
@@ -166,6 +167,8 @@ namespace Proyecto_de_desarrolo.Formularios
         {
             val.validarnum(e);
         }
+
+       
     }
 
 }
