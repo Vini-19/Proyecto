@@ -29,7 +29,7 @@ namespace Proyecto_de_desarrolo
 
         public void DataGridView()
         {
-            string consultaSql = "SELECT RTN_Persona, DNI_Persona, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 3";
+            string consultaSql = "SELECT PersonasID, RTN_Persona, DNI_Persona, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 3";
 
             try
             {
@@ -41,7 +41,7 @@ namespace Proyecto_de_desarrolo
                     adaptador.Fill(dataSet, "Personas");
 
                     dgvCliente.DataSource = dataSet.Tables["Personas"];
-
+                    dgvCliente.Columns["PersonasID"].HeaderText = "PersonasID";
                     dgvCliente.Columns["RTN_Persona"].HeaderText = "RTN";
                     dgvCliente.Columns["DNI_Persona"].HeaderText = "DNI";
                     dgvCliente.Columns["Primer_Nombre"].HeaderText = "Nombre";
@@ -68,6 +68,13 @@ namespace Proyecto_de_desarrolo
             txtTelefono_Cliente.Text = "";
             txtCorreo_Cliente.Text = "";
             txtDireccion_Cliente.Text = "";
+
+            errorProvider1.SetError(txtRTN_Cliente, "");
+            errorProvider1.SetError(txtDNI_Cliente, "");
+            errorProvider1.SetError(txtNombre_Cliente, "");
+            errorProvider1.SetError(txtTelefono_Cliente, "");
+            errorProvider1.SetError(txtCorreo_Cliente, "");
+            errorProvider1.SetError(txtDireccion_Cliente, "");
         }
 
 
@@ -117,12 +124,8 @@ namespace Proyecto_de_desarrolo
                                 limpiar();
                                 btnAgregar.Enabled = true;
                                 txtRTN_Cliente.Focus();
-                                errorProvider1.SetError(txtRTN_Cliente, "");
-                                errorProvider1.SetError(txtDNI_Cliente, "");
-                                errorProvider1.SetError(txtNombre_Cliente, "");
-                                errorProvider1.SetError(txtTelefono_Cliente, "");
-                                errorProvider1.SetError(txtCorreo_Cliente, "");
-                                MessageBox.Show("Proveedor modificado correctamente");
+                                
+                                MessageBox.Show("Cliente modificado correctamente");
 
                                 txtRTN_Cliente.Focus();
                             }
@@ -144,9 +147,6 @@ namespace Proyecto_de_desarrolo
             }
         }
        
-
-        
-
         private void FiltrarDatos(string texto)
         {
             DataTable dt = (DataTable)dgvCliente.DataSource;
@@ -263,14 +263,13 @@ namespace Proyecto_de_desarrolo
                     conexion.RegistroCliente(clientes.getrtn(), clientes.getdni(), clientes.getnombre(), clientes.getrol(), clientes.getestado(), clientes.gettelefono(), clientes.getcorreo(), clientes.getdireccion(), fechaInscripcion);
                     limpiar();
                     txtRTN_Cliente.Focus();
-                    errorProvider1.SetError(txtRTN_Cliente, "");
+                    /*errorProvider1.SetError(txtRTN_Cliente, "");
                     errorProvider1.SetError(txtDNI_Cliente, "");
                     errorProvider1.SetError(txtNombre_Cliente, "");
                     errorProvider1.SetError(txtTelefono_Cliente, "");
                     errorProvider1.SetError(txtCorreo_Cliente, "");
-                    errorProvider1.SetError(txtDireccion_Cliente, "");
+                    errorProvider1.SetError(txtDireccion_Cliente, "");*/
 
-                    MessageBox.Show("Se registro correctamente.");
                     DataGridView();
 
                 }
@@ -308,12 +307,12 @@ namespace Proyecto_de_desarrolo
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
-            errorProvider1.SetError(txtRTN_Cliente, "");
+            /*errorProvider1.SetError(txtRTN_Cliente, "");
             errorProvider1.SetError(txtDNI_Cliente, "");
             errorProvider1.SetError(txtNombre_Cliente, "");
             errorProvider1.SetError(txtTelefono_Cliente, "");
             errorProvider1.SetError(txtCorreo_Cliente, "");
-            errorProvider1.SetError(txtDireccion_Cliente, "");
+            errorProvider1.SetError(txtDireccion_Cliente, "");*/
 
             txtRTN_Cliente.Focus();
         }
@@ -341,11 +340,11 @@ namespace Proyecto_de_desarrolo
                         comandoEliminarCliente.ExecuteNonQuery();
 
                         limpiar();
-                        errorProvider1.SetError(txtRTN_Cliente, "");
+                        /*errorProvider1.SetError(txtRTN_Cliente, "");
                         errorProvider1.SetError(txtDNI_Cliente, "");
                         errorProvider1.SetError(txtNombre_Cliente, "");
                         errorProvider1.SetError(txtTelefono_Cliente, "");
-                        errorProvider1.SetError(txtCorreo_Cliente, "");
+                        errorProvider1.SetError(txtCorreo_Cliente, "");*/
                         btnAgregar.Enabled = true;
 
                         MessageBox.Show("Cliente marcado como inactivo correctamente");

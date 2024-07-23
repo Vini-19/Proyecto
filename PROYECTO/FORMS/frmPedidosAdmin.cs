@@ -120,6 +120,15 @@ namespace Proyecto_de_desarrolo.Formularios
             {
                 DataTable dataTable = new DataTable();
                 dataGridView1.DataSource = dataTable;
+                btnConfirmar.Visible = true;
+                lblNumPed.Text = "0" + " / " + "0";
+                lblTelefono.Text = "";
+                lblNombre_Cliente.Text = "";
+                lblDireccion.Text = "";
+                lblIdentidad.Text = "";
+                lblFecha.Text = "";
+                numpedido = 1;
+                lblPedido.Text = "";
             }
             return dt;
         }
@@ -162,6 +171,15 @@ namespace Proyecto_de_desarrolo.Formularios
             estado = 1;
             numpedido = 1;
             btnConfirmar.Visible = true;
+            lblNumPed.Text = "0" + " / " + "0";
+            lblTelefono.Text = "";
+            lblNombre_Cliente.Text = "";
+            lblDireccion.Text = "";
+            lblIdentidad.Text = "";
+            lblFecha.Text = "";
+            numpedido = 1;
+            btnCancelar.Visible = true;
+            lblPedido.Text = "";
             ObtenerDatosCarritos();
         }
 
@@ -171,6 +189,7 @@ namespace Proyecto_de_desarrolo.Formularios
             numpedido = 1;
             btnConfirmar.Visible = false;
             ObtenerDatosCarritos();
+            btnCancelar.Visible = false;
         }
 
         private void label3_Click(object sender, EventArgs e)

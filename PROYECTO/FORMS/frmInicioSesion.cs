@@ -148,19 +148,19 @@ namespace PROYECTO
                                 case 1:
                                     frmadmi frmPrincipal = new frmadmi();
                                     frmPrincipal.SetUsuarioLabel(usuario);
-                                    MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San Jose");
+                                    MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San José");
                                     frmPrincipal.Show();
                                     break;
                                 case 2:
                                     frmPrincipalEmpleado frm = new frmPrincipalEmpleado();
                                     frm.SetUsuarioLabel(usuario);
-                                    MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San Jose");
+                                    MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San José");
                                     frm.Show();
                                     break;
                                 case 3:
                                     frmPrincipalCliente frmPrincipalCliente = new frmPrincipalCliente();
                                     frmPrincipalCliente.SetUsuarioLabel(usuario);
-                                    MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San Jose");
+                                    MessageBox.Show("Bienvenido" + " " + usuario + " " + "Finca San José");
                                     frmPrincipalCliente.Show();
                                     break;
                                 default:

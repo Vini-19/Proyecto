@@ -370,7 +370,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "frmProveedores";
             this.Text = "frmProveedores";
-            this.Load += new System.EventHandler(this.frmProveedores_Load);
+           // this.Load += new System.EventHandler(this.frmProveedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Prov)).EndInit();

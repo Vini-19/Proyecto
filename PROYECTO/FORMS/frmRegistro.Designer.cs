@@ -55,10 +55,9 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(83, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.Size = new System.Drawing.Size(136, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Regístrate";
             // 
@@ -66,10 +65,9 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(82, 96);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(109, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 23);
+            this.label2.Size = new System.Drawing.Size(72, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuario";
             // 
@@ -88,10 +86,10 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(8, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(11, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 358);
+            this.panel1.Size = new System.Drawing.Size(297, 441);
             this.panel1.TabIndex = 2;
             // 
             // cmbPregunta
@@ -105,18 +103,18 @@ namespace Proyecto_de_desarrolo.Formularios
             "¿Cuál es tu libro favorito?",
             "¿Cuál es tu pelicula favorita?",
             ""});
-            this.cmbPregunta.Location = new System.Drawing.Point(34, 232);
-            this.cmbPregunta.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbPregunta.Location = new System.Drawing.Point(45, 286);
+            this.cmbPregunta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPregunta.Name = "cmbPregunta";
-            this.cmbPregunta.Size = new System.Drawing.Size(148, 21);
+            this.cmbPregunta.Size = new System.Drawing.Size(196, 24);
             this.cmbPregunta.TabIndex = 10;
             // 
             // txtRespuesta
             // 
-            this.txtRespuesta.Location = new System.Drawing.Point(34, 273);
-            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRespuesta.Location = new System.Drawing.Point(45, 336);
+            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(148, 20);
+            this.txtRespuesta.Size = new System.Drawing.Size(196, 22);
             this.txtRespuesta.TabIndex = 9;
             this.txtRespuesta.TextChanged += new System.EventHandler(this.txtRespuesta_TextChanged);
             // 
@@ -124,10 +122,9 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 252);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(37, 310);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 23);
+            this.label5.Size = new System.Drawing.Size(216, 29);
             this.label5.TabIndex = 8;
             this.label5.Text = "Respuesta de recuperación";
             // 
@@ -135,10 +132,9 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 211);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(37, 260);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 23);
+            this.label4.Size = new System.Drawing.Size(209, 29);
             this.label4.TabIndex = 7;
             this.label4.Text = "Pregunta de recuperación";
             // 
@@ -146,10 +142,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnSalir.Location = new System.Drawing.Point(183, 2);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(244, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(38, 19);
+            this.btnSalir.Size = new System.Drawing.Size(51, 23);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -159,10 +155,10 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(2, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(3, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 19);
+            this.button1.Size = new System.Drawing.Size(51, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "<--";
             this.button1.UseVisualStyleBackColor = true;
@@ -171,30 +167,30 @@ namespace Proyecto_de_desarrolo.Formularios
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.Gold;
-            this.btnSiguiente.Location = new System.Drawing.Point(68, 305);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSiguiente.Location = new System.Drawing.Point(88, 372);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(92, 24);
+            this.btnSiguiente.Size = new System.Drawing.Size(123, 30);
             this.btnSiguiente.TabIndex = 5;
-            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.Text = "Registrarse";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(34, 163);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContra.Location = new System.Drawing.Point(45, 201);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(148, 20);
+            this.txtContra.Size = new System.Drawing.Size(196, 22);
             this.txtContra.TabIndex = 4;
             this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(34, 116);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.Location = new System.Drawing.Point(45, 143);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(148, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(196, 22);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
@@ -202,10 +198,9 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 142);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(91, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 23);
+            this.label3.Size = new System.Drawing.Size(99, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Contraseña";
             // 
@@ -215,13 +210,13 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // frmRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(241, 374);
+            this.ClientSize = new System.Drawing.Size(321, 460);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistro";

@@ -182,28 +182,6 @@ namespace PROYECTO.CLASES
             }
         }
 
-        //public DataTable DataGridViewClientes()
-        //{
-        //    string consultaSql = "SELECT PersonasID, RTN_Persona, DNI_Persona, Roles_ID, Primer_Nombre, Estado, Numero_Telefono, Correo, Direccion, Fecha_Inscripcion FROM Personas WHERE Roles_ID = 3";
-
-        //    try
-        //    {
-        //        Cconexion conexion = new Cconexion();
-        //        using (SqlConnection cn = conexion.leer())
-        //        {
-
-        //            DataTable dt = new DataTable();
-        //            SqlCommand cmd = new SqlCommand(consultaSql,cn);
-        //            cmd.Parameters.AddWithValue("PersonasID",)
-
-
-
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al cargar datos: " + ex.Message);
-        //    }
-        //}
+        
     }
 }
