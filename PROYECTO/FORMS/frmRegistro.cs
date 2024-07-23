@@ -100,6 +100,7 @@ namespace Proyecto_de_desarrolo.Formularios
         private void button1_Click_1(object sender, EventArgs e)
         {
             frmInicioSesion InicioS = new frmInicioSesion();
+            this.Close();
             InicioS.Show();
         }
     }

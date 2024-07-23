@@ -81,7 +81,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.ListaCompras);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(52, 47);
+            this.panel2.Location = new System.Drawing.Point(117, 48);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1209, 705);
