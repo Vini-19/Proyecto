@@ -127,11 +127,11 @@ namespace Proyecto_de_desarrolo
                                 
                                 MessageBox.Show("Cliente modificado correctamente");
 
-                                txtRTN_Cliente.Focus();
+                                
                             }
                             else
                             {
-                                MessageBox.Show("No se pudo modificar el proveedor");
+                                MessageBox.Show("No se pudo modificar el cliente");
                             }
                         }
                     }
@@ -261,15 +261,10 @@ namespace Proyecto_de_desarrolo
                     }
 
                     conexion.RegistroCliente(clientes.getrtn(), clientes.getdni(), clientes.getnombre(), clientes.getrol(), clientes.getestado(), clientes.gettelefono(), clientes.getcorreo(), clientes.getdireccion(), fechaInscripcion);
+                    MessageBox.Show("Cliente registrado correctamente");
                     limpiar();
                     txtRTN_Cliente.Focus();
-                    /*errorProvider1.SetError(txtRTN_Cliente, "");
-                    errorProvider1.SetError(txtDNI_Cliente, "");
-                    errorProvider1.SetError(txtNombre_Cliente, "");
-                    errorProvider1.SetError(txtTelefono_Cliente, "");
-                    errorProvider1.SetError(txtCorreo_Cliente, "");
-                    errorProvider1.SetError(txtDireccion_Cliente, "");*/
-
+ 
                     DataGridView();
 
                 }
@@ -307,13 +302,7 @@ namespace Proyecto_de_desarrolo
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
-            /*errorProvider1.SetError(txtRTN_Cliente, "");
-            errorProvider1.SetError(txtDNI_Cliente, "");
-            errorProvider1.SetError(txtNombre_Cliente, "");
-            errorProvider1.SetError(txtTelefono_Cliente, "");
-            errorProvider1.SetError(txtCorreo_Cliente, "");
-            errorProvider1.SetError(txtDireccion_Cliente, "");*/
-
+            btnAgregar.Enabled = true;
             txtRTN_Cliente.Focus();
         }
 
@@ -340,11 +329,7 @@ namespace Proyecto_de_desarrolo
                         comandoEliminarCliente.ExecuteNonQuery();
 
                         limpiar();
-                        /*errorProvider1.SetError(txtRTN_Cliente, "");
-                        errorProvider1.SetError(txtDNI_Cliente, "");
-                        errorProvider1.SetError(txtNombre_Cliente, "");
-                        errorProvider1.SetError(txtTelefono_Cliente, "");
-                        errorProvider1.SetError(txtCorreo_Cliente, "");*/
+                        
                         btnAgregar.Enabled = true;
 
                         MessageBox.Show("Cliente marcado como inactivo correctamente");

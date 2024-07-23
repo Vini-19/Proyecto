@@ -196,6 +196,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.btnAgregarC.TabIndex = 24;
             this.btnAgregarC.Text = "Agregar ";
             this.btnAgregarC.UseVisualStyleBackColor = false;
+            this.btnAgregarC.Click += new System.EventHandler(this.btnAgregarC_Click_2);
             // 
             // txtPrecio
             // 
@@ -252,6 +253,7 @@ namespace Proyecto_de_desarrolo.Formularios
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(179, 24);
             this.cmbCategoria.TabIndex = 8;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbProveedor_SelectedIndexChanged);
             // 
             // txtCantidad
             // 

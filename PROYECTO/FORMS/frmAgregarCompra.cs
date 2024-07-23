@@ -19,10 +19,8 @@ namespace Proyecto_de_desarrolo.Formularios
         public frmAgregarCompra()
         {
             InitializeComponent();      
-            CargarDatosProveedores();       //al cargar el formulario carga los datos de los proveedores para la compra de materia prima y carga la categoria de esos proveedores.
-            Cargarcategoria();          //aqui carga el combobox de categoria
-
-
+                 //al cargar el formulario carga los datos de los proveedores para la compra de materia prima y carga la categoria de esos proveedores.
+                   //aqui carga el combobox de categoria
         }
 
         clsValidaciones val = new clsValidaciones();        //declaracion global de la clase de validaciones.
@@ -253,7 +251,8 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void frmAgregarCompra_Load_2(object sender, EventArgs e)
         {
-
+            Cargarcategoria();
+            CargarDatosProveedores();
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -468,6 +467,11 @@ namespace Proyecto_de_desarrolo.Formularios
         private void txtPrecio_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
+        }
+
+        private void btnAgregarC_Click_2(object sender, EventArgs e)
+        {
+
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)

@@ -52,9 +52,9 @@ namespace Proyecto_de_desarrolo
                                     string nombreCliente = reader["Primer_Nombre"].ToString();
                                     string rtnCliente = reader["RTN_Persona"].ToString();
 
-                                    cmbCliente.Items.Add(nombreCliente);
-                                    autoComplete.Add(nombreCliente);
-                                    clientesRTN[nombreCliente] = rtnCliente;
+                                    cmbCliente.Items.Add(rtnCliente);
+                                    autoComplete.Add(rtnCliente);
+                                    clientesRTN[rtnCliente] = nombreCliente;
                                 }
 
                                 cmbCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;

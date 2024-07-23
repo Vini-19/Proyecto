@@ -201,6 +201,11 @@ namespace Proyecto_de_desarrolo.Formularios
             errorProvider1.SetError(txtContra, "");
             errorProvider1.SetError(txtCodigo, "");
 
+            txtUsuario.Enabled = true;
+            txtContra.Enabled = true;
+            txtCodigo.Enabled = true;
+            btnAgregar.Enabled = true; 
+
             txtRTN_Trabajador.Focus();
         }
         private void txtRTN_Cliente_TextChanged(object sender, EventArgs e)
@@ -258,6 +263,9 @@ namespace Proyecto_de_desarrolo.Formularios
                             if (Actualizacion > 0)      //si si se actualizo algo
                             {
                                 limpiar();      //limpia todos los textbox
+                                txtUsuario.Enabled = true;
+                                txtContra.Enabled = true;
+                                txtCodigo.Enabled = true;
                                 btnAgregar.Enabled = true;      //permite usar el boton de agregar.
                                 MessageBox.Show("Trabajador modificado correctamente");  //mensake de confimracion de que el trabajdor se modifico correctamente.
                                 txtRTN_Trabajador.Focus();          //focus al textbox de rtn por si se requiere agregar o modificar otro trabajdor.
@@ -574,9 +582,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     conexion.RegistroCliente(Trabajador.getrtn(), Trabajador.getdni(), Trabajador.getnombre(), Trabajador.getrol(), Trabajador.getestado(), Trabajador.gettelefono(), Trabajador.getcorreo(), Trabajador.getdireccion(), fechaInscripcion);
                     conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);
+                    
 
                     limpiar();      //limpia los textbox luego de registrar correctamente.
-                    MessageBox.Show("Se registro correctamente.");
+                    MessageBox.Show("Trabajador registrado correctamente");
+                    
                     DataGridView();     //llama a la funcion para actualizar el data grid view.
                     txtRTN_Trabajador.Focus();      //lleva el cursor focus al trabajador.
                 }
@@ -630,8 +640,18 @@ namespace Proyecto_de_desarrolo.Formularios
 
                         comandoEliminarTrabajador.ExecuteNonQuery();
 
-                        MessageBox.Show("Cliente marcado como inactivo correctamente");
+                        
+                        limpiar();
+                        txtUsuario.Enabled = true;
+                        txtContra.Enabled = true;
+                        txtCodigo.Enabled = true;
+                        btnAgregar.Enabled = true;
+
+
                         DataGridView();
+
+                        MessageBox.Show("Trabajador marcado como inactivo correctamente");
+                        
                     }
                 }
                 catch (Exception ex)
@@ -641,7 +661,7 @@ namespace Proyecto_de_desarrolo.Formularios
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione un cliente para marcar como inactivo.");
+                MessageBox.Show("Por favor, seleccione un trabajador para marcar como inactivo.");
             }
         }
 
@@ -699,6 +719,10 @@ namespace Proyecto_de_desarrolo.Formularios
                 txtCorreo_Trabajador.Text = row.Cells["Correo"].Value.ToString();
                 txtDireccion_Trabajador.Text = row.Cells["Direccion"].Value.ToString();
 
+
+                txtUsuario.Enabled = false; 
+                txtContra.Enabled=false;
+                txtCodigo.Enabled=false;
                 btnAgregar.Enabled = false;
             }
         }

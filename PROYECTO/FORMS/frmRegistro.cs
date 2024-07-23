@@ -62,6 +62,7 @@ namespace Proyecto_de_desarrolo.Formularios
                         return;
                     }
                     conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 3);
+                    MessageBox.Show("Usuario registrado correctamente");
 
 
                     frmInicioSesion frmInicioSesion = new frmInicioSesion();

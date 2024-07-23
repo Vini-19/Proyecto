@@ -44,9 +44,6 @@ namespace PROYECTO.CLASES
 
 
                     comandoExisteUsuario.ExecuteNonQuery();
-
-                    MessageBox.Show("Usuario registrado correctamente");
-
                 }
                 else
                 {
@@ -169,10 +166,6 @@ namespace PROYECTO.CLASES
                     comandoInsertarCliente.Parameters.AddWithValue("@fecha_Inscripcion", fecha);
 
                     comandoInsertarCliente.ExecuteNonQuery();
-
-                    MessageBox.Show("Cliente registrado correctamente");
-
-
 
                 }
             }

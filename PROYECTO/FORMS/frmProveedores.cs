@@ -97,11 +97,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
                         Limpiar();
-                        errorProvider1.SetError(txtRTN_Prov, "");
-                        errorProvider1.SetError(txtDNI_Prov, "");
-                        errorProvider1.SetError(txtNombre_Prov, "");
-                        errorProvider1.SetError(txtTelefono_Prov, "");
-                        errorProvider1.SetError(txtCorreo_Prov, "");
+                        
                         MessageBox.Show("Proveedor registrado correctamente");
 
                         DataGridView();
@@ -174,6 +170,13 @@ namespace Proyecto_de_desarrolo.Formularios
             txtDireccion_Prov.Text = "";
             cmbCategoria.SelectedIndex = -1;
 
+            errorProvider1.SetError(txtRTN_Prov, "");
+            errorProvider1.SetError(txtDNI_Prov, "");
+            errorProvider1.SetError(txtNombre_Prov, "");
+            errorProvider1.SetError(txtTelefono_Prov, "");
+            errorProvider1.SetError(txtCorreo_Prov, "");
+            errorProvider1.SetError(txtDireccion_Prov, "");
+
         }
 
      
@@ -222,11 +225,7 @@ namespace Proyecto_de_desarrolo.Formularios
                         if (Actualizacion > 0)
                         {
                             Limpiar();
-                            errorProvider1.SetError(txtRTN_Prov, "");
-                            errorProvider1.SetError(txtDNI_Prov, "");
-                            errorProvider1.SetError(txtNombre_Prov, "");
-                            errorProvider1.SetError(txtTelefono_Prov, "");
-                            errorProvider1.SetError(txtCorreo_Prov, "");
+                            
                             btnAgregar.Enabled = true;
 
                             MessageBox.Show("Proveedor modificado correctamente");
@@ -418,14 +417,10 @@ namespace Proyecto_de_desarrolo.Formularios
                         if (Actualizacion > 0)
                         {
                             Limpiar();
-                            errorProvider1.SetError(txtRTN_Prov, "");
-                            errorProvider1.SetError(txtDNI_Prov, "");
-                            errorProvider1.SetError(txtNombre_Prov, "");
-                            errorProvider1.SetError(txtTelefono_Prov, "");
-                            errorProvider1.SetError(txtCorreo_Prov, "");
-                            errorProvider1.SetError(txtDireccion_Prov, "");
+                            
                             btnAgregar.Enabled = true;
-                            MessageBox.Show("Proveedor eliminado correctamente");
+                            DataGridView();
+                            MessageBox.Show("Proveedor marcado como inactivo correctamente");
                             txtRTN_Prov.Focus();
                         }
                         else
