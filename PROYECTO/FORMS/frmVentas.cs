@@ -1,4 +1,5 @@
-﻿using PROYECTO.CLASES;
+﻿using PROYECTO;
+using PROYECTO.CLASES;
 using Proyecto_de_desarrolo.Clases;
 using System;
 using System.Collections.Generic;
@@ -291,6 +292,8 @@ namespace Proyecto_de_desarrolo
             }
         }
 
+        
+
         private void btnGenerar_Factura_Click_1(object sender, EventArgs e)
         {
             if (Convert.ToString(dgvProductos.Rows.Count) == "1")
@@ -348,7 +351,27 @@ namespace Proyecto_de_desarrolo
                                 }
                                 dgvProductos.Rows.Clear();
                                 MessageBox.Show("Venta registrada correctamente.");
-                                
+                                MessageBox.Show(
+    "-----------------------------------------------------------\n" +
+    "                        FACTURA\n" +
+    "-----------------------------------------------------------\n" +
+    "Fecha de emisión de factura:\n" + fechaVenta + "\n\n" +
+    "Nombre del Cliente:\n" + rtnCliente + "\n\n" +
+    "RTN Cliente:\n" + cliente + "\n\n" +
+    "Total:\n" + totalVenta + "\n" +
+    "-----------------------------------------------------------\n" +
+    "Su pedido fue enviado correctamente a D' La Finca San Jose.\n\n" +
+    "Si desea contactar con nosotros por algún cambio, puede hacerlo marcando al 33797136.\n\n" +
+    "También puede encontrarnos en redes sociales como D' La Finca San Jose.\n\n" +
+    "Puede realizar su pago vía transferencia a la cuenta No. 744763621 de BAC.\n" +
+    "También incluimos pago contra entrega en efectivo.\n" +
+    "-----------------------------------------------------------\n" +
+    "Gracias por su compra.\n" +
+    "-----------------------------------------------------------",
+    "Factura"
+);
+
+
                             }
                         }
                         else
