@@ -405,7 +405,7 @@ namespace Proyecto_de_desarrolo.Formularios
             }
         }
 
-        private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbProveedor_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             cmbCategoria.Items.Clear(); // Limpiar los ítems actuales del ComboBox de categoría
             cmbCategoria.Text = "";
