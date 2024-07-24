@@ -144,9 +144,10 @@ namespace Proyecto_de_desarrolo.Formularios
 
             SqlCommand ConfirmarPedido = new SqlCommand("Update Pedidos set Estado = 0 where Pedido_ID='" + lblPedido.Text + "'", cn);
             ConfirmarPedido.ExecuteNonQuery();
+            MessageBox.Show("se acepto el pedido");
+
             ObtenerDatosCarritos();
         }
-
         private void btnAnterior_Click(object sender, EventArgs e)
         {
             numpedido--;
@@ -269,5 +270,7 @@ namespace Proyecto_de_desarrolo.Formularios
             ObtenerDatosCarritos();
 
         }
+
+       
     }
 }

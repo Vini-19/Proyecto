@@ -108,11 +108,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
             if (cont_pag == 1)
             {
-                anterior.Visible = false;
+                button1.Visible = false;
             }
             else
             {
-                anterior.Visible = true;
+                button1.Visible = true;
             }
 
             if (cont_filas != i)
@@ -324,12 +324,12 @@ namespace Proyecto_de_desarrolo.Formularios
             }
             if (cont_filas == i)
             {
-                btnsiguiente.Visible = false;
+                button2.Visible = false;
 
             }
             else
             {
-                btnsiguiente.Visible = true;
+                button2.Visible = true;
 
             }
 

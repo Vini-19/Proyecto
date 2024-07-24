@@ -452,7 +452,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtTelefono_Prov_TextChanged_1(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtTelefono_Prov, val.txt_vacio(txtTelefono_Prov.Text) + val.espacio_inicio_final(txtTelefono_Prov.Text) + val.validarnumerotell(txtTelefono_Prov.Text) + val.rango_8(txtTelefono_Prov.Text));
+            errorProvider1.SetError(txtTelefono_Prov, val.txt_vacio(txtTelefono_Prov.Text) + val.espacio_inicio_final(txtTelefono_Prov.Text) + val.validarnumerotell(txtTelefono_Prov.Text) + val.rango_8(txtTelefono_Prov.Text)+val.validar4ceros(txtTelefono_Prov.Text));
         }
 
         private void txtNombre_Prov_TextChanged_1(object sender, EventArgs e)

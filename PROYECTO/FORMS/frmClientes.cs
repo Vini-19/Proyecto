@@ -325,7 +325,7 @@ namespace Proyecto_de_desarrolo
 
         private void txtTelefono_Cliente_TextChanged_1(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtTelefono_Cliente, val.txt_vacio(txtTelefono_Cliente.Text) + val.espacio_inicio_final(txtTelefono_Cliente.Text) + val.validarnumerotell(txtTelefono_Cliente.Text) + val.rango_8(txtTelefono_Cliente.Text));
+            errorProvider1.SetError(txtTelefono_Cliente, val.txt_vacio(txtTelefono_Cliente.Text) + val.espacio_inicio_final(txtTelefono_Cliente.Text) + val.validarnumerotell(txtTelefono_Cliente.Text) + val.rango_8(txtTelefono_Cliente.Text)+val.validar4ceros(txtTelefono_Cliente.Text));
         }
 
         private void txtCorreo_Cliente_TextChanged_1(object sender, EventArgs e)

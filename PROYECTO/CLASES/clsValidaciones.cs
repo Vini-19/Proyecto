@@ -339,6 +339,17 @@ namespace Proyecto_de_desarrolo.Clases
             }
         }
 
+        public string validar4ceros(string texto)
+        {
+            if (texto.Contains("0000"))
+            {
+                return "ingrese un numero de telefono valido";
+            }
+            else
+            {
+                return "";
+            }
+        }
 
         public string validar_precio(string texto)
         {

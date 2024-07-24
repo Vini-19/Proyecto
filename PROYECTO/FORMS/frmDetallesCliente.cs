@@ -116,7 +116,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtTelefono_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtTelefono, val.txt_vacio(txtTelefono.Text) + val.espacio_inicio_final(txtTelefono.Text) + val.validarnumerotell(txtTelefono.Text) + val.rango_8(txtTelefono.Text));
+            errorProvider1.SetError(txtTelefono, val.txt_vacio(txtTelefono.Text) + val.espacio_inicio_final(txtTelefono.Text) + val.validarnumerotell(txtTelefono.Text) + val.rango_8(txtTelefono.Text)+val.validar4ceros(txtTelefono.Text));
         }
 
         private void btnEnviar_Click_1(object sender, EventArgs e)
