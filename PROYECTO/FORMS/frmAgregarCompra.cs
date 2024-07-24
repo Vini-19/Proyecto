@@ -27,7 +27,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         int o = -1;
         float totalCompra = 0;
-        List<string> listCompras = new List<string>();
+        List<string> listCompras = new List<string>(); 
         List<int> listPersonasId = new List<int>();
         clsValidaciones val = new clsValidaciones();        //declaracion global de la clase de validaciones.
             
@@ -40,6 +40,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 SqlConnection cn = conexion.leer();
                 if (cn.State == ConnectionState.Open)
                 {
+                    //Consulta para obtener el Rol,primer nombre y id de la persona de la tabla personas
                     string queryExisteProducto = "SELECT R.[Roles_ID], R.Rol, P.[Primer_Nombre],P.[PersonasID] FROM [dbo].[Personas] P INNER JOIN [dbo].[Roles] R ON R.Roles_ID = P.Roles_ID WHERE R.Rol LIKE 'Proveedor'";
                     SqlCommand comandoExisteProducto = new SqlCommand(queryExisteProducto, cn);
 
@@ -47,7 +48,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     cmbProveedor.Items.Clear();
 
-
+                    //recorrido para guardar los datos de la consulta
                     while (reader.Read())
                     {
                         int rolesID = Convert.ToInt32(reader["Roles_ID"]);
@@ -161,29 +162,25 @@ namespace Proyecto_de_desarrolo.Formularios
             if (o != -1)
             {
 
-
+                //declarar variables para sacar el precio y total
                 float pre = 0, cant = 0;
-                float x = ListaCompras.Items.Count;
-                x = x / 5;
-                int y = -1;
-                int t = 5;
-                List<int> ListPosicion = new List<int>()
+                float x = ListaCompras.Items.Count; //variable para sacar la cantidad de compras que agregue al listbox
+                x = x / 5; 
+                int y = -1; //variable para comparar la lista seleccionada del listbox
+                int t = 5; //variable para indicar cuando se encontro el listbox seleccionado
+                List<int> ListPosicion = new List<int>();
+                for (int i = 0; i < x; i++) //for que recorre los datos del productos de la lista por eso x se divide entre 5
                 {
 
-
-                };
-                for (int i = 0; i < x; i++)
-                {
-
-                    if (t != 2)
+                    if (t != 2) //verifica si se encontro el producto seleccionado del listbox
                     {
                         t = 5;
-                        for (int j = 0; j < 5; j++)
+                        for (int j = 0; j < 5; j++) //for para encontrar si el item del listbox seleccionado pertenece al grupo
                         {
                             y++;
-                            ListPosicion.Add(y);
+                            ListPosicion.Add(y); //guarda la posicion de los primeros datos de los productos
 
-                            if (o == y)
+                            if (o == y) //verifica si el item del listbox seleccionado pertence a los datos del producto
                             {
                                 t++;
                             }
@@ -194,17 +191,17 @@ namespace Proyecto_de_desarrolo.Formularios
                         }
 
                     }
-                    if (t != 2)
+                    if (t != 2) //verifica si se encontro el grupo
                     {
                         ListPosicion.Clear();
                     }
 
                 }
-                for (int i = ListPosicion.Count - 1; i >= 0; i--)
+                for (int i = ListPosicion.Count - 1; i >= 0; i--) //recorrido para quitar los datos del producto seleccionado
                 {
                     int indice = ListPosicion[i];
 
-                    if (i == 3)
+                    if (i == 3) //validacion para verificar si la posicion de listbox no se ha eliminado
                     {
                         int pre2 = ListPosicion[3];
                         pre = float.Parse(listCompras[pre2]);
@@ -217,17 +214,17 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
 
-                    if (indice >= 0 && indice < ListaCompras.Items.Count)
+                    if (indice >= 0 && indice < ListaCompras.Items.Count) //para remover los datos del la compra seleccionada
                     {
-                        ListaCompras.Items.RemoveAt(indice);
+                        ListaCompras.Items.RemoveAt(indice); 
                         listCompras.RemoveAt(indice);
                     }
                 }
 
-                totalCompra = totalCompra - (cant * pre);
+                totalCompra = totalCompra - (cant * pre); //actualizar el total al remover el producto
                 lbltotal2.Text = totalCompra.ToString();
             }
-            o = -1;
+            o = -1; 
 
         }
 
@@ -239,14 +236,15 @@ namespace Proyecto_de_desarrolo.Formularios
                 SqlConnection cn = conexion.leer();
                 if (cn.State == ConnectionState.Open)
                 {
-
+                    //declara contador
                     int i = 0;
-                    float po = listCompras.Count / 5;
+                    float po = listCompras.Count / 5; //declarar variable que guarda la cantidad de productos añadidos por eso se divide entre 5
 
-                    for (int x = 0; x < po; x++)
+                    for (int x = 0; x < po; x++) //recorrido para guardar los datos de los productos de uno en uno en la base de datos
                     {
-                        if (i < listCompras.Count)
+                        if (i < listCompras.Count) //validacion que verifica que ya se agregaron todos los datos
                         {
+                            //consulta para sacar la categoria de los productos
                             SqlCommand Comandocategoria = new SqlCommand("Select Categoria_ID from Categoria where NombreCategoria= '" + listCompras[i + 1] + "'", cn);
                             SqlDataAdapter sda = new SqlDataAdapter(Comandocategoria);
                             DataTable dataTable = new DataTable();
@@ -262,7 +260,7 @@ namespace Proyecto_de_desarrolo.Formularios
                             
 
                             string descripcion = "Compra de " + listCompras[i + 1];
-
+                            //insertar los datos del producto a la base de datos
                             string query = "INSERT INTO Inventario (Persona_ID, Categoria_ID, Estado, Cantidad_Producto, Descripcion, Precio) " +
                                 "VALUES ('" + listPersonasId[j] + "', '" + categoriaid + "', 'Activo', '" + listCompras[i + 2] + "','" + descripcion + "', '" + listCompras[i + 3] + "')";
                             SqlCommand comando = new SqlCommand(query, cn);
@@ -276,8 +274,8 @@ namespace Proyecto_de_desarrolo.Formularios
                             updateStockCommand.ExecuteNonQuery();
 
                             MessageBox.Show("Compra ingresada correctamente a inventario");
-                            i = i + 5;
-                            
+                            i = i + 5; //para pasar a la siguiente compra
+
                         }
                     }
                     listCompras.Clear();

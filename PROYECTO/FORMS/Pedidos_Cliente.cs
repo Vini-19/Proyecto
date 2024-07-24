@@ -18,6 +18,7 @@ namespace Proyecto_de_desarrolo.Formularios
 {
     public partial class Pedidos_Cliente : Form
     {
+        //declaracion de variables
         int i = -1;
 
         int num_pag = 0;
@@ -25,7 +26,7 @@ namespace Proyecto_de_desarrolo.Formularios
         int cont_pag = 1;
         bool y = true;
 
-        int x1 = 0, x2 = 0, x3 = 0, x4 = 0, x5 = 0, x6 = 0;
+        int x1 = 0, x2 = 0, x3 = 0, x4 = 0, x5 = 0, x6 = 0; //variable para la cantidad
 
         public Pedidos_Cliente()
         {
@@ -35,7 +36,7 @@ namespace Proyecto_de_desarrolo.Formularios
         }
 
         clsValidaciones val = new clsValidaciones();
-        private void Pedidos_Cliente_Load(object sender, EventArgs e)
+        private void Pedidos_Cliente_Load(object sender, EventArgs e) //cargar los pedidos del cliente
         {
             i = -1;
 
@@ -57,14 +58,13 @@ namespace Proyecto_de_desarrolo.Formularios
         private void cargar_pedido2()
         {
             Cconexion conexion = new Cconexion();
-            //Button[] botone = new Button[6];
-
-
+           
 
 
 
             using (SqlConnection cn = conexion.leer())
             {
+                //consulta para obtener la imagen del producto
                 SqlCommand cmd = new SqlCommand("select imagen from Productos", cn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
@@ -76,7 +76,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 cont_filas = cont_filas - 1;
 
 
-
+                //consulta para obtener el nombre del producto
                 string consulta = "Select Nombre_Producto,Precio from Productos";
                 SqlCommand comando = new SqlCommand(consulta, cn);
                 SqlDataAdapter DA = new SqlDataAdapter(comando);
@@ -89,7 +89,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
 
-                if (cont_pag == 1)
+                if (cont_pag == 1) //verifica si se esta en la pagina numero uno para habilitar o deshabilitar el boton de anterior
                 {
                     anterior.Visible = false;
                 }
@@ -98,7 +98,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     anterior.Visible = true;
                 }
 
-                if (cont_filas != i)
+                if (cont_filas != i) //if para verificar si existe el producto numero x en la posicion 1
                 {
                     if (y)
                     {
@@ -117,6 +117,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     lblNombre1.Visible = true;
                     lblPrecio1.Visible = true;
 
+                    //mostrar los datos del producto en la posicion 1
                     byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[i]["imagen"]);
                     MemoryStream stm = new MemoryStream(bytedata);
 
@@ -124,7 +125,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     lblNombre1.Text = dataTable.Rows[i][0].ToString();
                     lblPrecio1.Text = dataTable.Rows[i][1].ToString() + " Lps";
                 }
-                else
+                else//si no hay mas productos hace invisible los controles
                 {
                     button1.Visible = false;
                     lblNombre1.Visible = false;
@@ -132,7 +133,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 }
 
 
-                if (cont_filas != i)
+                if (cont_filas != i)//if para verificar si existe el producto numero x en la posicion 2
                 {
                     if (y)
                     {
@@ -150,7 +151,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     button2.Visible = true;
                     lblNombre2.Visible = true;
                     lblPrecio2.Visible = true;
-
+                    //mostrar los datos del producto en la posicion 2
                     byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[i]["imagen"]);
                     MemoryStream stm = new MemoryStream(bytedata);
 
@@ -159,7 +160,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     lblPrecio2.Text = dataTable.Rows[i][1].ToString() + " Lps";
 
                 }
-                else
+                else//si no hay mas productos hace invisible los controles
                 {
                     button2.Visible = false;
                     lblNombre2.Visible = false;
@@ -183,7 +184,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     button3.Visible = true;
                     lblNombre3.Visible = true;
                     lblPrecio3.Visible = true;
-
+                    //mostrar los datos del producto en la posicion 3
                     byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[i]["imagen"]);
                     MemoryStream stm = new MemoryStream(bytedata);
 
@@ -191,14 +192,14 @@ namespace Proyecto_de_desarrolo.Formularios
                     lblNombre3.Text = dataTable.Rows[i][0].ToString();
                     lblPrecio3.Text = dataTable.Rows[i][1].ToString() + " Lps";
                 }
-                else
+                else//si no hay mas productos hace invisible los controles
                 {
                     button3.Visible = false;
                     lblNombre3.Visible = false;
                     lblPrecio3.Visible = false;
                 }
 
-                if (cont_filas != i)
+                if (cont_filas != i)//if para verificar si existe el producto numero x en la posicion 3
                 {
                     if (y)
                     {
@@ -214,6 +215,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     button4.Visible = true;
                     lblNombre4.Visible = true;
                     lblPrecio4.Visible = true;
+                    //mostrar los datos del producto en la posicion 4
                     byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[i]["imagen"]);
                     MemoryStream stm = new MemoryStream(bytedata);
 
@@ -221,14 +223,14 @@ namespace Proyecto_de_desarrolo.Formularios
                     lblNombre4.Text = dataTable.Rows[i][0].ToString();
                     lblPrecio4.Text = dataTable.Rows[i][1].ToString() + " Lps";
                 }
-                else
+                else//si no hay mas productos hace invisible los controles
                 {
                     button4.Visible = false;
                     lblNombre4.Visible = false;
                     lblPrecio4.Visible = false;
                 }
 
-                if (cont_filas != i)
+                if (cont_filas != i)//if para verificar si existe el producto numero x en la posicion 5
                 {
                     if (y)
                     {
@@ -245,7 +247,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     button5.Visible = true;
                     lblNombre5.Visible = true;
                     lblPrecio5.Visible = true;
-
+                    //mostrar los datos del producto en la posicion 5
                     byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[i]["imagen"]);
                     MemoryStream stm = new MemoryStream(bytedata);
 
@@ -254,14 +256,14 @@ namespace Proyecto_de_desarrolo.Formularios
                     lblPrecio5.Text = dataTable.Rows[i][1].ToString() + " Lps";
 
                 }
-                else
+                else//si no hay mas productos hace invisible los controles
                 {
                     button5.Visible = false;
                     lblNombre5.Visible = false;
                     lblPrecio5.Visible = false;
                 }
 
-                if (cont_filas != i)
+                if (cont_filas != i)//if para verificar si existe el producto numero x en la posicion 6
                 {
                     if (y)
                     {
@@ -279,7 +281,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     button6.Visible = true;
                     lblNombre6.Visible = true;
                     lblPrecio6.Visible = true;
-
+                    //mostrar los datos del producto en la posicion 6
                     byte[] bytedata = (byte[])(DS.Tables["Productos"].Rows[i]["imagen"]);
                     MemoryStream stm = new MemoryStream(bytedata);
 
@@ -287,7 +289,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     lblNombre6.Text = dataTable.Rows[i][0].ToString();
                     lblPrecio6.Text = dataTable.Rows[i][1].ToString() + " Lps";
                 }
-                else
+                else//si no hay mas productos hace invisible los controles
                 {
                     button6.Visible = false;
                     lblNombre6.Visible = false;
@@ -295,7 +297,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
                 }
 
-                if (cont_filas == i)
+                if (cont_filas == i)//verifica si esta en la ultima pagina para deshabilitar el boton de siguiente
                 {
                     btnsiguiente.Visible = false;
 
@@ -320,7 +322,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)//boton para mostrar la siguiente oagina
         {
             cont_pag++;
             y = true;
@@ -335,11 +337,12 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void anterior_Click(object sender, EventArgs e)
+        private void anterior_Click(object sender, EventArgs e)//para mostrar la pagina anterior
         {
             cont_pag--;
 
             y = false;
+            //if para verificar cuantos productos hay en esa pagina y restarlos a i que es el contador de productos
             if (button1.Visible)
             {
                 i--;
@@ -365,7 +368,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 i--;
             }
 
-            i = i - 6;
+            i = i - 6;//se le resta 6 para que cuanndo se muestre la pagina se muestren en el mismo orden
 
             x1 = 0; x2 = 0; x3 = 0; x4 = 0; x5 = 0; x6 = 0;
             txtCantidad1.Text = x1.ToString();
@@ -378,7 +381,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
         string cod1;
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//boton para registrar primer producto
         {
 
 
@@ -386,6 +389,7 @@ namespace Proyecto_de_desarrolo.Formularios
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
             {
+                //consulta para obtener el id del producto
                 string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre1.Text + "'";
                 SqlCommand comando2 = new SqlCommand(consulta, cn);
                 SqlDataAdapter DA = new SqlDataAdapter(comando2);
@@ -397,14 +401,14 @@ namespace Proyecto_de_desarrolo.Formularios
 
             }
 
-            RegistrarCarrito(x1);
+            RegistrarCarrito(x1);//llama al metodo de registrar carrito y se le manda cantidad
             x1 = 0;
 
         }
-        private void RegistrarCarrito(int cant)
+        private void RegistrarCarrito(int cant)//metodo para añadir productos al carrito
         {
 
-            if (cant <= 0)
+            if (cant <= 0)//validacion para verificar que la cantidad sea valida
             {
                 MessageBox.Show("Seleccione una cantidad valida");
                 return;
@@ -416,7 +420,7 @@ namespace Proyecto_de_desarrolo.Formularios
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
             {
-
+                //consulta para insertar los datos
                 string consulta = "INSERT INTO Carritos ([Productos_ID],[Usuarios_ID],[cantidad],[estado]) " +
                                                   "VALUES ('" + cod1 + "','" + per.getcodUsu() + "','" + cant + "', 'true');";
 
@@ -439,7 +443,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMenos1_Click_1(object sender, EventArgs e)
+        private void btnMenos1_Click_1(object sender, EventArgs e)//boton para restarle cantidad del primer producto mostrado
         {
             if (x1 <= 0)
             {
@@ -455,7 +459,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMas1_Click(object sender, EventArgs e)
+        private void btnMas1_Click(object sender, EventArgs e)//boton para agregarle cantidad del primer producto mostrado
         {
 
             if (x1 >= 500)
@@ -472,7 +476,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMas2_Click(object sender, EventArgs e)
+        private void btnMas2_Click(object sender, EventArgs e)//boton para agregarle cantidad del segundo producto mostrado
         {
             if (x2 >= 500)
             {
@@ -488,7 +492,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMas3_Click(object sender, EventArgs e)
+        private void btnMas3_Click(object sender, EventArgs e)//boton para agregarle cantidad del tercero producto mostrado
         {
             if (x3 >= 500)
             {
@@ -504,7 +508,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMas4_Click(object sender, EventArgs e)
+        private void btnMas4_Click(object sender, EventArgs e)//boton para agregarle cantidad del cuarto producto mostrado
         {
             if (x4 >= 500)
             {
@@ -520,7 +524,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMas5_Click(object sender, EventArgs e)
+        private void btnMas5_Click(object sender, EventArgs e)//boton para agregarle cantidad del quinto producto mostrado
         {
             if (x5 >= 500)
             {
@@ -536,7 +540,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMas6_Click(object sender, EventArgs e)
+        private void btnMas6_Click(object sender, EventArgs e)//boton para agregarle cantidad del sexto producto mostrado
         {
             if (x6 >= 500)
             {
@@ -552,7 +556,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMenos2_Click(object sender, EventArgs e)
+        private void btnMenos2_Click(object sender, EventArgs e)//boton para restarle cantidad del segundo producto mostrado
         {
             if (x2 <= 0)
             {
@@ -568,7 +572,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMenos3_Click(object sender, EventArgs e)
+        private void btnMenos3_Click(object sender, EventArgs e)//boton para restarle cantidad del tercero producto mostrado
         {
             if (x3 <= 0)
             {
@@ -584,7 +588,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMenos4_Click(object sender, EventArgs e)
+        private void btnMenos4_Click(object sender, EventArgs e)//boton para restarle cantidad del cuarto producto mostrado
         {
             if (x4 <= 0)
             {
@@ -600,7 +604,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void btnMenos5_Click(object sender, EventArgs e)
+        private void btnMenos5_Click(object sender, EventArgs e)//boton para restarle cantidad del quinto producto mostrado
         {
             if (x5 <= 0)
             {
@@ -615,7 +619,7 @@ namespace Proyecto_de_desarrolo.Formularios
             txtCantidad5.Text = Convert.ToString(x5);
         }
 
-        private void btnMenos6_Click(object sender, EventArgs e)
+        private void btnMenos6_Click(object sender, EventArgs e)//boton para restarle cantidad del sexto producto mostrado
         {
             if (x6 <= 0)
             {
@@ -630,18 +634,19 @@ namespace Proyecto_de_desarrolo.Formularios
             txtCantidad6.Text = Convert.ToString(x6);
         }
 
-        private void btnCarrito_Click(object sender, EventArgs e)
+        private void btnCarrito_Click(object sender, EventArgs e)//boton para abrir el carrito
         {
             frmCarrito frmCarrito = new frmCarrito();
             frmCarrito.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//boton para guardar el segundo producto mostrado
         {
             clsPersonasid per = new clsPersonasid();
             Cconexion conexion = new Cconexion();
             using (SqlConnection cn = conexion.leer())
             {
+                //consulta para obtener el producto id 
                 string consulta = "Select Productos_ID from Productos where Nombre_Producto = '" + lblNombre2.Text + "'";
                 SqlCommand comando2 = new SqlCommand(consulta, cn);
                 SqlDataAdapter DA = new SqlDataAdapter(comando2);
@@ -653,7 +658,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             }
 
-            RegistrarCarrito(x2);
+            RegistrarCarrito(x2);//registra el producto y le manda la cantidad
 
         }
 
@@ -735,12 +740,6 @@ namespace Proyecto_de_desarrolo.Formularios
             }
 
             RegistrarCarrito(x6);
-        }
-
-        private void btnCarrito_Click_1(object sender, EventArgs e)
-        {
-            frmCarrito frmCarrito = new frmCarrito();
-            frmCarrito.Show();
         }
 
         private void txtCantidad1_TextChanged(object sender, EventArgs e)
