@@ -84,12 +84,12 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void txtContra_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtContra, val.validarcontra(txtContra.Text));
+            errorProvider1.SetError(txtContra, val.validarcontra(txtContra.Text)+val.validar_tripleCaracter(txtContra.Text));
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtUsuario, val.txt_vacio(txtUsuario.Text) + val.rango_usuario(txtUsuario.Text) + val.espacio_inicio_final(txtUsuario.Text) + val.espacio(txtUsuario.Text));
+            errorProvider1.SetError(txtUsuario, val.txt_vacio(txtUsuario.Text) + val.rango_usuario(txtUsuario.Text) + val.espacio_inicio_final(txtUsuario.Text) + val.espacio(txtUsuario.Text)+ val.validar_tripleCaracter(txtUsuario.Text));
         }
 
         private void btnSalir_Click_1(object sender, EventArgs e)

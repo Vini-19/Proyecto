@@ -537,7 +537,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
             Cconexion conexion = new Cconexion();       //declaracion de la clase de conexion.
 
-            if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
+            if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "" || txtUsuario.Text == "" || txtContra.Text == "" || txtCodigo.Text == "")
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.");
                 return;     //validacion en caso de que los datos de los textbox esten en blanco.
@@ -558,7 +558,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
                 DateTime fechaInscripcion = DateTime.Today; //obtiene la fecha actual.
-                if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "")
+                if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "" && errorProvider1.GetError(txtDireccion_Trabajador) == "" && errorProvider1.GetError(txtUsuario) == "" && errorProvider1.GetError(txtContra) == "" && errorProvider1.GetError(txtCodigo) == "")
                 {
                     //verificacion de los errores brindados por las validaciones.
                     if (conexion.VerificarClienteExistente(Trabajador.getdni()))
@@ -600,7 +600,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void btnModificar_Click_2(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtRTN_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDNI_Trabajador.Text) || string.IsNullOrWhiteSpace(txtNombre_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDireccion_Trabajador.Text) || (this.txtTelefono_Trabajador.Text == "0" || string.IsNullOrWhiteSpace(this.txtTelefono_Trabajador.Text)) || string.IsNullOrWhiteSpace(txtCorreo_Trabajador.Text))
+            if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
             {
                 MessageBox.Show("Por favor, seleccione un trabajador antes de poder ejecutar la acción.");
                 //en caso de tener campos en blanco no permite avanzar.
@@ -608,7 +608,14 @@ namespace Proyecto_de_desarrolo.Formularios
             }
             else
             {
-                Modificar_Trab();   //llama a la funcion de modificar el trabajador.
+                if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "" && errorProvider1.GetError(txtDireccion_Trabajador) == "" && errorProvider1.GetError(txtUsuario) == "" && errorProvider1.GetError(txtContra) == "" && errorProvider1.GetError(txtCodigo) == "")
+                {
+                    Modificar_Trab();   //llama a la funcion de modificar el trabajador.
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
+                }
             }
         }
 

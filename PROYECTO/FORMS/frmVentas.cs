@@ -346,8 +346,9 @@ namespace Proyecto_de_desarrolo
                                         }
                                     }
                                 }
-
+                                dgvProductos.Rows.Clear();
                                 MessageBox.Show("Venta registrada correctamente.");
+                                
                             }
                         }
                         else

@@ -56,8 +56,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(492, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(508, 437);
             this.dataGridView1.TabIndex = 0;
+        
             // 
             // btnCancelar
             // 
@@ -68,7 +69,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(803, 653);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(157, 50);
+            this.btnCancelar.Size = new System.Drawing.Size(173, 50);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar Pedido";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -85,7 +86,7 @@
             this.btnAnterior.Location = new System.Drawing.Point(980, 367);
             this.btnAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(101, 38);
+            this.btnAnterior.Size = new System.Drawing.Size(117, 38);
             this.btnAnterior.TabIndex = 3;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = false;
@@ -102,7 +103,7 @@
             this.btnSiguiente.Location = new System.Drawing.Point(980, 409);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(100, 39);
+            this.btnSiguiente.Size = new System.Drawing.Size(116, 39);
             this.btnSiguiente.TabIndex = 4;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
@@ -116,6 +117,7 @@
             this.lblNombre_Cliente.Size = new System.Drawing.Size(44, 16);
             this.lblNombre_Cliente.TabIndex = 19;
             this.lblNombre_Cliente.Text = "label2";
+            
             // 
             // lblIdentidad
             // 
@@ -125,6 +127,7 @@
             this.lblIdentidad.Size = new System.Drawing.Size(44, 16);
             this.lblIdentidad.TabIndex = 20;
             this.lblIdentidad.Text = "label3";
+           
             // 
             // lblTelefono
             // 
@@ -134,6 +137,7 @@
             this.lblTelefono.Size = new System.Drawing.Size(44, 16);
             this.lblTelefono.TabIndex = 21;
             this.lblTelefono.Text = "label4";
+            
             // 
             // lblDireccion
             // 
@@ -143,6 +147,7 @@
             this.lblDireccion.Size = new System.Drawing.Size(44, 16);
             this.lblDireccion.TabIndex = 22;
             this.lblDireccion.Text = "label5";
+           
             // 
             // lblFecha
             // 
@@ -152,6 +157,7 @@
             this.lblFecha.Size = new System.Drawing.Size(44, 16);
             this.lblFecha.TabIndex = 23;
             this.lblFecha.Text = "label6";
+            
             // 
             // label2
             // 
@@ -162,6 +168,7 @@
             this.label2.Size = new System.Drawing.Size(144, 16);
             this.label2.TabIndex = 24;
             this.label2.Text = "Nombre del Cliente:";
+            
             // 
             // label7
             // 
@@ -172,6 +179,7 @@
             this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 25;
             this.label7.Text = "Identidad:";
+            
             // 
             // label8
             // 
@@ -182,6 +190,7 @@
             this.label8.Size = new System.Drawing.Size(73, 16);
             this.label8.TabIndex = 26;
             this.label8.Text = "Teléfono:";
+            
             // 
             // label9
             // 
@@ -192,6 +201,7 @@
             this.label9.Size = new System.Drawing.Size(77, 16);
             this.label9.TabIndex = 27;
             this.label9.Text = "Dirección:";
+            
             // 
             // label10
             // 
@@ -202,6 +212,7 @@
             this.label10.Size = new System.Drawing.Size(54, 16);
             this.label10.TabIndex = 28;
             this.label10.Text = "Fecha:";
+           
             // 
             // label1
             // 
@@ -212,6 +223,7 @@
             this.label1.Size = new System.Drawing.Size(112, 24);
             this.label1.TabIndex = 29;
             this.label1.Text = "PEDIDO #";
+           
             // 
             // lblNumPed
             // 
@@ -222,6 +234,7 @@
             this.lblNumPed.Size = new System.Drawing.Size(25, 24);
             this.lblNumPed.TabIndex = 30;
             this.lblNumPed.Text = "N";
+           
             // 
             // frmHistorialPedidos
             // 
