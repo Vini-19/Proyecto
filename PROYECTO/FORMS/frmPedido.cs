@@ -500,7 +500,7 @@ namespace Proyecto_de_desarrolo
 
         private void txtNombre_Imagen_TextChanged_1(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtNombre_Imagen, val.txt_vacio(txtNombre_Imagen.Text) + val.espacio_inicio_final(txtNombre_Imagen.Text) + val.rango_nombre(txtNombre_Imagen.Text));
+            errorProvider1.SetError(txtNombre_Imagen, val.txt_vacio(txtNombre_Imagen.Text) + val.espacio_inicio_final(txtNombre_Imagen.Text) + val.rango_nombre(txtNombre_Imagen.Text) + val.validar_tripleCaracter(txtNombre_Imagen.Text) +val.doble_espacio(txtNombre_Imagen.Text));
         }
 
         private void txtPrecio_TextChanged_1(object sender, EventArgs e)
@@ -510,7 +510,7 @@ namespace Proyecto_de_desarrolo
 
         private void txtNombre_TextChanged_1(object sender, EventArgs e)
         {
-            errorProvider1.SetError(txtNombre, val.txt_vacio(txtNombre.Text) + val.espacio_inicio_final(txtNombre.Text) + val.rango_nombre(txtNombre.Text) + val.validarletra_espacio(txtNombre.Text));
+            errorProvider1.SetError(txtNombre, val.txt_vacio(txtNombre.Text) + val.espacio_inicio_final(txtNombre.Text) + val.rango_nombre(txtNombre.Text) + val.validarletra_espacio(txtNombre.Text) + val.validar_tripleCaracter(txtNombre.Text) +val.doble_espacio(txtNombre.Text));
         }
 
         private void txtCodigo_TextChanged_1(object sender, EventArgs e)
