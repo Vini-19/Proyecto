@@ -22,70 +22,7 @@ namespace Proyecto_de_desarrolo.Formularios
         }
 
         clsValidaciones val = new clsValidaciones();    //declaracion de la clase de validaciones.
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            clsTrabajadores Trabajador = new clsTrabajadores();
-            clsRegistro registro = new clsRegistro();
-
-            Cconexion conexion = new Cconexion();       //declaracion de la clase de conexion para conectar a la base de datos.
-
-            if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
-            {
-                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                return; //encaso de que los campos esten vacios no pernitira agregar un nuevo trabajador.
-
-            }
-            else
-            {
-                Trabajador.setrtn(txtRTN_Trabajador.Text);      //lamado al set de cada dato mediante la clase clsTrabajadores y sus atributos privados.
-                Trabajador.setdni(txtDNI_Trabajador.Text);
-                Trabajador.setnombre(txtNombre_Trabajador.Text);
-                Trabajador.settelefono(int.Parse(txtTelefono_Trabajador.Text));
-                Trabajador.setcorreo(txtCorreo_Trabajador.Text);
-                Trabajador.setdireccion(txtDireccion_Trabajador.Text);
-                registro.setUsu(txtUsuario.Text);
-                registro.setContra(txtContra.Text);
-                registro.setPregunta("Escriba su codigo de empleado");
-                registro.setRespuesta(txtCodigo.Text);
-
-
-                DateTime fechaInscripcion = DateTime.Today;     //saca la fecha actual para registrarla correctamente.
-                if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "")
-                {
-
-                    if (conexion.VerificarClienteExistente(Trabajador.getdni()))
-                    {
-                        MessageBox.Show("No se puede agregar el trabajador porque ya existe un trabajador con ese DNI.");   //si es DNI esta repetido no permite ingresar el trabajador.
-                        return;
-                    }
-
-
-                    if (string.IsNullOrWhiteSpace(Trabajador.getrtn()) | string.IsNullOrWhiteSpace(Trabajador.getdni()) || string.IsNullOrWhiteSpace(Trabajador.getnombre()) || string.IsNullOrWhiteSpace(Trabajador.gettelefono().ToString()) || string.IsNullOrWhiteSpace(Trabajador.getcorreo()) || string.IsNullOrWhiteSpace(Trabajador.getdireccion()))
-                    {
-                        MessageBox.Show("Por favor, complete todos los campos obligatorios.");  //si es null o esta en blanco el if no permite pasar.
-                        return;
-                    }
-
-                    conexion.RegistroCliente(Trabajador.getrtn(), Trabajador.getdni(), Trabajador.getnombre(), Trabajador.getrol(), Trabajador.getestado(), Trabajador.gettelefono(), Trabajador.getcorreo(), Trabajador.getdireccion(), fechaInscripcion);
-                    conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);
-                    //llamada a las funciones de registro de cliente y registro de usuario, enviamos los datos para que se almacenen en los datos privados.
-
-                    limpiar();  //llamada a la funcion limpiar que limpia los textbox y otros campos.
-                    errorProvider1.SetError(txtCodigo, "");
-                    MessageBox.Show("Se registro correctamente.");
-                    DataGridView();
-                    txtRTN_Trabajador.Focus();      //focus al textbox del rtn en caso de que se haya registrado correctamente todos los datos.
-                }
-                else
-                {
-                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
-                }
-
-            }
-        }
-
-
-
+    
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)    //si el rowindex es distinto de cero, es decir si hay datos se agregaran al data grid view.
@@ -175,8 +112,6 @@ namespace Proyecto_de_desarrolo.Formularios
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();      //FUNCION para llamar al boton de limpiar para limpiar los campos actuales y dejarlo en blanco.
-
-           
         }
         public void limpiar()       //funcion limpiar   para limpiar los campos actuales y dejarlo en blanco
         {
@@ -409,67 +344,7 @@ namespace Proyecto_de_desarrolo.Formularios
             btnAgregar.Enabled = false;     //deshabilita el boton de agregar,
         }
 
-        private void btnAgregar_Click_1(object sender, EventArgs e)
-        {
-            clsTrabajadores Trabajador = new clsTrabajadores();     //instancia de la clase de trabajador.
-            clsRegistro registro = new clsRegistro();           //instancia de la clase de registro.
-
-            Cconexion conexion = new Cconexion();       //instancia de la clase de conexion.
-
-            if (txtRTN_Trabajador.Text == "" || txtDNI_Trabajador.Text == "" || txtNombre_Trabajador.Text == "" || txtTelefono_Trabajador.Text == "" || txtCorreo_Trabajador.Text == "" || txtDireccion_Trabajador.Text == "")
-            {
-                MessageBox.Show("Por favor, complete todos los campos obligatorios.");      //validacion para verificar campos en blanco.
-                return;
-
-            }
-            else
-            {
-                Trabajador.setrtn(txtRTN_Trabajador.Text);      //utiliza el set para mandar los datos de los textbox a las variables privadas de la clase trabajador.
-                Trabajador.setdni(txtDNI_Trabajador.Text);//utiliza el set para mandar los datos de los textbox a las variables privadas de la clase trabajador.
-                Trabajador.setnombre(txtNombre_Trabajador.Text);//utiliza el set para mandar los datos de los textbox a las variables privadas de la clase trabajador.
-                Trabajador.settelefono(int.Parse(txtTelefono_Trabajador.Text));
-                Trabajador.setcorreo(txtCorreo_Trabajador.Text);
-                Trabajador.setdireccion(txtDireccion_Trabajador.Text);//utiliza el set para mandar los datos de los textbox a las variables privadas de la clase trabajador.
-                registro.setUsu(txtUsuario.Text);
-                registro.setContra(txtContra.Text);//utiliza el set para mandar los datos de los textbox a las variables privadas de la clase trabajador.
-                registro.setPregunta("Escriba su codigo de empleado");
-                registro.setRespuesta(txtCodigo.Text);
-
-
-                DateTime fechaInscripcion = DateTime.Today;     //obtiene la fecha del dia actual.
-                if (errorProvider1.GetError(txtRTN_Trabajador) == "" && errorProvider1.GetError(txtDNI_Trabajador) == "" && errorProvider1.GetError(txtNombre_Trabajador) == "" && errorProvider1.GetError(txtTelefono_Trabajador) == "" && errorProvider1.GetError(txtCorreo_Trabajador) == "")
-                {
-
-                    if (conexion.VerificarClienteExistente(Trabajador.getdni()))        //verifica si el trabajador ya existe porque tiene el mismo dni.
-                    {
-                        MessageBox.Show("No se puede agregar el trabajador porque ya existe un trabajador con ese DNI.");
-                        return;
-                    }
-
-
-                    if (string.IsNullOrWhiteSpace(Trabajador.getrtn()) | string.IsNullOrWhiteSpace(Trabajador.getdni()) || string.IsNullOrWhiteSpace(Trabajador.getnombre()) || string.IsNullOrWhiteSpace(Trabajador.gettelefono().ToString()) || string.IsNullOrWhiteSpace(Trabajador.getcorreo()) || string.IsNullOrWhiteSpace(Trabajador.getdireccion()))
-                    {
-                        MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                        return;     //si los campos estan en blanco o las variables privadas no contienen datos no permite pasar.
-                    }
-
-                    conexion.RegistroCliente(Trabajador.getrtn(), Trabajador.getdni(), Trabajador.getnombre(), Trabajador.getrol(), Trabajador.getestado(), Trabajador.gettelefono(), Trabajador.getcorreo(), Trabajador.getdireccion(), fechaInscripcion);
-                    conexion.RegistroUsu(registro.getContra(), registro.getPregunta(), registro.getRespuesta(), registro.getUsu(), 2);      //saca los datos de las variables privadas de la clase trabajador y la clase de registro.
-
-                    limpiar();      //funcion para limpiar los textbox
-                    MessageBox.Show("Se registro correctamente.");  //mensaje de confirmacion que se registraron los datos.
-                    DataGridView();     //lama a la funcion de llenado del data grid view desde la base de datos para actualizarlo.
-                    txtRTN_Trabajador.Focus();
-                }
-                else
-                {
-                    MessageBox.Show("Verifique que todos los campos esten llenos y cumplan con las especificaciones");
-                    //en caso de que los campos no cumplan las especificaciones y validacions.
-                }
-
-            }
-        }
-
+        
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtRTN_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDNI_Trabajador.Text) || string.IsNullOrWhiteSpace(txtNombre_Trabajador.Text) || string.IsNullOrWhiteSpace(txtDireccion_Trabajador.Text) || (this.txtTelefono_Trabajador.Text == "0" || string.IsNullOrWhiteSpace(this.txtTelefono_Trabajador.Text)) || string.IsNullOrWhiteSpace(txtCorreo_Trabajador.Text))
@@ -489,46 +364,7 @@ namespace Proyecto_de_desarrolo.Formularios
             limpiar();      //lamada a la funcion de limpiar los textbox al darle click al boton de limpiar.
         }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)        //evento click del boton eliminar.
-        {
-            if (dgvTrabajador.SelectedRows.Count > 0)
-            {
-                int TrabajadorID = Convert.ToInt32(dgvTrabajador.SelectedRows[0].Cells["PersonasID"].Value);    //saca el personas id del trabajdor.
-
-                Cconexion conexion = new Cconexion();
-
-                try
-                {
-                    using (SqlConnection cn = conexion.leer())      //usando la conexion sql.
-                    {
-                        if (cn.State == ConnectionState.Closed)
-                        {
-                            cn.Open();      //abre la conexion
-                        }
-
-                        SqlCommand comandoEliminarTrabajador = new SqlCommand("PA_MarcarClienteInactivo", cn);  //usa el procedimeinto almacenado para marcar el cliente como inactivo.
-                        comandoEliminarTrabajador.CommandType = CommandType.StoredProcedure;
-                        comandoEliminarTrabajador.Parameters.AddWithValue("@clienteID", TrabajadorID);  //le enviamos el parametro de trabajador id.
-
-                        comandoEliminarTrabajador.ExecuteNonQuery();
-
-                        MessageBox.Show("Cliente marcado como inactivo correctamente");
-                        //mensaje de exito en caso de marcar el cliente como inactivo.
-
-                        DataGridView();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al intentar conectar: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione un cliente para marcar como inactivo.");
-                //en caso de que el cliente aun no haya sido seleccionado.
-            }
-        }
+        
 
         private void btnAgregar_Click_2(object sender, EventArgs e)     //evento click del boton agregar.
         {

@@ -84,7 +84,7 @@ namespace Proyecto_de_desarrolo
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 585);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+           
             // 
             // txtDNI_Cliente
             // 
@@ -278,7 +278,7 @@ namespace Proyecto_de_desarrolo
             this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nombre";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+           
             // 
             // dgvCliente
             // 

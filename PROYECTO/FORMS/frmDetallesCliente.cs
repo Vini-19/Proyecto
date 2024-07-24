@@ -88,8 +88,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     comandoMandarPedido.ExecuteNonQuery();
 
-                    MessageBox.Show("Se agrego su pedido correctamente");
-                    //en caso de que todos los datos del pedido esten correctos.
 
                 }
             }
@@ -147,7 +145,7 @@ namespace Proyecto_de_desarrolo.Formularios
                     InsertarPedido(usuarioId, carrito, nombreCliente, numeroIdentidad, direccion, telefono);
 
                     // Mostrar mensaje de éxito
-                    MessageBox.Show("Pedido enviado correctamente.");
+                    
                     string mensaje = "Su pedido fue enviado correctamente a D' La Finca San José.\n\n" +
                                     "Si desea contactar con nosotros por algún cambio puede hacerlo marcando al 33797136.\n\n" +
                                     "También puede encontrarnos en redes sociales como D' La Finca San José.\n\n" +

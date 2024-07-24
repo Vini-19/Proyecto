@@ -180,54 +180,7 @@ namespace Proyecto_de_desarrolo
         {
             FiltrarDatos(txtBuscar.Text);
         }
-
-        private void txtRTN_Cliente_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtRTN_Cliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txtDNI_Cliente_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtDNI_Cliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txtNombre_Cliente_TextChanged(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void txtNombre_Cliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txtTelefono_Cliente_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void txtTelefono_Cliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txtCorreo_Cliente_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
+        
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -385,10 +338,6 @@ namespace Proyecto_de_desarrolo
             FiltrarDatos(txtBuscar.Text);
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -421,11 +370,6 @@ namespace Proyecto_de_desarrolo
         private void txtTelefono_Cliente_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 

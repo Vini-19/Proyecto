@@ -74,7 +74,7 @@ namespace Proyecto_de_desarrolo
                     string queryExisteProducto = "SELECT COUNT(*) FROM Productos WHERE Nombre_Producto = @nomProducto";
                     SqlCommand comandoExisteProducto = new SqlCommand(queryExisteProducto, cn);
 
-                    MessageBox.Show(producto.getnomProducto());
+                    //MessageBox.Show(producto.getnomProducto());
 
                     comandoExisteProducto.Parameters.AddWithValue("@nomProducto", producto.getnomProducto());
 
