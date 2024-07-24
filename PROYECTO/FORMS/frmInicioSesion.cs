@@ -207,10 +207,9 @@ namespace PROYECTO
 
         private void linkLRecuperacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmRecuperacion Rec = new frmRecuperacion();
-            Rec.Show();
             frmEspecificacionesInicio Esp = new frmEspecificacionesInicio();
             Esp.Show();
+            
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
