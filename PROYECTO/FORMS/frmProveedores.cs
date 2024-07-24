@@ -478,12 +478,6 @@ namespace Proyecto_de_desarrolo.Formularios
         
 
 
-
-        private void dgv_Prov_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgv_Prov_CellClick(object sender, DataGridViewCellEventArgs e)
         {
                 txtRTN_Prov.Text = dgv_Prov.CurrentRow.Cells[1].Value.ToString();
@@ -492,7 +486,7 @@ namespace Proyecto_de_desarrolo.Formularios
                 txtTelefono_Prov.Text = dgv_Prov.CurrentRow.Cells[5].Value.ToString();
                 txtCorreo_Prov.Text = dgv_Prov.CurrentRow.Cells[6].Value.ToString();
                 txtDireccion_Prov.Text = dgv_Prov.CurrentRow.Cells[7].Value.ToString();
-
+            cmbCategoria.Text = dgv_Prov.CurrentRow.Cells[9].Value.ToString();
                 btnAgregar.Enabled = false;
         }
 

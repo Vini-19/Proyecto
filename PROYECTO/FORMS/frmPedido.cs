@@ -571,7 +571,7 @@ namespace Proyecto_de_desarrolo
                 txtNombre.Text = fila.Cells["Nombre_Producto"].Value.ToString();
                 txtPrecio.Text = fila.Cells["Precio"].Value.ToString();
                 txtNombre_Imagen.Text = fila.Cells["Nombre_Imagen"].Value.ToString();
-                
+                cmbCategoria.Text = fila.Cells["Categoria"].Value.ToString();
                 MessageBox.Show(fila.Cells["Categoria_ID"].Value.ToString());
 
                 btnAgregar.Enabled = false;
@@ -612,6 +612,8 @@ namespace Proyecto_de_desarrolo
         {
             
         }
+
+      
     }
 
 

@@ -91,7 +91,6 @@ namespace Proyecto_de_desarrolo.Formularios
             // 
             // cmbCategoria
             // 
-            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(28, 318);
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -320,12 +319,12 @@ namespace Proyecto_de_desarrolo.Formularios
             this.dgv_Prov.Size = new System.Drawing.Size(750, 440);
             this.dgv_Prov.TabIndex = 0;
             this.dgv_Prov.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Prov_CellClick);
-            this.dgv_Prov.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Prov_CellContentClick);
+            //this.dgv_Prov.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Prov_CellContentClick);
             // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(358, 103);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(704, 20);
             this.txtBuscar.TabIndex = 1;
@@ -370,7 +369,6 @@ namespace Proyecto_de_desarrolo.Formularios
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "frmProveedores";
             this.Text = "frmProveedores";
-           // this.Load += new System.EventHandler(this.frmProveedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Prov)).EndInit();

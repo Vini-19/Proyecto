@@ -121,7 +121,6 @@ namespace Proyecto_de_desarrolo
             // 
             // cmbCategoria
             // 
-            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(41, 228);
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);

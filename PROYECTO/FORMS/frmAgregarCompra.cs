@@ -18,9 +18,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
         public frmAgregarCompra()
         {
-            InitializeComponent();      
-                 //al cargar el formulario carga los datos de los proveedores para la compra de materia prima y carga la categoria de esos proveedores.
-                   //aqui carga el combobox de categoria
+            InitializeComponent();
+            Cargarcategoria(); //al cargar el formulario carga los datos de los proveedores para la compra de materia prima y carga la categoria de esos proveedores.
+                                        //aqui carga el combobox de categoria
+            CargarDatosProveedores();
+           
         }
 
         clsValidaciones val = new clsValidaciones();        //declaracion global de la clase de validaciones.
@@ -67,11 +69,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-        }
         float precio, total, subtotal;      //delcaracion de variables de calculo.
 
         private void btnAgregarC_Click(object sender, EventArgs e)  //evento click del boton agregar.
@@ -102,22 +99,8 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void ListaCompras_SelectedIndexChanged(object sender, EventArgs e)
-        {
+    
 
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbCategoria.Items.Clear();     //saca el indice seleciconado del combobox del proveedor.
-            cmbCategoria.Text = "";
-            Cargarcategoria();      //carga la categoria del combobox nuevamente.
-        }
 
         public void Cargarcategoria()       //funcion para cargar la categoria del combobox.
         {
@@ -169,11 +152,7 @@ namespace Proyecto_de_desarrolo.Formularios
             }
         }
 
-        private void frmAgregarCompra_Load(object sender, EventArgs e)
-        {
-
-
-        }
+ 
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -232,40 +211,7 @@ namespace Proyecto_de_desarrolo.Formularios
 
         }
 
-        private void frmAgregarCompra_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-            
-
-        }
-
-        private void frmAgregarCompra_Load_2(object sender, EventArgs e)
-        {
-            Cargarcategoria();
-            CargarDatosProveedores();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbProveedor_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            cmbCategoria.Items.Clear();
-            cmbCategoria.Text = "";
-            Cargarcategoria();      //en caso de cambiar de proveedor limpia la categoria del combobox y vuelve a buscar a la que pertenece ese proveedor.
-        }
+     
 
         private void txtCantidad_TextChanged_1(object sender, EventArgs e)
         {
@@ -441,7 +387,7 @@ namespace Proyecto_de_desarrolo.Formularios
                             updateStockCommand.Parameters.AddWithValue("@categoriaId", categoriaid);
                             updateStockCommand.ExecuteNonQuery();
 
-                            MessageBox.Show("Materia Prima Ingresada Correctamente a Inventario");      //ingresa la materia prima al inventario.
+                            MessageBox.Show("Producto Ingresado Correctamente a Inventario");      //ingresa la materia prima al inventario.
                             i = i + 5;
                         }
                     }
@@ -459,6 +405,13 @@ namespace Proyecto_de_desarrolo.Formularios
             }
         }
 
+        private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbCategoria.Items.Clear(); // Limpiar los ítems actuales del ComboBox de categoría
+            cmbCategoria.Text = "";
+            Cargarcategoria();   //carga la categoria del combobox nuevamente.
+        }
+
         private void txtCantidad_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             val.validarnum(e);
@@ -469,20 +422,8 @@ namespace Proyecto_de_desarrolo.Formularios
             val.validarnum(e);
         }
 
-        private void btnAgregarC_Click_2(object sender, EventArgs e)
-        {
 
-        }
-
-        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-        }
+       
     }
 
 }
