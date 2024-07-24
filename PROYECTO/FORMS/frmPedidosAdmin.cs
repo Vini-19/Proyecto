@@ -104,7 +104,11 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     dataGridView1.DataSource = data.ToTable(false,"nombre_producto","Precio","cantidad");
 
-                }
+                        dataGridView1.Columns["nombre_producto"].HeaderText = "Nombre Producto";
+                        dataGridView1.Columns["Precio"].HeaderText = "Precio";
+                        dataGridView1.Columns["cantidad"].HeaderText = "Cantidad";
+
+                    }
                 else
                 {
                     MessageBox.Show("Error de conexión.");
@@ -133,12 +137,6 @@ namespace Proyecto_de_desarrolo.Formularios
             return dt;
         }
 
-
-        private void MostrarDatosCarritos()
-        {
-            
-        }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Cconexion conexion = new Cconexion();
@@ -151,7 +149,6 @@ namespace Proyecto_de_desarrolo.Formularios
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            
             numpedido--;
             ObtenerDatosCarritos();
             lblNumPed.Text = numpedido.ToString() + " / "+ dtCount.Rows.Count; 

@@ -125,6 +125,7 @@ namespace Proyecto_de_desarrolo.Formularios
         {
             clsPersonasid usu = new clsPersonasid();
             string usuarioId = usu.getcodUsu();
+           
 
             if (txtNombre.Text == "" || txtIdentidad.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == "")
             {
@@ -147,6 +148,13 @@ namespace Proyecto_de_desarrolo.Formularios
 
                     // Mostrar mensaje de éxito
                     MessageBox.Show("Pedido enviado correctamente.");
+                    string mensaje = "Su pedido fue enviado correctamente a D' La Finca San José.\n\n" +
+                                    "Si desea contactar con nosotros por algún cambio puede hacerlo marcando al 33797136.\n\n" +
+                                    "También puede encontrarnos en redes sociales como D' La Finca San José.\n\n" +
+                                    "Puede realizar su pago vía transferencia a la cuenta No. 744763621 de BAC.\n\n" +
+                                    "También incluimos pago contra entrega en efectivo.";
+
+                    MessageBox.Show(mensaje,"Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     this.Hide();
                 }
                 else

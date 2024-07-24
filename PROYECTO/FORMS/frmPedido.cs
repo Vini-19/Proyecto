@@ -613,7 +613,10 @@ namespace Proyecto_de_desarrolo
             
         }
 
-      
+        private void txtCodigo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            val.validarnum(e);
+        }
     }
 
 

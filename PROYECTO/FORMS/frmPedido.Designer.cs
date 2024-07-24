@@ -121,6 +121,7 @@ namespace Proyecto_de_desarrolo
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(55, 281);
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -176,7 +177,7 @@ namespace Proyecto_de_desarrolo
             this.txtCodigo.Size = new System.Drawing.Size(153, 22);
             this.txtCodigo.TabIndex = 14;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged_1);
-            //this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress_1);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress_1);
             // 
             // label6
             // 
